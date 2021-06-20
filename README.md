@@ -2,7 +2,7 @@ Este sitio web ofrece la venta de juegos de mesa y apunta a un público joven-ad
 El equipo encargado del desarrollo del mismo esta integrado por:
 
 Franco Gimenez, 
-Mariela Roblez, 
+Mariela Robles, 34 años de Mar del Plata, Buenos Aires.
 Federico Mosqueira, 
 Loana Rosi, 25 años de San Miguel, Buenos Aires.
 
