@@ -9,9 +9,9 @@ Loana Rosi, 25 años de San Miguel, Buenos Aires.<br>
 
 <b>Listado de referencias:</b>
 
-<b>Cobra Kai</b> - 
+[<b>Los juegos de ulthar</b>](https://www.losjuegosdeulthar.com.ar/) - 
 Por su funcionalidad, sobre todo del header y el menú. La ubicación de los elementos hace que sea fácil para el usuario identificar las acciones principales que puede realizar en el sitio. Los elementos principales se ven ordenados, en un diseño simple y limpio.
-
+-
 <b>Papillon</b> -
 Por su estética general, Es un diseño minimalista, se ve funcional y atractivo.
 El público al que va dirigido coincide con el del proyecto que realizaremos.
