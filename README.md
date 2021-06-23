@@ -3,7 +3,7 @@ El equipo encargado del desarrollo del mismo esta integrado por:
 
 Franco Gimenez, 19 años de lanus este, Buenos Aires.<br>
 Mariela Robles, 34 años de Mar del Plata, Buenos Aires.<br>
-Federico Mosqueira, <br>
+Federico Mosqueira, 25 años de villa lugano buenos aires <br>
 Loana Rosi, 25 años de San Miguel, Buenos Aires.<br>
 
 
