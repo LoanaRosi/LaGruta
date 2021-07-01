@@ -1,3 +1,7 @@
+Elegimos la temática de juegos de mesa porque es algo en lo que coincidimos que nos gusta, nos recuerda a la infancia y a lo divertido de ésta, cuando jugábamos con nuestros primos y amigos. Ahora que somos adultos y nos juntamos con amigos, pensamos en sumar algo lúdico a las previas.
+Por eso, este sitio web ofrece la venta de juegos (de rol, cartas y de mesa) y cuenta con una sección de alquiler de juegos de mesa para previa que se acompañan de bebidas. Nuestro público objetivo es joven-adulto.
+
+
 Este sitio web ofrece la venta de juegos de mesa y apunta a un público joven-adulto. 
 El equipo encargado del desarrollo del mismo esta integrado por:
 
