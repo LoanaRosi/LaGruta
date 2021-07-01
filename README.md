@@ -1,10 +1,10 @@
 Este sitio web ofrece la venta de juegos de mesa y apunta a un público joven-adulto. 
 El equipo encargado del desarrollo del mismo esta integrado por:
 
-Franco Gimenez, tengo 19 años, vivo en lanus buenos aires, mis hobys son dibujar, hacer pulseras y tocar la guitarra, ingrese en el curso de programacion full stack de digital house por una publicacion en instagram.<br>
+Franco Gimenez: tengo 19 años, vivo en lanus buenos aires, mis hobys son dibujar, hacer pulseras y tocar la guitarra, ingrese en el curso de programacion full stack de digital house por una publicacion en instagram.<br>
 Mariela Robles, 34 años de Mar del Plata, Buenos Aires.<br>
 Federico Mosqueira, 25 años de villa lugano buenos aires <br>
-Loana Rosi, 25 años de San Miguel, Buenos Aires.<br>
+Loana Rosi: tengo 25 años, soy de San Miguel, Buenos Aires. Me anoté al curso de programación por recomendación de mi hermana. Tambien estudio Yoga y me gusta la literatura.<br>
 
 
 <b>Listado de referencias:</b>
