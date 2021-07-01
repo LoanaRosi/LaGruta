@@ -1,7 +1,7 @@
 Este sitio web ofrece la venta de juegos de mesa y apunta a un público joven-adulto. 
 El equipo encargado del desarrollo del mismo esta integrado por:
 
-Franco Gimenez, 19 años de lanus este, Buenos Aires.<br>
+Franco Gimenez, tengo 19 años, vivo en lanus buenos aires, mis hobys son dibujar, hacer pulseras y tocar la guitarra, ingrese en el curso de programacion full stack de digital house por una publicacion en instagram.<br>
 Mariela Robles, 34 años de Mar del Plata, Buenos Aires.<br>
 Federico Mosqueira, 25 años de villa lugano buenos aires <br>
 Loana Rosi, 25 años de San Miguel, Buenos Aires.<br>
