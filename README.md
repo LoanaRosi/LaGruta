@@ -2,8 +2,7 @@ Elegimos la temática de juegos de mesa porque es algo en lo que coincidimos que
 Por eso, este sitio web ofrece la venta de juegos (de rol, cartas y de mesa) y cuenta con una sección de alquiler de juegos de mesa para previa que se acompañan de bebidas. Nuestro público objetivo es joven-adulto.
 
 
-Este sitio web ofrece la venta de juegos de mesa y apunta a un público joven-adulto. 
-El equipo encargado del desarrollo del mismo esta integrado por:
+El equipo encargado del desarrollo de esta sitio esta integrado por:
 
 Franco Gimenez: tengo 19 años, vivo en lanus buenos aires, mis hobys son dibujar, hacer pulseras y tocar la guitarra, ingrese en el curso de programacion full stack de digital house por una publicacion en instagram.<br>
 Mariela Robles, 34 años de Mar del Plata, Buenos Aires.<br>
