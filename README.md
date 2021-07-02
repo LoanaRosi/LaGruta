@@ -43,9 +43,9 @@ rojos:<br>
 #8E1212<br>
 negro:<br>
 #0E0E0E<br>
-#060606 (para fondo de imagen de productos)<br>
-#000000 (menu)<br>
+#060606 <br>
+#000000 <br>
 gris:<br>
-#212020 (para el cuerpo del home)<br>
+#212020<br>
 #262121<br>
 
