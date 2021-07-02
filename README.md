@@ -31,9 +31,9 @@ Por la implementación del botón de Whatsapp que lleva al cliente al contacto d
 
 <b>Elementos visuales</b>
 
-<b>Tipografías:</b>
+<b>Tipografías:</b><br>
 <b>Berkshire Swash</b>(https://fonts.google.com/specimen/Berkshire+Swash?query=Berkshire+Swash) - 
-Regular 400 para títulos principales y títulos de destacados.
+Regular 400 para títulos principales y títulos de destacados.<br>
 <b>Roboto Slab</b>(https://fonts.google.com/specimen/Roboto+Slab?query=Roboto+Slab) - 
 Para el contenido informativo del sitio: para textos generales, párrafos, descripciones. Light 300, Regular 400 y Medium 500 de acuerdo a la importancia y orden de lectura que deseemos generar en el sitio.
 
