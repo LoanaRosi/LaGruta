@@ -38,14 +38,14 @@ Regular 400 para títulos principales y títulos de destacados.<br>
 Para el contenido informativo del sitio: para textos generales, párrafos, descripciones. Light 300, Regular 400 y Medium 500 de acuerdo a la importancia y orden de lectura que deseemos generar en el sitio.
 
 <b>colores:</b><br>
-rojos:
-#8C1111
+rojos:<br>
+#8C1111<br>
 #8E1212<br>
-negro:
-#0E0E0E
-#060606 (para fondo de imagen de productos)
-#000000 (menu)
+negro:<br>
+#0E0E0E<br>
+#060606 (para fondo de imagen de productos)<br>
+#000000 (menu)<br>
 gris:<br>
-#212020 (para el cuerpo del home)
-#262121
+#212020 (para el cuerpo del home)<br>
+#262121<br>
 
