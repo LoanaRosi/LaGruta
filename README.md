@@ -2,6 +2,7 @@ Elegimos la temática de juegos de mesa porque es algo en lo que coincidimos que
 Por eso, este sitio web ofrece la venta de juegos (de rol, cartas y de mesa) y cuenta con una sección de alquiler de juegos de mesa para previa que se acompañan de bebidas. Nuestro público objetivo es joven-adulto.
 
 Breve historia del origen de los juegos de mesa:
+
 En la actualidad los juegos de mesa están en auge. Este género del entretenimiento ha evolucionado en las últimas décadas. Se podría decir que nos encontramos ahora mismo en la edad de oro de los juegos de mesa.
 Sin embargo, hacia el año 5.000 a.C. empiezan a aparecer los primeros juegos de mesa en Oriente Medio.
 Hacia el año 3.000 a.C. los juegos de mesa empiezan a popularizarse entre los faraones del Antiguo Egipto.
