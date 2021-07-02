@@ -37,3 +37,15 @@ Regular 400 para títulos principales y títulos de destacados.<br>
 <b>Roboto Slab</b>(https://fonts.google.com/specimen/Roboto+Slab?query=Roboto+Slab) - 
 Para el contenido informativo del sitio: para textos generales, párrafos, descripciones. Light 300, Regular 400 y Medium 500 de acuerdo a la importancia y orden de lectura que deseemos generar en el sitio.
 
+<b>colores:</b><br>
+rojos:
+#8C1111
+#8E1212<br>
+negro:
+#0E0E0E
+#060606 (para fondo de imagen de productos)
+#000000 (menu)
+gris:<br>
+#212020 (para el cuerpo del home)
+#262121
+
