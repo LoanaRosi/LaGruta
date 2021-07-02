@@ -1,6 +1,18 @@
 Elegimos la temática de juegos de mesa porque es algo en lo que coincidimos que nos gusta, nos recuerda a la infancia y a lo divertido de ésta, cuando jugábamos con nuestros primos y amigos. Ahora que somos adultos y nos juntamos con amigos, pensamos en sumar algo lúdico a las previas.
 Por eso, este sitio web ofrece la venta de juegos (de rol, cartas y de mesa) y cuenta con una sección de alquiler de juegos de mesa para previa que se acompañan de bebidas. Nuestro público objetivo es joven-adulto.
 
+Breve historia del origen de los juegos de mesa:
+En la actualidad los juegos de mesa están en auge. Este género del entretenimiento ha evolucionado en las últimas décadas. Se podría decir que nos encontramos ahora mismo en la edad de oro de los juegos de mesa.
+Sin embargo, hacia el año 5.000 a.C. empiezan a aparecer los primeros juegos de mesa en Oriente Medio.
+Hacia el año 3.000 a.C. los juegos de mesa empiezan a popularizarse entre los faraones del Antiguo Egipto.
+Los egipcios fueron precisamente los que introducen el tablero en el juego de mesa, así como los peones. Digamos que se empieza a configurar la idea tradicional de juego de mesa que ha permanecido durante tantos años.
+Durante el Imperio Romano, la actividad bélica ingente tuvo una gran influencia sobre los juegos de mesa. Estos empezaron a incorporar la estrategia militar a su mecánica.
+Dando un gran salto hacia adelante en la historia, llegamos a principios del siglo XX. En este momento se crea  uno de los juegos de mesa tradicionales más populares, todo un clásico, el Monopoly.
+Tras la aparición del Monopoly, se abrieron las puertas a la creación de otros muchos juegos de mesa clásicos.
+Los colonos de Catán fue uno de los primeros juegos de mesa modernos o Eurogames que se hizo popular en todo el mundo. 
+Entre las características determinantes de este nuevo estilo de juegos de mesa encontramos una duración pre-establecida y una nueva mecánica basada en la gestión de recursos.
+Hoy en día los tableros están compuestos de algo más que de simples cuadros y peones a los que se les llama meeples, es por eso que desde esta página les ofrecemos una altrnativa en la busqueda de un juego que les permita vivir una experiencia agradable y compartir un momento ameno con los suyos.
+
 
 El equipo encargado del desarrollo de esta sitio esta integrado por:
 
