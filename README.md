@@ -55,16 +55,16 @@ Para el contenido informativo del sitio: para textos generales, párrafos, descr
 
 *colores:*
 
-- rojos:
+1. rojos:
  * #8C1111
  * #8E1212
 
-- negros:
+2. negros:
  * #0E0E0E
  * #060606 
  * #000000 
 
-- grises:
+3. grises:
  * #212020
  * #262121
 
