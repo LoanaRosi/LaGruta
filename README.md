@@ -22,7 +22,7 @@ Hoy en día los tableros están compuestos de algo más que de simples cuadros y
 * Franco Gimenez: tengo 19 años, vivo en lanus buenos aires, mis hobys son dibujar, hacer pulseras y tocar la guitarra, ingrese en el curso de programacion full stack de digital house por una publicacion en instagram.
 *Mariela Robles: 34 años de Mar del Plata, Buenos Aires. Me gusta la fotografía y el cine, las series animadas, los videojuegos y juegos en general. Ingresé al curso de programación a través de información que me compartieron por whatsapp.
 * Federico Mosqueira: 25 años de villa lugano buenos aires 
-* Loana Rosi: tengo 25 años, soy de San Miguel, Buenos Aires. Me anoté al curso de programación por recomendación de mi hermana. Tambien estudio Yoga y me gusta la literatura.
+* Loana Rosi: tengo 25 años, soy de San Miguel, Buenos Aires. Me anoté al curso de programación por recomendación de mi hermana, también estudio Sistemas de Informaciín Geográfica, Yoga y me gusta la literatura.
 
 
 **Listado de referencias:**
