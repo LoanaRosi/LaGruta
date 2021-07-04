@@ -3,7 +3,7 @@
 Elegimos la temática de juegos de mesa porque es algo en lo que coincidimos que nos gusta, nos recuerda a la infancia y lo divertido de ésta, cuando jugábamos con nuestros primos y amigos. Ahora que somos adultos y nos juntamos con amigos, pensamos en sumar algo lúdico a las previas.
 Por eso, este sitio web ofrece la venta de juegos (de rol, cartas y de mesa) y cuenta con una sección de alquiler para previa que se acompañan de bebidas. Nuestro público objetivo es joven-adulto.
 
-**Breve historia del origen de los juegos de mesa:**
+### Breve historia del origen de los juegos de mesa: 
 
 En la actualidad los juegos de mesa están en auge. Este género del entretenimiento ha evolucionado en las últimas décadas. Se podría decir que nos encontramos ahora mismo en la edad de oro de los juegos de mesa.
 Sin embargo, hacia el año 5.000 a.C. empiezan a aparecer los primeros juegos de mesa en Oriente Medio.
@@ -17,7 +17,7 @@ Entre las características determinantes de este nuevo estilo de juegos de mesa 
 Hoy en día los tableros están compuestos de algo más que de simples cuadros y peones a los que se les llama meeples, es por eso que desde esta página les ofrecemos una altrnativa en la busqueda de un juego que les permita vivir una experiencia agradable y compartir un momento ameno con los suyos.
 
 
-**El equipo encargado del desarrollo de esta sitio esta integrado por:**
+### El equipo encargado del desarrollo de esta sitio esta integrado por:
 
 * Franco Gimenez: tengo 19 años, vivo en lanus buenos aires, mis hobys son dibujar, hacer pulseras y tocar la guitarra, ingrese en el curso de programacion full stack de digital house por una publicacion en instagram.
 *Mariela Robles: 34 años de Mar del Plata, Buenos Aires. Me gusta la fotografía y el cine, las series animadas, los videojuegos y juegos en general. Ingresé al curso de programación a través de información que me compartieron por whatsapp.
