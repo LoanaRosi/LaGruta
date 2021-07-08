@@ -27,7 +27,7 @@ Hoy en día los tableros están compuestos de algo más que de simples cuadros y
 
 **Listado de referencias:**
 
-1. [Los juegos de ulthar] (https://www.losjuegosdeulthar.com.ar/) - 
+1. [Los juegos de ulthar](https://www.losjuegosdeulthar.com.ar/) - 
 Por su funcionalidad, sobre todo del header y el menú. La ubicación de los elementos hace que sea fácil para el usuario identificar las acciones principales que puede realizar en el sitio. Los elementos principales se ven ordenados, en un diseño simple y limpio.
 
 2. [Buraeu de juegos](https://www.bureaudejuegos.com./) - 
