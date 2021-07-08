@@ -21,26 +21,26 @@ Hoy en día los tableros están compuestos de algo más que de simples cuadros y
 
 * Franco Gimenez: tengo 19 años, vivo en lanus buenos aires, mis hobys son dibujar, hacer pulseras y tocar la guitarra, ingrese en el curso de programacion full stack de digital house por una publicacion en instagram.
 * Mariela Robles: 34 años de Mar del Plata, Buenos Aires. Me gusta la fotografía y el cine, las series animadas, los videojuegos y juegos en general. Ingresé al curso de programación a través de información que me compartieron por whatsapp.
-* Federico Mosqueira: 25 años de villa lugano buenos aires capital federal .mis hobbies la series , coleccionar , anime y los juegos . soy bartender y electricista .Me entere del curso por medio de un amigo que paso la info por wp .
+* Federico Mosqueira: 25 años de villa lugano buenos aires capital federal. Mis hobbies son las series, coleccionar, anime y los juegos. Soy bartender y electricista. Me entere del curso por medio de un amigo que paso la información por whatsapp.
 * Loana Rosi: tengo 25 años, soy de San Miguel, Buenos Aires. Me anoté al curso de programación por recomendación de mi hermana, también estudio Sistemas de Informaciín Geográfica, Yoga y me gusta la literatura.
 
 
 **Listado de referencias:**
 
-1. (Los juegos de ulthar)[https://www.losjuegosdeulthar.com.ar/] - 
+1. [Los juegos de ulthar] (https://www.losjuegosdeulthar.com.ar/) - 
 Por su funcionalidad, sobre todo del header y el menú. La ubicación de los elementos hace que sea fácil para el usuario identificar las acciones principales que puede realizar en el sitio. Los elementos principales se ven ordenados, en un diseño simple y limpio.
 
-2. (Buraeu de juegos)[https://www.bureaudejuegos.com./] - 
+2. [Buraeu de juegos](https://www.bureaudejuegos.com./) - 
 Por su estética general, Es un diseño minimalista, se ve funcional y atractivo.
 El público al que va dirigido coincide con el del proyecto que realizaremos.
 
-3. (El ogro alegre)[https://www.elogroalegre.com.ar/] -
+3. [El ogro alegre](https://www.elogroalegre.com.ar/) -
 Por el uso de imágenes que destaca las categorías principales, y el uso de los colores de la marca en la estética del sitio. 
 
-4. (La madriguera del conejo)[https://www.lamadrigueradelconejo.xyz/] -
+4. [La madriguera del conejo](https://www.lamadrigueradelconejo.xyz/) -
 Por la organización del catálogo de productos y la estética general del sitio. Los acentos de color que utiliza en los elementos y el diseño del logotipo. 
 
-5. (Estratagema)[https://estratagema.com.ar/#!/-estratagema/] -
+5. [Estratagema](https://estratagema.com.ar/#!/-estratagema/) -
 Por la combinación de colores, tipografía, formas de botones.
 Por la implementación del botón de Whatsapp que lleva al cliente al contacto directo con la empresa. Agiliza la comunicación y las ventas.
 
@@ -48,23 +48,23 @@ Por la implementación del botón de Whatsapp que lleva al cliente al contacto d
 
 *Tipografías:*
 
-(Berkshire Swash)[https://fonts.google.com/specimen/Berkshire+Swash?query=Berkshire+Swash] - 
+* [Berkshire Swash](https://fonts.google.com/specimen/Berkshire+Swash?query=Berkshire+Swash)
 Regular 400 para títulos principales y títulos de destacados.
-(Roboto Slab)[https://fonts.google.com/specimen/Roboto+Slab?query=Roboto+Slab] - 
-Para el contenido informativo del sitio: para textos generales, párrafos, descripciones. Light 300, Regular 400 y Medium 500 de acuerdo a la importancia y orden de lectura que deseemos generar en el sitio.
+* [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?query=Roboto+Slab) 
+* Para el contenido informativo del sitio: para textos generales, párrafos, descripciones. Light 300, Regular 400 y Medium 500 de acuerdo a la importancia y orden de lectura que deseemos generar en el sitio.
 
-*colores:*
+*Colores:*
 
-1. rojos:
+1. Rojos:
  * #8C1111
  * #8E1212
 
-2. negros:
+2. Negros:
  * #0E0E0E
  * #060606 
  * #000000 
 
-3. grises:
+3. Grises:
  * #212020
  * #262121
 
