@@ -1,4 +1,4 @@
-# Proyecto Ecommerce: La Gruta 
+# Proyecto Ecommerce: La Gruta del Dragón
 
 Elegimos la temática de juegos de mesa porque es algo en lo que coincidimos que nos gusta, nos recuerda a la infancia y lo divertido de ésta, cuando jugábamos con nuestros primos y amigos. Ahora que somos adultos y nos juntamos con amigos, pensamos en sumar algo lúdico a las previas.
 Por eso, este sitio web ofrece la venta de juegos (de rol, cartas y de mesa) y cuenta con una sección de alquiler para previa que se acompañan de bebidas. Nuestro público objetivo es joven-adulto.
