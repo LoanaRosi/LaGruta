@@ -44,6 +44,9 @@ Por la organización del catálogo de productos y la estética general del sitio
 Por la combinación de colores, tipografía, formas de botones.
 Por la implementación del botón de Whatsapp que lleva al cliente al contacto directo con la empresa. Agiliza la comunicación y las ventas.
 
+**Tablero de Trello:**
+https://trello.com/b/DvaYRrLa/c9-proyecto-la-gruta-del-drag%C3%B3n
+
 **Elementos visuales**
 
 *Tipografías:*
@@ -51,9 +54,9 @@ Por la implementación del botón de Whatsapp que lleva al cliente al contacto d
 * [Berkshire Swash](https://fonts.google.com/specimen/Berkshire+Swash?query=Berkshire+Swash)
 Regular 400 para títulos principales y títulos de destacados.
 * [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?query=Roboto+Slab) 
-* Para el contenido informativo del sitio: para textos generales, párrafos, descripciones. Light 300, Regular 400 y Medium 500 de acuerdo a la importancia y orden de lectura que deseemos generar en el sitio.
+Light 300, Regular 400 y Medium 500 de acuerdo a la importancia y orden de lectura que deseemos generar en el sitio.
 
-*Colores:*
+*Colores:*Para el contenido informativo del sitio: para textos generales, párrafos, descripciones. 
 
 1. Rojos:
  * #8C1111
