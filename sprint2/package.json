@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/LoanaRosi/LaGruta#readme",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {}
 }
