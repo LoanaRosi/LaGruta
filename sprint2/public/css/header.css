@@ -87,6 +87,7 @@
     background-color: var(--color-nav-menu) ;
     /* background-color: #300505 ; */
     padding: 16px;
+    position: relative;
 }
 
 .container-menu .menu-options .menu-options-usuario a i.fa-user{
@@ -98,8 +99,10 @@
     background-color: #fff;
 }
 .container-menu .menu-options .menu-options-usuario a i.fa-times{
-   margin-bottom: 30px;
    font-size: 25px;
+   position: absolute;
+   top: 5px;
+   right: 9px;
    
 }
 
@@ -117,7 +120,6 @@
 .container-menu .menu-options .options{
     display: flex;
     flex-direction: column;
-    
 
 }
 .container-menu .menu-options .options li{
