@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto+Slab:wght@300;400;500&display=swap');
+
+:root{
+    --fontFamily-Titulo: 'Berkshire Swash', cursive;
+    --fontFamily-Textos: 'Roboto Slab', serif;
+
+    --color-negro1: #0E0E0E;
+    --color-negro2: #060606; 
+    --color-negro3: #000000; 
+    --color-header: #222221;
+
+    --color-Rojo1: #8C1111;
+    --color-Rojo2: #8E1212;
+
+    --color-Gris1: #212020;
+    --color-Gris2: #262121; 
+    --color-Gris3: #2e2d2d; 
+    --color-Body: #0D0C0C;
+
+
+
+
+
+
+
+}
+
+
+
+/* Berkshire: Regular 400 para títulos principales y títulos de destacados. */
+
+/* Roboto: Light 300, Regular 400 y Medium 500 de acuerdo a la importancia y orden de lectura que deseemos generar en el sitio. */
+
+
