@@ -1,7 +1,4 @@
 /* header */
-.home{
-
-}
 .container-menu{
     width: 100%;
     
@@ -71,6 +68,13 @@
     
 }
 
+.container-menu .logo{
+  
+}
+.container-menu .logo img{
+    width: 100%;
+}
+
 .container-menu .menu-options{
 
 }
@@ -79,17 +83,24 @@
 .container-menu .menu-options .menu-options-usuario{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     background-color: var(--color-nav-menu) ;
+    /* background-color: #300505 ; */
     padding: 16px;
 }
 
-.container-menu .menu-options .menu-options-usuario i{
-    margin-left: 10px;
+.container-menu .menu-options .menu-options-usuario a i.fa-user{
+    margin-left: -5px;
     font-size: 30px;
     border-radius: 50px;
     padding:10px 12px;
     color: #000;
     background-color: #fff;
+}
+.container-menu .menu-options .menu-options-usuario a i.fa-times{
+   margin-bottom: 30px;
+   font-size: 25px;
+   
 }
 
 .container-menu .menu-options .menu-options-usuario a{
@@ -97,6 +108,10 @@
     font-size: 18px;
     text-transform: uppercase;
     color: #fff;
+}
+.container-menu .menu-options .menu-options-usuario a:hover{
+    border-bottom: 1px solid #8E1212;
+    transition: .6s;
 }
 
 .container-menu .menu-options .options{
@@ -110,6 +125,11 @@
     padding: 18px 0;
     border-top: none;
     background-color: #2e2d2d;
+    /* background-color: #660c0c; */
+    
+}
+.container-menu .menu-options .options li:hover{
+    background-color:#660c0c;
     
 }
 .container-menu .menu-options .options li a{
@@ -119,6 +139,7 @@
     padding-right: 100px;
     width: 200px;
 }
+
 .container-menu .menu-options .options li i{
     justify-content: flex-end;
 }
