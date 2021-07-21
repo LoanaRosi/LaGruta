@@ -100,6 +100,9 @@ body.home{
 .container-menu .logo img{
     width: 100%;
 }
+.container-menu .container-buscador .container-cart-shop img{
+   
+}
 /* aca esta el nav del menu hamburguer */
 .container-menu .menu-options{
     display: none;
@@ -241,6 +244,7 @@ body.home{
         right: -1.5%;
         padding-top: 0;
         padding-right: 0;
+        
     }
     .container-menu .container-buscador .container-cart-shop img.cart-shop{
         position: absolute;
