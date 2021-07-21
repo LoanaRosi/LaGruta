@@ -1,1 +1,1 @@
-![retrospectiva](\public\img\restrospectiva.png)
+![retrospectiva](\sprint2\public\img\restrospectiva.png)
