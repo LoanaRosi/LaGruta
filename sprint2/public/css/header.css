@@ -1,8 +1,29 @@
 /* header */
+body.home{
+    background-color: var(--color-Body);
+}
 .container-menu{
     width: 100%;
     
 }
+.container-menu .container-redes-sociales{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    background-color: var(--color-Gris3);
+    display: none;
+}
+.container-menu .container-redes-sociales i{
+    padding: 3px;
+    font-size: 22px;
+    margin-left: 10px ;
+    color: var(--color-Rojo3);
+
+}
+.container-menu .container-redes-sociales i:last-child{
+    margin-right: 10px;
+}
+
 .container-menu .container-menu-nav{
     display: flex;
     align-items: center;
@@ -31,6 +52,9 @@
    padding: 5px;
    padding-top: 15px;
    color: #fff;
+}
+.container-menu .container-buscador i.fa-user-circle{
+    display: none;
 }
 .container-menu .container-buscador .buscador{
     width: 85%;
@@ -67,16 +91,18 @@
     border-bottom:2px solid #8E1212 ;
     
 }
-
+.container-buscador .nav-logo{
+    display: none;
+}
 .container-menu .logo{
   
 }
 .container-menu .logo img{
     width: 100%;
 }
-
+/* aca esta el nav del menu hamburguer */
 .container-menu .menu-options{
-
+    display: none;
 }
 
 
@@ -144,4 +170,86 @@
 
 .container-menu .menu-options .options li i{
     justify-content: flex-end;
+}
+
+@media (min-width:1024px) {
+    .container-menu .container-redes-sociales{
+        display: flex;
+    }
+
+    .container-menu .container-menu-nav{
+        display: flex;
+        align-items: center;
+        background-color: #222221;
+        padding: 25px 0;
+        position: relative;
+    }
+    .container-menu  .container-bars{
+        display: none;
+    }
+    .container-menu  .container-bars i{
+        font-size: 35px;
+        padding: 10px;
+        color: #fff;
+    }
+    
+    .container-menu .menu-buscador{
+        
+    }
+    .container-menu .container-buscador{
+        width: 100%;
+        
+    }
+    .container-buscador .nav-logo{
+        display: inline-block;
+        width: 20%;
+       margin-top: 20px;
+    }
+    .container-menu .container-buscador i{
+       font-size: 30px ;
+       margin-left: 5px;
+       padding: 5px;
+       padding-top: 15px;
+       color: var(--color-Rojo3);
+       position: relative;
+        top: -28px;
+    }
+    .container-menu .container-buscador i.fa-user-circle{
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .container-menu .container-buscador .buscador{
+        width: 45%;
+        padding: 9px;
+        font-size: 20px;
+        border: none;
+        border-radius: 4px ;
+        position: relative;
+        top: -30px;
+       margin-left: 10%;
+        
+        
+    }
+    .container-menu .container-buscador .container-cart-shop {
+        
+        
+    }
+    .container-menu .container-buscador .container-cart-shop img{
+        display: inline-block;
+        position: absolute;
+        top: -4%;
+        right: -1.5%;
+        padding-top: 0;
+        padding-right: 0;
+    }
+    .container-menu .container-buscador .container-cart-shop img.cart-shop{
+        position: absolute;
+        top:20%;
+        right: 2%;
+    }
+    .container-menu .logo{
+        position: absolute;
+        display: none;
+        left: 0;
+    }
 }
