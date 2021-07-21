@@ -1,1 +1,1 @@
-![retrospectiva](\grupo_4_LaGruta\sprint2\public\img\restrospectiva.png)
+![Retrospectiva](\sprint2\public\img\retro.png)
