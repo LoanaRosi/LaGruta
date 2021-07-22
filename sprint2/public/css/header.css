@@ -56,6 +56,15 @@ body.home{
 .container-menu .container-buscador i.fa-user-circle{
     display: none;
 }
+.container-menu .container-buscador .container-search-user{
+    display: inline-block;
+}
+.container-menu .container-buscador .container-search-user .login{
+    display: none;
+}
+.container-menu .container-buscador .container-search-user .register{
+    display: none;
+}
 .container-menu .container-buscador .buscador{
     width: 85%;
     padding: 9px;
@@ -183,6 +192,171 @@ body.home{
     justify-content: flex-end;
 }
 
+/* tablet */
+@media (min-width:768px){
+    .container-menu .container-redes-sociales{
+        display: flex;
+    }
+
+    .container-menu .container-menu-nav{
+        display: flex;
+        align-items: center;
+        background-color: var(--color-header);
+        padding: 5px 0;
+        position: relative;
+        box-shadow: 0px 0px 10px black inset,0px 0px 25px black ;
+    }
+    .container-menu .container-menu-nav .container-buscador{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .container-menu  .container-menu-bar{
+        display: none;
+    }
+    .container-menu  .container-bars{
+        display: none;
+    }
+    .container-menu  .container-bars i{
+        font-size: 35px;
+        padding: 10px;
+        color: #fff;
+    }
+    
+    .container-menu .menu-buscador{
+        
+    }
+    .container-menu .container-buscador{
+        width: 100%;
+    }
+    .container-menu .container-buscador .container-search-user{
+        margin-bottom: -4%;
+        display: flex;
+        align-items: center;
+        line-height: 3;
+        margin-left: -9%;
+    }
+    .container-menu .container-buscador .container-search-user i{
+        font-size: 26px ;
+        color: var(--color-Rojo3);
+     }
+    .container-menu .container-buscador .container-search-user a{
+        font-size: 14px;
+        font-family: var(--fontFamily-Textos);
+        color: #fff;
+        font-weight: 400;
+    }
+    .container-menu .container-buscador .container-search-user .login{
+        display: inline-block;
+    }
+    .container-menu .container-buscador .container-search-user .register{
+        display: inline-block;
+    }
+
+    .container-buscador .container-nav-logo{
+        width: 25%;
+        margin-top: 17px;
+        margin-left: -2%;
+    }
+    .container-buscador .nav-logo{
+        display: inline-block;
+        width: 100%;
+       
+    }
+
+    .container-menu .container-buscador .buscador{
+        width: 26%;
+        padding: 9px;
+        font-size: 20px;
+        border: none;
+        border-radius: 50px;
+        font-family: var(--fontFamily-Textos);
+        margin-bottom: -30px;
+        margin-left: -5%;
+        box-shadow: 0px 3px 20px black;
+        
+    }
+    .container-menu .container-buscador .container-login-register{
+        display: inline-block;
+        margin-left: -6%;
+        margin-bottom: -2.5%;
+        
+    }
+   
+    .container-menu .container-buscador i.fa-user-circle{
+        display: inline-block;
+        margin-left: 10px;
+        
+
+    }
+    .container-menu .container-buscador .container-cart-shop {
+       
+    }
+    
+    .container-menu .container-buscador .container-cart-shop img.cart-shop{
+        display: inline-block;
+        position: absolute;
+        top: 10%;
+        right: 1.9%;
+        width: 5%;
+    }
+
+    .container-menu .container-buscador .container-cart-shop img.flag-nav{
+        display: inline-block;
+        position: absolute;
+        top: 0%;
+        right: 0;
+        padding-top: 0;
+        padding-right: 0;
+        height: 80%;
+        
+    }
+    .container-menu  .container-menu-bar-pc{
+        display: block;
+    }
+    .container-menu  .container-menu-bar-pc ul{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        background-color: var(--color-Rojo2);
+    }
+    .container-menu  .container-menu-bar-pc li{
+        border-right: 1px solid var(--color-negro1);
+        padding: 15px 0;
+        width: 100%;
+        transition: background-color .6s;
+    }
+    .container-menu .container-menu-bar-pc ul li a{
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: var(--fontFamily-Textos);
+        transition: font-size .6s;
+        padding: 10px 20%;
+    }
+    .container-menu .container-menu-bar-pc ul li a:hover{
+        font-size: 11px;
+    }
+    .container-menu .container-menu-bar-pc ul li:hover{
+        background-color: #c40f0fe9;
+    }
+    .container-menu .container-menu-bar-pc .more-catalogos{
+        font-size: 40px;
+        padding: 0 10px;
+        transition: background-color .2s;
+    }
+    .container-menu .container-menu-bar-pc .more-catalogos:hover{
+        background-color: #c40f0fe9;
+    }
+    .container-menu .logo{
+        position: absolute;
+        display: none;
+        left: 0;
+    }
+}
+
 @media (min-width:1024px) {
     .container-menu .container-redes-sociales{
         display: flex;
@@ -194,8 +368,13 @@ body.home{
         background-color: var(--color-header);
         padding: 5px 0;
         position: relative;
-        
-
+        box-shadow: 0px 0px 10px black inset,0px 0px 25px black ;
+    }
+    .container-menu .container-menu-nav .container-buscador{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     .container-menu  .container-menu-bar-pc{
         display: block;
@@ -252,22 +431,39 @@ body.home{
     .container-menu .container-buscador{
         width: 100%;
     }
+    .container-menu .container-buscador .container-search-user{
+        margin-left: -5%;
+        margin-bottom: -2.8%;
+        display: flex;
+        align-items: center;
+        line-height: 3;
+        margin-left: -7%;
+    }
+    .container-menu .container-buscador .container-search-user a{
+        font-size: 14px;
+        font-family: var(--fontFamily-Textos);
+        color: #fff;
+    }
+    .container-menu .container-buscador .container-search-user .login{
+        display: inline-block;
+    }
+    .container-menu .container-buscador .container-search-user .register{
+        display: inline-block;
+    }
+
+    .container-buscador .container-nav-logo{
+        width: 28%;
+        margin-top: 17px;
+        margin-left: -2%;
+    }
     .container-buscador .nav-logo{
         display: inline-block;
-        width: 28%;
-       margin-top: 18px;
-       margin-left: 20px;
-       margin-right: -10px;
+        width: 100%;
        
     }
     .container-menu .container-buscador i{
        font-size: 30px ;
-       margin-left: 5px;
-       padding: 5px;
-       padding-top: 15px;
        color: var(--color-Rojo3);
-       position: relative;
-        top: -28px;
     }
 
     .container-menu .container-buscador .buscador{
@@ -275,28 +471,24 @@ body.home{
         padding: 9px;
         font-size: 20px;
         border: none;
-        border-radius: 50px ;
-        position: relative;
-        top: -30px;
-       margin-left: 7%;
-       font-family: var(--fontFamily-Textos);
-       
-        
+        border-radius: 50px;
+        font-family: var(--fontFamily-Textos);
+        margin-bottom: -30px;
+        margin-left: -10px;
+        box-shadow: 0px 3px 20px black;
         
     }
     .container-menu .container-buscador .container-login-register{
         display: inline-block;
-        margin-right: -6px;
+        margin-left: -6%;
+        margin-bottom: -2.5%;
         
     }
     .container-menu .container-buscador .login, .container-menu .container-buscador .register{
         color: #fff;
         font-weight: 800;
         font-size: 13px;
-        position: relative;
-        top:-35px;
         font-family: var(--fontFamily-Textos);
-         ; 
 
     }
     .container-menu .container-buscador i.fa-user-circle{
@@ -312,12 +504,9 @@ body.home{
     .container-menu .container-buscador .container-cart-shop img.cart-shop{
         display: inline-block;
         position: absolute;
-        top:15%;
-        right: 2.2%;
+        top: 10%;
+        right: 1.7%;
         width: 4.5%;
-        
-
-        
     }
 
     .container-menu .container-buscador .container-cart-shop img.flag-nav{
@@ -328,9 +517,6 @@ body.home{
         padding-top: 0;
         padding-right: 0;
         height: 70%;
-        width: 8.4%;
-        
-        
         
     }
     .container-menu .logo{
