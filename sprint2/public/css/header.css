@@ -64,6 +64,13 @@ body.home{
     border-radius: 4px ;
     
 }
+.container-menu .container-buscador .container-login-register{
+    display:none;
+    
+}
+.container-menu  .container-menu-bar-pc{
+    display: none;
+}
 .container-menu .container-menu-bar{
     
 }
@@ -95,13 +102,14 @@ body.home{
     display: none;
 }
 .container-menu .logo{
+  width: 100%;
   
 }
 .container-menu .logo img{
     width: 100%;
 }
 .container-menu .container-buscador .container-cart-shop img{
-   
+    display: none;
 }
 /* aca esta el nav del menu hamburguer */
 .container-menu .menu-options{
@@ -184,8 +192,42 @@ body.home{
         display: flex;
         align-items: center;
         background-color: #222221;
-        padding: 25px 0;
+        padding: 5px 0;
         position: relative;
+        
+    }
+    .container-menu  .container-menu-bar-pc{
+        display: block;
+    }
+    .container-menu  .container-menu-bar-pc ul{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        background-color: var(--color-Rojo2);
+    }
+    .container-menu  .container-menu-bar-pc li{
+        border-right: 1px solid var(--color-negro1);
+        padding: 10px 0;
+        width: 100%;
+        transition: background-color .6s;
+    }
+    .container-menu .container-menu-bar-pc ul li a{
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: var(--fontFamily-Textos);
+        transition: font-size .6s;
+        padding: 10px 20%;
+    }
+    .container-menu .container-menu-bar-pc ul li a:hover{
+        font-size: 15px;
+    }
+    .container-menu .container-menu-bar-pc ul li:hover{
+        background-color: #c40f0fe9;
+    }
+    
+    .container-menu  .container-menu-bar{
+        display: none;
     }
     .container-menu  .container-bars{
         display: none;
@@ -201,12 +243,13 @@ body.home{
     }
     .container-menu .container-buscador{
         width: 100%;
-        
     }
     .container-buscador .nav-logo{
         display: inline-block;
-        width: 20%;
-       margin-top: 20px;
+        width: 30%;
+       margin-top: 18px;
+       margin-left: 20px;
+       margin-right: -10px;
     }
     .container-menu .container-buscador i{
        font-size: 30px ;
@@ -217,40 +260,62 @@ body.home{
        position: relative;
         top: -28px;
     }
-    .container-menu .container-buscador i.fa-user-circle{
-        display: inline-block;
-        margin-left: 10px;
-    }
+
     .container-menu .container-buscador .buscador{
-        width: 45%;
+        width: 30%;
         padding: 9px;
         font-size: 20px;
         border: none;
         border-radius: 4px ;
         position: relative;
         top: -30px;
-       margin-left: 10%;
+       margin-left: 8%;
+       font-family: var(--fontFamily-Textos);
         
         
+    }
+    .container-menu .container-buscador .container-login-register{
+        display: inline-block;
+        margin-right: -6px;
+        
+    }
+    .container-menu .container-buscador .login, .container-menu .container-buscador .register{
+        color: #fff;
+        font-weight: 800;
+        font-size: 13px;
+        position: relative;
+        top:-35px;
+        font-family: var(--fontFamily-Textos);
+
+    }
+    .container-menu .container-buscador i.fa-user-circle{
+        display: inline-block;
+        margin-left: 10px;
+
     }
     .container-menu .container-buscador .container-cart-shop {
-        
-        
+       
     }
-    .container-menu .container-buscador .container-cart-shop img{
+    .container-menu .container-buscador .container-cart-shop img.flag-nav{
         display: inline-block;
         position: absolute;
-        top: -4%;
-        right: -1.5%;
+        top: 0%;
+        right: 0;
         padding-top: 0;
         padding-right: 0;
+        height: 70%;
+        width: 8.4%;
         
     }
     .container-menu .container-buscador .container-cart-shop img.cart-shop{
+        display: inline-block;
         position: absolute;
-        top:20%;
-        right: 2%;
+        top:15%;
+        right: 2.3%;
+        width: 4.5%;
+        
     }
+
     .container-menu .logo{
         position: absolute;
         display: none;
