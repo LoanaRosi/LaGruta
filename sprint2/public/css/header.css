@@ -191,7 +191,7 @@ body.home{
     .container-menu .container-menu-nav{
         display: flex;
         align-items: center;
-        background-color: #222221;
+        background-color: var(--color-header);
         padding: 5px 0;
         position: relative;
         
@@ -207,7 +207,7 @@ body.home{
     }
     .container-menu  .container-menu-bar-pc li{
         border-right: 1px solid var(--color-negro1);
-        padding: 10px 0;
+        padding: 15px 0;
         width: 100%;
         transition: background-color .6s;
     }
@@ -225,7 +225,14 @@ body.home{
     .container-menu .container-menu-bar-pc ul li:hover{
         background-color: #c40f0fe9;
     }
-    
+    .container-menu .container-menu-bar-pc .more-catalogos{
+        font-size: 40px;
+        padding: 0 10px;
+        transition: background-color .2s;
+    }
+    .container-menu .container-menu-bar-pc .more-catalogos:hover{
+        background-color: #c40f0fe9;
+    }
     .container-menu  .container-menu-bar{
         display: none;
     }
@@ -246,7 +253,7 @@ body.home{
     }
     .container-buscador .nav-logo{
         display: inline-block;
-        width: 30%;
+        width: 28%;
        margin-top: 18px;
        margin-left: 20px;
        margin-right: -10px;
@@ -266,10 +273,10 @@ body.home{
         padding: 9px;
         font-size: 20px;
         border: none;
-        border-radius: 4px ;
+        border-radius: 50px ;
         position: relative;
         top: -30px;
-       margin-left: 8%;
+       margin-left: 7%;
        font-family: var(--fontFamily-Textos);
         
         
@@ -296,6 +303,16 @@ body.home{
     .container-menu .container-buscador .container-cart-shop {
        
     }
+    
+    .container-menu .container-buscador .container-cart-shop img.cart-shop{
+        display: inline-block;
+        position: absolute;
+        top:15%;
+        right: 2.2%;
+        width: 4.5%;
+        
+    }
+
     .container-menu .container-buscador .container-cart-shop img.flag-nav{
         display: inline-block;
         position: absolute;
@@ -307,15 +324,6 @@ body.home{
         width: 8.4%;
         
     }
-    .container-menu .container-buscador .container-cart-shop img.cart-shop{
-        display: inline-block;
-        position: absolute;
-        top:15%;
-        right: 2.3%;
-        width: 4.5%;
-        
-    }
-
     .container-menu .logo{
         position: absolute;
         display: none;
