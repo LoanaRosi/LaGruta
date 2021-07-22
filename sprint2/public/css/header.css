@@ -195,6 +195,7 @@ body.home{
         padding: 5px 0;
         position: relative;
         
+
     }
     .container-menu  .container-menu-bar-pc{
         display: block;
@@ -257,6 +258,7 @@ body.home{
        margin-top: 18px;
        margin-left: 20px;
        margin-right: -10px;
+       
     }
     .container-menu .container-buscador i{
        font-size: 30px ;
@@ -278,6 +280,7 @@ body.home{
         top: -30px;
        margin-left: 7%;
        font-family: var(--fontFamily-Textos);
+       
         
         
     }
@@ -293,11 +296,13 @@ body.home{
         position: relative;
         top:-35px;
         font-family: var(--fontFamily-Textos);
+         ; 
 
     }
     .container-menu .container-buscador i.fa-user-circle{
         display: inline-block;
         margin-left: 10px;
+        
 
     }
     .container-menu .container-buscador .container-cart-shop {
@@ -311,6 +316,8 @@ body.home{
         right: 2.2%;
         width: 4.5%;
         
+
+        
     }
 
     .container-menu .container-buscador .container-cart-shop img.flag-nav{
@@ -322,6 +329,8 @@ body.home{
         padding-right: 0;
         height: 70%;
         width: 8.4%;
+        
+        
         
     }
     .container-menu .logo{
