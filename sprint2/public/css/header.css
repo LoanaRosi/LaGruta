@@ -11,15 +11,16 @@ body.home{
     justify-content: flex-end;
     padding: 5px;
     background-color: var(--color-Gris3);
-    display: none;
+   
 }
+
 .container-menu .container-redes-sociales i{
     padding: 3px;
     font-size: 22px;
     margin-left: 10px ;
     color: var(--color-Rojo3);
-
 }
+
 .container-menu .container-redes-sociales i:last-child{
     margin-right: 10px;
 }
@@ -29,7 +30,9 @@ body.home{
     align-items: center;
     background-color: #222221;
     padding: 16px 0;
-}
+    box-shadow: 0px 0px 10px black inset,0px 0px 25px black;
+} 
+
 .container-menu  .container-bars{
 
 }
@@ -42,9 +45,18 @@ body.home{
 .container-menu .menu-buscador{
     
 }
-.container-menu .container-buscador{
-    width: 100%;
-    margin-top: -9px;
+
+.container-menu .container-buscador .buscador{ /* barra de busqueda */
+    width: 40%;
+    padding: 4px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--fontFamily-Textos);
+    margin-bottom: 20px;
+    margin-left: 10%;
+    
+    
 }
 .container-menu .container-buscador i{
    font-size: 26px ;
@@ -52,7 +64,7 @@ body.home{
    padding: 5px;
    padding-top: 15px;
    color: #fff;
-}
+} 
 .container-menu .container-buscador i.fa-user-circle{
     display: none;
 }
@@ -65,14 +77,25 @@ body.home{
 .container-menu .container-buscador .container-search-user .register{
     display: none;
 }
-.container-menu .container-buscador .buscador{
+
+/* .container-menu .container-buscador .buscador{
     width: 85%;
     padding: 9px;
     font-size: 20px;
     border: none;
     border-radius: 4px ;
     
-}
+}  */
+
+/* .container-menu .container-menu-nav .container-buscador{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}  */
+
+
+
 .container-menu .container-buscador .container-login-register{
     display:none;
     
@@ -80,40 +103,50 @@ body.home{
 .container-menu  .container-menu-bar-pc{
     display: none;
 }
-.container-menu .container-menu-bar{
-    
-}
 
-.container-menu .container-menu-bar ul{
+div.container-menu-bar{
+    background-color: var(--color-header);
+    box-shadow: 0px 0px 10px black inset,0px 0px 25px black;
+} 
+.container-menu  .container-menu-bar ul{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    border-bottom: 1px solid #060606;
+    background-color: var(--color-Rojo2);
+    box-shadow: 0px 0px 10px black inset,0px 0px 25px black;
 }
-
-.container-menu .container-menu-bar ul li{
-    padding: 20px 0;
-    background-color: #fff;
+.container-menu  .container-menu-bar li{
+    border-right: 1px solid var(--color-negro1);
+    padding: 15px 0;
     width: 100%;
-    
+    transition: background-color .6s;
 }
-
 .container-menu .container-menu-bar ul li a{
-    font-size: 15px;
+    font-size: 10px;
     text-transform: uppercase;
-    color: #8E1212;
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+    transition: font-size .6s;
+    padding: 10px 20%;
+}
+.container-menu .container-menu-bar ul li a:hover{
+    font-size: 11px;
 }
 .container-menu .container-menu-bar ul li:hover{
-    border-bottom:2px solid #8E1212 ;
-    
+    background-color: #c40f0fe9;
 }
+
 .container-buscador .nav-logo{
     display: none;
 }
-.container-menu .logo{
-  width: 100%;
-  
+
+.container-menu-bar .logo{
+    width: 70%;
+    padding: 15px;
+    margin: auto;
 }
+
+
 .container-menu .logo img{
     width: 100%;
 }
@@ -211,7 +244,7 @@ body.home{
         display: flex;
         justify-content: space-around;
         align-items: center;
-    }
+    } 
     
     .container-menu  .container-menu-bar{
         display: none;
@@ -219,6 +252,7 @@ body.home{
     .container-menu  .container-bars{
         display: none;
     }
+
     .container-menu  .container-bars i{
         font-size: 35px;
         padding: 10px;
@@ -230,7 +264,7 @@ body.home{
     }
     .container-menu .container-buscador{
         width: 100%;
-    }
+    } 
     .container-menu .container-buscador .container-search-user{
         margin-bottom: -4%;
         display: flex;
@@ -264,9 +298,9 @@ body.home{
         display: inline-block;
         width: 100%;
        
-    }
+    } 
 
-    .container-menu .container-buscador .buscador{
+    .container-menu .container-buscador .buscador{ /* barra de busqueda */
         width: 26%;
         padding: 9px;
         font-size: 20px;
@@ -277,7 +311,7 @@ body.home{
         margin-left: -5%;
         box-shadow: 0px 3px 20px black;
         
-    }
+    } 
     .container-menu .container-buscador .container-login-register{
         display: inline-block;
         margin-left: -6%;
