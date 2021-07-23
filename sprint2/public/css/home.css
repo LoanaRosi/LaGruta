@@ -21,10 +21,11 @@
     color: #fff;
     text-align: center;
     font-family: var(--fontFamily-Titulo);
-    font-weight: 400;
+    font-weight: 200;
     margin: 10px 0;
     font-size: 20px;
     text-transform: uppercase;
+    
 }
 
 .main-home .container-catalogos{
@@ -58,43 +59,97 @@
     text-align: center;
     color: #fff;
     font-family: var(--fontFamily-Titulo);
-    font-weight: 400;
+    font-weight: 200;
     font-size: 20px;
     padding: 10px;
 }
 
 .main-home .conatiner-product{
-
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .main-home .conatiner-product article{
-
+    width: 100%;
+    margin-right: 20px;
+}
+.main-home .conatiner-product article:last-child{
+    margin-right: 0px;
 }
 
 .main-home .conatiner-product article a{
+    
+}
 
+.main-home .conatiner-product article .img-product{
+    width: 100%;
+    background-color: var(--color-Gris1);
+    border-radius: 10px 10px 0 0;
+    margin-bottom: -4px;
+    box-shadow: 0 0 40px 30px #000 inset;
 }
 
 .main-home .conatiner-product article a img{
+   width: 100%;
+   
+}
 
+.main-home .conatiner-product article .container-name-precio{
+    background-color: var(--color-negro1);
+    width: 100%;
+    box-shadow: 0 0 20px 15px #000 inset;
+    
 }
 
 .main-home .conatiner-product article h2.name-product{
-
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    padding-left: 6px;
+    
 }
 
 .main-home .conatiner-product article p.precio{
-
+    color: #fff;
+    padding-bottom:15px ;
+    padding-left: 6px;
 }
 
 .main-home .conatiner-product article .container-option-product{
-
+    display: flex;
+    width: 100%;
 }
 
-.main-home .conatiner-product article .container-option-product a{
-
+.main-home .conatiner-product article .container-option-product .option-detalle{
+    width: 50%;
+    background-color: var(--color-Rojo2);
+    padding:40px;
+    clip-path: polygon(0 100%, 50% 70%, 100% 100%, 100% 0, 50% 0, 0 0);
+    border: 1px solid #000;
+    border-right: none;
+    box-shadow: 0 0 10px  #000 inset ;
 }
 
-.main-home .conatiner-product article .container-option-product a img{
+.main-home .conatiner-product article .container-option-product .option-detalle a{
+   
+}
 
+.main-home .conatiner-product article .container-option-product .option-cart-shop{
+    width: 50%;
+    background-color: var(--color-Rojo2);
+    padding:40px;
+    clip-path: polygon(0 100%, 50% 70%, 100% 100%, 100% 0, 50% 0, 0 0);
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000 inset ;
+}
+
+.main-home .conatiner-product article .container-option-product .option-cart-shop a{
+   
+   
 }
