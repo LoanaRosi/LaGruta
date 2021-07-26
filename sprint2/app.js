@@ -10,5 +10,6 @@ app.get("/productDetail",(req,res) => res.sendFile(path.join(__dirname,"views","
 app.get("/productCart",(req,res) => res.sendFile(path.join(__dirname,"views","productCart.html")));
 app.get("/register",(req,res) => res.sendFile(path.join(__dirname,"views","register.html")));
 app.get("/login",(req,res) => res.sendFile(path.join(__dirname,"views","login.html")));
+app.get("/productos",(req,res) => res.sendFile(path.join(__dirname,"views","productos.html")));
 
 app.listen(port,()=> console.log("el puerto esta corriendo en el servidor "+ port))
