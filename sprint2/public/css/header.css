@@ -1,8 +1,7 @@
 /* header */
-body{
-    background-color: rgb(24, 24, 24);
-    box-shadow: 0 0 35px #000 inset
-    
+body.home{
+    background-color: var(--color-Body);
+    box-shadow: 0 0 20px #111 inset;
 }
 .container-menu{
     width: 100%;
