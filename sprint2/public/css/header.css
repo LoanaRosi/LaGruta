@@ -282,7 +282,7 @@ div.container-menu-bar{
         display: flex;
         align-items: center;
         line-height: 3;
-        margin-left: -9%;
+        margin-left: -8%;
     }
     
 
@@ -498,6 +498,12 @@ div.container-menu-bar{
         font-family: var(--fontFamily-Textos);
         color: #fff;
     }
+
+    .container-menu .container-buscador .container-search-user i {
+        font-size: 27px;
+        color: var(--color-Rojo3);
+    }
+
     .container-menu .container-buscador .container-search-user .login{
         display: inline-block;
     }
@@ -577,5 +583,32 @@ div.container-menu-bar{
         position: absolute;
         display: none;
         left: 0;
+    }
+}
+
+
+@media (min-width:1140px){ /* pogo esta vista porque se deforma el header en esta resolucion */
+    .container-menu .container-buscador .container-search-user {
+        margin-left: -5%;
+        margin-bottom: -2.2%;
+        display: flex;
+        align-items: center;
+        line-height: 3;
+        margin-left: -7%;
+    }
+
+    .container-menu .container-buscador .container-search-user i {
+        font-size: 28px;
+        color: var(--color-Rojo3);
+    }
+
+    .container-menu .container-buscador .container-search-user .login {
+        display: inline-block;
+        font-size: 18px;
+    }
+
+    .container-menu .container-buscador .container-search-user .register {
+        display: inline-block;
+        font-size: 18px;
     }
 }
