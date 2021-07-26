@@ -1,5 +1,5 @@
 const express = require("express");
-const path =require("path")
+const path = require("path")
 const port= 3030
 const app= express();
 
@@ -12,4 +12,4 @@ app.get("/register",(req,res) => res.sendFile(path.join(__dirname,"views","regis
 app.get("/login",(req,res) => res.sendFile(path.join(__dirname,"views","login.html")));
 app.get("/productos",(req,res) => res.sendFile(path.join(__dirname,"views","productos.html")));
 
-app.listen(port,()=> console.log("el puerto esta corriendo en el servidor "+ port))
+app.listen(port,()=> console.log("el puerto esta corriendo en el servidor "+ port));
