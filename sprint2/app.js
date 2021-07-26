@@ -11,4 +11,4 @@ app.get("/productCart",(req,res) => res.sendFile(path.join(__dirname,"views","pr
 app.get("/register",(req,res) => res.sendFile(path.join(__dirname,"views","register.html")));
 app.get("/login",(req,res) => res.sendFile(path.join(__dirname,"views","login.html")));
 
-app.listen(port,()=> console.log("el puerto esta corriendo en el servidor "+ port))
+app.listen(port,()=> console.log("el puerto esta corriendo en el servidor "+ port));
