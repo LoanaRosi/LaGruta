@@ -1,7 +1,6 @@
 /* header */
 body.home{
     background-color: var(--color-Body);
-    box-shadow: 0 0 20px #111 inset;
 }
 .container-menu{
     width: 100%;
