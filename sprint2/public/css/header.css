@@ -46,10 +46,15 @@ body.home{
     
 }
 
+.container-buscador{
+    display: flex;
+}
+
 .container-menu .container-buscador .buscador{ /* barra de busqueda */
-    width: 40%;
+    width: 80%;
     padding: 4px;
-    font-size: 20px;
+    padding-left: 20px;
+    font-size: 15px;
     border: none;
     border-radius: 50px;
     font-family: var(--fontFamily-Textos);
@@ -59,6 +64,7 @@ body.home{
     
 }
 .container-menu .container-buscador i{
+   width: 5px;
    font-size: 26px ;
    margin-left: 5px;
    padding: 5px;
