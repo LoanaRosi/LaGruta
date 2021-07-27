@@ -20,6 +20,8 @@ li{
     --color-negro1: #0E0E0E;
     --color-negro2: #060606; 
     --color-negro3: #000000; 
+    --color-negro4: #070707; /* franco: use este para la tarjeta de los productos */
+    --color-negro5: #0e0e0e; /* franco: use este para el fondo de las imagenes de los productos */
     --color-header: #222221;
 
     --color-Rojo1: #8C1111;
