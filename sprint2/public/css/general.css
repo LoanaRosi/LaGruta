@@ -12,16 +12,16 @@ li{
     list-style: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto+Slab:wght@300;400;500&display=swap');
 
 :root{
-    --fontFamily-Titulo: 'Berkshire Swash', cursive;
+    --fontFamily-Titulo: 'Lora', serif;;
     --fontFamily-Textos: 'Roboto Slab', serif;
 
     --color-negro1: #0E0E0E;
     --color-negro2: #060606; 
     --color-negro3: #000000; 
+    --color-negro4: #070707; /* franco: use este para la tarjeta de los productos */
+    --color-negro5: #0e0e0e; /* franco: use este para el fondo de las imagenes de los productos */
     --color-header: #222221;
 
     --color-Rojo1: #8C1111;
@@ -41,7 +41,7 @@ li{
 
 }
 
-
+/* Lora: Para titulos, regular 400 */
 
 /* Berkshire: Regular 400 para títulos principales y títulos de destacados. */
 
