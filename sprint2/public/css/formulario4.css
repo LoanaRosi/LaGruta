@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.formulario4 {
+    font-family: 'Lora', serif;
+    background-color: #0D0C0C;
+    color: white;
+}
+
 .formulario4 h4 {
     margin: 5px;
     padding: 5px;
-    background-color: rgb(202, 199, 199);
+    background-color: #8C1111;
 }
 
 .formulario4 .up {
@@ -35,4 +43,23 @@
 .formulario4 button a {
     text-decoration: none;
     color: rgb(54, 106, 165);
+}
+
+@media (min-width : 500px) {
+    .formulario4 {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        width: 60%;
+    }
+}
+
+@media (min-width : 768px) {
+    
+}
+
+@media (min-width : 1024px) {
+    
 }
