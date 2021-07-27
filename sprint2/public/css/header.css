@@ -1,5 +1,5 @@
 /* header */
-body.home{
+body{
     background-color: var(--color-Body);
 }
 .container-menu{
@@ -78,7 +78,6 @@ body.home{
 }
 .container-menu .container-buscador .container-search-user{
     display: inline-block;
-    f
 }
 .container-menu .container-buscador .container-search-user .login{
     display: none;

@@ -1,3 +1,10 @@
+/* colores  
+  
+ #070707 background
+
+ #0e0e0e back img
+
+*/
 /* main */
 
 body{
@@ -124,7 +131,7 @@ body{
     margin-top: 22px;
 }
 
-.main-home .conatiner-product article a img{
+.main-home .conatiner-product article a img{ /* ESTO NO VA CREO */
    width: 100%;
    
 }

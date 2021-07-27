@@ -15,4 +15,4 @@ app.get("/juegos-de-mesa",(req,res) => res.sendFile(path.join(__dirname,"views",
 app.get("/juegos-de-rol",(req,res) => res.sendFile(path.join(__dirname,"views","juegos-rol.html")));
 app.get("/juegos-de-previa",(req,res) => res.sendFile(path.join(__dirname,"views","juegos-previa.html")));
 
-app.listen(port,()=> console.log("el puerto esta corriendo en el servidor "+ port))
+app.listen(port,()=> console.log("el puerto esta corriendo en el servidor "+ port));
