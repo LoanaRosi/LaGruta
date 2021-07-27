@@ -1,7 +1,7 @@
 /* main */
 
-.home main{
-
+body{
+    background-color: var(--color-Body);
 }
 
 .main-home .container-carrusel{
