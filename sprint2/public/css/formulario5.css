@@ -1,0 +1,30 @@
+h4 {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(202, 199, 199);
+}
+
+.formulario5 form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.formulario5 input {
+    background-color: white;
+    border-style:outset;
+    padding: 8px;
+}
+
+.formulario5 button {
+    text-decoration: none;
+    background-color: white;
+    padding: 8px;
+    float: right;
+    margin-right: 20px;
+}
+
+.formulario5 button a {
+    text-decoration: none;
+    color: rgb(54, 106, 165);
+}

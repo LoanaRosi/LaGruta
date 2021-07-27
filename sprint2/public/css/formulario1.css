@@ -1,0 +1,46 @@
+.formulario1 .formu h4 {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(202, 199, 199);
+}
+
+.formulario1 form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+
+.formulario1 .sesion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.formulario1 .cuenta {
+    margin: 0;
+    padding: 0;
+}
+
+.formulario1 .sesion a {
+    color: rgb(54, 106, 165);
+    text-decoration: none;
+}
+
+.formulario1 .linea {
+    border-bottom: 1px solid grey;
+    margin: 8px;
+}
+
+.formulario1 input, select, button {
+    margin: 10px;
+    background-color: white;
+    border-style:outset;
+    padding: 8px;
+}
+
+.formulario1 button a{
+    text-decoration: none;
+    color: rgb(54, 106, 165);
+}

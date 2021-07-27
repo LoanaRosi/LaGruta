@@ -1,0 +1,39 @@
+.formulario3 h4 {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(202, 199, 199);
+}
+
+.formulario3 .datos {
+    margin: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.formulario3 form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.formulario3 input {
+    margin-bottom: 15px;
+    border-style: outset;
+    padding: 8px;
+}
+
+.formulario3 select {
+    background-color: white;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.formulario3 button {
+    text-decoration: none;
+    background-color: white;
+    padding: 8px;
+}
+
+.formulario3 button a {
+    text-decoration: none;
+    color: rgb(54, 106, 165);
+}

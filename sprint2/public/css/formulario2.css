@@ -1,0 +1,62 @@
+.formulario2 form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+
+.formulario2 form p {
+    margin: 0;
+}
+
+.formulario2 .entrega {
+    border-bottom: 1px solid grey;
+    margin: 8px;
+}
+
+.formulario2 form a {
+    text-decoration: none;
+    color: black;
+}
+
+.formulario2 h4 {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(202, 199, 199);
+}
+
+.formulario2 .entrega {
+    border-bottom: 1px solid grey;
+    margin: 20px;
+}
+
+.formulario2 .envio {
+    display: flex;
+    margin: 10px;
+}
+
+.formulario2 .envio a i {
+    margin-right: 15px;
+}
+
+.formulario2 .put {
+    display: flex;
+    margin: 10px;
+    border: solid 1px rgb(211, 208, 208);
+    padding: 20px;
+}
+
+.formulario2 .put label {
+    margin-left: 10px;
+}
+
+.formulario2 button {
+    text-decoration: none;
+    background-color: white;
+    padding: 8px;
+    margin: 10px;
+}
+
+.formulario2 button a {
+    color: rgb(54, 106, 165);
+}

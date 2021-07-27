@@ -1,0 +1,28 @@
+.formulario6 h4 {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(202, 199, 199);
+}
+
+.formulario6 article {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgb(238, 162, 149);
+    border-style: groove;
+}
+
+.formulario6 button {
+    text-decoration: none;
+    background-color: white;
+    padding: 8px;
+    float: right;
+    margin-right: 20px;
+}
+
+.formulario6 button a {
+    text-decoration: none;
+    color: rgb(54, 106, 165);
+}
