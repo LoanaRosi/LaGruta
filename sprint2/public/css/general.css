@@ -18,6 +18,7 @@ li{
 :root{
     --fontFamily-Titulo: 'Berkshire Swash', cursive;
     --fontFamily-Textos: 'Roboto Slab', serif;
+    --fontFamily-Titulo: 'Lora', serif;
 
     --color-negro1: #0E0E0E;
     --color-negro2: #060606; 
@@ -41,7 +42,7 @@ li{
 
 }
 
-
+/* Lora: Para titulos, regular 400 */
 
 /* Berkshire: Regular 400 para títulos principales y títulos de destacados. */
 
