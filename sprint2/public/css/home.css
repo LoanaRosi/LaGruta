@@ -398,8 +398,16 @@ body{
     }
 
     .main-home .contaienr-slider .container-baner-oferta .baner-oferta {
-        width: 90%;
+        width: 70%;
         justify-content: end;
+    }
+
+    .main-home .contaienr-slider .container-baner-oferta .container-img-oferta{ /* el container del las imagenes en oferta */
+        display: inline-block;
+        position: absolute;
+        right: 5.4%;
+        top: 25%;
+        width: 37%;
     }
 }
 
