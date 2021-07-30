@@ -88,14 +88,14 @@ body.home{
 }
 
  .container-menu .container-buscador .buscador{
-    width: 60%;
-    padding: 6px;
-    font-size: 20px;
+    width: 67%;
+    padding: 4px;
+    font-size: 1.2em;
     border: none;
     border-radius: 50px ;
     font-family: var(--fontFamily-Textos);
     box-shadow: 0px 3px 20px black;
-    padding-left: 10px;
+    padding-left: 15px;
     
 }  
 
@@ -402,10 +402,10 @@ div.container-menu-bar{
         color: #fff;
         font-family: var(--fontFamily-Textos);
         transition: font-size .6s;
-        padding: 10px 19%;
+        padding: 14px 22%;
     }
     .container-menu .container-menu-bar-pc ul li a:hover{
-        font-size: 11px;
+        font-size: 9px;
     }
     .container-menu .container-menu-bar-pc ul li:hover{
         background-color: #c40f0fe9;
@@ -458,10 +458,10 @@ div.container-menu-bar{
         color: #fff;
         font-family: var(--fontFamily-Textos);
         transition: font-size .6s;
-        padding: 10px 20%;
+        padding: 11px 24%;
     }
     .container-menu .container-menu-bar-pc ul li a:hover{
-        font-size: 15px;
+        font-size: 12px;
     }
     .container-menu .container-menu-bar-pc ul li:hover{
         background-color: #c40f0fe9;
