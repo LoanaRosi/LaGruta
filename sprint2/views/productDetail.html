@@ -30,16 +30,16 @@
                         <a href="/register" class="register"><i class="fas fa-plus-circle"></i></a><a href="/register" class="register">registrarte</a>
                     </div>
                     <div class="container-cart-shop">
-                        <a href="/productCart"><img src="/images/flag-5.svg" alt="carrito" class="flag-nav"> <img src="/images/cart-2.svg" alt="" class="cart-shop"></a>
+                        <a href="/productCart"><img src="/images/bandera-cart-tablet.svg" alt="carrito" class="flag-nav"> <i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
             </div>
             <div class="container-menu-bar-pc"><!-- mobile -->
                 <ul>
-                    <li><a href="#">juegos de mesa</a></li>
-                    <li><a href="#">juegos de rol</a></li>
-                    <li><a href="#">juegos de previa</a></li>
-                    <li><a href="#">todos los juegos</a></li>
+                    <li><a href="/juegos-de-mesa">juegos de mesa</a></li>
+                    <li><a href="/juegos-de-rol">juegos de rol</a></li>
+                    <li><a href="/juegos-de-previa">juegos de previa</a></li>
+                    <li><a href="/productos">todos los juegos</a></li>
                     <div class="more-catalogos"><i class="fas fa-chevron-right"></i></div>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
                 </div>
                 <ul>
                     <li><a href="/">inicio</a></li>
-                    <li><a href="#">productos</a></li>
+                    <li><a href="/productos">productos</a></li>
                     <li><a href="/productCart">carrito</a></li>
                 </ul>
                 <div class="menu-options">
@@ -60,10 +60,10 @@
                         <a href="#" class="extit-menu"><i class="fas fa-times"></i></a>
                     </div>
                     <ul class="options">
-                        <li><a href="#">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
-                        <li><a href="#">juegos de previa</a><i class="fas fa-chevron-down"></i></li>
-                        <li><a href="#">juegos de rol</a><i class="fas fa-chevron-down"></i></li>
-                        <li><a href="#">todos los juegos</a><i class="fas fa-chevron-down"></i></li>
+                        <li><a href="/juegos-de-mesa">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
+                        <li><a href="/juegos-de-previa">juegos de previa</a><i class="fas fa-chevron-down"></i></li>
+                        <li><a href="/juegos-de-rol">juegos de rol</a><i class="fas fa-chevron-down"></i></li>
+                        <li><a href="/productos">todos los juegos</a><i class="fas fa-chevron-down"></i></li>
                     </ul>
                 </div>
         </nav>
@@ -78,12 +78,15 @@
     </div>
     <section class="product-name">
         <h1>Los Inmortales</h1>
-        <article class="product">
+        <article class="product">            
             <div class="product-photo">
+            <!-- <div class="more"><i class="fas fa-chevron-left"></i></div> -->
             <img src="/images/juego-los-inmortales.png" alt="">
             <span class="price">$10.000</span>
             <span class="credit">12 cuotas de $833,33</span>
+            <!-- <div class="more"><i class="fas fa-chevron-right"></i></div> -->
         </div>
+            
         <div class="payment">
         <a href="/mediosPago"><img src="/images/visa@2x.png" alt="Visa"></a>
         <a href="/mediosPago"><img src="/images/mastercard@2x.png" alt="Mastercard"></a>
@@ -223,8 +226,30 @@
         <div class="more"><i class="fas fa-chevron-right"></i></div>
     </section>
     </main>
-    <footer>
-        <h3>Esto es el footer</h3>
+    <footer class="footer">
+        <div class="iconos">
+            <a href=""><i class="fab fa-facebook"></i></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+        </div>
+        <section>
+        <article class="pie" id="borde">
+            <h2><a href="">Contactanos</a></h2>
+            <p>No te olvides de visitar nuestras redes sociales y ponerte en contacto ante cualquier duda!</p>
+            <i class="fas fa-puzzle-piece"></i>
+        </article>
+        <article class="pie" id="borde">
+            <h2><a href="">Sobre nosotros</a></h2>
+            <p>Conocenos y enterate de todas las novedades del sitio!</p>
+            <i class="fas fa-puzzle-piece"></i>
+        </article>
+        <article class="pie">
+            <h2><a href="">Comentarios</a></h2>
+            <p>Dejanos saber cómo fue tu experiencia con nuestro sitio web!</p>
+            <i class="fas fa-puzzle-piece"></i>
+        </article>
+        </section>
+        <p class ="bot">La Gruta del Dragón. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

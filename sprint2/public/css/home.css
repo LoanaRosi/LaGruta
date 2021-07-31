@@ -505,11 +505,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Slab&display=swap');
 
-body {
+/* body {
     margin: 0;
-}
+} */
 
-footer {
+.footer {
     background-color: rgb(39, 37, 37);
     color: rgb(224, 17, 17);
 }
