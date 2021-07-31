@@ -1,0 +1,91 @@
+/* footer */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Slab&display=swap');
+
+/* body {
+    margin: 0;
+} */
+
+.footer {
+    background-color: rgb(39, 37, 37);
+    color: rgb(224, 17, 17);
+}
+
+footer .iconos {
+    text-align: center;
+    padding: 20px;
+}
+
+footer .iconos a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+footer .iconos a i {
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgb(221, 221, 221);
+    border: 2px black solid;
+    border-radius: 50%;
+}
+
+footer .pie {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .pie h2 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+footer .pie h2 a:hover {
+    color: rgb(224, 17, 17);
+}
+
+footer .pie i {
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    font-size: 25px;
+}
+
+footer .bot {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width : 768px) {
+    
+}
+
+@media (min-width : 1024px) {
+    footer .iconos {
+        margin-bottom: 30px;
+    }
+
+    footer section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer .pie {
+        width: 33%;
+    }
+
+    footer section #borde {
+        border-right: 1px solid grey;
+    }
+
+    footer .pie i {
+        border: none;
+    }
+}
+
+
