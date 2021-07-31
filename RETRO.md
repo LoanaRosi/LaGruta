@@ -1,4 +1,4 @@
-![Retrospectiva](\sprint2\public\img\retro.PNG)
+![Retrospectiva](\sprint2\public\img\retro.png)
 
 ## Hacer menos:
 * Dedicarle tanto tiempo a un tema en específico.
