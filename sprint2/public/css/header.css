@@ -88,14 +88,14 @@ body.home{
 }
 
  .container-menu .container-buscador .buscador{
-    width: 60%;
-    padding: 6px;
-    font-size: 20px;
+    width: 67%;
+    padding: 4px;
+    font-size: 1.2em;
     border: none;
     border-radius: 50px ;
     font-family: var(--fontFamily-Textos);
     box-shadow: 0px 3px 20px black;
-    padding-left: 10px;
+    padding-left: 15px;
     
 }  
 
@@ -111,6 +111,9 @@ body.home{
 .container-menu .container-buscador .container-login-register{
     display:none;
     
+}
+.container-menu .container-buscador .container-cart-shop { /* bandera del carrito y carrito superior derecha */
+       display: none;
 }
 .container-menu  .container-menu-bar-pc{
     display: none;
@@ -252,6 +255,7 @@ div.container-menu-bar{
         align-items: center;
         background-color: var(--color-header);
         padding: 5px 0;
+        padding-bottom: 25px;
         position: relative;
         box-shadow: 0px 0px 10px black inset,0px 0px 25px black ;
     }
@@ -282,16 +286,16 @@ div.container-menu-bar{
         width: 100%;
     } 
     .container-menu .container-buscador .container-search-user{
-        margin-bottom: -4%;
+        margin-bottom: -30px;
         display: flex;
         align-items: center;
-        line-height: 3;
+        line-height: 5;
         margin-left: -8%;
     }
     
 
     .container-menu .container-buscador .container-search-user i{
-        font-size: 26px ;
+        font-size: 1.2em ;
         color: var(--color-Rojo3);
     }
 
@@ -306,17 +310,20 @@ div.container-menu-bar{
         font-family: var(--fontFamily-Textos);
         color: #fff;
         font-weight: 400;
+        text-transform: uppercase;
     }
     .container-menu .container-buscador .container-search-user .login{
         display: inline-block;
+        font-size: 0.7em;
     }
     .container-menu .container-buscador .container-search-user .register{
         display: inline-block;
+        font-size: 0.7em;
     }
 
     .container-buscador .container-nav-logo{
         width: 35%;
-        margin-top: 25px; 
+        margin-top: 37px; 
         margin-left: -2%;
         padding: 10px;
     }
@@ -327,8 +334,10 @@ div.container-menu-bar{
     } 
 
     .container-menu .container-buscador .buscador{ /* barra de busqueda */
-        width: 26%;
-        font-size: 20px;
+        width: 24%;
+        font-size: .9em;
+        padding: 2px;
+        padding-left: 10px;
         border: none;
         border-radius: 50px;
         font-family: var(--fontFamily-Textos);
@@ -351,15 +360,16 @@ div.container-menu-bar{
 
     }
     .container-menu .container-buscador .container-cart-shop {
-       
+       display: inline-block;
     }
     
-    .container-menu .container-buscador .container-cart-shop img.cart-shop{
+    .container-menu .container-buscador .container-cart-shop .fa-shopping-cart{
         display: inline-block;
         position: absolute;
-        top: 10%;
-        right: 1.8%;
-        width: 4%;
+        top: 0;
+        right: 4px;
+        margin-right: 12px;
+        color: #000;
     }
 
     .container-menu .container-buscador .container-cart-shop img.flag-nav{
@@ -369,7 +379,6 @@ div.container-menu-bar{
         right: 0;
         padding-top: 0;
         padding-right: 0;
-        height: 70%;
         
     }
     .container-menu  .container-menu-bar-pc{
@@ -393,10 +402,10 @@ div.container-menu-bar{
         color: #fff;
         font-family: var(--fontFamily-Textos);
         transition: font-size .6s;
-        padding: 10px 20%;
+        padding: 14px 22%;
     }
     .container-menu .container-menu-bar-pc ul li a:hover{
-        font-size: 11px;
+        font-size: 9px;
     }
     .container-menu .container-menu-bar-pc ul li:hover{
         background-color: #c40f0fe9;
@@ -420,15 +429,8 @@ div.container-menu-bar{
     .container-menu .container-redes-sociales{
         display: flex;
     }
-
-    .container-menu .container-menu-nav{
-        display: flex;
-        align-items: center;
-        background-color: var(--color-header);
-        padding: 5px 0;
-        position: relative;
-        box-shadow: 0px 0px 10px black inset,0px 0px 25px black ;
-    }
+    
+   
     .container-menu .container-menu-nav .container-buscador{
         width: 100%;
         display: flex;
@@ -456,10 +458,10 @@ div.container-menu-bar{
         color: #fff;
         font-family: var(--fontFamily-Textos);
         transition: font-size .6s;
-        padding: 10px 20%;
+        padding: 11px 24%;
     }
     .container-menu .container-menu-bar-pc ul li a:hover{
-        font-size: 15px;
+        font-size: 12px;
     }
     .container-menu .container-menu-bar-pc ul li:hover{
         background-color: #c40f0fe9;
@@ -496,16 +498,19 @@ div.container-menu-bar{
         display: flex;
         align-items: center;
         line-height: 3;
-        margin-left: -7%;
+        margin-left: -11%;
     }
     .container-menu .container-buscador .container-search-user a{
         font-size: 14px;
         font-family: var(--fontFamily-Textos);
         color: #fff;
+        line-height: 4;
+       padding-top: 2px;
+       padding-bottom: 2px;
     }
 
     .container-menu .container-buscador .container-search-user i {
-        font-size: 27px;
+        font-size: 18px;
         color: var(--color-Rojo3);
     }
 
@@ -518,7 +523,7 @@ div.container-menu-bar{
 
     .container-buscador .container-nav-logo{
         width: 28%;
-        margin-top: 17px;
+        margin-top: 34px;
         margin-left: -2%;
     }
     .container-buscador .nav-logo{
@@ -532,23 +537,19 @@ div.container-menu-bar{
     }
 
     .container-menu .container-buscador .buscador{
-        width: 30%;
-        padding: 9px;
-        font-size: 20px;
+        width: 24%;
+        font-size: .9em;
+        padding: 4px;
+        padding-left: 10px;
         border: none;
         border-radius: 50px;
         font-family: var(--fontFamily-Textos);
         margin-bottom: -30px;
-        margin-left: -10px;
+        margin-left: -5%;
         box-shadow: 0px 3px 20px black;
         
     }
-    .container-menu .container-buscador .container-login-register{
-        display: inline-block;
-        margin-left: -6%;
-        margin-bottom: -2.5%;
-        
-    }
+
     .container-menu .container-buscador .login, .container-menu .container-buscador .register{
         color: #fff;
         font-weight: 800;
@@ -558,7 +559,7 @@ div.container-menu-bar{
     }
     .container-menu .container-buscador i.fa-user-circle{
         display: inline-block;
-        margin-left: 10px;
+        margin-left: 45px;
         
 
     }
@@ -566,12 +567,13 @@ div.container-menu-bar{
        
     }
     
-    .container-menu .container-buscador .container-cart-shop img.cart-shop{
+    .container-menu .container-buscador .container-cart-shop .fa-shopping-cart{
         display: inline-block;
         position: absolute;
-        top: 10%;
-        right: 1.3%;
+        top: 0;
         width: 3%;
+        color: #000;
+        margin-right: 21px;
     }
 
     .container-menu .container-buscador .container-cart-shop img.flag-nav{
@@ -581,7 +583,6 @@ div.container-menu-bar{
         right: 0;
         padding-top: 0;
         padding-right: 0;
-        height: 70%;
         
     }
     .container-menu .logo{
@@ -595,30 +596,25 @@ div.container-menu-bar{
 @media (min-width:1140px){ /* pogo esta vista porque se deforma el header en esta resolucion */
     .container-menu .container-buscador .container-search-user {
         margin-left: -5%;
-        margin-bottom: -2.2%;
+        margin-bottom: -3%;
         display: flex;
         align-items: center;
         line-height: 3;
-        margin-left: -7%;
+        margin-left: -12%;
     }
 
     .container-menu .container-buscador .container-search-user i {
-        font-size: 28px;
+        font-size: 19px;
         color: var(--color-Rojo3);
     }
 
-    .container-menu .container-buscador .container-search-user .login {
-        display: inline-block;
-        font-size: 18px;
+    .container-menu .container-buscador .container-search-user .login .fa-user-circle {
+        margin-left: 50px;
     }
 
-    .container-menu .container-buscador .container-search-user .register {
-        display: inline-block;
-        font-size: 18px;
-    }
-
-    .container-menu .container-buscador .container-cart-shop img.cart-shop{
-        right: 1.2%;
+    .container-menu .container-buscador .container-cart-shop .fa-shopping-cart{
+       width: 2.7%;
+       margin-right: 17px;
         
     }
 }
