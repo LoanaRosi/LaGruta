@@ -1,0 +1,593 @@
+
+/* main home*/
+
+.main-home .container-carrusel{
+    width: 100%;
+}
+
+.main-home .container-carrusel a{
+
+}
+
+.main-home .container-carrusel img{
+    width: 100%;
+
+}
+.main-home .main-category{
+
+}
+
+.main-home h3.titulo-categorias{
+    color: #fff;
+    text-align: center;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 200;
+    margin: 10px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
+
+.main-home .container-catalogos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-home .container-catalogos .catalogo {  /* aca esta el la categoria que se muestra con una img */
+    width: 80%;
+    margin: 0 auto;
+    background-color: #0e0e0e;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    
+}
+
+.main-home .container-catalogos article img{  /* img de la categoria que se quire mostrar */
+    width: 95%;
+    margin: 0 auto;
+}
+
+.main-home .container-titulo-destacados{  /* el container de titulo destacados */
+    background-color: var(--color-Body);
+    background-image: url("/images/bandera-product-4.svg");
+    background-repeat:no-repeat;
+    margin: 0 auto;
+    background-position: center;
+    height: 70px;
+    width: 100%;
+    
+}
+
+.main-home .container-titulo-destacados .destacados{  /* el titulo de destacados */
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 200;
+    font-size: 20px;
+    padding: 10px;
+    padding-top: 27px;
+}
+
+
+/* espacio de los productos------------------------------------- */
+.main-home .conatiner-product{  /* este es el container de todos los articles dentro del section */
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.main-home .conatiner-product article {  /* el container del producto */
+    width: 44%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    margin: 10px 7px;
+    border: 2px solid transparent;
+    transition: border .1s;
+}
+
+.main-home .conatiner-product article:hover{
+    border: 2px solid var(--color-Rojo2);
+}
+
+.main-home .conatiner-product .conatiner-inside-article{ /* contenedor de lo que esta dentro del ariculo */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-home .conatiner-product article .container-img {  /* el contenedor de la imagen del producto  */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: -4px;
+    /* box-shadow: 0 0 40px 20px #000 inset; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* background-color: #070707; */
+    background: #070707;
+}
+
+.main-home .conatiner-product article .img-product { /* la imagen del producto */
+    width: 90%;
+    background-color: #0e0e0e;
+    margin-top: 22px;
+}
+
+.main-home .conatiner-product article a img{ /* ESTO NO VA CREO */
+   width: 100%;
+   
+}
+
+
+
+.main-home .conatiner-product article .container-name-precio { /* el contenedor del nombre del producto y el precio */
+    width: 100%;
+    /* box-shadow: 0 0 20px 15px #000 inset, 0 0 10px -5px var(--color-Rojo2); */
+    background-color: #070707;
+    /* align-items: center; */
+    text-align: center;
+}
+
+.main-home .conatiner-product article h2.name-product { /* nombre del producto  */
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    /* padding-left: 6px; */
+}
+
+.main-home .conatiner-product article p.precio { /* precio del producto */
+    color: #fff;
+    padding-bottom: 1em;
+    /* padding-left: 6px; */
+    font-size: 16px;
+}
+
+.main-home .conatiner-product article .container-option-product { /* container del vista detalle y carrito con sus iconos */
+    display: flex;
+    width: 100%;
+    /* box-shadow: 0 3px 10px -5px var(--color-Rojo2); */
+    /* border-radius: 0 0px 20px 20px; */
+}
+
+.main-home .conatiner-product article .container-option-product .option-detalle { /* cotainer del opcion vista detalle */
+    width: 50%;
+    border-radius: 0 0 0 4px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4px;
+    background: #070707;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+
+.main-home .conatiner-product article .container-option-product .option-detalle a{ 
+    color: #fff;
+    font-size: 19px;
+    transition: color .3s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+
+.main-home .conatiner-product article .container-option-product .option-detalle a i{
+    margin-top: 3.9px;
+}
+
+.main-home .conatiner-product article .container-option-product .option-detalle a p{ /* texto devajo del icono del ojo */
+    font-size: .7em;
+}
+
+.main-home .conatiner-product article .container-option-product .option-detalle a:hover{
+    color: var(--color-Rojo2);
+}
+
+.main-home .conatiner-product article .container-option-product .option-cart-shop {
+    width: 50%;
+    box-shadow: 0 0 10px #000 inset;
+    border-radius: 0 0 4px 0;
+    display: flex;
+    justify-content: center;
+    background: #070707;
+}
+
+.main-home .conatiner-product article .container-option-product .option-cart-shop a{
+    color: #fff;
+    font-size: 19px;
+    transition: color .3s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.main-home .conatiner-product article .container-option-product .option-cart-shop a i{
+
+}
+
+.main-home .conatiner-product article .container-option-product .option-cart-shop a p{
+    font-size: .7em;
+    line-height: 1.3;
+}
+
+.main-home .conatiner-product article .container-option-product .option-cart-shop a:hover{
+    color: var(--color-Rojo2);
+}
+
+
+/* cierre de espacio de productos------------------------------------- */
+
+
+/* espacio de ofertas del slider */
+
+.main-home .botton-full-productos{  /* contenedor de el boton para ver todos los productos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.main-home .botton-full-productos a{ /* boton para ver los productos */
+    font-family: var(--fontFamily-Textos);
+    color: #fff;
+    font-size: 20px;
+    transition: color .2s;
+    text-decoration: #000;
+    padding: 10px 15%;
+    background: var(--color-Rojo2);
+    border-radius: 4px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.main-home .botton-full-productos a:hover{
+    color: #000;
+}
+
+.main-home .contaienr-slider{ /* contenedor del slider de ofertas */
+    margin-bottom: 30px;
+}
+
+
+
+.main-home .contaienr-slider .container-baner-oferta{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.main-home .contaienr-slider .container-silder-oferta{
+    display: inline-block;
+    position: absolute;
+    left: 22%;
+    bottom: 45%;
+}
+
+.main-home .contaienr-slider .container-baner-oferta .slider-ofertas{ /* aca esta el titulo que dice ofertas */
+    
+    font-size: 130%;
+}
+
+.main-home .contaienr-slider .container-baner-oferta .baner-oferta{ /* imagen de la bandera */
+    width: 90%;
+    justify-content: end;
+}
+
+.main-home .contaienr-slider .container-baner-oferta .container-img-oferta{ /* el container del las imagenes en oferta */
+    display: inline-block;
+    position: absolute;
+    right: 5.4%;
+    top: 25%;
+    width: 50%;
+}
+
+.main-home .contaienr-slider .container-baner-oferta .container-img-oferta .fa-angle-left{ /* icono flecha izquierda */
+    position: absolute;
+    top: 43%;
+    left: 6px;
+    font-size: 25px;
+}
+
+.main-home .contaienr-slider .container-baner-oferta .container-img-oferta .fa-angle-right{ /* icono flecha derecha */
+    position: absolute;
+    top: 43%;
+    right: 7px;
+    font-size: 25px;
+}
+
+.main-home .contaienr-slider .container-baner-oferta .container-img-oferta .img-oferta{ /* aca estan las imagenes del slider */
+    width: 100%;
+}
+
+
+
+/* vista tablet ---------------------------------*/
+
+@media (min-width:768px) {
+
+    /* parte baner y catalogos */
+
+    .main-home .container-catalogos{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .main-home .container-catalogos .catalogo {  /* aca esta el la categoria que se muestra con una img */
+        width: 31%;
+        margin: 0 auto;
+        background-color: #0e0e0e;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+
+    /* parte productos */
+
+    .main-home .container-titulo-destacados{  /* el container de titulo destacados */
+        border: none;
+        border-right: none;
+        border-left: none;
+        background-color: var(--color-Body);
+        background-image: url("/images/bandera-product-4.svg");
+        background-repeat:no-repeat;
+        box-shadow: none;
+        margin: 0 auto;
+        background-position: center;
+        height: 70px;
+
+        
+    }
+    
+    .main-home .container-titulo-destacados .destacados{  /* el titulo de destacados */
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        font-family: var(--fontFamily-Titulo);
+        font-weight: 200;
+        font-size: 20px;
+        padding: 10px;
+        padding-top: 27px;
+    }
+
+
+    .main-home .conatiner-product article {
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        margin: 10px 7px;
+        border: 2px solid transparent;
+        transition: border .1s;
+    }
+
+    .main-home .botton-full-productos a{ /* boton para ver los productos */
+        font-size: 20px;
+        padding: 10px 4%;
+    }
+
+    .main-home .contaienr-slider .container-baner-oferta{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .main-home .contaienr-slider .container-baner-oferta .baner-oferta {
+        width: 70%;
+        justify-content: end;
+    }
+
+    .main-home .contaienr-slider .container-baner-oferta .container-img-oferta{ /* el container del las imagenes en oferta */
+        display: inline-block;
+        position: absolute;
+        right: 5.4%;
+        top: 25%;
+        width: 37%;
+    }
+}
+
+@media (min-width:1024px) {
+
+    /* parte baner y catalogos */
+
+    .main-home .container-carrusel{
+        width: 100%;
+    }
+
+    .main-home h3.titulo-categorias{
+        color: #fff;
+        text-align: center;
+        font-family: var(--fontFamily-Titulo);
+        font-weight: 200;
+        font-size: 26px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        
+    }
+
+    .main-home .container-catalogos{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    
+    .main-home .container-catalogos .catalogo {  /* aca esta el la categoria que se muestra con una img */
+        width: 29%;
+        margin: 20px 9px;
+        margin-top: 10px;
+    }
+
+    .main-home .container-catalogos .catalogo img{
+        transition: transform .4s ;
+    }
+
+    .main-home .container-catalogos .catalogo:hover >img{
+        transform: scale(1.1);
+    }
+
+    /* parte productos */
+
+
+    .main-home .conatiner-product article {
+        width: 19%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        margin: 10px 10px;
+        border: 2px solid transparent;
+        transition: border .1s;
+    }
+
+    .main-home .botton-full-productos a{ /* boton para ver los productos */
+        font-size: 20px;
+        padding: 10px 4%;
+        margin-top: 40px;
+    }
+
+    .main-home .contaienr-slider .container-baner-oferta{  /* slider con forma de bandera */
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        margin-top: 100px;
+    }
+
+    .main-home .contaienr-slider .container-baner-oferta .baner-oferta {
+        width: 60%;
+        justify-content: end;
+    }
+
+    .main-home .contaienr-slider .container-baner-oferta .container-img-oferta {
+        display: inline-block;
+        position: absolute;
+        right: 3.2%;
+        top: 25%;
+        width: 34%;
+    }
+}
+
+@media (min-width:1140px){
+
+    .main-home .contaienr-slider .container-baner-oferta .baner-oferta {  /* img de slider con forma de bandera */
+        width: 52%;
+        justify-content: end;
+    }
+
+    .main-home .contaienr-slider .container-baner-oferta .container-img-oferta {  /* imagen dentro del slider */
+        display: inline-block;
+        position: absolute;
+        right: 2.5%;
+        top: 25%;
+        width: 30%;
+    }
+}
+
+/* footer */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Slab&display=swap');
+
+/* body {
+    margin: 0;
+} */
+
+.footer {
+    background-color: rgb(39, 37, 37);
+    color: rgb(224, 17, 17);
+}
+
+footer .iconos {
+    text-align: center;
+    padding: 20px;
+}
+
+footer .iconos a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+footer .iconos a i {
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgb(221, 221, 221);
+    border: 2px black solid;
+    border-radius: 50%;
+}
+
+footer .pie {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .pie h2 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+footer .pie h2 a:hover {
+    color: rgb(224, 17, 17);
+}
+
+footer .pie i {
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    font-size: 25px;
+}
+
+footer .bot {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width : 768px) {
+    
+}
+
+@media (min-width : 1024px) {
+    footer .iconos {
+        margin-bottom: 30px;
+    }
+
+    footer section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer .pie {
+        width: 33%;
+    }
+
+    footer section #borde {
+        border-right: 1px solid grey;
+    }
+
+    footer .pie i {
+        border: none;
+    }
+}
+
+
