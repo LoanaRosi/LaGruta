@@ -16,6 +16,7 @@ li{
 :root{
     --fontFamily-Titulo: 'Lora', serif;;
     --fontFamily-Textos: 'Roboto Slab', serif;
+    --fontFamily-Titulo: 'Lora', serif;
 
     --color-negro1: #0E0E0E;
     --color-negro2: #060606; 
