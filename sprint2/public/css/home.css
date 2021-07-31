@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-/* colores  
-  
- #070707 background
 
- #0e0e0e back img
-
-*/
-/* main */
-
-body{
-    background-color: var(--color-Body);
-}
+/* main home*/
 
 .main-home .container-carrusel{
     width: 100%;
@@ -510,7 +499,7 @@ body{
         width: 30%;
     }
 }
-=======
+
 /* footer */
 
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
@@ -602,4 +591,3 @@ footer .bot {
 }
 
 
->>>>>>> 04e89a1d4afaaa2c0a28830499d85a6c6e242f58
