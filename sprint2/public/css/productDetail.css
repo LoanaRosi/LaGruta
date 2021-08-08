@@ -21,29 +21,38 @@ margin: 40px 0;
 
 .product-detail .main-products .breadcrumbs span{
     color: whitesmoke;
+
 }
 
 .product-detail .product-name h1{
-text-transform: uppercase;
-font-family: var(--fontFamily-Titulo);
-font-size: 1rem;
-color: white;
-text-align: center;
-margin: 20px 0;
-}
+    text-transform: uppercase;
+    font-family: var(--fontFamily-Titulo);
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    }
 
-.product-detail .product-name article .product-photo img{
+    .product-detail .product-name .product-photo-big img{
+        display: block;
+        width: 60%;
+        background-color: var(--color-negro4);
+        border: 1.5px solid var(--color-Rojo2);
+        border-radius: 5px;
+        margin: 10px auto;    
+    }
+
+ .product-detail .product-name .product-photo-small img{
+    display: none;
+           
+}  
+
+.product-detail .product-info span{
     display: block;
-    width: 60%;
-    background-color: var(--color-negro4);
-    border: 1.5px solid var(--color-Rojo2);
-    border-radius: 5px;
-    margin: 10px auto;    
-}
-
-.product-detail .product span{
     font-family: var(--fontFamily-Textos);
     color: white;
+    text-align: center;
+    margin: 10px;
 }
 
 .product-detail .product .price{
@@ -123,7 +132,7 @@ margin: 20px 0;
     border: none;
 }
 
-.product-detail .product .envio { /* Medios de envio */
+.product-detail .product-name .envio { /* Medios de envio */
     border: 1px solid whitesmoke;
     border-radius: 7px;
     width: 70%;
@@ -266,6 +275,11 @@ margin: 20px 0;
     padding: 30px 0;
 } 
 
+.product-detail .productos-relacionados article{
+    margin-bottom: 20px;
+}
+
+
 .product-detail .productos-relacionados img{
     width: 70%;
     
@@ -316,9 +330,40 @@ margin: 20px 0;
 
 @media (min-width:768px){
 
-    .product-detail .product-name article .product-photo img{
-        width: 40%;            
+    .product-detail .product-name .product{
+        display: flex;
+        margin: 0 50px;
     }
+    
+    .product-detail .product-name .product-photo-big img{
+       /*  display: flex; */
+        width: 100%;
+        background-color: var(--color-negro4);
+        border: 1.5px solid var(--color-Rojo2);
+        border-radius: 5px;
+        margin: 10px auto;  
+    }
+    
+    .product-detail .product-name .product-photo-small{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 30px;
+        justify-content: space-between; 
+    }
+    
+    .product-detail .product-name .product-photo-small img{
+        display: initial;
+        width: 20%;
+        background-color: var(--color-negro4);
+        border-radius: 5px;
+    
+            
+    } 
+    
+    .product-detail .product-name .product-photo-small img:hover{
+        border: 2px solid var(--color-Rojo2);
+            
+    } 
 
     .product-detail .product .price{
         font-size: 1.2rem ;
@@ -339,8 +384,9 @@ margin: 20px 0;
                     
     }
 
-    .product-detail .product .envio { /* Medios de envio */
-        width: 40%;        
+    .product-detail .product-name .envio { /* Medios de envio */
+        width: 40%;
+    
     }
 
     .product-detail .product-name .info { /* todo el contenedor de la tabla */
@@ -356,7 +402,7 @@ margin: 20px 0;
     }
 
     .product-detail .productos-relacionados{ /* contenedor */
-        margin: 0 -15%;
+        margin: auto -70px;
     }
 
 }
@@ -365,9 +411,7 @@ margin: 20px 0;
 
 @media (min-width:1024px){
 
-    .product-detail .product-name article .product-photo img{
-        width: 35%;            
-    }
+  
 
     .product-detail .product .price{
     font-size: 1.5rem ;
@@ -401,9 +445,11 @@ margin: 20px 0;
                     
     }
 
-    .product-detail .product .envio { /* Medios de envio */
-        width: 30%;        
+    .product-detail .product-name .envio { /* Medios de envio */
+        width: 30%;
+    
     }
+
 
     .product-detail .product-name .info { /* todo el contenedor de la tabla */
         margin-left: 36%;
@@ -421,4 +467,27 @@ margin: 20px 0;
         width: 100%;
     }
 
+}
+
+@media (min-width:1140px){
+
+    .product-detail .product-name .envio { /* Medios de envio */
+        width: 25;
+    
+    }
+
+    .product-detail .product-name .info { /* todo el contenedor de la tabla */
+        margin-left: 37.5%;
+    }
+
+    .product-detail .productos-relacionados{ /* contenedor */
+        margin: 0 -27%;
+        width: 100%;
+    }
+
+    .product-detail .productos-relacionados .product-5{
+        display: initial;
+        width: 45%; 
+        height: 40%;
+    }
 }
