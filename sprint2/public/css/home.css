@@ -1,4 +1,3 @@
-
 /* main home*/
 
 .main-home .container-carrusel{
@@ -240,79 +239,149 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
+    background-color: var(--color-Gris1);
+    padding: 50px 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-home .botton-full-productos h2{
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 400;
+   
+}
+
+.main-home .botton-full-productos .more-product-p{ /* container de la p */
+    display: flex;
+}
+
+.main-home .botton-full-productos .more-product-p p{ /* p de la frase para mas productos */
+    color: rgb(192, 192, 192);
+    text-transform: capitalize;
+    font-size: 17px;
+    text-align: center;
 }
 
 .main-home .botton-full-productos a{ /* boton para ver los productos */
     font-family: var(--fontFamily-Textos);
     color: #fff;
-    font-size: 20px;
-    transition: color .2s;
+    font-size: 15px;
+    transition: background-color .2s;
     text-decoration: #000;
-    padding: 10px 15%;
-    background: var(--color-Rojo2);
-    border-radius: 4px;
-    border: 1px solid #fff;
-    box-shadow: 0 0 10px #000 inset;
+    padding: 10px 4%;
+    margin-top: 20px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    text-transform: capitalize;
+    background-color: var(--color-Rojo2);
 }
 
 .main-home .botton-full-productos a:hover{
-    color: #000;
-}
-
-.main-home .contaienr-slider{ /* contenedor del slider de ofertas */
-    margin-bottom: 30px;
+    background-color: #000;
 }
 
 
 
-.main-home .contaienr-slider .container-baner-oferta{
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
+
+.main-home .main-category .container-ofertas{
+
 }
 
-.main-home .contaienr-slider .container-silder-oferta{
-    display: inline-block;
-    position: absolute;
-    left: 22%;
-    bottom: 45%;
-}
-
-.main-home .contaienr-slider .container-baner-oferta .slider-ofertas{ /* aca esta el titulo que dice ofertas */
-    
-    font-size: 130%;
-}
-
-.main-home .contaienr-slider .container-baner-oferta .baner-oferta{ /* imagen de la bandera */
-    width: 90%;
-    justify-content: end;
-}
-
-.main-home .contaienr-slider .container-baner-oferta .container-img-oferta{ /* el container del las imagenes en oferta */
-    display: inline-block;
-    position: absolute;
-    right: 5.4%;
-    top: 25%;
-    width: 50%;
-}
-
-.main-home .contaienr-slider .container-baner-oferta .container-img-oferta .fa-angle-left{ /* icono flecha izquierda */
-    position: absolute;
-    top: 43%;
-    left: 6px;
-    font-size: 25px;
-}
-
-.main-home .contaienr-slider .container-baner-oferta .container-img-oferta .fa-angle-right{ /* icono flecha derecha */
-    position: absolute;
-    top: 43%;
-    right: 7px;
-    font-size: 25px;
-}
-
-.main-home .contaienr-slider .container-baner-oferta .container-img-oferta .img-oferta{ /* aca estan las imagenes del slider */
+.main-home .main-category .container-ofertas .container-titulo-oferta{
+    background-color: var(--color-Body);
+    background-image: url("/images/bandera-product-4.svg");
+    background-repeat:no-repeat;
+    margin: 0 auto;
+    background-position: center;
+    height: 70px;
     width: 100%;
+    margin-bottom: 70px;
+}
+
+.main-home .main-category .container-ofertas .container-titulo-oferta .title-oferta{
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 200;
+    font-size: 20px;
+    padding: 10px;
+    padding-top: 27px;
+
+}
+
+.main-home .main-category .container-ofertas .product-oferta{
+    display: flex;
+    background-color: var(--color-negro4);
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+.main-home .main-category .container-ofertas .product-oferta .container-img-oferta{
+    width: 150px;
+}
+
+.main-home .main-category .container-ofertas .product-oferta .container-img-oferta img{
+    width: 95%;
+    background-color: var(--color-negro5);
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.main-home .main-category .container-ofertas .product-oferta .detail-oferta{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.main-home .main-category .container-ofertas .product-oferta .detail-oferta h4{
+    color: #fff;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 400;
+    text-transform: uppercase;
+
+
+}
+
+.main-home .main-category .container-ofertas .product-oferta .detail-oferta p.precio-old{
+    color: #fff;
+    text-decoration:line-through;
+
+}
+
+.main-home .main-category .container-ofertas .product-oferta .detail-oferta p.new-oferta{
+    color: #fff;
+    margin-top: -10px;
+}
+
+.main-home .main-category .container-ofertas .product-oferta .detail-oferta button{
+    color: #000;
+    padding: 10px 0;
+    width: 150px;
+    font-family: var(--fontFamily-Textos);
+    font-size: 16px;
+    font-weight: 450;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    transition: background-color .3s;
+    margin-bottom: 20px
+}
+
+.main-home .main-category .container-ofertas .product-oferta .detail-oferta button:hover{
+    background-color: var(--color-Rojo2);
 }
 
 
@@ -377,28 +446,126 @@
         transition: border .1s;
     }
 
+    .main-home .botton-full-productos h2{
+        font-size: 26px;
+    }
+  
+
+    .main-home .botton-full-productos{  /* contenedor de el boton para ver todos los productos */
+        padding: 50px 0;
+    }
+
+    .main-home .botton-full-productos .more-product-p p{ /* p de la frase para mas productos */
+        font-size: 18px;
+    }
+
     .main-home .botton-full-productos a{ /* boton para ver los productos */
+        font-size: 17px;
+        padding: 10px 2%;
+        margin-top: 50px;
+    }
+
+
+    .main-home .main-category .container-ofertas{
+
+    }
+    
+    .main-home .main-category .container-ofertas .container-titulo-oferta{
+        background-color: var(--color-Body);
+        background-image: url("/images/bandera-product-4.svg");
+        background-repeat:no-repeat;
+        margin: 0 auto;
+        background-position: center;
+        height: 70px;
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    
+    .main-home .main-category .container-ofertas .container-titulo-oferta .title-oferta{
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        font-family: var(--fontFamily-Titulo);
+        font-weight: 200;
         font-size: 20px;
-        padding: 10px 4%;
+        padding: 10px;
+        padding-top: 27px;
+    
     }
 
-    .main-home .contaienr-slider .container-baner-oferta{
+    .main-home .main-category .container-ofertas .container-products-oferta{
         display: flex;
-        justify-content: flex-end;
-        position: relative;
+        flex-wrap: wrap;
+        
     }
-
-    .main-home .contaienr-slider .container-baner-oferta .baner-oferta {
-        width: 70%;
-        justify-content: end;
+    
+    .main-home .main-category .container-ofertas .product-oferta{
+        display: flex;
+        background-color: var(--color-negro4);
+        width: 48%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        border-radius: 2px;
     }
-
-    .main-home .contaienr-slider .container-baner-oferta .container-img-oferta{ /* el container del las imagenes en oferta */
-        display: inline-block;
-        position: absolute;
-        right: 5.4%;
-        top: 25%;
-        width: 37%;
+    
+    .main-home .main-category .container-ofertas .product-oferta .container-img-oferta{
+        width: 140px;
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .container-img-oferta img{
+        width: 95%;
+        background-color: var(--color-negro5);
+        display: flex;
+        justify-content: center;
+        margin: 12px;
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta{
+        margin-left: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta h3{
+        color: #fff;
+        font-family: var(--fontFamily-Titulo);
+        font-weight: 400;
+        text-transform: uppercase;
+    
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta p.precio-old{
+        color: #fff;
+        text-decoration:line-through;
+    
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta p.new-oferta{
+        color: #fff;
+        margin-top: -10px;
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta button{
+        color: #000;
+        padding: 10px 0;
+        width: 150px;
+        font-family: var(--fontFamily-Textos);
+        font-size: 16px;
+        font-weight: 450;
+        text-transform: uppercase;
+        background-color: #fff;
+        border: none;
+        border-radius: 50px;
+        transition: background-color .3s;
+        margin-bottom: 20px;
+        
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta button:hover{
+        background-color: var(--color-Rojo2);
     }
 }
 
@@ -440,7 +607,7 @@
         transition: transform .4s ;
     }
 
-    .main-home .container-catalogos .catalogo:hover >img{
+    .main-home .container-catalogos .catalogo a:hover >img{
         transform: scale(1.1);
     }
 
@@ -457,47 +624,91 @@
         transition: border .1s;
     }
 
-    .main-home .botton-full-productos a{ /* boton para ver los productos */
-        font-size: 20px;
-        padding: 10px 4%;
-        margin-top: 40px;
+
+    .main-home .botton-full-productos{  /* contenedor de el boton para ver todos los productos */
+        padding: 65px 0;
     }
 
-    .main-home .contaienr-slider .container-baner-oferta{  /* slider con forma de bandera */
+    .main-home .botton-full-productos .more-product-p p{ /* p de la frase para mas productos */
+        font-size: 17px;
+    }
+
+    .main-home .main-category .container-ofertas .container-products-oferta{
         display: flex;
-        justify-content: flex-end;
-        position: relative;
-        margin-top: 100px;
+        flex-wrap: wrap;
+        
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta{
+        display: flex;
+        background-color: var(--color-negro4);
+        width: 32%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-radius: 2px;
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .container-img-oferta{
+        width: 130px;
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .container-img-oferta img{
+        width: 95%;
+        background-color: var(--color-negro5);
+        display: flex;
+        justify-content: center;
+        margin: 12px;
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta{
+        margin-left: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta h4{
+        color: #fff;
+        font-family: var(--fontFamily-Titulo);
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 14px;
+    
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta p.precio-old{
+        color: #fff;
+        text-decoration: line-through;
+        margin-bottom: 10px;
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta p.new-oferta{
+        color: #fff;
+        margin-top: -10px;
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta button{
+        color: #000;
+        padding: 10px 0;
+        width: 130px;
+        font-family: var(--fontFamily-Textos);
+        font-size: 16px;
+        font-weight: 450;
+        text-transform: uppercase;
+        background-color: #fff;
+        border: none;
+        border-radius: 50px;
+        transition: background-color .3s;
+        margin-bottom: 20px
+        
+    }
+    
+    .main-home .main-category .container-ofertas .product-oferta .detail-oferta button:hover{
+        background-color: var(--color-Rojo2);
     }
 
-    .main-home .contaienr-slider .container-baner-oferta .baner-oferta {
-        width: 60%;
-        justify-content: end;
-    }
-
-    .main-home .contaienr-slider .container-baner-oferta .container-img-oferta {
-        display: inline-block;
-        position: absolute;
-        right: 3.2%;
-        top: 25%;
-        width: 34%;
-    }
-}
-
-@media (min-width:1140px){
-
-    .main-home .contaienr-slider .container-baner-oferta .baner-oferta {  /* img de slider con forma de bandera */
-        width: 52%;
-        justify-content: end;
-    }
-
-    .main-home .contaienr-slider .container-baner-oferta .container-img-oferta {  /* imagen dentro del slider */
-        display: inline-block;
-        position: absolute;
-        right: 2.5%;
-        top: 25%;
-        width: 30%;
-    }
 }
 
 /* footer */
