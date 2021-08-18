@@ -1,0 +1,167 @@
+.vista-register{
+
+}
+
+.vista-register .register{ /* container main */
+    background-color: var(--color-negro5);
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.vista-register .register h2{
+    font-family: var(--fontFamily-Titulo);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    background-color: var(--color-negro4);
+    padding: 10px;
+    
+}
+
+.vista-register .register .option-register{ /* container de opciones alternativas de registro, facebook, gmail */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.vista-register .register .option-register a{ /* afecta a las ocipondes de registro facebook y gmail */
+    width: 100%;
+    color: var(--color-Rojo2);
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--fontFamily-Textos);
+    font-weight: 400;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: var(--color-negro4);
+    align-items: center;
+    border-radius: 3px;
+
+}
+
+.vista-register .register .option-register a i{
+    color: var(--color-Rojo3);
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.vista-register .register .option-register span{
+       width: 90%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+
+/* ----------------parte de los inputs de usuario--------------------- */
+
+.vista-register .register .box-form{ /* contenedor de los formularios */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px
+}
+
+
+
+.vista-register .register .box-form input{ /* todos los inputs del formulario */
+    padding: 8px;
+    border:1px solid var(--color-Gris1);
+    font-family: var(--fontFamily-Textos);
+    background-color: var(--color-negro4);
+    border-radius: 3px;
+    color: #fff;
+ 
+}
+
+.vista-register .register .box-form label{ /* label de condiciones */
+    color: #fff;
+    text-transform: capitalize;
+    margin-right: 10px;
+}
+
+.vista-register .register .condiciones{ /* checkbox para las condiciones */
+    display: flex;
+    flex-direction: row;
+    padding: 20px 10px;
+    align-items: center;
+}
+
+.vista-register .register .box-button{
+    padding-bottom: 20px;
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.vista-register .register .box-button button{
+    padding: 12px;
+    width: 98%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-family: var(--fontFamily-Textos);
+    text-transform: uppercase;
+    
+}
+
+.vista-register .register .box-button button:hover{
+    background-color: var(--color-Rojo3);
+    color: #fff;
+}
+
+@media (min-width:768px) {
+
+    .vista-register .register{ /* container main */
+        width: 80%;
+    }
+}
+
+@media (min-width:1024px) {
+
+    .vista-register .register{ /* container main */
+        width: 70%;
+    }
+
+    
+    .vista-register .register .option-register{ /* container de opciones alternativas de registro, facebook, gmail */
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        flex-direction: row;
+        border-bottom: 1px solid #fff;
+        padding: 20px 0px;
+        margin-bottom: 30px;
+
+    }
+
+    .vista-register .register .option-register span{
+     display: none;
+    }
+
+    .vista-register .register .option-register a{ /* afecta a las ocipondes de registro facebook y gmail */
+        width: 300px;
+    
+    }
+
+    .vista-register .register .box-form{ /* contenedor de los formularios */
+        width: 80%;
+    }
+
+    .vista-register .register .box-form input{ /* todos los inputs del formulario */
+     
+    }
+
+}

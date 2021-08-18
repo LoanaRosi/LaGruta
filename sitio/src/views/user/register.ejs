@@ -1,0 +1,45 @@
+
+<%- include("./partials/head") %> 
+
+<body class="vista-register">
+    <main class="register">
+        <h2>Crear cuenta</h2> 
+        <form action=""> 
+            <div class="option-register"> <!-- container de opciones alternativas de registro -->
+                <a href=""><i class="fab fa-facebook"></i> Facebook login </a>
+                <a href=""> <i class="fab fa-google"></i> Google login</a>
+                <span>o</span>
+            </div>
+            <div class="box-form">
+                <input type="text" name="name" placeholder="Nombre">
+            </div>
+
+            
+            <div class="box-form">
+                <input type="number" name="number" id="number" placeholder="Número de celular">
+            </div>
+
+            <div class="box-form">
+                <input type="email" name="email" id="email" placeholder="Gmail">
+            </div>
+
+            <div class="box-form">
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+            </div>
+
+            <div class="box-form">
+                <input type="password" name="password-confirm" id="password-confirm" placeholder="Confirmar contraseña">
+            </div>
+
+            <div class="box-form condiciones">
+                <label for="conditions">Acepto términos y condiciones</label>
+                <input type="checkbox">
+            </div>
+
+            <div class="box-button">
+                <button type="submit">Crear cuenta</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

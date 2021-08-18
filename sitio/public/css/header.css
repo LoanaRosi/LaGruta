@@ -1,0 +1,527 @@
+/* header */
+body{
+    background-color:var( --color-Body);
+}
+
+.container-menu{ /* container del menu */
+
+}
+
+
+.container-menu .container-menu-center .container-buscador{ /* container del buscador */
+    display: none;
+
+}
+
+.container-menu .container-redes-sociales{ /* container del redes sociales */
+    background-color: var(--color-Gris3);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-menu .container-redes-sociales i{ /* afecta a todos los icono de redes */
+    font-size: 20px;
+    padding: 6px 8px;
+    color: var(--color-Rojo3);
+}
+
+.container-menu .container-redes-sociales .fa-facebook{ /* icono facebook */
+
+}
+
+.container-menu .container-redes-sociales .fa-twitter{ /* icono twitter */
+
+}
+
+.container-menu .container-redes-sociales .fa-instagram{ /* icono instagram */
+
+}
+
+.container-menu .container-menu-center .container-logo-pc{ /* contenedor de el logo version pc  */
+    display: none;
+}
+
+.container-menu .container-menu-center .container-logo-pc .logo{ /* logo imagen */
+    display: none;
+}
+
+.container-menu .container-menu-center .container-login-register{ /* conatainer del login y del register */
+    display: none;
+}
+
+.container-menu .container-menu-center .container-cart-shop{ /* conatiner del carrito, la img y el icono */
+    display: none;
+}
+
+.container-menu .container-menu-bar-pc{ /* conatiner del menu de catalogos */
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* <---------------------------------MOBILE---------------------------------> */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+.container-menu .container-menu-bar{ /* container del menu de abajo version mobile*/
+   
+
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador{ /* container del menu hamburguer y del buscador */
+    display: flex;
+    background-color: var(--color-header);
+    padding-top: 22px;
+    padding-bottom: 22px;
+    box-shadow: 0 0 20px #000, 0 0 10px #000 inset;
+    justify-content: space-between;
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars{ /* container del menu hamburguer */
+    margin-left: 20px;
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars a{
+
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars a .fa-bars{ /* icono hamburguer  */
+    color: #fff;
+    font-size: 40px;
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador{ /* container del buscador */
+    display: flex;
+    align-items: center;
+    width: 67%;
+    margin-right: 25px;
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .buscador{ /*  buscador */
+    border-radius: 50px;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    font-family: var(--fontFamily-Textos);
+    padding-left: 10px;
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .fa-search{ /* icono de lupa */
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.container-menu .container-menu-bar .container-logo{ /* conatiner del logo */
+    padding: 20px;
+    background: var(--color-Gris1);
+    box-shadow: 0 0 15px #000 inset;
+}
+
+.container-menu .container-menu-bar .container-logo a{ /* "a" del logo */
+    width: 100%;
+}
+
+.container-menu .container-menu-bar .container-logo a img{ /* logo img */
+    width: 100%;
+}
+
+.container-menu .container-menu-bar .container-categorias{ /* opciones de categorias de juegos */
+    background-color: var(--color-Rojo2);
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.container-menu .container-menu-bar .container-categorias ul{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.container-menu .container-menu-bar .container-categorias ul li{
+    width: 100%;
+    padding: 15px;
+    border-right: 1px solid var(--color-negro1);
+    transition: background-color .6s ;
+}
+
+.container-menu .container-menu-bar .container-categorias ul li:hover{
+    background-color: #c40f0fe9;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.container-menu .container-menu-bar .container-categorias ul li:last-child{
+    border-right: none;
+}
+
+.container-menu .container-menu-bar .container-categorias ul li a{ /* link a las categorias */
+    padding: 10px 27%;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+    transition: font-size .4s;
+}
+
+.container-menu .container-menu-bar .container-categorias ul li a:hover{
+    font-size: 9px;
+}
+
+.container-menu .container-menu-bar .menu-options{ /* conatiner de las opcines del menu hamburguer version mobile  */
+    display: flex;
+    flex-direction: column;
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario{ /* container del opciones de usuario */
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--color-header);
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 20px #000 inset;
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario a{  /* a del icono usuario */
+    color: #fff;
+    font-size: 20px;
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .usuario{ /* afecta a todas las a */
+    margin-left: 20px;
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .usuario .fa-user{ /* icono de usuario */
+    padding: 10px 12px;
+    border-radius: 50px;
+    background-color: var(--color-Rojo2);
+    border: 1px solid #000;
+   
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .login{  /* link login */
+    margin-left: 50px;
+    font-family: var(--fontFamily-Textos);
+    font-size: 1em;
+    text-transform: uppercase;
+    transition:  border-bottom .3s ;
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .login:hover{
+    border-bottom: 2px solid var(--color-Rojo2);
+}
+
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .register{  /* link register */
+    margin-left: 50px;
+    font-family: var(--fontFamily-Textos);
+    font-size: 1em;
+    text-transform: uppercase;
+    transition:  border-bottom .3s ;
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .register:hover{
+    border-bottom: 2px solid var(--color-Rojo2);
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .exit-menu{ /* a del icono para salir del menu de opciones movile */
+    position: absolute;
+    right: 12px;
+    top: 10px;
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .exit-menu .fa-times{ /* icono de cruz */
+
+}
+
+
+.container-menu .container-menu-bar .menu-options .options-categorias{ /* container del las opciones de categorias  */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container-menu .container-menu-bar .menu-options .options-categorias li{ /* afecta a todas las li de las opciones de categorias */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-negro1);
+    border-bottom: 1px solid var(--color-Rojo2);
+}
+
+.container-menu .container-menu-bar .menu-options .options-categorias li:first-child{
+    border-top: 1px solid var(--color-Rojo2);
+}
+
+.container-menu .container-menu-bar .menu-options .options-categorias li a{ /* afecta a todas las a de las opciones de categorias */
+    padding: 15px 20px;
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+    text-transform:uppercase;
+    font-size: .9em;
+}
+
+.container-menu .container-menu-bar .menu-options .options-categorias li a i{ /* afecta a todas las i de las opciones de categorias */
+
+}
+
+.container-menu .container-menu-bar .menu-options .options-categorias li .fa-chevron-down{ /* afecta a las flechas */
+    justify-content: flex-end;
+    color: #fff;
+    padding-right: 15px;
+}
+
+@media (min-width:768px){
+    /* cosas de version mobile */
+
+    .container-menu .container-menu-bar .container-logo{ /* conatiner del logo */
+        display: none;
+    }
+
+    .container-menu .container-menu-bar .container-hamburguer-buscador{ /* container del menu hamburguer y del buscador */
+        display: none;
+    }
+
+    .container-menu .container-menu-bar .container-categorias{ /* opciones de categorias de juegos */
+       display: none;
+    }
+
+    .container-menu .container-menu-bar .menu-options{ /* conatiner de las opcines del menu hamburguer version mobile  */
+        display: none;
+    }
+
+    /* --------------------------- */
+
+    .container-menu{ /* container del menu */
+
+    }
+    
+    .container-menu .container-menu-center{ /* container del menu del centro donde esta el buscador el logo, login,etc */
+        display: flex;
+        padding: 35px 0;
+        background-color: var(--color-header);
+        align-items: center;
+        position: relative;
+        box-shadow: 0 0 20px #000, 0 0 10px #000 inset;
+      
+    }
+    
+    .container-menu .container-menu-center .container-logo-pc{ /* contenedor de el logo version pc  */
+        display: block;
+        width: 37%;
+        padding-left: 10px;
+    }
+    
+    .container-menu .container-menu-center .container-logo-pc .logo{ /* a de la imagen */
+        display: block;
+        width: 100%;
+    }
+
+    .container-menu .container-menu-center .container-logo-pc .logo img{ /* logo imagen */
+        display: block;
+        width: 100%;
+    }
+    
+    .container-menu .container-menu-center .container-buscador{ /* container del buscador */
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        width: 27%;
+    }
+    
+    .container-menu .container-menu-center .container-buscador .buscador{ /* input buscador  */
+        border: none;
+        border-radius: 50px;
+        padding: 4px;
+        padding-left: 10px;
+        font-family: var(--fontFamily-Textos);
+        width: 100%;
+        box-shadow: 0 0 10px #000;
+    }
+
+    .container-menu .container-menu-center .container-buscador a{ /* a del icono de lupa */
+        padding-left: 7px;
+       
+    }
+
+    .container-menu .container-menu-center .container-buscador a i{ /* icono de lupa */
+        color: var(--color-Rojo2);
+        font-size: 1.3em;
+    } 
+    
+    .container-menu .container-menu-center .container-login-register{ /* conatainer del login y del register */
+        display: flex;
+        margin-left: 25px;
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-login{ /* conatiner del icono login y de la a */
+        font-size: 1em;
+        margin-right: 15px;
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-login .login{ /* icono del login */
+        color: var(--color-Rojo2);
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-login .login-frase{ /* "a" link del login */
+        color: #fff;
+        font-family: var(--fontFamily-Textos);
+        font-size: .8em;
+      
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-register{ /* conatiner del icono register y de la a */
+        font-size: .9em;
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-register .register{ /*  icono del register */
+        color: var(--color-Rojo2);
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-register .register-frase{ /* "a" link del register */
+        color: #fff;
+        font-family: var(--fontFamily-Textos);
+        font-size: .8em;
+        
+    }
+    
+    .container-menu .container-menu-center .container-cart-shop{ /* conatiner del carrito, la img y el icono */
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        
+    }
+    
+    .container-menu .container-menu-center .container-cart-shop .flag-nav{ /* img de bandera  */
+        position: relative;
+        height: 65px;
+    }
+    
+    .container-menu .container-menu-center .container-cart-shop .fa-shopping-cart{ /* icono del carrtio */
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        color: #000;
+        font-size: 2em;
+        transition: color .3s;
+    }
+
+    .container-menu .container-menu-center .container-cart-shop .fa-shopping-cart:hover{
+        color: #fff;
+    }
+    
+    .container-menu .container-menu-bar-pc{ /* conatiner del menu de catalogos */
+        display: flex;
+        align-items: center;
+        background-color: var(--color-Rojo2);
+        box-shadow: 0 0 10px #000 inset;
+    }
+    
+    .container-menu .container-menu-bar-pc ul{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-menu .container-menu-bar-pc ul a{
+        width: 100%;
+        transition: box-shadow 1s;
+    }
+
+    .container-menu .container-menu-bar-pc ul a:hover{
+        box-shadow: 0 0 10px #000 inset;
+    }
+    
+    .container-menu .container-menu-bar-pc ul li{
+        width: 100%;
+        padding: 15px;
+        border-right: 1px solid var(--color-negro1);
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: var(--fontFamily-Textos);
+        transition: font-size .4s  ;
+    } 
+
+    .container-menu .container-menu-bar-pc ul li:hover{
+        font-size: 11px;
+    }
+    
+    .container-menu .container-menu-bar-pc .more-catalogos{ /* container de la flecha para mas categorias */
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-menu .container-menu-bar-pc .more-catalogos i{ /* icono de flecha */
+        color: #fff;
+
+    }
+}
+
+@media (min-width:1024px) {
+
+    .container-menu .container-menu-center{ /* container del menu del centro donde esta el buscador el logo, login,etc */
+        padding: 35px 0;
+      
+    }
+
+    .container-menu .container-menu-center .container-logo-pc{ /* contenedor de el logo version pc  */
+        width: 37%;
+        padding-left: 20px;
+    }
+    
+    .container-menu .container-menu-center .container-logo-pc .logo{ /* a de la imagen */
+        width: 95%;
+    }
+
+    .container-menu .container-menu-center .container-logo-pc .logo img{ /* logo imagen */
+        width: 100%;
+    }
+
+    .container-menu .container-menu-center .container-buscador{ /* container del buscador */
+        margin-left: 35px;
+        width: 30%;
+    }
+
+    .container-menu .container-menu-center .container-buscador .buscador{ /* input buscador  */
+        padding: 6px;
+    }
+
+    .container-menu .container-menu-center .container-login-register{ /* conatainer del login y del register */
+        margin-left: 40px;
+    }
+
+    .container-menu .container-menu-center .container-login-register .container-login .login-frase{ /* "a" link del login */
+        font-size: .9em;
+      
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-register{ /* conatiner del icono register y de la a */
+        font-size: .9em;
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-register .register{ /*  icono del register */
+        color: var(--color-Rojo2);
+    }
+    
+    .container-menu .container-menu-center .container-login-register .container-register .register-frase{ /* "a" link del register */
+        font-size: 1em;
+        
+    }
+    
+    .container-menu .container-menu-center .container-cart-shop .flag-nav{ /* img de bandera  */
+        height: 75px;
+    }
+    
+    .container-menu .container-menu-center .container-cart-shop .fa-shopping-cart{ /* icono del carrtio */
+        top: 10px;
+        right: 16px;
+        font-size: 2.3em;
+    }
+}

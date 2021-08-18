@@ -1,0 +1,376 @@
+.productos{
+
+}
+
+.productos .main-products{ /* (main) cuerpo de todos los productos */
+
+}
+
+.productos .main-products h1{ /* titulo de pagina */
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-family: var(--fontFamily-Titulo);
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 1px solid #fff;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 3px;
+}
+/* -----------------caja filtrado------------------------------- */
+
+.productos .main-products .container-filtros{ /* contenedor de los filtros */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* -----------------------filtrado orden---------------------- */
+
+
+.productos .main-products .container-filtros .filtro-orden{ /* container de, filtrado por orden */
+    display: flex;
+    flex-direction: column;
+    width: 43%;
+}
+
+.productos .main-products .container-filtros .filtro-orden small{ /* el small ordenar por: */
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+}
+
+.productos .main-products .container-filtros .filtro-orden .order-products{ /* (select) caja selector que contiene los options de oreden de producto */
+    padding: 7px;
+    background-color: #070707;
+    color: #fff;
+    width: 100%;
+}
+
+.productos .main-products .container-filtros .filtro-orden option{ /* todas las opciones dentro del select der oreden */
+    color: #fff;
+    background-color: #070707;
+    
+}
+
+/* -----------------flitado categoria--------------------------- */
+
+.productos .main-products .container-filtros .fltro-categorias { /* container de el flitro por categoria */
+    width: 43%;
+    margin-top: 18px;
+}
+
+.productos .main-products .container-filtros .fltro-categorias .order-categoria{ /* (select) caja selector que contiene los options de categoria */
+    padding: 7px;
+    background-color: #070707;
+    color: #fff;
+    width: 100%;
+}
+
+.productos .main-products .container-filtros .fltro-categorias .order-categoria option{ /* todas las opciones dentro del select der flitro categoria */
+
+}
+
+/* --------------------------------------------------------------------------- */
+
+.productos .main-products .container-productos{ /* (section) contenedor de todos los productos */
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos .main-products .container-productos .producto{ /* (article) el producto */
+    width: 44%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    margin: 10px 7px;
+    border: 2px solid transparent;
+    transition: border .1s;
+}
+
+.productos .main-products .container-productos .producto:hover{
+    border: 2px solid var(--color-Rojo2);
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto{ /* contenedor de todo lo que esta dentro del producto (article) */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-img{ /*(a) contenedor de la imagen del producto */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: -4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #070707;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-img .img-product{ /*(img) esta es la imagen del producto */
+    width: 90%;
+    background-color: #0e0e0e;
+    margin-top: 22px;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-name-precio{ /* container del nombre del producto y el precio */
+    width: 100%;
+    background-color: #070707;
+    text-align: center;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-name-precio .name-product{ /* nombre del producto */
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+    font-weight: 400;
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-name-precio .precio{ /* precio del producto */
+    color: #fff;
+    padding-bottom: 15px;
+    font-size: 1em;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product{ /* container de la opciones del producto */
+    display: flex;
+    width: 100%;
+}
+
+/* opcion del ver detalles------------------------ */
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-detalle{ /* conatiner del icono y p del ver detalle */
+    width: 50%;
+    border-radius: 0 0 0 4px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4px;
+    background: #070707;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-detalle a{ /* container del icono detalle */
+    color: #fff;
+    font-size: 19px;
+    transition: color .3s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-detalle a:hover{
+    color: var(--color-Rojo2);
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-detalle a i{ /* icono del ojo */
+    margin-top: 3.9px;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-detalle a p{ /* p "detalles" */
+    font-size: .7em;
+}
+
+/* opcion del agregar al carrito------------------------ */
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-cart-shop{ /* conatainer del icono y p del agrgar al carrito */
+    width: 50%;
+    box-shadow: 0 0 10px #000 inset;
+    border-radius: 0 0 4px 0;
+    display: flex;
+    justify-content: center;
+    background: #070707;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-cart-shop a{ /* conatner del icono y el p */
+    color: #fff;
+    font-size: 19px;
+    transition: color .3s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6px;
+    text-transform: uppercase;
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-cart-shop a:hover{
+    color: var(--color-Rojo2);
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-cart-shop a i{ /* icono carrito */
+
+}
+
+.productos .main-products .container-productos .producto .conatiner-inside-producto .container-option-product .option-cart-shop a p{ /* p "carrito" */
+    font-size: .7em;
+    line-height: 1.3;
+}
+/* -------------------------------------------------------------------- */
+
+.productos .main-products .container-productos .conatner-mas-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.productos .main-products .container-productos .conatner-mas-products .mas-products{ /* (a) boton para ver mas productos */
+    font-family: var(--fontFamily-Textos);
+    color: #fff;
+    font-size: 20px;
+    transition: color .2s;
+    text-decoration: #000;
+    padding: 10px 10%;
+    background: var(--color-Rojo2);
+    border-radius: 4px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.productos .main-products .container-productos .conatner-mas-products .mas-products:hover{
+    color: #000;
+}
+
+/* ---------------------------------------------- filtro pc--------------------- */
+
+.productos .main-products .fltro-categorias-pc{
+    display: none;
+}
+
+
+@media (min-width:768px) {
+
+    .productos .main-products .container-productos{ /* (section) contenedor de todos los productos */
+        display: flex;
+        width: 90%;
+        margin: 30px auto;
+        flex-wrap: wrap;
+        
+    }
+    
+    .productos .main-products .container-productos .producto{ /* (article) el producto */
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        margin: 10px 7px;
+        border: 2px solid transparent;
+        transition: border .1s;
+    }
+}
+
+@media (min-width:1024px) {
+
+    .productos .main-products{ /* (main) cuerpo de todos los productos */
+    }
+
+    .productos .main-products .container-filtros{ /* contenedor de los filtros */
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .productos .main-products .container-filtros .filtro-orden{ /* container de, filtrado por orden */
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin-right: 30px;
+    }
+
+    .productos .main-products .container-filtros .fltro-categorias { /* container de el flitro por categoria */
+        display: none;
+    }
+
+    
+
+    .productos .main-products .container-productos{ /* (section) contenedor de todos los productos */
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        margin: 30px 0;
+        justify-content: flex-end;
+        margin-left: 14%;
+        
+    }
+
+    .productos .main-products .container-productos .fltro-categorias-pc{ /* container de filtro pc */
+        display: flex;
+        width: 15%;
+        background: var(--color-Rojo1);
+        margin-right: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 70px;
+        border-radius: 5px 5px 0 0;
+        position: absolute;
+        left: 30px;
+        margin-top: 11px;
+        clip-path: polygon(51% 0, 78% 0, 100% 0, 100% 67%, 100% 100%, 50% 88%, 0 100%, 0 69%, 0 0, 25% 0);
+
+    }
+
+    .productos .main-products .container-productos .fltro-categorias-pc h3{
+        margin-top: 16px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-family: var(--fontFamily-Titulo);
+        border-bottom: 1px solid #fff;
+        padding-top: 20px;
+    }
+
+    .productos .main-products .container-productos .fltro-categorias-pc ul{
+
+    }
+
+    .productos .main-products .container-productos .fltro-categorias-pc ul li{
+        padding: 5px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #000;
+    }
+
+    .productos .main-products .container-productos .fltro-categorias-pc ul li a{
+        color: #fff;
+        font-size: 13px;
+        font-family: var(--fontFamily-Textos);
+    }
+    
+    .productos .main-products .container-productos .producto{ /* (article) el producto */
+        width: 21%;
+        margin: 10px 7px;
+        margin-bottom: 25px;
+    }
+
+    .productos .main-products .container-productos .conatner-mas-products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        width: 80%;
+        margin-right: 10%;
+    }
+    
+    .productos .main-products .container-productos .conatner-mas-products .mas-products{ /* (a) boton para ver mas productos */
+        font-family: var(--fontFamily-Textos);
+        color: #fff;
+        font-size: 20px;
+        transition: color .2s;
+        text-decoration: #000;
+        padding: 10px 10%;
+        background: var(--color-Rojo2);
+        border-radius: 4px;
+        border: 1px solid #fff;
+        box-shadow: 0 0 10px #000 inset;
+    }
+}

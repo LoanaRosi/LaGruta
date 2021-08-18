@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.formulario5 {
+    font-family: 'Lora', serif;
+    background-color: #0D0C0C;
+    color: white;
+}
+
+h4 {
+    margin: 5px;
+    padding: 5px;
+    background-color: #8C1111;
+}
+
+.formulario5 form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.formulario5 input {
+    background-color: white;
+    border-style:outset;
+    padding: 8px;
+}
+
+.formulario5 button {
+    text-decoration: none;
+    background-color: white;
+    padding: 8px;
+    float: right;
+    margin-right: 20px;
+}
+
+.formulario5 button a {
+    text-decoration: none;
+    color: rgb(54, 106, 165);
+}
+
+@media (min-width : 500px) {
+    .formulario5 {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        width: 60%;
+    }
+}
+
+@media (min-width : 768px) {
+    
+}
+
+@media (min-width : 1024px) {
+    
+}

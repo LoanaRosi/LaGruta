@@ -1,0 +1,13 @@
+@import url("./general.css");
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./home.css");
+@import url("./productDetail.css");
+@import url("./productCart.css");
+@import url("./register.css");
+@import url("./login.css");
+@import url("./productos.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto+Slab:wght@300;400;500&display=swap');
