@@ -1,0 +1,110 @@
+[
+    {
+        "id" :1,
+        "name" : "cyclades",
+        "price" : 13900,
+        "category" : "juego-de-mesa",
+        "img" : "mesa-1.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :2,
+        "name" : "Kemet",
+        "price" : 13900,
+        "category" : "juego-de-mesa",
+        "img" : "mesa-3.png", 
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :3,
+        "name" : "Piramide del Sol",
+        "price" : 1290,
+        "category" : "juego-de-mesa",
+        "img" : "mesa-4.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :4,
+        "name" : "Isthar",
+        "price" : 7900,
+        "category" : "juego-de-mesa",
+        "img" : "mesa-1.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :5,
+        "name" : "hdp 6",
+        "price" : 2900,
+        "category" : "juego-de-previa",
+        "img" : "previa-3.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :6,
+        "name" : "Escape Quest 2: Más Allá de lo Virtual",
+        "price" : 10600,
+        "category" : "juego-de-rol",
+        "img" : "rol-3.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :7,
+        "name" : "Dungeons & Drinks",
+        "price" : 7900,
+        "category" : "juego-de-mesa",
+        "img" : "mesa-2.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :8,
+        "name" : "Escape Quest 2: Más Allá de lo Virtual",
+        "price" : 10600,
+        "category" : "juego-de-rol",
+        "img" : "mesa-3.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :9,
+        "name" : "Escape Quest 2: Más Allá de lo Virtual",
+        "price" : 20000,
+        "category" : "juego-de-rol",
+        "img" : "previa-3.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :10,
+        "name" : "Escape Quest 2: Más Allá de lo Virtual",
+        "price" : 30000,
+        "category" : "juego-de-rol",
+        "img" : "rol-3.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :11,
+        "name" : "Escape Quest 2: Más Allá de lo Virtual",
+        "price" : 40000,
+        "category" : "juego-de-rol",
+        "img" : "mesa-4.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :12,
+        "name" : "Escape Quest 2: Más Allá de lo Virtual",
+        "price" : 50000,
+        "category" : "juego-de-rol",
+        "img" : "mesa-6.png",
+        "discount" : 0,
+        "on-sale" : false
+    }
+]
