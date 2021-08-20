@@ -87,7 +87,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-3.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :11,
@@ -96,7 +96,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-4.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :12,
@@ -105,7 +105,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-5.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
 
     {
@@ -115,7 +115,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-6.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :14,
@@ -124,7 +124,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-7.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :15,
@@ -133,7 +133,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-8.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :16,
@@ -142,7 +142,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-9.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :17,
@@ -151,7 +151,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-10.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :18,
@@ -160,37 +160,37 @@
         "category" : "juego-de-previa",
         "img" : "previa-11.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :17,
+        "id" :19,
         "name" : "Dany",
         "price" : 2380,
         "category" : "juego-de-previa",
         "img" : "previa-2.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :18,
-        "name" : "",
+        "id" :20,
+        "name" : "Aventuras en la Tierra Media",
         "price" : 2380,
         "category" : "juego-de-rol",
         "img" : "rol-1.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :19,
+        "id" :21,
         "name" : "La llamada de Cthulhu",
         "price" : 5800,
         "category" : "juego-de-rol",
         "img" : "rol-2.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :20,
+        "id" :22,
         "name" : "Más allá de lo virtual",
         "price" : 8000,
         "category" : "juego-de-rol",
@@ -199,7 +199,7 @@
         "sale" : false
     },
     {
-        "id" :21,
+        "id" :24,
         "name" : "Fanhunter",
         "price" : 6380,
         "category" : "juego-de-rol",
@@ -208,82 +208,75 @@
         "sale" : false
     },
     {
-        "id" :22,
+        "id" :25,
         "name" : "Solo en Salem",
         "price" : 2400,
         "category" : "juego-de-rol",
         "img" : "rol-5.png",
         "discount" : 0,
-<<<<<<< HEAD
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :23,
-        "name" : "",
+        "id" :26,
+        "name" : "Camarilla: Vampiro",
         "price" : 2380,
         "category" : "juego-de-rol",
         "img" : "rol-6.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :24,
+        "id" :27,
         "name" : "The witcher",
         "price" : 5400,
         "category" : "juego-de-rol",
         "img" : "rol-7.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :25,
-        "name" : "Mago: La ascensión",
+        "id" :28,
+        "name" : "Pathfinder",
         "price" : 8000,
         "category" : "juego-de-rol",
         "img" : "rol-8.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :26,
+        "id" :29,
         "name" : "Fate of Cthulhu",
         "price" : 7000,
         "category" : "juego-de-rol",
         "img" : "rol-9.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :29,
-        "name" : "Forbidden lands",
+        "id" :30,
+        "name" : "Star wars: Al filo del imperio",
         "price" : 9980,
         "category" : "juego-de-rol",
         "img" : "rol-10.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :30,
-        "name" : "Sherlock Holmes",
+        "id" :31,
+        "name" : "Dune",
         "price" : 12000,
         "category" : "juego-de-rol",
         "img" : "rol-11.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
-        "id" :31,
+        "id" :32,
         "name" : "D&D: Cartas de objetos mágicos",
         "price" : 15000,
         "category" : "juego-de-rol",
         "img" : "rol-12.png",
         "discount" : 0,
-        "on-sale" : false
-    },
-
-
-=======
         "sale" : false
     }
->>>>>>> a1e5c1dd6e5efc83806444190c0150b74560fe9f
 ]
