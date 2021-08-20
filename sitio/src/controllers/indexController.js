@@ -5,6 +5,7 @@ module.exports ={
     },
 
     cartShop: (req,res) =>{
-        return res.render("productCart")
-    }
+        return res.render("cart/productCart")
+    },
 }
+

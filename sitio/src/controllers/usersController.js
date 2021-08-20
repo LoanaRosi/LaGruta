@@ -7,5 +7,10 @@ module.exports ={
 
     register: (req,res) =>{
         return res.render("user/register")
+    },
+    admin : (req,res) => {
+        return res.render('admin/index',{
+            title : "Administración"
+        })
     }
 }
