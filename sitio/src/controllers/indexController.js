@@ -12,6 +12,12 @@ module.exports ={
 
     // vita del carrito
     cartShop: (req,res) =>{
-        return res.render("productCart")
+        return res.render("cart/productCart")
+    },
+
+    admin: (req, res) => {
+        return res.render("admin/index", {products})
+        
     }
 }
+

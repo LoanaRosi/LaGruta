@@ -26,7 +26,9 @@ app.use('/', indexRouter);
 app.use("/cart",indexRouter);
 app.use('/user', usersRouter);
 app.use("/list",productsRouter);
-app.use("/detail",productsRouter)
+app.use("/detail",productsRouter);
+app.use("/admin",indexRouter)
+
 
 
 // catch 404 and forward to error handler

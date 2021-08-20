@@ -163,7 +163,7 @@
         "sale" : false
     },
     {
-        "id" :17,
+        "id" :19,
         "name" : "Dany",
         "price" : 2380,
         "category" : "juego-de-previa",
@@ -172,8 +172,8 @@
         "sale" : false
     },
     {
-        "id" :18,
-        "name" : "",
+        "id" :20,
+        "name" : "Aventuras en la Tierra Media",
         "price" : 2380,
         "category" : "juego-de-rol",
         "img" : "rol-1.png",
@@ -181,7 +181,7 @@
         "sale" : false
     },
     {
-        "id" :19,
+        "id" :21,
         "name" : "La llamada de Cthulhu",
         "price" : 5800,
         "category" : "juego-de-rol",
@@ -190,7 +190,7 @@
         "sale" : false
     },
     {
-        "id" :20,
+        "id" :22,
         "name" : "Más allá de lo virtual",
         "price" : 8000,
         "category" : "juego-de-rol",
@@ -199,7 +199,7 @@
         "sale" : false
     },
     {
-        "id" :21,
+        "id" :24,
         "name" : "Fanhunter",
         "price" : 6380,
         "category" : "juego-de-rol",
@@ -208,7 +208,7 @@
         "sale" : false
     },
     {
-        "id" :22,
+        "id" :25,
         "name" : "Solo en Salem",
         "price" : 2400,
         "category" : "juego-de-rol",
@@ -217,8 +217,8 @@
         "sale" : false
     },
     {
-        "id" :23,
-        "name" : "",
+        "id" :26,
+        "name" : "Camarilla: Vampiro",
         "price" : 2380,
         "category" : "juego-de-rol",
         "img" : "rol-6.png",
@@ -226,7 +226,7 @@
         "sale" : false
     },
     {
-        "id" :24,
+        "id" :27,
         "name" : "The witcher",
         "price" : 5400,
         "category" : "juego-de-rol",
@@ -235,8 +235,8 @@
         "sale" : false
     },
     {
-        "id" :25,
-        "name" : "Mago: La ascensión",
+        "id" :28,
+        "name" : "Pathfinder",
         "price" : 8000,
         "category" : "juego-de-rol",
         "img" : "rol-8.png",
@@ -244,7 +244,7 @@
         "sale" : false
     },
     {
-        "id" :26,
+        "id" :29,
         "name" : "Fate of Cthulhu",
         "price" : 7000,
         "category" : "juego-de-rol",
@@ -253,8 +253,8 @@
         "sale" : false
     },
     {
-        "id" :29,
-        "name" : "Forbidden lands",
+        "id" :30,
+        "name" : "Star wars: Al filo del imperio",
         "price" : 9980,
         "category" : "juego-de-rol",
         "img" : "rol-10.png",
@@ -262,8 +262,8 @@
         "sale" : false
     },
     {
-        "id" :30,
-        "name" : "Sherlock Holmes",
+        "id" :31,
+        "name" : "Dune",
         "price" : 12000,
         "category" : "juego-de-rol",
         "img" : "rol-11.png",
@@ -271,7 +271,7 @@
         "sale" : false
     },
     {
-        "id" :31,
+        "id" :32,
         "name" : "D&D: Cartas de objetos mágicos",
         "price" : 15000,
         "category" : "juego-de-rol",
