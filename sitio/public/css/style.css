@@ -4,8 +4,8 @@
 @import url("./home.css");
 @import url("./productDetail.css");
 @import url("./cart.css");
-@import url("./register.css");
-@import url("./login.css");
+@import url("./user/login.css");
+@import url("./user/register.css");
 @import url("./productos.css");
 @import url("./glider.css");
 

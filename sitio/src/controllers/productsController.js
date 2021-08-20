@@ -24,7 +24,7 @@ module.exports ={
 
 	// formulario de creacion de producto
 	create: (req, res) => { /* esto solo renderiza la vista */
-		res.render("productDetail") 
+		res.render("") 
 	},
 	
 	// metodo para crear el producto
