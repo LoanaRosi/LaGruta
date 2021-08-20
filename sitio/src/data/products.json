@@ -28,83 +28,262 @@
     },
     {
         "id" :4,
-        "name" : "Isthar",
-        "price" : 7900,
+        "name" : "Red 7",
+        "price" : 1290,
         "category" : "juego-de-mesa",
-        "img" : "mesa-1.png",
+        "img" : "mesa-5.png",
         "discount" : 0,
         "sale" : true
     },
     {
         "id" :5,
-        "name" : "hdp 6",
-        "price" : 2900,
-        "category" : "juego-de-previa",
-        "img" : "previa-3.png",
+        "name" : "Takenoko",
+        "price" : 8900,
+        "category" : "juego-de-mesa",
+        "img" : "mesa-6.png",
         "discount" : 0,
         "sale" : true
     },
     {
         "id" :6,
-        "name" : "Escape Quest 2: Más Allá de lo Virtual",
-        "price" : 10600,
-        "category" : "juego-de-rol",
-        "img" : "rol-3.png",
+        "name" : "Cartógrafos",
+        "price" : 2490,
+        "category" : "juego-de-mesa",
+        "img" : "mesa-7.png",
         "discount" : 0,
         "sale" : true
     },
     {
         "id" :7,
-        "name" : "Dungeons & Drinks",
-        "price" : 7900,
+        "name" : "Ishtar",
+        "price" : 8900,
         "category" : "juego-de-mesa",
-        "img" : "mesa-2.png",
+        "img" : "mesa-8.png",
         "discount" : 0,
         "sale" : false
     },
     {
         "id" :8,
-        "name" : "Escape Quest 2: Más Allá de lo Virtual",
+        "name" : "Sonar",
         "price" : 10600,
-        "category" : "juego-de-rol",
-        "img" : "mesa-3.png",
+        "category" : "juego-de-mesa",
+        "img" : "mesa-9.png",
         "discount" : 0,
         "sale" : false
     },
     {
         "id" :9,
-        "name" : "Escape Quest 2: Más Allá de lo Virtual",
-        "price" : 20000,
-        "category" : "juego-de-rol",
-        "img" : "previa-3.png",
+        "name" : "Amigos de mierda 2",
+        "price" : 2380,
+        "category" : "juego-de-previa",
+        "img" : "previa-1.png",
         "discount" : 0,
         "sale" : false
     },
     {
         "id" :10,
-        "name" : "Escape Quest 2: Más Allá de lo Virtual",
-        "price" : 30000,
+        "name" : "H.D.P 6",
+        "price" : 3300,
+        "category" : "juego-de-previa",
+        "img" : "previa-3.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :11,
+        "name" : "Tomalo vos",
+        "price" : 4000,
+        "category" : "juego-de-previa",
+        "img" : "previa-4.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :12,
+        "name" : "Amigos de mierda 1",
+        "price" : 2380,
+        "category" : "juego-de-previa",
+        "img" : "previa-5.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+
+    {
+        "id" :13,
+        "name" : "Say my name",
+        "price" : 2380,
+        "category" : "juego-de-previa",
+        "img" : "previa-6.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :14,
+        "name" : "No lo testeamos ni un poco",
+        "price" : 4500,
+        "category" : "juego-de-previa",
+        "img" : "previa-7.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :15,
+        "name" : "No lo testeamos ni un poco: Legados",
+        "price" : 5500,
+        "category" : "juego-de-previa",
+        "img" : "previa-8.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :16,
+        "name" : "Prendete fuego",
+        "price" : 1380,
+        "category" : "juego-de-previa",
+        "img" : "previa-9.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :17,
+        "name" : "H.D.P",
+        "price" : 2500,
+        "category" : "juego-de-previa",
+        "img" : "previa-10.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :18,
+        "name" : "Dungeons and drinks",
+        "price" : 3400,
+        "category" : "juego-de-previa",
+        "img" : "previa-11.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :17,
+        "name" : "Dany",
+        "price" : 2380,
+        "category" : "juego-de-previa",
+        "img" : "previa-2.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :18,
+        "name" : "",
+        "price" : 2380,
+        "category" : "juego-de-rol",
+        "img" : "rol-1.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :19,
+        "name" : "La llamada de Cthulhu",
+        "price" : 5800,
+        "category" : "juego-de-rol",
+        "img" : "rol-2.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :20,
+        "name" : "Más allá de lo virtual",
+        "price" : 8000,
         "category" : "juego-de-rol",
         "img" : "rol-3.png",
         "discount" : 0,
         "sale" : false
     },
     {
-        "id" :11,
-        "name" : "Escape Quest 2: Más Allá de lo Virtual",
-        "price" : 40000,
+        "id" :21,
+        "name" : "Fanhunter",
+        "price" : 6380,
         "category" : "juego-de-rol",
-        "img" : "mesa-4.png",
+        "img" : "rol-4.png",
         "discount" : 0,
         "sale" : false
     },
     {
-        "id" :12,
-        "name" : "Escape Quest 2: Más Allá de lo Virtual",
-        "price" : 50000,
+        "id" :22,
+        "name" : "Solo en Salem",
+        "price" : 2400,
         "category" : "juego-de-rol",
-        "img" : "mesa-6.png",
+        "img" : "rol-5.png",
         "discount" : 0,
+<<<<<<< HEAD
+        "on-sale" : false
+    },
+    {
+        "id" :23,
+        "name" : "",
+        "price" : 2380,
+        "category" : "juego-de-rol",
+        "img" : "rol-6.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :24,
+        "name" : "The witcher",
+        "price" : 5400,
+        "category" : "juego-de-rol",
+        "img" : "rol-7.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :25,
+        "name" : "Mago: La ascensión",
+        "price" : 8000,
+        "category" : "juego-de-rol",
+        "img" : "rol-8.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :26,
+        "name" : "Fate of Cthulhu",
+        "price" : 7000,
+        "category" : "juego-de-rol",
+        "img" : "rol-9.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :29,
+        "name" : "Forbidden lands",
+        "price" : 9980,
+        "category" : "juego-de-rol",
+        "img" : "rol-10.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :30,
+        "name" : "Sherlock Holmes",
+        "price" : 12000,
+        "category" : "juego-de-rol",
+        "img" : "rol-11.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+    {
+        "id" :31,
+        "name" : "D&D: Cartas de objetos mágicos",
+        "price" : 15000,
+        "category" : "juego-de-rol",
+        "img" : "rol-12.png",
+        "discount" : 0,
+        "on-sale" : false
+    },
+
+
+=======
         "sale" : false
     }
+>>>>>>> a1e5c1dd6e5efc83806444190c0150b74560fe9f
 ]
