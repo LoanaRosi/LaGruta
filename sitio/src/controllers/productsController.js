@@ -1,4 +1,10 @@
 
+const fs = require("fs");
+const path = require("path");
+
+const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
+
+let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8')
 
 module.exports ={
 
@@ -7,42 +13,47 @@ module.exports ={
 		return res.render("listProducts")
 	},
 
-	// Detail - Detail from one product
+	// pagina detalle de producto
 	detail: (req, res) => {
-		/* let productDetail = products.find(product => product.id === +req.params.id); */ /* usamos find para que devuelva un objeti literarl en vez de un array como lo aria filter */
+		let productDetail = products.find(product => product.id === +req.params.id); /* usamos find para que devuelva un objeti literarl en vez de un array como lo aria filter */
 
-		res.render("productDetail")
+		res.render("productDetail",{
+			productDetail
+		})
 	},
 
-	// Create - Form to create
+	// formulario de creacion de producto
 	create: (req, res) => { /* esto solo renderiza la vista */
-		res.render("productDetail")
+		res.render("productDetail") 
 	},
 	
-	// Create -  Method to store
+	// metodo para crear el producto
 	store: (req, res) => { /* esta manda los datos */
-		const {name,price,discount,category,description} = req.body
+		const {name,price,discount,category,sale} = req.body
 		let product ={
 			id : products[products.length - 1].id +1,
 			name,
 			price : +price,
 			discount : +discount,
 			category,
-			description,
-			image: "default-image.png"
+			sale,
+			image : "mesa-2.png"
 		}
-		products.push(product);
-		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2),"utf-8")
+		products.push(products);
+		res.send(products) /* para verificar que manda bien  */
+
+		save(product)
+
 		res.redirect("/products")
 	
 	},
 
-	// Update - Form to edit
+	// pagina de edicion de producto
 	edit: (req, res) => {
 		let product = products.find(product=> product.id === +req.params.id)
 		res.render("product-edit-form")
     },
-	// Update - Method to update
+	// metodo para subir el producto
 	update: (req, res) => {
 		const {name,price,discount,category,description} = req.body;
 		 products.forEach(product => {
@@ -55,16 +66,16 @@ module.exports ={
 			}
 			
 		});
-		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2),"utf-8");
-			res.redirect("/products");
+		save(products)
+		res.redirect("/products");
 	
 	},
 
-	// Delete - Delete one product from DB
+	// metodo para eliminar un producto
 	destroy : (req, res) => {
-		let productsModi = products.filter(product=> product.id !== +req.params.id)  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
-		fs.writeFileSync(productsFilePath,JSON.stringify(productsModi,null,2),"utf-8")
-		res.redirect("/products")
+		let productsModifi = products.filter(product=> product.id !== +req.params.id);  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
+		save(productsModifi);
+		res.redirect("/products");
 
 	}
 

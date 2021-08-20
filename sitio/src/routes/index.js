@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const { index, cartShop } = require('../controllers/indexController');
-const { admin } = require('../controllers/usersController');
+const { index, cartShop, admin } = require('../controllers/indexController');
 
 
 /* GET home page. */
@@ -10,6 +9,6 @@ router.get('/',index);
 
 router.get("/shop",cartShop)
 
-router.get("/admin",admin)
+router.get("/index",admin)
 
 module.exports = router;

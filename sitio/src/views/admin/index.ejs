@@ -11,22 +11,29 @@
     <table>
         <thead>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Job Title</th>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Categoria</th>
+            <th>Oferta</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>James</td>
-            <td>Matman</td>
-            <td>Chief Sandwich Eater</td>
+            <% products.forEach(product => { %>
+              <tr>
+            <td><%= product.img %> </td>
+            <td><%= product.name %> </td>
+            <td><%= product.price %> </td>
+            <td><%= product.category %> </td>
+            <td><%= product.sale %> </td>
         </tr>
-        <tr>
+            <% }) %>
+       
+        <!-- <tr>
             <td>The</td>
             <td>Tick</td>
             <td>Crimefighter Sorta</td>
-        </tr>
+        </tr> -->
         </tbody>
     </table>
 </body>

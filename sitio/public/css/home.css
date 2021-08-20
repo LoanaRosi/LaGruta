@@ -1,5 +1,6 @@
 /* main home*/
 
+
 .main-home .container-carrusel{ /* container del carrusel  */
     width: 100%;
 }
@@ -15,6 +16,7 @@
 .main-home .main-category{
 
 }
+
 /* ---------------------------------- */
 /* empieza la seccion de categorias */
 /* ---------------------------------- */
@@ -143,10 +145,11 @@
     color: #fff;
     font-family: var(--fontFamily-Textos);
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     padding-top: 10px;
     margin-left: 12px;
     margin-right: 10px;
+    text-transform: uppercase;
 }
 
 
@@ -294,6 +297,32 @@
 .main-home .main-category .container-ofertas{
 
 }
+.main-home .main-category .container-ofertas .glider-contain .glider{
+   
+    margin-bottom: 50px;
+}
+.main-home .main-category .container-ofertas .glider-contain .glider-prev{ /* este es el boton para deslizar el carusel de productos */
+    left: 10px;
+    top: 38%;
+    font-size: 46px;
+}
+
+.main-home .main-category .container-ofertas .glider-contain .glider-next{ /* este es el boton para deslizar el carusel de productos */
+    right: 10px;
+    top: 38%;
+    font-size: 46px;
+}
+
+.main-home .main-category .container-ofertas .glider-contain .glider-dot{ /* estos son los puntos debajo del carrusel */
+    height: 5px;
+    width: 18px;
+    background-color: #fff;
+    display: none;
+}
+
+.main-home .main-category .container-ofertas .glider-contain .glider-dot.active{ /* estos son los puntos debajo del carrusel */
+   background-color: var(--color-Rojo2);
+}
 
 .main-home .main-category .container-ofertas .container-titulo-oferta{
     background-color: var(--color-Body);
@@ -327,7 +356,7 @@
     background-color: var(--color-negro4);
     width: 95%;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border-radius: 2px;
 }
 
@@ -384,7 +413,7 @@
 
 .main-home .main-category .container-ofertas .product-oferta .detail-oferta a{
     color: #000;
-    padding: 10px;
+    padding: 6px;
     width: 130px;
     font-family: var(--fontFamily-Textos);
     font-size: 16px;
@@ -496,15 +525,13 @@
     }
     
     .main-home .main-category .container-ofertas .product-oferta{
-        display: flex;
-        width: 48%;
         margin: 0 auto;
-        margin-bottom: 30px;
-        border-radius: 2px;
+        margin-bottom: 10px;
+        width: 98%;
     }
     
     .main-home .main-category .container-ofertas .product-oferta .container-img-oferta{
-        width: 140px;
+        width: 180px;
     }
     
 }
@@ -570,6 +597,8 @@
         z-index: 900;
     }
 
+    
+
 
     .main-home .botton-full-productos{  /* contenedor de el boton para ver todos los productos */
         padding: 65px 0;
@@ -582,9 +611,9 @@
     
     .main-home .main-category .container-ofertas .product-oferta{
         display: flex;
-        width: 45%;
+        width: 98%;
         margin: 0 auto;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         border-radius: 2px;
     }
     

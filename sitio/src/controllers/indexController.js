@@ -1,11 +1,23 @@
+const fs = require("fs");
+const path = require("path");
+
+const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
 
 module.exports ={
+    // vista del home
     index : (req,res) =>{
-        return res.render("home")
+        const productsOfert = products.filter(product=>product.sale === true);
+        return res.render("home",{products, productsOfert})
     },
 
+    // vita del carrito
     cartShop: (req,res) =>{
         return res.render("cart/productCart")
     },
+
+    admin: (req, res) => {
+        return res.render("admin/index", {products})
+        
+    }
 }
 
