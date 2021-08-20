@@ -87,7 +87,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-3.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :11,
@@ -96,7 +96,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-4.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :12,
@@ -105,7 +105,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-5.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
 
     {
@@ -115,7 +115,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-6.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :14,
@@ -124,7 +124,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-7.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :15,
@@ -133,7 +133,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-8.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :16,
@@ -142,7 +142,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-9.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :17,
@@ -151,7 +151,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-10.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :18,
@@ -160,7 +160,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-11.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :17,
@@ -169,7 +169,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-2.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :18,
@@ -178,7 +178,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-1.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :19,
@@ -187,7 +187,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-2.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :20,
@@ -214,8 +214,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-5.png",
         "discount" : 0,
-<<<<<<< HEAD
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :23,
@@ -224,7 +223,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-6.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :24,
@@ -233,7 +232,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-7.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :25,
@@ -242,7 +241,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-8.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :26,
@@ -251,7 +250,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-9.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :29,
@@ -260,7 +259,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-10.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :30,
@@ -269,7 +268,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-11.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :31,
@@ -278,12 +277,6 @@
         "category" : "juego-de-rol",
         "img" : "rol-12.png",
         "discount" : 0,
-        "on-sale" : false
-    },
-
-
-=======
         "sale" : false
     }
->>>>>>> a1e5c1dd6e5efc83806444190c0150b74560fe9f
 ]
