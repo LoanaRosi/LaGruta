@@ -6,7 +6,7 @@
         "category" : "juego-de-mesa",
         "img" : "mesa-1.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : true
     },
     {
         "id" :2,
@@ -15,7 +15,7 @@
         "category" : "juego-de-mesa",
         "img" : "mesa-3.png", 
         "discount" : 0,
-        "on-sale" : false
+        "sale" : true
     },
     {
         "id" :3,
@@ -24,7 +24,7 @@
         "category" : "juego-de-mesa",
         "img" : "mesa-4.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : true
     },
     {
         "id" :4,
@@ -33,7 +33,7 @@
         "category" : "juego-de-mesa",
         "img" : "mesa-1.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : true
     },
     {
         "id" :5,
@@ -42,7 +42,7 @@
         "category" : "juego-de-previa",
         "img" : "previa-3.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : true
     },
     {
         "id" :6,
@@ -51,7 +51,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-3.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : true
     },
     {
         "id" :7,
@@ -60,7 +60,7 @@
         "category" : "juego-de-mesa",
         "img" : "mesa-2.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :8,
@@ -69,7 +69,7 @@
         "category" : "juego-de-rol",
         "img" : "mesa-3.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :9,
@@ -78,7 +78,7 @@
         "category" : "juego-de-rol",
         "img" : "previa-3.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :10,
@@ -87,7 +87,7 @@
         "category" : "juego-de-rol",
         "img" : "rol-3.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :11,
@@ -96,7 +96,7 @@
         "category" : "juego-de-rol",
         "img" : "mesa-4.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     },
     {
         "id" :12,
@@ -105,6 +105,6 @@
         "category" : "juego-de-rol",
         "img" : "mesa-6.png",
         "discount" : 0,
-        "on-sale" : false
+        "sale" : false
     }
 ]

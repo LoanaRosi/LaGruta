@@ -39,379 +39,34 @@
             </div>
 
             <section class="conatiner-product">
-                <article>
+                <% products.forEach(product => { %>
+                    <article>
 
-                    <div class="conatiner-inside-article">
-                        <a href="/detail/product" class="container-img"><img src="/images/productos/mesa-1.png" alt="" class="img-product"></a>
-
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Los Inmortales</h3>
-                            <h3 class="precio">$7.900</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
+                        <div class="conatiner-inside-article">
+                            <a href="/productDetail" class="container-img"><img class="img-product" src="/images/productos/<%= product.img %>" alt=""></a>
+    
+                            <div class="container-name-precio">
+                                <h3 class="name-product"><%= product.name %></h3>
+                                <h3 class="precio">$<%= product.price %></h3>
                             </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
+    
+                            <div class="container-option-product">
+                                <div class="option-detalle">
+                                    <a href="/productDetail"><i class="far fa-eye"></i>
+                                        <p>detalles</p>
+                                    </a>
+                                </div>
+                                <div class="option-cart-shop">
+                                    <a href="#"><i class="fas fa-shopping-cart"></i>
+                                        <p>agregar</p>
+                                    </a>
+                                </div>
                             </div>
+    
                         </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                   <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-2.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Aliens: Hadley's Hope</h3>
-                            <h3 class="precio">$10.900</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                    <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-3.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Los Inmortales</h3>
-                            <h3 class="precio">$7.900</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                   <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-4.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Amigos de Mierda</h3>
-                            <h3 class="precio">$1.190</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-                <article>
-
-                   <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-5.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Los Inmortales</h3>
-                            <h3 class="precio">$7.900</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-                <article>
-
-                    <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-6.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Los Inmortales</h3>
-                            <h3 class="precio">$7.900</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                    <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-7.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Los Inmortales</h3>
-                            <h3 class="precio">$7.900</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-                    
-                    <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-4.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Amigos de Mierda</h3>
-                            <h3 class="precio">$1.190</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-                <article>
-                   <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-4.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Amigos de Mierda</h3>
-                            <h3 class="precio">$1.190</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                   <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-4.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Amigos de Mierda</h3>
-                            <h3 class="precio">$1.190</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                   <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-4.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Amigos de Mierda</h3>
-                            <h3 class="precio">$1.190</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                   <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-4.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Amigos de Mierda</h3>
-                            <h3 class="precio">$1.190</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                    <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-4.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Amigos de Mierda</h3>
-                            <h3 class="precio">$1.190</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <article>
-
-                    <div class="conatiner-inside-article">
-                        <a href="/productDetail" class="container-img"><img src="/images/products-img/product-4.png" alt="" class="img-product"></a>
-                        
-                        <div class="container-name-precio">
-                            <h3 class="name-product">Amigos de Mierda</h3>
-                            <h3 class="precio">$1.190</h3>
-                        </div>
-
-                        <div class="container-option-product">
-                            <div class="option-detalle">
-                                <a href="/productDetail"><i class="far fa-eye"></i>
-                                    <p>detalles</p>
-                                </a>
-                            </div>
-                            <div class="option-cart-shop">
-                                <a href="#"><i class="fas fa-shopping-cart"></i>
-                                    <p>agregar</p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
+    
+                    </article>
+                <% }) %>
 
             </section>
 
@@ -431,91 +86,48 @@
                 <div class="container-titulo-oferta">
                     <h3 class="title-oferta">Productos en oferta</h3>
                 </div>
-                <div class="container-products-oferta">
-                    <article class="product-oferta">
-                        <div class="container-img-oferta">
-                            <img src="/images/products-img/product-5.png" alt="">
-                        </div>
-                        <div class="detail-oferta">
-                            <h4>nombre producto</h4>
-                            <div class="container-precios">
-                            <p class="new-oferta">$8000</p>
-                            <p class="precio-old">20% OFF</p>
-                            </div> 
-                            <a href="/productDetail" class="botn-comprar">Comprar</a>
-                        </div>
-                        
-                    </article>
-                    <article class="product-oferta">
-                           <div class="container-img-oferta">
-                            <img src="/images/products-img/product-5.png" alt="">
-                        </div>
-                        <div class="detail-oferta">
-                            <h4>nombre producto</h4>
-                            <div class="container-precios">
-                            <p class="new-oferta">$8000</p>
-                            <p class="precio-old">20% OFF</p>
-                            </div> 
-                            <a href="/productDetail" class="botn-comprar">comprar</a>
-                        </div>
-                        
-                    </article>
-                    <article class="product-oferta">
-                           <div class="container-img-oferta">
-                            <img src="/images/products-img/product-5.png" alt="">
-                        </div>
-                        <div class="detail-oferta">
-                            <h4>nombre producto</h4>
-                            <div class="container-precios">
-                            <p class="new-oferta">$8000</p>
-                            <p class="precio-old">20% OFF</p>
-                            </div> 
-                            <a href="/productDetail" class="botn-comprar">comprar</a>
-                        </div>
-                        
-                    </article>
-                    <article class="product-oferta">
-                           <div class="container-img-oferta">
-                            <img src="/images/products-img/product-5.png" alt="">
-                        </div>
-                        <div class="detail-oferta">
-                            <h4>nombre producto</h4>
-                            <div class="container-precios">
-                            <p class="new-oferta">$100.900</p>
-                            <p class="precio-old">20% OFF</p>
-                            </div> 
-                            <a href="/productDetail" class="botn-comprar">comprar</a>
-                        </div>
-                        
-                    </article>
-                    <article class="product-oferta">
-                           <div class="container-img-oferta">
-                            <img src="/images/products-img/product-5.png" alt="">
-                        </div>
-                        <div class="detail-oferta">
-                            <h4>nombre producto</h4>
-                            <div class="container-precios">
-                            <p class="new-oferta">$8000</p>
-                            <p class="precio-old">20% OFF</p>
-                            </div> 
-                            <a href="/productDetail" class="botn-comprar">comprar</a>
-                        </div>
-                        
-                    </article>
-                    <article class="product-oferta">
-                           <div class="container-img-oferta">
-                            <img src="/images/products-img/product-5.png" alt="">
-                        </div>
-                        <div class="detail-oferta">
-                            <h4>nombre producto</h4>
-                            <div class="container-precios">
-                            <p class="new-oferta">$8000</p>
-                            <p class="precio-old">20% OFF</p>
-                            </div> 
-                            <a href="/productDetail" class="botn-comprar">comprar</a>
-                        </div>
-                        
-                    </article>
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% for( let index = 0; index < productsOfert.length -1; index++ ) { %>
+                                <div class="column">
+                                    <article class="product-oferta">
+                                            <div class="container-img-oferta">
+                                            <img src="/images/productos/<%= productsOfert[index].img %>" alt="">
+                                        </div>
+                                        <div class="detail-oferta">
+                                            <h4><%= productsOfert[index].name %></h4>
+                                            <div class="container-precios">
+                                            <p class="new-oferta">$<%= productsOfert[index].price %></p>
+                                            <p class="precio-old">20% OFF</p>
+                                            </div> 
+                                            <a href="/productDetail" class="botn-comprar">comprar</a>
+                                        </div>
+                                        
+                                    </article>
+                                    <article class="product-oferta">
+                                        <div class="container-img-oferta">
+                                        <img src="/images/productos/<%= productsOfert[index +1].img %>" alt="">
+                                    </div>
+                                    <div class="detail-oferta">
+                                        <h4><%= productsOfert[index +1].name %></h4>
+                                        <div class="container-precios">
+                                        <p class="new-oferta">$<%= productsOfert[index +1].price %></p>
+                                        <p class="precio-old">20% OFF</p>
+                                        </div> 
+                                        <a href="/productDetail" class="botn-comprar">comprar</a>
+                                    </div>
+                                
+                                    </article>
+                                </div>
+                         
+                        <% } %>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                    <div role="tablist" class="dots"></div>
+                  </div>
+                   
                     
                 </div>
                
@@ -523,6 +135,8 @@
 
     </main>
     <%- include("./partials/footer") %> 
+    <script src="../../javascripts/glider.js"></script>
+    <script src="../../javascripts/carrusel.js"></script>
 </body>
     
 </html>
