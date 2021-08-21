@@ -42,7 +42,7 @@
 }
 
 
-.formulario1 input, select, button {
+.formulario1 input, .formulario1 select,  .formulario1 button {
     margin: 10px;
     background-color: white;
     border-style:outset;
@@ -60,7 +60,7 @@
         justify-content: center;
     }
 
-    section {
+    .formulario1 section {
         width: 60%;
     }
 }

@@ -1,18 +1,11 @@
 /* main home*/
 
 
-.main-home .container-carrusel{ /* container del carrusel  */
-    width: 100%;
+.main-home .carousel{
+    display: none;
 }
 
-.main-home .container-carrusel a{
 
-}
-
-.main-home .container-carrusel img{
-    width: 100%;
-
-}
 .main-home .main-category{
 
 }
@@ -57,8 +50,7 @@
 /* ------------------------------------------------- */
 
 .main-home .container-titulo-destacados{  /* el container de titulo destacados */
-    background-color: var(--color-Body);
-    background-image: url("/images/bandera-product-4.svg");
+    background-image: url("/images/flag/bandera-product-4.svg");
     background-repeat:no-repeat;
     margin: 0 auto;
     background-position: center;
@@ -325,8 +317,7 @@
 }
 
 .main-home .main-category .container-ofertas .container-titulo-oferta{
-    background-color: var(--color-Body);
-    background-image: url("/images/bandera-product-4.svg");
+    background-image: url("/images/flag/bandera-product-4.svg");
     background-repeat:no-repeat;
     margin: 0 auto;
     background-position: center;
@@ -437,6 +428,23 @@
 
 @media (min-width:768px) {
 
+    /* --------------------------- */
+    /* ----------BANNER----------- */
+    /* --------------------------- */
+    .main-home .carousel{
+        display: block;
+    }
+
+    .main-home .carousel-item{
+        width: 100%;
+        height: 265px;
+        background-repeat: no-repeat;
+
+        background-size:100% 100%;
+    }
+
+    
+
     /* ------------------------------ */
     /* seccion catalogos principales */
     /* ------------------------------ */
@@ -496,8 +504,6 @@
     }
     
     .main-home .main-category .container-ofertas .container-titulo-oferta{
-        background-color: var(--color-Body);
-        background-image: url("/images/bandera-product-4.svg");
         background-repeat:no-repeat;
         margin: 0 auto;
         background-position: center;
@@ -531,17 +537,18 @@
     }
     
     .main-home .main-category .container-ofertas .product-oferta .container-img-oferta{
-        width: 180px;
     }
     
 }
 
 @media (min-width:1024px) {
 
-    /* parte baner y catalogos */
+     /* --------------------------- */
+    /* ----------BANNER----------- */
+    /* --------------------------- */
 
-    .main-home .container-carrusel{
-        width: 100%;
+    .main-home .carousel-item{
+        height: 350px;
     }
 
     .main-home h3.titulo-categorias{

@@ -284,12 +284,13 @@
     .productos .main-products .container-filtros .filtro-orden{ /* container de, filtrado por orden */
         display: flex;
         flex-direction: column;
-        width: 25%;
+        width: 35%;
         margin-right: 30px;
     }
 
     .productos .main-products .container-filtros .fltro-categorias { /* container de el flitro por categoria */
-        display: none;
+        width: 35%;
+        margin-right: 10px;
     }
 
     
@@ -304,7 +305,7 @@
         
     }
 
-    .productos .main-products .container-productos .fltro-categorias-pc{ /* container de filtro pc */
+   /*  .productos .main-products .container-productos .fltro-categorias-pc{ /* container de filtro pc 
         display: flex;
         width: 15%;
         background: var(--color-Rojo1);
@@ -318,7 +319,7 @@
         margin-top: 11px;
         clip-path: polygon(51% 0, 78% 0, 100% 0, 100% 67%, 100% 100%, 50% 88%, 0 100%, 0 69%, 0 0, 25% 0);
 
-    }
+    } */
 
     .productos .main-products .container-productos .fltro-categorias-pc h3{
         margin-top: 16px;
