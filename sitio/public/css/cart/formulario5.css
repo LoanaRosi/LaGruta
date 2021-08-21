@@ -6,7 +6,7 @@
     color: white;
 }
 
-h4 {
+.formulario5 h4 {
     margin: 5px;
     padding: 5px;
     background-color: #8C1111;
@@ -43,7 +43,7 @@ h4 {
         justify-content: center;
     }
 
-    section {
+    .formulario5 section {
         width: 60%;
     }
 }

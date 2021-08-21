@@ -1,0 +1,70 @@
+/* contenedor body */
+.admin-creation{
+
+}
+
+.admin-creation .admin__container{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.admin-creation .admin__title{
+    color: #fff;
+    font-family: var(--fontFamily-Titulo);
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+/* ------------------------------ */
+/* -----EMPIEZA FORMULARIO------ */
+/* ----------------------------- */
+.admin-creation .form-admin{ /* contenedor del los formularios */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-creation .form-admin__box{ /* contenedor formulario */
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.admin-creation .form-admin__input{ /* inpunt del formulario */
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+}
+
+.admin-creation .form-admin__select{
+    width: 100%;
+    padding: 8px
+}
+
+.admin-creation .fom-admin__option{
+
+}
+/* -------------------------------------- */
+/* ------BOTON PARA CREAR PRODUCTO------- */
+/* -------------------------------------- */
+
+.admin-creation .create-button{
+    width: 200px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.admin-creation .create-button__button{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: var(--color-Rojo1);
+    color: #fff;
+}

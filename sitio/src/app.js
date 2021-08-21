@@ -25,9 +25,10 @@ app.use(express.static(path.join(__dirname, "..", 'public')));
 app.use('/', indexRouter);
 app.use("/cart",indexRouter);
 app.use('/user', usersRouter);
-app.use("/list",productsRouter);
+app.use("/list",productsRouter); /* muestra todos los productos */
 app.use("/detail",productsRouter);
-app.use("/admin",indexRouter)
+app.use("/admin",indexRouter);
+app.use("/create",productsRouter);
 
 
 

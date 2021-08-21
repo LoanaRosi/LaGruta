@@ -10,7 +10,7 @@ module.exports ={
 
     // muestra todos los productos y tambien por categoria
 	list: (req, res) => {
-		return res.render("listProducts")
+		return res.render("listProducts",{products})
 	},
 
 	// pagina detalle de producto
@@ -24,27 +24,25 @@ module.exports ={
 
 	// formulario de creacion de producto
 	create: (req, res) => { /* esto solo renderiza la vista */
-		res.render("") 
+		res.render("admin/create") 
 	},
 	
 	// metodo para crear el producto
 	store: (req, res) => { /* esta manda los datos */
-		const {name,price,discount,category,sale} = req.body
+		const {name,price,category,img,discount,sale} = req.body
 		let product ={
 			id : products[products.length - 1].id +1,
 			name,
 			price : +price,
-			discount : +discount,
 			category,
-			sale,
-			image : "mesa-2.png"
+			img : "mesa-2.png",
+			discount : +discount,
+			sale
 		}
-		products.push(products);
-		res.send(products) /* para verificar que manda bien  */
 
-		save(product)
-
-		res.redirect("/products")
+		products.push(product)
+		save(products)
+		res.redirect("/list/products")
 	
 	},
 
