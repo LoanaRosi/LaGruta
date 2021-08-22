@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const productsRouter = require("./routes/products");
-var formulario1Router = require('./routes/formulario1')
+var formularioRouter = require('./routes/formulario')
 
 
 var app = express();
@@ -29,7 +29,7 @@ app.use('/user', usersRouter);
 app.use("/list",productsRouter); /* muestra todos los productos */
 app.use("/detail",productsRouter);
 app.use("/admin",indexRouter);
-app.use("/formulario1",formulario1Router)
+app.use("/cart",formularioRouter);
 app.use("/create",productsRouter);
 
 

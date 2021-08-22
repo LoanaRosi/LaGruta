@@ -16,7 +16,7 @@ module.exports ={
     },
 
     admin: (req, res) => {
-        return res.render("admin/index", {products})
+        return res.render("admin/admin", {products})
         
     }
 }

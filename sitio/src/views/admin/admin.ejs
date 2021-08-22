@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/778560f052.js" crossorigin="anonymous"></script>
 </head>
+<header class="tabla">
+    <h3>Administración</h3>
+</header>
 <body class="index">
+    <button><a href="">Crear Producto</a></button>
     <table>
         <thead>
         <tr>
@@ -16,6 +21,7 @@
             <th>Precio</th>
             <th>Categoria</th>
             <th>Oferta</th>
+            <th>Opciones</th>
         </tr>
         </thead>
         <tbody>
@@ -26,6 +32,7 @@
             <td><%= product.price %> </td>
             <td><%= product.category %> </td>
             <td><%= product.sale %> </td>
+            <td><button><a href=""><i class="far fa-edit"></i></a></button><button><a href=""><i class="far fa-trash-alt"></i></i></a></button></td>
         </tr>
             <% }) %>
        

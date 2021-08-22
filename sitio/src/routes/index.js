@@ -9,6 +9,6 @@ router.get('/',index);
 
 router.get("/shop",cartShop)
 
-router.get("/index",admin)
+router.get("/admin",admin)
 
 module.exports = router;
