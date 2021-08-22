@@ -47,10 +47,13 @@ module.exports ={
 	},
 
 	// pagina de edicion de producto
-	edit: (req, res) => {
-		let product = products.find(product=> product.id === +req.params.id)
-		res.render("product-edit-form")
-    },
+	edit : (req,res) => {
+			return res.render('admin/edit',{
+				product : products.find(product => product.id === +req.params.id),
+			})
+	},
+
+
 	// metodo para subir el producto
 	update: (req, res) => {
 		const {name,price,discount,category,description} = req.body;

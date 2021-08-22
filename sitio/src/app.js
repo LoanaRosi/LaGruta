@@ -31,6 +31,8 @@ app.use("/detail",productsRouter);
 app.use("/admin",indexRouter);
 app.use("/cart",formularioRouter);
 app.use("/create",productsRouter);
+/* app.use("admin/edit",productsRouter); */
+
 
 
 
