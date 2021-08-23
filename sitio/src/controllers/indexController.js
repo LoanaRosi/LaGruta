@@ -19,6 +19,11 @@ module.exports ={
         return res.render("cart/productCart")
     },
 
+    // vita de detalle de producto
+    detail: (req,res) =>{
+        return res.render("productDetail")
+    },
+
     admin: (req, res) => {
         return res.render("admin/admin", {products})
         

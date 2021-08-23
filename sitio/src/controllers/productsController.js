@@ -17,7 +17,7 @@ module.exports ={
 	detail: (req, res) => {
 		let productDetail = products.find(product => product.id === +req.params.id); /* usamos find para que devuelva un objeti literarl en vez de un array como lo aria filter */
 
-		res.render("productDetail",{
+		return res.render("productDetail",{
 			productDetail
 		})
 	},
@@ -64,6 +64,7 @@ module.exports ={
 				product.discount = +discount;
 				product.category = category;
 				product.description = description;
+				/* falta imagen */
 			}
 			
 		});

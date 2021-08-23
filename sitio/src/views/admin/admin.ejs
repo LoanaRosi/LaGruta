@@ -4,6 +4,7 @@
     <table>
         <thead>
         <tr>
+            <th>ID</th>
             <th>Imagen</th>
             <th>Nombre</th>
             <th>Precio</th>
@@ -15,14 +16,17 @@
         <tbody>
             <% products.forEach(product => { %>
               <tr>
+            <td><%= product.id %> </td>
             <td><%= product.img %> </td>
             <td><%= product.name %> </td>
             <td><%= product.price %> </td>
             <td><%= product.category %> </td>
             <td><%= product.sale %> </td>
-            <td><button><a href=""><i class="far fa-edit"></i></a></button><button><a href=""><i class="far fa-trash-alt"></i></i></a></button></td>
+            <td><button><a href="/products/edit/<%= product.id %>"><i class="far fa-edit"></i></a></button><button><a href=""><i class="far fa-trash-alt"></i></i></a></button></td>
         </tr>
             <% }) %>
+
+            <!-- <a href="/products/edit/" class="btn btn-sm btn-success" style="width: 30px;"><i class="fas fa-edit"></i></a> -->
        
         <!-- <tr>
             <td>The</td>
