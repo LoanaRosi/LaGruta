@@ -2,11 +2,31 @@
     background-color: white;
 }
 
+.index button {
+    margin: 2px;
+    padding: 5px;
+}
 
+.index button a {
+  color: black;
+}
+
+.tabla{
+  background-color: black;
+  padding: 2%;
+}
+
+.tabla h3{
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
 
 table { 
-    width: 100%; 
-    border-collapse: collapse; 
+  margin: 10px;  
+  width: 98%; 
+  border-collapse: collapse;
+  
   }
   /* Zebra striping */
   tr:nth-of-type(odd) { 

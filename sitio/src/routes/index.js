@@ -26,7 +26,7 @@ router.get('/',index);
 
 router.get("/shop",cartShop)
 
-router.get("/index",admin)
+router.get("/admin",admin)
 
 router.get("/banner/control",banner)
 router.post("/banner/control",upload.single("banner"),bannerAdd);

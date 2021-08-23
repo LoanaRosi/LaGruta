@@ -13,6 +13,23 @@ body{
 
 }
 
+.container-menu .control-admin{ /* boton para ir a admin */
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    background-color: var(--color-Rojo1);
+    padding: 2px 10px;
+    font-family: var(--fontFamily-Titulo);
+    font-size: 17px;
+    text-transform: uppercase;
+    border: 1px solid #000;
+}
+
+.container-menu .control-admin:hover{
+    color: #000;
+}
+
 .container-menu .container-redes-sociales{ /* container del redes sociales */
     background-color: var(--color-Gris3);
     display: flex;

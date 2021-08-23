@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include("../partials/head") %> 
 <body class="index">
+    <%- include("./partials/header") %> 
     <table>
         <thead>
         <tr>
@@ -16,6 +9,7 @@
             <th>Precio</th>
             <th>Categoria</th>
             <th>Oferta</th>
+            <th>Opciones</th>
         </tr>
         </thead>
         <tbody>
@@ -26,6 +20,7 @@
             <td><%= product.price %> </td>
             <td><%= product.category %> </td>
             <td><%= product.sale %> </td>
+            <td><button><a href=""><i class="far fa-edit"></i></a></button><button><a href=""><i class="far fa-trash-alt"></i></i></a></button></td>
         </tr>
             <% }) %>
        
@@ -36,5 +31,6 @@
         </tr> -->
         </tbody>
     </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
