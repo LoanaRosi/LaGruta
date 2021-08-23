@@ -33,7 +33,7 @@
                 <a href="/juegos-de-mesa"><li>juegos de mesa</li></a>
                 <a href="/juegos-de-rol"><li>juegos de rol</li></a>
                 <a href="/juegos-de-previa"><li>juegos de previa</li></a>
-                <a href="/list/products"><li>todos los juegos</li></a>
+                <a href="/productos"><li>todos los juegos</li></a>
                 <div class="more-catalogos"><i class="fas fa-chevron-right"></i></div> <!-- icono de flecha para mas categorias -->
             </ul>
         </div>
@@ -41,7 +41,22 @@
         <div class="container-menu-bar "> <!-- container del menu de abajo version movile -->
             <div class="container-hamburguer-buscador"> <!-- container del menu hamburguer y del buscador -->
                 <div class="container-bars"> <!-- container del menu hamburguer -->
-                    <a href="#"><i class="fas fa-bars"></i></a> <!-- icono hamburguer -->
+                    <input type="checkbox" id="burguer">
+                    <label for="burguer"><i class="fas fa-bars"></i></label> <!-- icono hamburguer -->
+                    <div class="menu-options"> <!-- conatiner de las opcines del menu hamburguer version mobile -->
+                        <div class="menu-options-usuario"> <!-- container de las opciones de usuario -->
+                            <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
+                            <a href="/user/login" class="login">ingresar</a> <!-- link login -->
+                            <a href="/user/register" class="register">rgistrarse</a> <!-- link register -->
+                            <a href="#" class="exit-menu"><i class="fas fa-times"></i></a> <!-- icono para salir -->
+                        </div>
+                        <ul class="options-categorias"> <!-- container del las opciones de categorias -->
+                            <li><a href="/juegos-de-mesa">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
+                            <li><a href="/juegos-de-previa">juegos de previa</a><i class="fas fa-chevron-down"></i></li>
+                            <li><a href="/juegos-de-rol">juegos de rol</a><i class="fas fa-chevron-down"></i></li>
+                            <li><a href="/productos">todos los juegos</a><i class="fas fa-chevron-down"></i></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="container-buscador"> <!-- container del buscador -->
                     <input class="buscador" type="text" name="buscador" placeholder="buscador..."><a href="#"><i class="fas fa-search"></i></a> <!-- buscador -->
@@ -54,24 +69,11 @@
             <div class="container-categorias"> <!-- opciones de categorias -->
                 <ul>
                     <li><a href="/">inicio</a></li>
-                    <li><a href="/list/products">productos</a></li>
-                    <li><a href="/cart/shop">carrito</a></li>
+                    <li><a href="/productos">productos</a></li>
+                    <li><a href="/productCart">carrito</a></li>
                 </ul>
             </div>
 
-            <div class="menu-options"> <!-- conatiner de las opcines del menu hamburguer version mobile -->
-                <div class="menu-options-usuario"> <!-- container de las opciones de usuario -->
-                    <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
-                    <a href="/user/login" class="login">ingresar</a> <!-- link login -->
-                    <a href="/user/register" class="register">rgistrarse</a> <!-- link register -->
-                    <a href="#" class="exit-menu"><i class="fas fa-times"></i></a> <!-- icono para salir -->
-                </div>
-                <ul class="options-categorias"> <!-- container del las opciones de categorias -->
-                    <li><a href="/juegos-de-mesa">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
-                    <li><a href="/juegos-de-previa">juegos de previa</a><i class="fas fa-chevron-down"></i></li>
-                    <li><a href="/juegos-de-rol">juegos de rol</a><i class="fas fa-chevron-down"></i></li>
-                    <li><a href="/list/products">todos los juegos</a><i class="fas fa-chevron-down"></i></li>
-                </ul>
-            </div>
+            
     </nav>
 </header>

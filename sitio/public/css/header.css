@@ -82,95 +82,28 @@ body{
     margin-left: 20px;
 }
 
-.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars a{
-
-}
-
-.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars a .fa-bars{ /* icono hamburguer  */
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars .fa-bars{ /* icono hamburguer  */
     color: #fff;
     font-size: 40px;
 }
-
-.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador{ /* container del buscador */
-    display: flex;
-    align-items: center;
-    width: 67%;
-    margin-right: 25px;
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars input{
+    visibility: hidden;
 }
-
-.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .buscador{ /*  buscador */
-    border-radius: 50px;
-    border: none;
-    padding: 5px;
-    width: 100%;
-    font-family: var(--fontFamily-Textos);
-    padding-left: 10px;
-}
-
-.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .fa-search{ /* icono de lupa */
-    color: #fff;
-    font-size: 1.5em;
-    margin-left: 10px;
-}
-
-.container-menu .container-menu-bar .container-logo{ /* conatiner del logo */
-    padding: 20px;
-    background: var(--color-Gris1);
-    box-shadow: 0 0 15px #000 inset;
-}
-
-.container-menu .container-menu-bar .container-logo a{ /* "a" del logo */
-    width: 100%;
-}
-
-.container-menu .container-menu-bar .container-logo a img{ /* logo img */
-    width: 100%;
-}
-
-.container-menu .container-menu-bar .container-categorias{ /* opciones de categorias de juegos */
-    background-color: var(--color-Rojo2);
-    box-shadow: 0 0 10px #000 inset;
-}
-
-.container-menu .container-menu-bar .container-categorias ul{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
-
-.container-menu .container-menu-bar .container-categorias ul li{
-    width: 100%;
-    padding: 15px;
-    border-right: 1px solid var(--color-negro1);
-    transition: background-color .6s ;
-}
-
-.container-menu .container-menu-bar .container-categorias ul li:hover{
-    background-color: #c40f0fe9;
-    box-shadow: 0 0 10px #000 inset;
-}
-
-.container-menu .container-menu-bar .container-categorias ul li:last-child{
-    border-right: none;
-}
-
-.container-menu .container-menu-bar .container-categorias ul li a{ /* link a las categorias */
-    padding: 10px 27%;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #fff;
-    font-family: var(--fontFamily-Textos);
-    transition: font-size .4s;
-}
-
-.container-menu .container-menu-bar .container-categorias ul li a:hover{
-    font-size: 9px;
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars input:checked ~ .menu-options{
+    transform: translateY(18%);
+    transition: transform .8ys;
 }
 
 .container-menu .container-menu-bar .menu-options{ /* conatiner de las opcines del menu hamburguer version mobile  */
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-150%);
+    width: 100%;
+    background-color: var(--color-negro1);
+    height: 100%;
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario{ /* container del opciones de usuario */
@@ -249,6 +182,7 @@ body{
     align-items: center;
     background-color: var(--color-negro1);
     border-bottom: 1px solid var(--color-Rojo2);
+    align-items: center;
 }
 
 .container-menu .container-menu-bar .menu-options .options-categorias li:first-child{
@@ -272,6 +206,85 @@ body{
     color: #fff;
     padding-right: 15px;
 }
+
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador{ /* container del buscador */
+    display: flex;
+    align-items: center;
+    width: 67%;
+    margin-right: 25px;
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .buscador{ /*  buscador */
+    border-radius: 50px;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    font-family: var(--fontFamily-Textos);
+    padding-left: 10px;
+}
+
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .fa-search{ /* icono de lupa */
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.container-menu .container-menu-bar .container-logo{ /* conatiner del logo */
+    padding: 20px;
+    background: var(--color-Gris1);
+    box-shadow: 0 0 15px #000 inset;
+}
+
+.container-menu .container-menu-bar .container-logo a{ /* "a" del logo */
+    width: 100%;
+}
+
+.container-menu .container-menu-bar .container-logo a img{ /* logo img */
+    width: 100%;
+}
+
+.container-menu .container-menu-bar .container-categorias{ /* opciones de categorias de juegos */
+    background-color: var(--color-Rojo2);
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.container-menu .container-menu-bar .container-categorias ul{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.container-menu .container-menu-bar .container-categorias ul li{
+    width: 100%;
+    padding: 15px;
+    border-right: 1px solid var(--color-negro1);
+    transition: background-color .6s ;
+}
+
+.container-menu .container-menu-bar .container-categorias ul li:hover{
+    background-color: #c40f0fe9;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.container-menu .container-menu-bar .container-categorias ul li:last-child{
+    border-right: none;
+}
+
+.container-menu .container-menu-bar .container-categorias ul li a{ /* link a las categorias */
+    padding: 10px 18%;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+    transition: font-size .4s;
+}
+
+.container-menu .container-menu-bar .container-categorias ul li a:hover{
+    font-size: 9px;
+}
+
 
 @media (min-width:768px){
     /* cosas de version mobile */

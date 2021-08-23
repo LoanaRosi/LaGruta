@@ -31,6 +31,7 @@ app.use("/detail",productsRouter);
 app.use("/admin",indexRouter);
 app.use("/formulario1",formulario1Router)
 app.use("/create",productsRouter);
+app.use("/banner",indexRouter); /* muestra el control de banners */
 
 
 

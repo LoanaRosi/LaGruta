@@ -1,0 +1,24 @@
+<%- include("../partials/head") %> 
+<body class="control-banner">
+    <%- include("./partials/header") %> 
+    <main class="container-form">
+        <form class="form-banner" action="" method="POST" enctype="multipart/form-data">
+            <label for="banner" class="form-banner__label">banners de 350px de alto:</label>
+        <input class="form-banner__imgBanner" type="file" name="banner" id="banner">
+        <button class="form-banner__button" type="submit"> Agregar Banner</button>
+        </form>
+        <h1 class="title">Control Banner</h1>
+    <section class="container-banner">
+        <article class="container-banner__article">
+            <div class="container-img">
+                <% banner.forEach(item => { %>
+                 <img class="container-img__img" src="/images/banner-img/<%= item %> " alt="">
+                <% }) %>
+            </div>
+        </article>
+    </section>
+    </main>
+    <%- include("../partials/footer") %> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
