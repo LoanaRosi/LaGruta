@@ -1,28 +1,18 @@
-.index{
+.index-admin{
     background-color: white;
 }
 
-.index button {
+.index-admin button {
     margin: 2px;
     padding: 5px;
 }
 
-.index button a {
+.index-admin button a {
   color: black;
 }
 
-.tabla{
-  background-color: black;
-  padding: 2%;
-}
 
-.tabla h3{
-  color: white;
-  text-align: center;
-  font-size: 40px;
-}
-
-table { 
+.admin { 
   margin: 10px;  
   width: 98%; 
   border-collapse: collapse;
