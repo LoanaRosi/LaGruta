@@ -2,15 +2,18 @@
 const fs = require("fs");
 const path = require("path");
 
+const tothousand = require("../utils/thotousand")
+const descuento = require("../utils/descount")
+
 const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
 
-let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8')
+let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
 
 module.exports ={
 
     // muestra todos los productos y tambien por categoria
 	list: (req, res) => {
-		return res.render("listProducts",{products})
+		return res.render("listProducts",{products,descuento,tothousand})
 	},
 
 	// pagina detalle de producto
@@ -32,10 +35,10 @@ module.exports ={
 		const {name,price,category,img,discount,sale} = req.body
 		let product ={
 			id : products[products.length - 1].id +1,
-			name,
+			name : name.trim(),
 			price : +price,
 			category,
-			img : req.file.filename,
+			img : req.file ? req.file.filename : "default-image.jpg",
 			discount : +discount,
 			sale
 		}
@@ -54,7 +57,7 @@ module.exports ={
 	},
 
 
-	// metodo para subir el producto
+	// metodo para subir el producto editado
 	update: (req, res) => {
 		const {name,price,discount,category,description} = req.body;
 		 products.forEach(product => {
@@ -76,7 +79,7 @@ module.exports ={
 	destroy : (req, res) => {
 		let productsModifi = products.filter(product=> product.id !== +req.params.id);  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
 		save(productsModifi);
-		res.redirect("/products");
+		res.redirect("/admin/admin");
 
 	}
 

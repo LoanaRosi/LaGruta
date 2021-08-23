@@ -69,7 +69,7 @@
     
                             <div class="container-name-precio">
                                 <h3 class="name-product"><%= product.name %></h3>
-                                <h3 class="precio">$<%= product.price %></h3>
+                                <h3 class="precio">$<%=descuento(product.discount,product.price) %></h3>
                             </div>
     
                             <div class="container-option-product">
@@ -119,8 +119,8 @@
                                         <div class="detail-oferta">
                                             <h4><%= productsOfert[index].name %></h4>
                                             <div class="container-precios">
-                                            <p class="new-oferta">$<%= productsOfert[index].price %></p>
-                                            <p class="precio-old">20% OFF</p>
+                                            <p class="new-oferta">$<%=descuento(productsOfert[index].discount,productsOfert[index].price)%></p>
+                                            <p class="precio-old"><%=productsOfert[index].discount%>% OFF</p>
                                             </div> 
                                             <a href="/productDetail" class="botn-comprar">comprar</a>
                                         </div>
@@ -133,8 +133,8 @@
                                     <div class="detail-oferta">
                                         <h4><%= productsOfert[index +1].name %></h4>
                                         <div class="container-precios">
-                                        <p class="new-oferta">$<%= productsOfert[index +1].price %></p>
-                                        <p class="precio-old">20% OFF</p>
+                                        <p class="new-oferta">$<%=descuento(productsOfert[index+1].discount,productsOfert[index+1].price)%></p>
+                                        <p class="precio-old"><%=productsOfert[index].discount%>% OFF</p>
                                         </div> 
                                         <a href="/productDetail" class="botn-comprar">comprar</a>
                                     </div>
@@ -157,9 +157,7 @@
 
     </main>
     <%- include("./partials/footer") %> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="../../javascripts/glider.js"></script>
-    <script src="../../javascripts/carrusel.js"></script>
+    <%- include("./partials/scripts") %> 
 </body>
     
 </html>
