@@ -1,43 +1,53 @@
-.index{
+.index-admin{
     background-color: white;
 }
 
-.index button {
+.index-admin button {
     margin: 2px;
     padding: 5px;
 }
 
-.index button a {
+.index-admin button a {
   color: black;
 }
 
-.tabla{
-  background-color: black;
-  padding: 2%;
-}
 
-.tabla h3{
-  color: white;
-  text-align: center;
-  font-size: 40px;
-}
-
-table { 
+.index-admin .admin { 
   margin: 10px;  
   width: 98%; 
   border-collapse: collapse;
   
   }
   /* Zebra striping */
-  tr:nth-of-type(odd) { 
+  .index-admin tr:nth-of-type(odd) { 
     background: #eee; 
   }
-  th { 
+  .index-admin th { 
     background: #333; 
     color: white; 
     font-weight: bold; 
   }
-  td, th { 
+
+  .index-admin .imgProduct-container{
+    width: 12%;
+  }
+
+  .index-admin .imgProduct-container__img{
+
+  }
+
+  .index-admin .container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+  }
+
+  .index-admin .container-form__delete{
+
+  }
+
+  .index-admin td,.index-admin th { 
     padding: 6px; 
     border: 1px solid #ccc; 
     text-align: left; 

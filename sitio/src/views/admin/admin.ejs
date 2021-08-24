@@ -1,9 +1,10 @@
 <%- include("../partials/head") %> 
-<body class="index">
+<body class="index-admin">
     <%- include("./partials/header") %> 
-    <table>
+    <table class="admin">
         <thead>
         <tr>
+            <th>ID</th>
             <th>Imagen</th>
             <th>Nombre</th>
             <th>Precio</th>
@@ -15,15 +16,15 @@
         <tbody>
             <% products.forEach(product => { %>
               <tr>
-            <td><%= product.img %> </td>
+            <td><%= product.id %> </td>
+            <td class="imgProduct-container"><img class="imgProduct-container__img" src="/images/productos/<%= product.img %>" alt="imagen producto"></td>
             <td><%= product.name %> </td>
             <td><%= product.price %> </td>
             <td><%= product.category %> </td>
-            <td><%= product.sale %> </td>
-            
+            <td><%= product.sale %> </td> 
             <td class="container-form">
                 <form action="/delete/product/<%= product.id %>?_method=DELETE" method="POST">
-                    <button type="submit"><a href="#"><i class="far fa-trash-alt"></i></i></a></button>
+                    <button type="submit" class="container-form__delete"><a href="#"><i class="far fa-trash-alt"></i></i></a></button>
                 </form>
                 <form action="">
                     <button><a href=""><i class="far fa-edit"></i></a></button>
@@ -31,6 +32,8 @@
             </td>
         </tr>
             <% }) %>
+
+            <!-- <a href="/products/edit/" class="btn btn-sm btn-success" style="width: 30px;"><i class="fas fa-edit"></i></a> -->
        
         <!-- <tr>
             <td>The</td>

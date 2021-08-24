@@ -1,22 +1,25 @@
+<!DOCTYPE html>
+<html>
 <%- include("../partials/head", {title: "Editar"}) %> 
-
 <body class="admin-edit">
-    <%- include("../partials/header") %> 
+    <%- include("./partials/header") %> 
     <main class="admin__container">
-        <h2 class="admin__title">Editar producto</h2> 
-        <form class="form-admin" action="/products/edit/" method="POST" > 
-
+        <h2 class="admin__title">Editar "<%= product.name %> <%= product.category %>" </h2> 
+        <form class="form-admin" action="products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                       
             <div class="form-admin__box">
-                <input class="form-admin__input" type="file" name="img" id="img" placeholder="Imagen del Producto">
+                <label for="imagen" class="form-label">Cambiar imagen</label>
+                  <input type="file" class="form-control" id="imagen" name="img-product" required>
             </div>
 
             <div class="form-admin__box">
-                <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto">
+                <label for="nombre" class="form-label">Nombre del producto</label>
+                <input class="form-admin__input" type="text" id= "name" require name="name" value= "<%= product.name %>"placeholder="Nombre del Producto">
             </div>
-
-            
+           
             <div class="form-admin__box">
-                <input class="form-admin__input" type="number" name="price" id="price" placeholder="Precio del Producto">
+                <label for="precio" class="form-label">Precio</label>
+                <input class="form-admin__input" type="number" name="price" id="price" required value="<%= product.price %>"placeholder="Precio del Producto">
             </div>
 
             <div class="form-admin__box">
@@ -28,7 +31,9 @@
             </div>
 
             <div class="form-admin__box">
-                <input class="form-admin__input" type="number" name="discount" id="discount" placeholder="Descuento del Producto">
+                <label for="discount" class="form-label">Descuento</label>
+                <input class="form-admin__input" type="number" name="discount" id="discount" 
+                value="<%= product.discount %>" placeholder="Descuento del Producto">
             </div>
 
             <div class="form-admin__box">
@@ -40,9 +45,10 @@
                 </select>
             </div>
             <div class="create-button">
-                <button class="create-button__button" type="submit">Crear producto</button>
+                <button class="edit-button__button" type="submit">Editar producto</button>
             </div>
         </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>

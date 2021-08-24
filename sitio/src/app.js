@@ -23,17 +23,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "..", 'public')));
 
-app.use(methodOverride("_method"));
+app.use(methodOverride('_method'));
 
 /* rutas */
 app.use('/', indexRouter);
 app.use("/cart",indexRouter);
 app.use('/user', usersRouter);
 app.use("/list",productsRouter); /* muestra todos los productos */
-app.use("/detail",productsRouter);
+app.use("/productDetail",productsRouter);
 app.use("/admin",indexRouter);
 app.use("/cart",formularioRouter);
 app.use("/create",productsRouter); /* para crear productos */
+app.use("/edit",productsRouter); /* para editar productos */
 app.use("/banner",indexRouter); /* muestra el control de banners */
 app.use("/delete",productsRouter); /* para eliminar producto */
 /* app.use("admin/edit",productsRouter); */
