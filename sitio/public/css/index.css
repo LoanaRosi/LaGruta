@@ -33,23 +33,41 @@
   }
 
   .index-admin .imgProduct-container__img{
-
-  }
-
-  .index-admin .container-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%
   }
 
-  .index-admin .container-form__delete{
+  .index-admin .container-form{
+    text-align: center;
+  }
 
+  .index-admin .container-delete{
+    display: inline-block;
+  }
+
+  .index-admin .container-form__delete{
+    padding: 5px 7px;
+    background-color: var(--color-Rojo3);
+  }
+
+  .index-admin .container-form__delete:hover{
+    background-color: var(--color-Rojo2);
+  }
+
+  .index-admin .container-form__edit{
+    background: #e4e40b;
+  }
+
+  .index-admin .container-form__edit:hover{
+    background: #bdbd09;
   }
 
   .index-admin td,.index-admin th { 
-    padding: 6px; 
     border: 1px solid #ccc; 
     text-align: left; 
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 600
   }
   

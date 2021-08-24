@@ -65,17 +65,16 @@ margin: 20px 0;
 .product-detail .payment{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .product-detail .payment a{
-    width: 20%;
-    margin-right: -45px;
+    width: 15%;
         
 }
 
 .product-detail .product-name .payment img{ /* imagenes tarjetas de credito */
-    width: 40%;
+    width: 100%;
     
 } 
 
@@ -123,13 +122,19 @@ margin: 20px 0;
     border: none;
 }
 
-.product-detail .product .envio { /* Medios de envio */
+.product-detail .envio { /* Medios de envio */
     border: 1px solid whitesmoke;
     border-radius: 7px;
     width: 70%;
     margin: 20px auto;
     padding: 0 0 10px;
     
+}
+
+.product-detail .envio__datos{
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 
@@ -157,6 +162,7 @@ margin: 20px 0;
     border: none;
     margin-inline-start: 20px;
     padding-left: 5px;
+    width: 120px
 }
 
 .product-detail .product-name .envio button{
@@ -210,7 +216,8 @@ margin: 20px 0;
     color: white;
     font-size: 0.7rem;
     text-align: left;
-    margin-left: 16%;
+    width: 50%;
+    margin: 0 auto
 } 
 
 .product-detail table{
@@ -316,26 +323,32 @@ margin: 20px 0;
 
 @media (min-width:768px){
     
+    .product-detail  .product-container-photos{
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        margin-left: 35%
+    }
 
     .product-detail .product-photo-big{
         display: flex;
         justify-content: center;
-        width:100%
+        margin-right: 40px;
     }
 
-    .prudct-detail .product-photo-big img{
+    .product-detail .product-photo-big__img{
         width:100%;
-        margin-right: 20px;
     }
 
     .product-detail .product-photo-small{
-        display:flex;
+        display: flex;
         flex-direction: column;
-        width:10%;
+        width: 6%;
     }
 
-    .product-detail .product-photo-small img{
-        width:100%
+    .product-detail .product-photo-small__img{
+        margin-bottom: 10px;
+        width: 100%;
     }
 
     .product-detail .product-name article .product-photo img{
@@ -347,26 +360,43 @@ margin: 20px 0;
         }
 
     .product-detail .payment{
-        width: 60%;
-        margin-left: 160px;
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
        
     }
 
+    .product-detail .payment a{
+        width: 15%;
+            
+    }
+    
     .product-detail .product-name .payment img{ /* imagenes tarjetas de credito */
-        width: 40%;     
+        width: 100%;
+        
     } 
 
-    .product-detail .payment a{
-        width: 20%; 
-                    
+    .product-detail .envio { /* contenedor de datos de envio */
+        border: 1px solid whitesmoke;
+        border-radius: 7px;
+        width: 50%;
+        margin: 20px auto;
+        padding: 0 0 10px;
     }
 
-    .product-detail .product .envio { /* Medios de envio */
-        width: 40%;        
+    .product-detail .product-name .envio input{ /* input codigo postal */
+        font-size: 0.7rem;
+        padding: 7px 0;
+        border-radius: 3px;
+        border: none;
+        margin-inline-start: 20px;
+        padding-left: 5px;
+        width: 200px
     }
 
     .product-detail .product-name .info { /* todo el contenedor de la tabla */
-        margin-left: 31%;
+       
     } 
     
     .product-detail .productos-relacionados .product-3{
@@ -405,30 +435,7 @@ margin: 20px 0;
        
     }
 
-   
-    .product-detail .payment{
-        width: 50%;
-        margin-left: 255px;
-               
-    }
-
-    .product-detail .product-name .payment img{ /* imagenes tarjetas de credito */
-        width: 25%;     
-    } 
-
-    .product-detail .product .payment a{
-        width: 40%; 
-        margin-right: -150px;
-        
-                    
-    }
-
-    .product-detail .product .envio { /* Medios de envio */
-        width: 30%;        
-    }
-
     .product-detail .product-name .info { /* todo el contenedor de la tabla */
-        margin-left: 36%;
     } 
     
     

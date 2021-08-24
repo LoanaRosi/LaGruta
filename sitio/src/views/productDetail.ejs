@@ -13,15 +13,16 @@
     </div>
     <section class="product-name">
         <h1><%= productDetail.name %></h1>
-        <div class= product> 
+        <div class= product-container-photos> 
             <div class=product-photo-big>
-                <img src="/images/productos/<%= productDetail.img %>" alt="">
-                <div class="product-photo-small">
-                    <img src="/images/detail-product/Juego-2.jpg" alt="">
-                    <img src="/images/detail-product/Juego-3.jpg" alt="">
-                    <img src="/images/detail-product/Juego-4.jpg" alt="">                
-                </div>    
+                <img class="product-photo-big__img" src="/images/productos/<%= productDetail.img %>" alt="">
+                 
             </div> 
+            <div class="product-photo-small">
+                <img class="product-photo-small__img" src="/images/detail-product/Juego-2.jpg" alt="">
+                <img class="product-photo-small__img" src="/images/detail-product/Juego-3.jpg" alt="">
+                <img class="product-photo-small__img" src="/images/detail-product/Juego-4.jpg" alt="">                
+            </div>   
             
         </div>
         <div class="product-info">
@@ -49,19 +50,23 @@
                 <i class="fas fa-truck"></i>
                 <span>Medios de envío </span>
             </p>
-            <input class="codigo-postal" type="tel" name="zipcode" placeholder="Tu código postal" value=""
+            <div class="envio__datos">
+                <input class="codigo-postal" type="tel" name="zipcode" placeholder="Tu código postal" value=""
             aria-label="Tu código postal">
             <button class="calcular" aria-label="Calcular envío">
                 <span>Calcular</span>
             </button>
+            
+            </div>
             <div>
                 <a class="cp-link" href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank">No sé mi código postal</a>
             </div> 
-            </div>  
+            
+        </div>  
         </article>     
         <div class="info">
             <p>Detalles</p>
-            <table style="height: 744px; width: 291px;">
+            <table style="height: 744px; width: 100%;">
                 <tbody>
                 <tr style="height: 23px;">
                 <td style="width: 116.983px; height: 23px;">&nbsp;Autor</td>
@@ -172,6 +177,7 @@
     </section>
     </main>
     <%- include("./partials/footer") %> 
+    
 </body>
 </html>
 
