@@ -9,23 +9,34 @@
             <span class="breadcrumb-divider">/</span>
             <a class="breadcrumbs-juego-mesa" href="/" title="Juegos de mesa">Juegos de mesa</a>
             <span class="breadcrumb-divider">/</span>
-            <span class="breadcrumbs-activo">Los Inmortales</span>   
+            <span class="breadcrumbs-activo"><%= productDetail.name %></span>   
     </div>
     <section class="product-name">
-        <h1>Los Inmortales</h1>
-        <article class="product">            
-            <div class="product-photo">
+        <h1><%= productDetail.name %></h1>
+        <div class= product> 
+            <div class=product-photo-big>
+                <img src="/images/productos/<%= productDetail.img %>" alt="">
+                <div class="product-photo-small">
+                    <img src="/images/detail-product/Juego-2.jpg" alt="">
+                    <img src="/images/detail-product/Juego-3.jpg" alt="">
+                    <img src="/images/detail-product/Juego-4.jpg" alt="">                
+                </div>    
+            </div> 
+            
+        </div>
+        <div class="product-info">
             <!-- <div class="more"><i class="fas fa-chevron-left"></i></div> -->
-            <img src="/images/detail-product/juego-los-inmortales.png" alt="">
             <span class="price">$10.000</span>
             <span class="credit">12 cuotas de $833,33</span>
             <!-- <div class="more"><i class="fas fa-chevron-right"></i></div> -->
         </div>
+        
             
         <div class="payment">
-        <a href="/mediosPago"><img src="/public/images/cards/" alt="Mastercard"></a>
-        <a href="/mediosPago"><img src="/images/amex@2x.png" alt="Amex"></a>
-        <a href="/mediosPago"><img src="/images/credit-card@2x.png" alt="Tarjeta"></a>
+        <a href="/mediosPago"><img src="/images/cards/visa@2x.png" alt="Visa"></a>
+        <a href="/mediosPago"><img src="/images/cards/mastercard@2x.png" alt="Mastercard"></a>
+        <a href="/mediosPago"><img src="/images/cards/amex@2x.png" alt="Amex"></a>
+        <a href="/mediosPago"><img src="/images/cards/credit-card@2x.png" alt="Tarjeta"></a>
         </div>
         <div class="payment-link">
             <a href="">Ver medios de pago</a>
@@ -163,6 +174,8 @@
     <%- include("./partials/footer") %> 
 </body>
 </html>
+
+
 
 
 

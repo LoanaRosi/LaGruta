@@ -315,6 +315,28 @@ margin: 20px 0;
 
 
 @media (min-width:768px){
+    
+
+    .product-detail .product-photo-big{
+        display: flex;
+        justify-content: center;
+        width:100%
+    }
+
+    .prudct-detail .product-photo-big img{
+        width:100%;
+        margin-right: 20px;
+    }
+
+    .product-detail .product-photo-small{
+        display:flex;
+        flex-direction: column;
+        width:10%;
+    }
+
+    .product-detail .product-photo-small img{
+        width:100%
+    }
 
     .product-detail .product-name article .product-photo img{
         width: 40%;            

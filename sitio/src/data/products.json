@@ -3,8 +3,8 @@
     "id": 1,
     "name": "cyclades",
     "price": 13900,
-    "category": "juego-de-mesa",
-    "img": "mesa-1.png",
+    "category": "true",
+    "img": "imgproduct-1629775005389.jpg",
     "discount": 0,
     "sale": true
   },
