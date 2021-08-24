@@ -22,7 +22,7 @@ const upload = multer({
 
 router.get("/products",list); /* muestra todos los productos */
 
-router.get("/productDetail/:id",detail);
+router.get("/product/:id",detail);
 
 router.get("/admin",create); /* ruta de cracion de producto */
 router.post("/admin",upload.single("img-product"),store); /* guarda un producto */

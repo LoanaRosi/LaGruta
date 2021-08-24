@@ -31,7 +31,7 @@ app.use('/', indexRouter);
 app.use("/cart",indexRouter);
 app.use('/user', usersRouter);
 app.use("/list",productsRouter); /* muestra todos los productos */
-app.use("/productDetail",productsRouter);
+app.use("/detail",productsRouter);
 app.use("/admin",indexRouter);
 app.use("/cart",formularioRouter);
 app.use("/create",productsRouter); /* para crear productos */
