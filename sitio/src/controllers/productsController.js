@@ -32,7 +32,7 @@ module.exports ={
 	
 	// metodo para crear el producto
 	store: (req, res) => { /* esta manda los datos */
-		const {name,price,category,img,discount,sale} = req.body
+		const {name,price,category,discount,sale} = req.body
 		let product ={
 			id : products[products.length - 1].id +1,
 			name : name.trim(),
@@ -59,22 +59,22 @@ module.exports ={
 
 	// metodo para subir el producto editado
 	update: (req, res) => {
-		const {name,price,discount,category,description} = req.body;
-		 products.forEach(product => {
+		const {name,price,category,discount,sale,img} = req.body;
+		 products.map(product => {
 			if (product.id === +req.params.id) { /* recordar poner el +, si no no va a comparar number con string */
 				product.name = name;
 				product.price = +price;
-				product.discount = +discount;
 				product.category = category;
-				product.description = description;
-				/* falta imagen */
+				product.img = req.file ? req.file.filename : product.img;
+				product.discount = +discount;
+				product.sale = sale ? true : false;
+				
 			}
 			
 		});
 		save(products)
-		res.redirect("/products");
-	
-	},
+		res.redirect("/admin/admin");
+    },
 
 	// metodo para eliminar un producto
 	destroy : (req, res) => {

@@ -1,4 +1,4 @@
-<%- include("../partials/head") %> 
+<%- include("../partials/head",{title: "admin"} ) %> 
 <body class="index-admin">
     <%- include("./partials/header") %> 
     <table class="admin">
@@ -27,7 +27,7 @@
                     <button type="submit" class="container-form__delete"><a href="#"><i class="far fa-trash-alt"></i></i></a></button>
                 </form>
                 <form action="">
-                    <button><a href=""><i class="far fa-edit"></i></a></button>
+                    <button><a href="/edit/edit/<%= product.id %>"><i class="far fa-edit"></i></a></button>
                 </form>
             </td>
         </tr>

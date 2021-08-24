@@ -26,8 +26,9 @@ router.get("/product/:id",detail);
 
 router.get("/admin",create); /* ruta de cracion de producto */
 router.post("/admin",upload.single("img-product"),store); /* guarda un producto */
+
 router.get('/edit/:id', edit); /* edita un producto */
-router.put('/edit/:id',upload.single('img-product'), update); /* actualiza datos de un producto */
+router.put('/edit/:id',upload.single('img'), update); /* actualiza datos de un producto */
 
 router.delete("/product/:id",destroy) /* elimina un producto */
 

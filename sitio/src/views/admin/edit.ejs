@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <%- include("../partials/head", {title: "Editar"}) %> 
-<body class="admin-edit">
+<body class="admin-creation">
     <%- include("./partials/header") %> 
     <main class="admin__container">
         <h2 class="admin__title">Editar "<%= product.name %> <%= product.category %>" </h2> 
-        <form class="form-admin" action="products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+        <form class="form-admin" action="edit/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                        
             <div class="form-admin__box">
                 <label for="imagen" class="form-label">Cambiar imagen</label>
-                  <input type="file" class="form-control" id="imagen" name="img-product" required>
+                  <input type="file" class="form-control" id="img" name="img">
             </div>
 
             <div class="form-admin__box">
@@ -19,11 +19,11 @@
            
             <div class="form-admin__box">
                 <label for="precio" class="form-label">Precio</label>
-                <input class="form-admin__input" type="number" name="price" id="price" required value="<%= product.price %>"placeholder="Precio del Producto">
+                <input class="form-admin__input" type="number" name="price" id="price" required value=<%= product.price %> placeholder="Precio del Producto">
             </div>
 
             <div class="form-admin__box">
-                <select class="form-admin__select" name="sale" id="category">
+                <select class="form-admin__select" name="sale" id="sale">
                     <option class="fom-admin__option" value="true" hidden>Dato del Producto</option>
                     <option class="fom-admin__option" value="true">En Oferta</option>
                     <option class="fom-admin__option" value="false">Destacados</option>
@@ -33,7 +33,7 @@
             <div class="form-admin__box">
                 <label for="discount" class="form-label">Descuento</label>
                 <input class="form-admin__input" type="number" name="discount" id="discount" 
-                value="<%= product.discount %>" placeholder="Descuento del Producto">
+                value=<%= product.discount %> placeholder="Descuento del Producto">
             </div>
 
             <div class="form-admin__box">
