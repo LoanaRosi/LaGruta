@@ -17,12 +17,19 @@
             <% products.forEach(product => { %>
               <tr>
             <td><%= product.id %> </td>
-            <td><%= product.img %> </td>
+            <td class="imgProduct-container"><img class="imgProduct-container__img" src="/images/productos/<%= product.img %>" alt="imagen producto"></td>
             <td><%= product.name %> </td>
             <td><%= product.price %> </td>
             <td><%= product.category %> </td>
-            <td><%= product.sale %> </td>
-            <td><button><a href="/products/edit/<%= product.id %>"><i class="far fa-edit"></i></a></button><button><a href=""><i class="far fa-trash-alt"></i></i></a></button></td>
+            <td><%= product.sale %> </td> 
+            <td class="container-form">
+                <form action="/delete/product/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="container-form__delete"><a href="#"><i class="far fa-trash-alt"></i></i></a></button>
+                </form>
+                <form action="">
+                    <button><a href=""><i class="far fa-edit"></i></a></button>
+                </form>
+            </td>
         </tr>
             <% }) %>
 
@@ -35,6 +42,6 @@
         </tr> -->
         </tbody>
     </table>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <%- include("../partials/scripts") %> 
 </body>
 </html>

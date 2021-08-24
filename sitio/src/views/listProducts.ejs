@@ -54,7 +54,7 @@
                         </a>
                         <div class="container-name-precio">
                             <h2 class="name-product"><%= product.name %></h2>
-                            <p class="precio"><%= product.price %></p>
+                            <p class="precio">$<%=descuento(product.discount,product.price)%></p>
                         </div>
                         <div class="container-option-product">
                             <div class="option-detalle">

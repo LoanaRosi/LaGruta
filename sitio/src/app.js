@@ -3,8 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-const methodOverride = require('method-override');
+const methodOverride = require("method-override");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -37,6 +36,7 @@ app.use("/cart",formularioRouter);
 app.use("/create",productsRouter); /* para crear productos */
 app.use("/edit",productsRouter); /* para editar productos */
 app.use("/banner",indexRouter); /* muestra el control de banners */
+app.use("/delete",productsRouter); /* para eliminar producto */
 /* app.use("admin/edit",productsRouter); */
 
 
