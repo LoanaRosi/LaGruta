@@ -6,7 +6,7 @@
 
 }
 
-.productos .main-products h1{ /* titulo de pagina */
+.productos .main-products .title-result{ /* titulo de pagina */
     text-transform: uppercase;
     text-align: center;
     color: #fff;
@@ -19,6 +19,16 @@
     margin-top: 30px;
     margin-bottom: 50px;
     padding-bottom: 3px;
+}
+
+.productos .no-result{ /* en caso de no encontar el producto */
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-left: 30px;
+    display: inline-block;
+    font-size: 25px;
 }
 /* -----------------caja filtrado------------------------------- */
 

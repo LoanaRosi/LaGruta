@@ -18,6 +18,18 @@ module.exports ={
 
     },
 
+    search: (req,res) => {
+        let busqueda = products.filter(product => product.name.toLowerCase().trim().includes(req.query.busqueda.trim().toLowerCase()));
+        
+
+        res.render("result-search",{
+            tothousand,
+            descuento,
+            products : busqueda,
+            resultado : req.query.busqueda
+        })
+    },
+
     // vita del carrito
     cartShop: (req,res) =>{
         return res.render("cart/productCart")

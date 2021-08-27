@@ -45,7 +45,7 @@ module.exports ={
 
 		products.push(product)
 		save(products)
-		res.redirect("/list/products")
+		res.redirect("/product/list")
 	
 	},
 
@@ -73,14 +73,14 @@ module.exports ={
 			
 		});
 		save(products)
-		res.redirect("/admin/admin");
+		res.redirect("/admin");
     },
 
 	// metodo para eliminar un producto
 	destroy : (req, res) => {
 		let productsModifi = products.filter(product=> product.id !== +req.params.id);  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
 		save(productsModifi);
-		res.redirect("/admin/admin");
+		res.redirect("/admin");
 
 	}
 
