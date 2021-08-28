@@ -175,7 +175,7 @@
     "name": "Aventuras en la Tierra Media",
     "price": 2380,
     "category": "juego-de-rol",
-    "img": "rol-1.png",
+    "img": "rol-1.jpg",
     "discount": 0,
     "sale": false
   },
@@ -220,7 +220,7 @@
     "name": "Camarilla: Vampiro",
     "price": 2380,
     "category": "juego-de-rol",
-    "img": "rol-6.png",
+    "img": "rol-6.jpg",
     "discount": 0,
     "sale": false
   },
@@ -229,7 +229,7 @@
     "name": "The witcher",
     "price": 5400,
     "category": "juego-de-rol",
-    "img": "rol-7.png",
+    "img": "rol-7.jpg",
     "discount": 0,
     "sale": false
   },
@@ -238,7 +238,7 @@
     "name": "Pathfinder",
     "price": 8000,
     "category": "juego-de-rol",
-    "img": "rol-8.png",
+    "img": "rol-8.jpg",
     "discount": 0,
     "sale": false
   },
@@ -256,7 +256,7 @@
     "name": "Star wars: Al filo del imperio",
     "price": 9980,
     "category": "juego-de-rol",
-    "img": "rol-10.png",
+    "img": "rol-10.jpg",
     "discount": 0,
     "sale": false
   },
@@ -265,7 +265,7 @@
     "name": "Dune",
     "price": 12000,
     "category": "juego-de-rol",
-    "img": "rol-11.png",
+    "img": "rol-11.jpg",
     "discount": 0,
     "sale": false
   },
