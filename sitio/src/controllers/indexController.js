@@ -5,7 +5,7 @@ const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","pro
 const banner = require(path.join(__dirname,"..","data","banner.json"))
 
 const tothousand = require("../utils/thotousand")
-const descuento = require("../utils/descount")
+const descuento = require("../utils/discount")
 
 let saveBanner = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','banner.json'),JSON.stringify(dato,null,2),'utf-8')
 

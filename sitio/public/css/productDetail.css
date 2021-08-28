@@ -79,7 +79,7 @@ margin: 20px 0;
 } 
 
 .product-detail .product-name .payment img:hover{
-    border: 1px solid #8E1212;
+    opacity: .50;
     transition: .3s;
 }
 
