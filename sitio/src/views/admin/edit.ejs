@@ -5,7 +5,7 @@
     <%- include("./partials/header") %> 
     <main class="admin__container">
         <h2 class="admin__title">Editar "<%= product.name %> <%= product.category %>" </h2> 
-        <form class="form-admin" action="/edit/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+        <form class="form-admin" action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                        
             <div class="form-admin__box">
                 <label for="imagen" class="form-label">Cambiar imagen</label>

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 <%- include("./partials/head") %> 
 
@@ -49,7 +48,7 @@
                 <article class="producto">
 
                     <div class="conatiner-inside-producto">
-                        <a href="#" class="container-img">
+                        <a href="/product/detail/<%= product.id %>" class="container-img">
                             <img src="/images/productos/<%=product.img %>" alt="" class="img-product">
                         </a>
                         <div class="container-name-precio">
@@ -58,7 +57,7 @@
                         </div>
                         <div class="container-option-product">
                             <div class="option-detalle">
-                                <a href="#"><i class="far fa-eye"></i>
+                                <a href="/product/detail/<%= product.id %>"><i class="far fa-eye"></i>
                                     <p>detalles</p>
                                 </a>
                             </div>

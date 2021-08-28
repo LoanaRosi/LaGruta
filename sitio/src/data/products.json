@@ -3,8 +3,8 @@
     "id": 1,
     "name": "cyclades",
     "price": 13900,
-    "category": "true",
-    "img": "imgproduct-1629775005389.jpg",
+    "category": "juego-de-mesa",
+    "img": "imgproduct-1630029973148.png",
     "discount": 0,
     "sale": true
   },
@@ -82,7 +82,7 @@
   },
   {
     "id": 10,
-    "name": "H.D.P 6",
+    "name": "HDP 6",
     "price": 3300,
     "category": "juego-de-previa",
     "img": "previa-3.png",

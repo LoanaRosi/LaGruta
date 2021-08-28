@@ -5,7 +5,7 @@ const path = require("path")
 
 const multer = require("multer")
 
-const { index, cartShop, admin, banner, bannerAdd } = require('../controllers/indexController');
+const { index, cartShop, admin, banner, bannerAdd,search } = require('../controllers/indexController');
 
 const storage = multer.diskStorage({
     destination : (req,file,callback) => {
@@ -23,11 +23,9 @@ const upload = multer({
 
 /* GET home page. */
 router.get('/',index);
-
-router.get("/shop",cartShop)
-
+router.get("/result",search)
+router.get("/cart",cartShop)
 router.get("/admin",admin)
-
 router.get("/banner/control",banner)
 router.post("/banner/control",upload.single("banner"),bannerAdd);
 

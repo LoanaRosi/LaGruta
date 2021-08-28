@@ -95,6 +95,7 @@ body{
     justify-content: space-between;
 }
 
+
 .container-menu .container-menu-bar .container-hamburguer-buscador .container-bars{ /* container del menu hamburguer */
     margin-left: 20px;
 }
@@ -224,12 +225,16 @@ body{
     padding-right: 15px;
 }
 
+.container-menu .container-menu-bar .container-hamburguer-buscador .search-form{
+    width: 65%;
+    display: flex;
+    margin: 0 auto
+}
 
 .container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador{ /* container del buscador */
     display: flex;
     align-items: center;
-    width: 67%;
-    margin-right: 25px;
+    width: 100%;
 }
 
 .container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .buscador{ /*  buscador */
@@ -241,11 +246,11 @@ body{
     padding-left: 10px;
 }
 
-.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .fa-search{ /* icono de lupa */
-    color: #fff;
-    font-size: 1.5em;
-    margin-left: 10px;
+.container-menu .container-menu-bar .container-hamburguer-buscador .container-buscador .search-form_button{
+    margin-left: -27px;
+    border: none;
 }
+
 
 .container-menu .container-menu-bar .container-logo{ /* conatiner del logo */
     padding: 20px;
@@ -353,12 +358,16 @@ body{
         display: block;
         width: 100%;
     }
+
+    .container-menu .search-form{
+        width: 30%;
+    }
     
     .container-menu .container-menu-center .container-buscador{ /* container del buscador */
         display: flex;
         align-items: center;
         margin-left: 20px;
-        width: 27%;
+        width: 100%;
     }
     
     .container-menu .container-menu-center .container-buscador .buscador{ /* input buscador  */
@@ -367,19 +376,14 @@ body{
         padding: 4px;
         padding-left: 10px;
         font-family: var(--fontFamily-Textos);
-        width: 100%;
         box-shadow: 0 0 10px #000;
+        width: 100%;
     }
 
-    .container-menu .container-menu-center .container-buscador a{ /* a del icono de lupa */
-        padding-left: 7px;
-       
+    .container-menu .search-form_button{ /* button del buscador */
+        border: none;
+        margin-left: -25px;
     }
-
-    .container-menu .container-menu-center .container-buscador a i{ /* icono de lupa */
-        color: var(--color-Rojo2);
-        font-size: 1.3em;
-    } 
     
     .container-menu .container-menu-center .container-login-register{ /* conatainer del login y del register */
         display: flex;
@@ -515,8 +519,7 @@ body{
     }
 
     .container-menu .container-menu-center .container-buscador{ /* container del buscador */
-        margin-left: 35px;
-        width: 30%;
+        
     }
 
     .container-menu .container-menu-center .container-buscador .buscador{ /* input buscador  */

@@ -5,7 +5,7 @@ const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","pro
 const banner = require(path.join(__dirname,"..","data","banner.json"))
 
 const tothousand = require("../utils/thotousand")
-const descuento = require("../utils/descount")
+const descuento = require("../utils/discount")
 
 let saveBanner = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','banner.json'),JSON.stringify(dato,null,2),'utf-8')
 
@@ -16,6 +16,18 @@ module.exports ={
         const productsOfert = products.filter(product=>product.sale === true);
         return res.render("home",{products,productsOfert,banner,descuento,tothousand})
 
+    },
+
+    search: (req,res) => {
+        let busqueda = products.filter(product => product.name.toLowerCase().trim().includes(req.query.busqueda.trim().toLowerCase()));
+        
+
+        res.render("result-search",{
+            tothousand,
+            descuento,
+            products : busqueda,
+            resultado : req.query.busqueda
+        })
     },
 
     // vita del carrito

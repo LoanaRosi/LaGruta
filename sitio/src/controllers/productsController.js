@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const tothousand = require("../utils/thotousand")
-const descuento = require("../utils/descount")
+const descuento = require("../utils/discount")
 
 const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
 
@@ -21,7 +21,8 @@ module.exports ={
 		let productDetail = products.find(product => product.id === +req.params.id); /* usamos find para que devuelva un objeti literarl en vez de un array como lo aria filter */
 
 		return res.render("productDetail",{
-			productDetail
+			productDetail,
+			products
 		})
 	},
 
@@ -45,7 +46,7 @@ module.exports ={
 
 		products.push(product)
 		save(products)
-		res.redirect("/list/products")
+		res.redirect("/product/list")
 	
 	},
 
@@ -73,14 +74,14 @@ module.exports ={
 			
 		});
 		save(products)
-		res.redirect("/admin/admin");
+		res.redirect("/admin");
     },
 
 	// metodo para eliminar un producto
 	destroy : (req, res) => {
 		let productsModifi = products.filter(product=> product.id !== +req.params.id);  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
 		save(productsModifi);
-		res.redirect("/admin/admin");
+		res.redirect("/admin");
 
 	}
 

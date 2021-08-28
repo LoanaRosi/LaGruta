@@ -13,6 +13,9 @@
             <div class="container-img">
                 <% banner.forEach(item => { %>
                  <img class="container-img__img" src="/images/banner-img/<%= item %> " alt="">
+                 <form action="/banner/control" method="POST" enctype="multipart/form-data">
+                     <button type="submit">Eliminiar</button>
+                 </form>
                 <% }) %>
             </div>
         </article>
