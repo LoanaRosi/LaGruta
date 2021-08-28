@@ -18,11 +18,19 @@
                 <img class="product-photo-big__img" src="/images/productos/<%= productDetail.img %>" alt="">
                  
             </div> 
-            <div class="product-photo-small">
-                <img class="product-photo-small__img" src="/images/detail-product/Juego-2.jpg" alt="">
-                <img class="product-photo-small__img" src="/images/detail-product/Juego-3.jpg" alt="">
-                <img class="product-photo-small__img" src="/images/detail-product/Juego-4.jpg" alt="">                
-            </div>   
+            <div>
+                <div class="glider-contain">
+                    <div class="glider">
+                      <div><img class="product-photo-small__img" src="/images/detail-product/Juego-2.jpg" alt=""></div>
+                      <div> <img class="product-photo-small__img" src="/images/detail-product/Juego-3.jpg" alt=""></div>
+                      <div><img class="product-photo-small__img" src="/images/detail-product/Juego-4.jpg" alt=""> </div>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                  </div>
+            </div>
             
         </div>
         <div class="product-info">
