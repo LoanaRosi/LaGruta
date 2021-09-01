@@ -93,12 +93,26 @@
 }
 
 .control-banner .container-img{
-    
+    position: relative;
 }
 
 .control-banner .container-img__img{ /* imagen banner */
     width: 100%;
     margin-top: 10px;
+}
+
+.control-banner .buttonDelete{ /* boton para borrar banner */
+    margin-left: 85%;
+    margin-top: -100px;
+    position: absolute;
+    padding: 5px 20px;
+    border-radius: 7px;
+    border: 1px solid #000;
+    background-color: var(--color-Rojo1);
+    color: #fff;
+    box-shadow: 0 0 25px 4px #000, 0 0 10px -4px #000 inset;
+    font-family: var(--fontFamily-Titulo);
+    text-transform: uppercase;
 }
 
 @media (min-width:768px) {

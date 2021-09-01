@@ -12,10 +12,10 @@
         <article class="container-banner__article">
             <div class="container-img">
                 <% banner.forEach(item => { %>
-                 <img class="container-img__img" src="/images/banner-img/<%= item %> " alt="">
-                 <form action="/banner/control" method="POST" enctype="multipart/form-data">
-                     <button type="submit">Eliminiar</button>
-                 </form>
+                    <img class="container-img__img" src="/images/banner-img/<%= item.imgBanner %>" alt="">
+                    <form action="/banner/delete/<%= item.id %>?_method=DELETE" method="POST">
+                        <button class="buttonDelete" type="submit">Eliminiar</button>
+                    </form>
                 <% }) %>
             </div>
         </article>
