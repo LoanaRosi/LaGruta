@@ -11,7 +11,7 @@
                 <span>o</span>
             </div>
             <div class="box-form">
-                <input type="text" name="name" placeholder="Nombre y Apellido">
+                <input type="text" name="nombre" placeholder="Nombre y Apellido">
             </div>
 
             <div class="box-form">
@@ -32,13 +32,22 @@
             </div>
 
             <div class="box-form promociones">
-                <label for="promotions">Quiero recibir info de ofertas, promociones y nuevos lanzamientos</label>
+                <label name="terminos" for="promotions">Quiero recibir info de ofertas, promociones y nuevos lanzamientos</label>
                 <input type="checkbox">
             </div>
+
+            <% if (locals.errors) {
+                errors.forEach(error => { %>
+                <p><%= error.msg %> </p>
+            <% })
+            } %>
+
+            <br>
 
             <div class="box-button">
                 <button type="submit">Crear cuenta</button>
             </div>
+
         </form>
     </main>
 </body>

@@ -20,7 +20,14 @@ module.exports ={
 
     // vista register
     register: (req,res) =>{
-        return res.render("user/register")
+        let errors = validationResult(req);
+        if(errors.isEmpty()) {
+            return res.render("user/register")
+        } else {
+            res.render("user/register", {errors: errors.array(),
+            old: req.body});
+        }
+        
     },
 
     proccesRegister:(req,res)=>{
