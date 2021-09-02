@@ -32,35 +32,115 @@ text-align: center;
 margin: 20px 0;
 }
 
+
+
+/* --------------------------------------- */
+
+.product-detail  .product-container-photos{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    /* margin-left: 35%  ???*/
+}
+
+.product-detail .product-container-photos__2{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse
+}
+
+.product-detail .product-photo-big{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.product-detail .product-photo-big__img{
+    width:100%;
+}
+
+.product-detail .carrusel-container{
+    display: none;
+}
+
+
+.product-detail .carrusel-img{ /* contenedor de las imagenes chicas */
+    width: 1012.5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    max-height: 450px;
+}
+
+.product-detail .glider .glider-track{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.product-detail .product-photo-small{
+    display: flex;
+    flex-direction: column;
+    width: 6%;
+}
+
+.product-detail .product-photo-small__img{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
 .product-detail .product-name article .product-photo img{
+    width: 40%;            
+}
+
+.product-detail .price{
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-family: var(--fontFamily-Textos);
+}
+
+.product-detail .product-info{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: var(--fontFamily-Textos);
+    font-size: 20px;
+}
+
+/* ---------------------------------------- */
+
+
+/* .product-detail .product-name article .product-photo img{
     display: block;
     width: 60%;
     background-color: var(--color-negro4);
     border: 1.5px solid var(--color-Rojo2);
     border-radius: 5px;
     margin: 10px auto;    
-}
+} ????????????*/
 
-.product-detail .product span{
+/* .product-detail .product span{
     font-family: var(--fontFamily-Textos);
     color: white;
-}
+} ???????*/
 
-.product-detail .product .price{
+/* .product-detail .product .price{
     display: block;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-}
+} ??????*/
 
-.product-detail .product .credit{
+/* .product-detail .product .credit{
     display: block;
     text-align: center;
     font-size: 0.7rem;
     padding-bottom: 10px;
     margin: 0 auto;
 
-}
+} ????????*/
 
 .product-detail .payment{
     display: flex;
@@ -204,6 +284,14 @@ margin: 20px 0;
     transition: .2s;
 }
 
+.product-detail .product-name .info { /* todo el contenedor de la tabla */
+    color: white;
+    font-size: 0.7rem;
+    text-align: left;
+    width: 70%;
+    margin: 0 auto
+} 
+
 .product-detail .product-name .info p{  /* Detalles */
     font-family: var(--fontFamily-Textos);
     color: white;
@@ -211,14 +299,6 @@ margin: 20px 0;
     padding-bottom: 10px;
     
 }
-
-.product-detail .product-name .info { /* todo el contenedor de la tabla */
-    color: white;
-    font-size: 0.7rem;
-    text-align: left;
-    width: 50%;
-    margin: 0 auto
-} 
 
 .product-detail table{
     table-layout: fixed;
@@ -254,9 +334,18 @@ margin: 20px 0;
     margin: auto;
 }
 
+/* ----------------------- */
+/* seccion de relacionados */
+/* ----------------------- */
+
+.product-detail .container-carrusel-detail{ /* controla el ancho de la de la caja contenedora de los productos relacionados */
+    width: 90%;
+    margin: 0 auto;
+}
+
 .product-detail .productos-relacionados{ /* contenedor */
     display: flex;
-    width: 90%;
+    /* width: 90%; ??????*/
     /* margin: auto 5px; */
 }
 
@@ -267,11 +356,20 @@ margin: 20px 0;
 } */
 
 
-.product-detail .productos-relacionados .more i{
+/* .product-detail .productos-relacionados .more i{
     width: 50px;
     font-size: 1rem;
     padding: 30px 0;
-} 
+} ????? */
+
+.product-detail .productos-relacionados .product-1{
+    width: 100%;
+    margin-right: 10px;
+}
+
+.product-detail .productos-relacionados .container-img{
+    
+}
 
 .product-detail .productos-relacionados img{
     width: 70%;
@@ -284,7 +382,8 @@ margin: 20px 0;
     
 }
 
-.product-detail .productos-relacionados .product-3{
+
+/* .product-detail .productos-relacionados .product-3{
     display: none;
 }
 
@@ -294,7 +393,7 @@ margin: 20px 0;
 
 .product-detail .productos-relacionados .product-5{
     display: none;
-}
+} ??????*/
 
 .product-detail .productos-relacionados p{
     font-family: var(--fontFamily-Textos);
@@ -327,18 +426,42 @@ margin: 20px 0;
         width: 50%;
         margin: 0 auto;
         display: flex;
-        margin-left: 35%
+        /* margin-left: 35%  ???*/
+    }
+
+    .product-detail .product-container-photos__2{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse
     }
 
     .product-detail .product-photo-big{
         display: flex;
         justify-content: center;
-        margin-right: 40px;
+        width: 100%;
     }
-
+    
     .product-detail .product-photo-big__img{
         width:100%;
     }
+
+    .product-detail .carrusel-container{
+       
+    }
+
+    .product-detail .carrusel-img{ /* contenedor de las imagenes chicas */
+        width: 1012.5px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: hidden;
+        max-height: 450px;
+    }
+
+    .product-detail .glider .glider-track{
+        display: flex;
+        flex-direction: column;
+    }
+
 
     .product-detail .product-photo-small{
         display: flex;
@@ -355,9 +478,25 @@ margin: 20px 0;
         width: 40%;            
     }
 
+    .product-detail .price{
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+        margin-bottom: 15px;
+        font-family: var(--fontFamily-Textos);
+    }
+
+    .product-detail .product-info{
+        text-align: center;
+        color: #fff;
+        margin-bottom: 10px;
+        font-family: var(--fontFamily-Textos);
+        font-size: 20px;
+    }
+
     .product-detail .product .price{
         font-size: 1.2rem ;
-        }
+    }
 
     .product-detail .payment{
         width: 50%;
@@ -395,8 +534,8 @@ margin: 20px 0;
         width: 200px
     }
 
-    .product-detail .product-name .info { /* todo el contenedor de la tabla */
-       
+    .product-detail .product-name .info { /* todo el contenedor de la tabla  ????*/
+        width: 50%;
     } 
     
     .product-detail .productos-relacionados .product-3{
@@ -416,6 +555,11 @@ margin: 20px 0;
 
 
 @media (min-width:1024px){
+
+    .product-detail .carrusel-container{ /* carrusel de imagenes chicas */
+        width: 20%;
+        display: block;
+    }
 
     .product-detail .product-name article .product-photo img{
         width: 35%;            
