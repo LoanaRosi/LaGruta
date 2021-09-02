@@ -2,10 +2,10 @@ const fs = require("fs");
 const path = require("path");
 
 const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
-const banner = require(path.join(__dirname,"..","data","banner.json"))
+const banner = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","banner.json"),"utf-8"));
 
 const tothousand = require("../utils/thotousand")
-const descuento = require("../utils/descount")
+const descuento = require("../utils/discount")
 
 let saveBanner = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','banner.json'),JSON.stringify(dato,null,2),'utf-8')
 
@@ -50,11 +50,23 @@ module.exports ={
     },
 
     bannerAdd: (req,res) =>{
-       if (req.file) {
-        banner.push(req.file.filename)
-        saveBanner(banner)
-       }
-       return res.redirect("/banner/control")
+        const {imgBanner} = req.body
+		let bannerImg ={
+			id : banner[banner.length - 1].id +1,
+			imgBanner : req.file ? req.file.filename : "default-image.jpg",
+		}
+
+		banner.push(bannerImg)
+		saveBanner(banner)
+		res.redirect("/banner/control")
+    },
+
+    bannerDestroy : (req,res) =>{
+        let productsModifi = banner.filter(item=> item.id !== +req.params.id);  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
+		saveBanner(productsModifi);
+		res.redirect("/banner/control");
+
+		
     }
 }
 

@@ -10,13 +10,14 @@ const validateLogin = [
 ]
 
 
-const {login,register} = require("../controllers/usersController")
+const {login,register,proccesRegister} = require("../controllers/usersController")
 
 /* GET users listing. */
 
 router.get("/login", validateLogin, login);
 
 router.get("/register",register);
+router.post("/register",proccesRegister)
 
 
 

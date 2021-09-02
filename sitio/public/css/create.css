@@ -23,10 +23,17 @@
 /* ------------------------------ */
 /* -----EMPIEZA FORMULARIO------ */
 /* ----------------------------- */
-.admin-creation .form-admin{ /* contenedor del los formularios */
+
+.admin-creation .container-form-add{
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.admin-creation .form-admin{ /* contenedor del los formularios */
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .admin-creation .form-admin__box{ /* contenedor formulario */
@@ -50,13 +57,61 @@
 .admin-creation .fom-admin__option{
 
 }
+
+/* -------------------------------------- */
+/* ------DESCIPCION DEL PRODUCTO--------- */
+/* -------------------------------------- */
+
+.admin-creation .title-description{
+    color: #fff;
+    margin-bottom: 36px;
+    font-family: var(--fontFamily-Titulo);
+    text-transform: capitalize;
+}
+
+.admin-creation .form-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-creation .form-description .form_desciption__box{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.admin-creation .form-description .form_desciption__box input{
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+}
+
+.admin-creation .form-description .form_desciption__box select{
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+}
+
+.admin-creation .form-description .form_desciption__box textarea{
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+    resize: none;
+}
+
 /* -------------------------------------- */
 /* ------BOTON PARA CREAR PRODUCTO------- */
 /* -------------------------------------- */
 
 .admin-creation .create-button{
-    width: 200px;
-    margin-bottom: 30px;
+    width: 230px;
+    margin-bottom: 50px;
     margin-top: 10px;
 }
 
@@ -67,4 +122,62 @@
     border-radius: 5px;
     background-color: var(--color-Rojo1);
     color: #fff;
+}
+
+@media (min-width:1024px) {
+
+    .admin-creation .form-admin{ /* contenedor del los formularios */
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    /* -------------------------------------- */
+    /* ------DESCIPCION DEL PRODUCTO--------- */
+    /* -------------------------------------- */
+
+    .admin-creation .title-description{
+        color: #fff;
+        margin-bottom: 36px;
+        font-family: var(--fontFamily-Titulo);
+        text-transform: capitalize;
+    }
+
+    .admin-creation .form-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-creation .form-description .form_desciption__box{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .admin-creation .form-description .form_desciption__box input{
+        padding: 8px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #000;
+        font-family: var(--fontFamily-Textos);
+    }
+
+    .admin-creation .form-description .form_desciption__box select{
+        padding: 8px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #000;
+        font-family: var(--fontFamily-Textos);
+    }
+
+    .admin-creation .form-description .form_desciption__box textarea{
+        padding: 8px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #000;
+        font-family: var(--fontFamily-Textos);
+        resize: none;
+    }
+
 }

@@ -10,15 +10,15 @@
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <% for( let index = 0; index < banner.length-1; index++ ) { %>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= index+1 %> " aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= index+1 %>" aria-label="Slide 2"></button>
               <% } %>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active" style="background-image: url('/images/banner-img/<%= banner[0] %>')">
+              <div class="carousel-item active" style="background-image: url('/images/banner-img/<%= banner[0].imgBanner %>')">
                 <!-- imagen que va como background-image -->
               </div>
               <% for( let index = 0; index < banner.length-1; index++ ) { %>
-                <div class="carousel-item" style="background-image: url('/images/banner-img/<%= banner[index+1] %>')">
+                <div class="carousel-item" style="background-image: url('/images/banner-img/<%= banner[index+1].imgBanner %>')">
                     <!-- imagen que va como background-image -->
                   </div>
               <% } %>

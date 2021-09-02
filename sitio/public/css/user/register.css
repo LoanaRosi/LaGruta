@@ -86,14 +86,21 @@
 
 .vista-register .register .box-form label{ /* label de condiciones */
     color: #fff;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     margin-right: 10px;
 }
 
 .vista-register .register .condiciones{ /* checkbox para las condiciones */
     display: flex;
     flex-direction: row;
-    padding: 20px 10px;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.vista-register .register .promociones{ /* checkbox para las promociones */
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px 40px 10px;
     align-items: center;
 }
 
