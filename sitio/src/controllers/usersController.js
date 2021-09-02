@@ -6,11 +6,7 @@ const users = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","users.
 const saveUser = dato => fs.writeFileSync(path.join(__dirname,"..","data","users.json"),JSON.stringify(dato,null,2),"utf-8");
 
 module.exports ={
-    //vista login
-    login: (req,res) =>{
-        return res.render("user/login")
-    },
-
+   
     // vista register
     register: (req,res) =>{
         return res.render("user/register")
@@ -31,6 +27,12 @@ module.exports ={
         saveUser(users);
         res.redirect("/");
     },
+
+     //vista login
+     login: (req,res) =>{
+        return res.render("user/login")
+    },
+
 
     admin : (req,res) => {
         return res.render('admin/index',{

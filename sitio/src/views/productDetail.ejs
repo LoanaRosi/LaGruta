@@ -13,29 +13,45 @@
     </div>
     <section class="product-name">
         <h1><%= productDetail.name %></h1>
-        <div class= product-container-photos> 
-            <div class=product-photo-big>
-                <img class="product-photo-big__img" src="/images/productos/<%= productDetail.img %>" alt="">
-                 
-            </div> 
-            <div>
-                <div class="glider-contain">
-                    <div class="glider">
-                      <div><img class="product-photo-small__img" src="/images/detail-product/Juego-2.jpg" alt=""></div>
-                      <div> <img class="product-photo-small__img" src="/images/detail-product/Juego-3.jpg" alt=""></div>
-                      <div><img class="product-photo-small__img" src="/images/detail-product/Juego-4.jpg" alt=""> </div>
+
+        <div>
+
+            <div class= product-container-photos> 
+                <div class="product-container-photos__2">
+                    <div class=product-photo-big>
+                        <div class="glider-contain-img-big">
+                            <div class="glider-img-big">
+                              <div class="container-img-big"><img class="product-photo-big__img" src="/images/productos/<%= productDetail.img %>" alt=""></div>
+                            </div>
+                          
+                            <button aria-label="Previous" class="glider-prev">«</button>
+                            <button aria-label="Next" class="glider-next">»</button>
+                            <div role="tablist" class="dots"></div>
+                          </div>
+                        
+                    </div> 
+                    <div class="carrusel-container">
+                        <div class="glider-contain">
+                            <div class="glider">
+                              <div class="carrusel-img"><img class="product-photo-small__img" src="/images/detail-product/Juego-2.jpg" alt=""></div>
+                              <div class="carrusel-img"> <img class="product-photo-small__img" src="/images/detail-product/Juego-3.jpg" alt=""></div>
+                              <div class="carrusel-img"><img class="product-photo-small__img" src="/images/detail-product/Juego-4.jpg" alt=""> </div>
+                            </div>
+                          
+                            <button aria-label="Previous" class="glider-prev">«</button>
+                            <button aria-label="Next" class="glider-next">»</button>
+                            <div role="tablist" class="dots"></div>
+                          </div>
                     </div>
-                  
-                    <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button>
-                    <div role="tablist" class="dots"></div>
-                  </div>
+                </div>
             </div>
-            
+
         </div>
+
+        <p class="price">$10.000</p>
+
         <div class="product-info">
             <!-- <div class="more"><i class="fas fa-chevron-left"></i></div> -->
-            <span class="price">$10.000</span>
             <span class="credit">12 cuotas de $833,33</span>
             <!-- <div class="more"><i class="fas fa-chevron-right"></i></div> -->
         </div>
@@ -130,25 +146,45 @@
                 </table>
                 <p>&nbsp;</p>
                 <div class="more-products"><p>También te pueden gustar</p>
-                </div>     
-        <section class="productos-relacionados">
-            <div class="more"><i class="fas fa-chevron-left"></i></div>
-            <% if (products.category === productDetail.category) { %>
-                <% products.forEach(product => { %>
-                    <article class="product-1">
-                        <img src="/images/productos/<%= product.img %>" alt="">
-                        <p><%= product.name %> </p>
-                        <p>$<%= product.price %> </p>
-                        <form method="get" action="/juegos-mesa.html">
-                            <button type="submit">Ver más
-                           </form>                      
-                    </article>
-                <% }) %>     
-            <% } %>
-            
-       </section>
+                </div>
+            </div>
+            <section>
+                <div class="container-carrusel-detail">
+                    <div class="glider-contain">
+                        <div class="glider productos-relacionados">
+                                    <% products.forEach(product => { %>
+                                        <% if (product.category == productDetail.category) { %>
+                                            <div>
+                                                <article class="product-1">
+                                                    <div class="container-img">
+                                                        <img src="/images/productos/<%= product.img %>" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p><%= product.name %> </p>
+                                                        <p>$<%= product.price %> </p>
+                                                    </div>
+                                                    <form method="get" action="/juegos-mesa.html">
+                                                        <button type="submit">Ver más
+                                                    </form>                      
+                                                </article>
+                                            </div>
+                                            
+                                        <% } %>
+                                    <% }) %>
+                           
+                        </div>
+                      
+                        <button aria-label="Previous" class="glider-prev">«</button>
+                        <button aria-label="Next" class="glider-next">»</button>
+                        <div role="tablist" class="dots"></div>
+                    </div>
+                </div>
+            </section>
     </main>
-    <%- include("./partials/footer") %> 
+    <%- include("./partials/footer") %>
+    <%- include("./partials/scripts") %> 
+    <script src="../../javascripts/carruselDetailSmall.js"></script>
+    <script src="../../javascripts/carruselDetailBig.js"></script>
     
 </body>
 </html>

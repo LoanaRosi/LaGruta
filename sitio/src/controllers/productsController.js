@@ -22,7 +22,9 @@ module.exports ={
 
 		return res.render("productDetail",{
 			productDetail,
-			products
+			products,
+			descuento,
+			tothousand
 		})
 	},
 
