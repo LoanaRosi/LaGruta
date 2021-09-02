@@ -9,14 +9,22 @@
                 <a href=""> <i class="fab fa-google"></i> Google login</a>
                 <span>o</span>
             </div>
+            
+
             <div class="box-form">
-                <input type="email" name="email" placeholder="Gmail">
+                <input type="email" name="email" placeholder="Gmail" value="<%= locals.old && old.email ? old.email : ''%>">
             </div>
 
             
             <div class="box-form">
                 <input type="password" name="password" id="password" placeholder="Contraseña">
             </div>
+
+            <% if (locals.errors) {
+                errors.forEach(error => { %>
+                <p><%= error.msg %> </p>
+            <% })
+            } %>
 
             <a href="#" class="recuperar-contra">Olvidaste tu contraseña?</a>
             
@@ -28,3 +36,4 @@
     </main>
 </body>
 </html>
+

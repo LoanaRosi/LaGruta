@@ -1,8 +1,15 @@
+const {validationResult} = require('express-validator')
 
 module.exports ={
     //vista login
     login: (req,res) =>{
-        return res.render("user/login")
+        let errors = validationResult(req);
+        if(errors.isEmpty()) {
+            return res.render("user/login")
+        } else {
+            res.render("user/login", {errors: errors.array(),
+            old: req.body});
+        }
     },
     // vista register
     register: (req,res) =>{
