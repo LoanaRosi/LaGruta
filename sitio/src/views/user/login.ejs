@@ -15,11 +15,15 @@
                 <input type="email" name="email" placeholder="Gmail" value="<%= locals.old && old.email ? old.email : null  %>">
             </div>
 
-            
             <div class="box-form">
                 <input type="password" name="password" id="password" placeholder="Contraseña">
             </div>
             <a href="#" class="recuperar-contra">Olvidaste tu contraseña?</a>
+
+            <div class="recordar">
+                <label for="conditions">Recordar</label>
+                <input type="checkbox">
+            </div>
             
             <div class="box-button">
                 <button type="submit">Iniciar sesión</button>
