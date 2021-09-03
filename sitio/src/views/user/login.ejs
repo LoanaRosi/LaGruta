@@ -12,7 +12,8 @@
             
 
             <div class="box-form">
-                <input type="email" name="email" placeholder="Gmail" value="<%= locals.old && old.email ? old.email : null  %>">
+                <input type="email" name="email" placeholder="Gmail">
+                <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
             </div>
 
             <div class="box-form">
@@ -20,8 +21,6 @@
                 <span class="text-danger small"><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
             </div>
             <a href="#" class="recuperar-contra">Olvidaste tu contraseña?</a>
-
-            <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
 
             <div class="recordar">
                 <label for="conditions">Recordar</label>
