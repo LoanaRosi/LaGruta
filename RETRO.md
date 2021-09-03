@@ -38,3 +38,22 @@
 
 ## Hacer más: 
 * Mantener las reuniones y daylist para intercambiar ideas.
+
+## Sprint4
+
+## Seguir haciendo: 
+* Seguir manteniendo el ritmo en entregas y organización.
+* Mantener las reuniones y daylist para intercambiar ideas. 
+
+## Hacer menos:
+* Subestimar el tiempo de desarrollo de los trabajos.
+
+## Dejar de hacer:
+* Posponer dificultades en el grupo o individuales.
+
+## Empezar a hacer:
+* Organizar reuniones usando la extensión Live Share y codear en conjunto al mismo tiempo. 
+
+## Hacer más: 
+* Reunirnos para discutir temas vistos en clases y reforzar conocimiento los días martes después de clases.
+
