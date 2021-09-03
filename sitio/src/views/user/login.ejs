@@ -12,25 +12,19 @@
             
 
             <div class="box-form">
-                <input type="email" name="email" placeholder="Gmail" value="<%= locals.old && old.email ? old.email : ''%>">
+                <input type="email" name="email" placeholder="Gmail" value="<%= locals.old && old.email ? old.email : null  %>">
             </div>
 
             
             <div class="box-form">
                 <input type="password" name="password" id="password" placeholder="Contraseña">
             </div>
-
-            <% if (locals.errors) {
-                errors.forEach(error => { %>
-                <p><%= error.msg %> </p>
-            <% })
-            } %>
-
             <a href="#" class="recuperar-contra">Olvidaste tu contraseña?</a>
             
             <div class="box-button">
-                <button type="submit">Crear cuenta</button>
+                <button type="submit">Iniciar sesión</button>
             </div>
+            <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
 
         </form>
     </main>
