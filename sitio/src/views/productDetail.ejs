@@ -24,19 +24,23 @@
                               <div class="container-img-big"><img class="product-photo-big__img" src="/images/productos/<%= productDetail.img %>" alt=""></div>
                             </div>
                           
-                            <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
-                            <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
-                            <div role="tablist" class="dots-big"></div>
+                            <button aria-label="Previous" class="glider-prev">«</button>
+                            <button aria-label="Next" class="glider-next">»</button>
+                            <div role="tablist" class="dots"></div>
                           </div>
                         
                     </div> 
                     <div class="carrusel-container">
-                        <div class="carrusel-container__box">
-                            <div class="carrusel-container__img">
+                        <div class="glider-contain">
+                            <div class="glider">
                               <div class="carrusel-img"><img class="product-photo-small__img" src="/images/detail-product/Juego-2.jpg" alt=""></div>
                               <div class="carrusel-img"> <img class="product-photo-small__img" src="/images/detail-product/Juego-3.jpg" alt=""></div>
                               <div class="carrusel-img"><img class="product-photo-small__img" src="/images/detail-product/Juego-4.jpg" alt=""> </div>
                             </div>
+                          
+                            <button aria-label="Previous" class="glider-prev">«</button>
+                            <button aria-label="Next" class="glider-next">»</button>
+                            <div role="tablist" class="dots"></div>
                           </div>
                     </div>
                 </div>
@@ -178,9 +182,15 @@
             </section>
     </main>
     <%- include("./partials/footer") %>
+    <%- include("./partials/scripts") %> 
     <script src="../../javascripts/carruselDetailSmall.js"></script>
     <script src="../../javascripts/carruselDetailBig.js"></script>
-    <script src="../../javascripts/glider.js"></script>
     
 </body>
 </html>
+
+
+
+
+
+
