@@ -14,4 +14,6 @@ module.exports = [
             return false
         }
     }).withMessage('Credenciales inválidas'),
+    check('password')
+    .notEmpty().withMessage('El campo contraseña no puede estar vacío')
 ]

@@ -70,6 +70,8 @@ module.exports ={
 
 },
 
+    //vista admin
+
     admin : (req,res) => {
         return res.render('admin/index',{
             title : "Administración"
