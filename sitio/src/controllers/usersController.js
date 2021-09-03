@@ -6,24 +6,7 @@ const users = require('../data/users.json');
 
 
 module.exports ={
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-   
-=======
-    //vista login
-    login: (req,res) =>{
-        let errors = validationResult(req);
-        if(errors.isEmpty()) {
-            return res.render("user/login")
-        } else {
-            res.render("user/login", {errors: errors.array(),
-            old: req.body});
-        }
-    },
->>>>>>> e083573d9636efd399b1d2d3f9055c5e0d183fb7
 
->>>>>>> d7d25e3d763ea5e441b3794fbca54b52b0c81629
     // vista register
     register: (req,res) => res.render('user/register'),
         processRegister : (req, res) => {
@@ -85,17 +68,8 @@ module.exports ={
     logout : (req,res) => {
         req.session.destroy();
 
-<<<<<<< HEAD
 },
-    
-=======
-     //vista login
-     login: (req,res) =>{
-        return res.render("user/login")
-    },
 
-
->>>>>>> e083573d9636efd399b1d2d3f9055c5e0d183fb7
     admin : (req,res) => {
         return res.render('admin/index',{
             title : "Administración"
