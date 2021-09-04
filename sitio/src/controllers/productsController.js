@@ -14,6 +14,8 @@ module.exports ={
 
     // muestra todos los productos y tambien por categoria
 	list: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
+		
 		return res.render("listProducts",{products,descuento,tothousand})
 	},
 
@@ -38,7 +40,7 @@ module.exports ={
 	store: (req, res) => { /* esta manda los datos */
 		let errors = validationResult(req);
 		if(errors.isEmpty()){
-		const {name,price,category,discount,sale} = req.body
+		const {name,price,category,discount,sale,autor,mecanica,tematica,jugadores,tiempo,medidas,complejidad,editorial,idioma,contenido,} = req.body
 		let product ={
 			id : products[products.length - 1].id +1,
 			name : name.trim(),
@@ -46,7 +48,17 @@ module.exports ={
 			category,
 			img : req.file ? req.file.filename : "default-image.jpg",
 			discount : +discount,
-			sale
+			sale,
+			autor : autor.trim(),
+			mecanica : mecanica.trim(),
+			tematica : tematica.trim(),
+			jugadores : jugadores.trim(),
+			tiempo : tiempo.trim(),
+			medidas : medidas.trim(),
+			complejidad,
+			editorial : editorial.trim(),
+			idioma,
+			contenido : contenido.trim()
 		}
 
 		products.push(product)

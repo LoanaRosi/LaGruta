@@ -4,7 +4,7 @@
     "name": "cyclades",
     "price": 13900,
     "category": "juego-de-mesa",
-    "img": "imgproduct-1630029973148.png",
+    "img": "mesa-4.png",
     "discount": 0,
     "sale": true
   },
@@ -13,7 +13,7 @@
     "name": "Kemet",
     "price": 13900,
     "category": "juego-de-mesa",
-    "img": "pixlr-bg-result (1)-min.png",
+    "img": "mesa-1.png",
     "discount": 0,
     "sale": true
   },
@@ -22,7 +22,7 @@
     "name": "Piramide del Sol",
     "price": 1290,
     "category": "juego-de-mesa",
-    "img": "mesa-4.png",
+    "img": "mesa-2.png",
     "discount": 0,
     "sale": true
   },
@@ -31,7 +31,7 @@
     "name": "Red 7",
     "price": 1290,
     "category": "juego-de-mesa",
-    "img": "mesa-5.png",
+    "img": "mesa-3.png",
     "discount": 0,
     "sale": true
   },
@@ -40,7 +40,7 @@
     "name": "Takenoko",
     "price": 8900,
     "category": "juego-de-mesa",
-    "img": "mesa-6.png",
+    "img": "mesa-5.png",
     "discount": 0,
     "sale": true
   },
@@ -49,7 +49,7 @@
     "name": "Cartógrafos",
     "price": 2490,
     "category": "juego-de-mesa",
-    "img": "mesa-7.png",
+    "img": "mesa-6.png",
     "discount": 0,
     "sale": true
   },
@@ -58,7 +58,7 @@
     "name": "Ishtar",
     "price": 8900,
     "category": "juego-de-mesa",
-    "img": "mesa-8.png",
+    "img": "mesa-7.png",
     "discount": 0,
     "sale": false
   },
@@ -85,7 +85,7 @@
     "name": "HDP 6",
     "price": 3300,
     "category": "juego-de-previa",
-    "img": "previa-3.png",
+    "img": "previa-2.png",
     "discount": 0,
     "sale": false
   },
@@ -94,16 +94,16 @@
     "name": "Tomalo vos",
     "price": 4000,
     "category": "juego-de-previa",
-    "img": "previa-4.png",
+    "img": "previa-3.png",
     "discount": 0,
     "sale": false
   },
   {
     "id": 12,
-    "name": "Amigos de mierda 1",
+    "name": "Amigos de mierda",
     "price": 2380,
     "category": "juego-de-previa",
-    "img": "previa-5.png",
+    "img": "previa-4.png",
     "discount": 0,
     "sale": false
   },
@@ -112,7 +112,7 @@
     "name": "Say my name",
     "price": 2380,
     "category": "juego-de-previa",
-    "img": "previa-6.png",
+    "img": "previa-5.png",
     "discount": 0,
     "sale": false
   },
@@ -121,7 +121,7 @@
     "name": "No lo testeamos ni un poco",
     "price": 4500,
     "category": "juego-de-previa",
-    "img": "previa-7.png",
+    "img": "previa-6.png",
     "discount": 0,
     "sale": false
   },
@@ -130,7 +130,7 @@
     "name": "No lo testeamos ni un poco: Legados",
     "price": 5500,
     "category": "juego-de-previa",
-    "img": "previa-8.png",
+    "img": "previa-7.png",
     "discount": 0,
     "sale": false
   },
@@ -139,16 +139,16 @@
     "name": "Prendete fuego",
     "price": 1380,
     "category": "juego-de-previa",
-    "img": "previa-9.png",
+    "img": "previa-8.png",
     "discount": 0,
     "sale": false
   },
   {
     "id": 17,
-    "name": "H.D.P",
+    "name": "HDP",
     "price": 2500,
     "category": "juego-de-previa",
-    "img": "previa-10.png",
+    "img": "previa-9.png",
     "discount": 0,
     "sale": false
   },
@@ -157,7 +157,7 @@
     "name": "Dungeons and drinks",
     "price": 3400,
     "category": "juego-de-previa",
-    "img": "previa-11.png",
+    "img": "previa-10.png",
     "discount": 0,
     "sale": false
   },
@@ -166,7 +166,7 @@
     "name": "Dany",
     "price": 2380,
     "category": "juego-de-previa",
-    "img": "previa-2.png",
+    "img": "previa-11.png",
     "discount": 0,
     "sale": false
   },
@@ -264,13 +264,13 @@
     "id": 31,
     "name": "Dune",
     "price": 12000,
-    "category": "juego-de-rol",
+    "category": "true",
     "img": "rol-11.jpg",
     "discount": 0,
-    "sale": false
+    "sale": true
   },
   {
-    "id": 32,
+    "id": 33,
     "name": "D&D: Cartas de objetos mágicos",
     "price": 15000,
     "category": "juego-de-rol",
