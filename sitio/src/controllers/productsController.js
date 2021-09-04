@@ -2,8 +2,9 @@
 const fs = require("fs");
 const path = require("path");
 
-const tothousand = require("../utils/thotousand")
-const descuento = require("../utils/discount")
+const tothousand = require("../utils/thotousand");
+const descuento = require("../utils/discount");
+const {validationResult} = require('express-validator');
 
 const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
 
@@ -35,6 +36,8 @@ module.exports ={
 	
 	// metodo para crear el producto
 	store: (req, res) => { /* esta manda los datos */
+		let errors = validationResult(req);
+		if(errors.isEmpty()){
 		const {name,price,category,discount,sale} = req.body
 		let product ={
 			id : products[products.length - 1].id +1,
@@ -49,6 +52,12 @@ module.exports ={
 		products.push(product)
 		save(products)
 		res.redirect("/product/list")
+	} else {
+		return res.render('admin/create',{
+			errors : errors.mapped(),
+			old : req.body
+		})
+	  }
 	
 	},
 

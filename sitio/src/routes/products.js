@@ -3,8 +3,10 @@ var router = express.Router();
 const path = require('path');
 
 const multer = require('multer');
+const productsValidation = require('../validations/productsValidation');
 
-const { list, detail, create, store, edit, update,destroy } = require("../controllers/productsController");
+const { list, detail, create, store, edit, update,destroy,} = require("../controllers/productsController");
+
 
 const storage = multer.diskStorage({
     destination : (req,file,callback) => {
@@ -25,7 +27,7 @@ router.get("/list",list); /* muestra todos los productos */
 router.get("/detail/:id",detail);
 
 router.get("/create",create); /* ruta de cracion de producto */
-router.post("/create",upload.single("img-product"),store); /* guarda un producto */
+router.post("/create",upload.single("img-product"), productsValidation, store); /* guarda un producto */
 
 router.get('/edit/:id', edit); /* edita un producto */
 router.put('/edit/:id',upload.single('img'), update); /* actualiza datos de un producto */
