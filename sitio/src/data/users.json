@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "franco gimenez",
+    "email": "francogimenez@gmail.com",
+    "password": "$2a$10$aAcBOkyWSaCa/RSuGBSniOcw/I96iOaWhB5fQ5ghAKaEgmHz4Bzvy",
+    "rol": "admin"
+  }
+]

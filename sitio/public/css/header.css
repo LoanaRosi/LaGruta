@@ -116,7 +116,7 @@ body{
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
+    top: 96px;
     left: 0;
     transform: translateY(-150%);
     width: 100%;
