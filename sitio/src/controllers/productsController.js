@@ -83,7 +83,7 @@ module.exports ={
 
 	// metodo para subir el producto editado
 	update: (req, res) => {
-		const {name,price,category,discount,sale,img} = req.body;
+		const {name,price,category,discount,sale,autor,mecanica,tematica,jugadores,tiempo,medidas,complejidad,editorial,idioma,contenido} = req.body;
 		 products.map(product => {
 			if (product.id === +req.params.id) { /* recordar poner el +, si no no va a comparar number con string */
 				product.name = name;
@@ -92,6 +92,16 @@ module.exports ={
 				product.img = req.file ? req.file.filename : product.img;
 				product.discount = +discount;
 				product.sale = sale ? true : false;
+				product.autor =  autor.trim(),
+				product.mecanica =  mecanica.trim(),
+				product.tematica =  tematica.trim(),
+				product.jugadores =  jugadores.trim(),
+				product.tiempo =  tiempo.trim(),
+				product.medidas =  medidas.trim(),
+				product.complejidad =  complejidad,
+				product.editorial =  editorial.trim(),
+				product.idioma =  idioma,
+				product.contenido =  contenido.trim()
 				
 			}
 			
