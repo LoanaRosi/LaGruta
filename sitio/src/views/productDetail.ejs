@@ -149,36 +149,54 @@
                 </div>
             </div>
             <section>
-                <div class="container-carrusel-detail">
-                    <div class="glider-contain">
-                        <div class="glider productos-relacionados">
-                                    <% products.forEach(product => { %>
-                                        <% if (product.category == productDetail.category) { %>
-                                            <div>
-                                                <article class="product-1">
-                                                    <div class="container-img">
-                                                        <img src="/images/productos/<%= product.img %>" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <p><%= product.name %> </p>
-                                                        <p>$<%= product.price %> </p>
-                                                    </div>
-                                                    <form method="get" action="/juegos-mesa.html">
-                                                        <button type="submit">Ver más
-                                                    </form>                      
-                                                </article>
-                                            </div>
-                                            
-                                        <% } %>
-                                    <% }) %>
-                           
-                        </div>
-                      
-                        <button aria-label="Previous" class="glider-prev">«</button>
-                        <button aria-label="Next" class="glider-next">»</button>
-                        <div role="tablist" class="dots"></div>
+                <div class="glider-contain">
+                    <div class="gliderRelacion">
+                       
+                        <% for( let index = 0; index < productRelacion.length -1; index++) { %>
+                                <div class="column">
+                                    <article class="product-oferta">
+                                            <div class="container-img-oferta">
+                                            <img src="/images/productos/<%= productRelacion[index].img %>" alt="">
+                                        </div>
+                                        <div class="detail-oferta">
+                                            <h4><%= productRelacion[index].name %></h4>
+                                            <div class="container-precios">
+                                            <p class="new-oferta">$<%=descuento(productRelacion[index].discount,productRelacion[index].price)%></p>
+                                            <% if (productRelacion.discount > 0) { %>
+                                                <p class="precio-old"><%=productRelacion[index +1].discount%>% OFF</p>
+                                            <% } %>
+                                            </div> 
+                                            <a href="/productDetail" class="botn-comprar">comprar</a>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-oferta">
+                                            <div class="container-img-oferta">
+                                            <img src="/images/productos/<%= productRelacion[index +1].img %>" alt="">
+                                        </div>
+                                        <div class="detail-oferta">
+                                            <h4><%= productRelacion[index +1].name %></h4>
+                                            <div class="container-precios">
+                                            <p class="new-oferta">$<%=descuento(productRelacion[index +1].discount,productRelacion[index].price)%></p>
+                                            <% if (productRelacion.discount > 0) { %>
+                                                <p class="precio-old"><%=productRelacion[index +1].discount%>% OFF</p>
+                                            <% } %>
+                                            </div> 
+                                            <a href="/productDetail" class="botn-comprar">comprar</a>
+                                        </div>
+                                    </article>
+                                </div>
+                        <% } %>
                     </div>
+                  
+                    <button aria-label="Previous" class="glider-prevRelacion"><i class="fas fa-chevron-left"></i></button>
+                    <button aria-label="Next" class="glider-nextRelacion"><i class="fas fa-chevron-right"></i></button>
+                    <div role="tablist" class="dotsRelacion"></div>
+                  </div>
+                   
+                    
                 </div>
+
             </section>
     </main>
     <%- include("./partials/footer") %>

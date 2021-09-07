@@ -23,9 +23,11 @@ module.exports ={
 	detail: (req, res) => {
 		let productDetail = products.find(product => product.id === +req.params.id); /* usamos find para que devuelva un objeti literarl en vez de un array como lo aria filter */
 
+		let productRelacion = products.filter(product => product.category === productDetail.category);
+
 		return res.render("productDetail",{
 			productDetail,
-			products,
+			productRelacion,
 			descuento,
 			tothousand
 		})
