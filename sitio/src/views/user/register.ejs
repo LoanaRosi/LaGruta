@@ -11,37 +11,35 @@
                 <span>o</span>
             </div>
             <div class="box-form">
-                <input type="text" name="nombre" placeholder="Nombre y Apellido">
+                <input type="text" name="name" placeholder="Nombre y Apellido" value="<%= locals.old && old.name ? old.name : null  %>">
+                <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
             </div>
 
             <div class="box-form">
-                <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                <input type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && old.email ? old.email : null  %>">
+                <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
             </div>
 
             <div class="box-form">
                 <input type="password" name="password" id="password" placeholder="Contraseña">
+                <span class="text-danger small"><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
             </div>
 
             <div class="box-form">
                 <input type="password" name="passwordConfirm" id="password-confirm" placeholder="Confirmar contraseña">
+                <span class="text-danger small"><%= locals.errors && errors.passwordConfirm ? errors.passwordConfirm.msg : null %> </span>
             </div>
 
             <div class="box-form condiciones">
                 <label for="conditions">Acepto términos y condiciones</label>
-                <input type="checkbox">
+                <input type="checkbox" name="terminos">
+                <span class="text-danger small"><%= locals.errors && errors.terminos ? errors.terminos.msg : null %></span>
             </div>
 
             <div class="box-form promociones">
                 <label name="terminos" for="promotions">Quiero recibir info de ofertas, promociones y nuevos lanzamientos</label>
-                <input type="checkbox">
+                <input type="checkbox" name="promotions">
             </div>
-
-            <% if (locals.errors) {
-                errors.forEach(error => { %>
-                <p><%= error.msg %> </p>
-            <% })
-            } %>
-
             <br>
 
             <div class="box-button">

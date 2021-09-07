@@ -1,0 +1,14 @@
+const storage = multer.diskStorage({
+    destination : (req,file,callback) => {
+        callback(null,'public/images/users')  //ubicacion para guardar los archivos
+    },
+    filename : (req,file,callback) => {
+        callback(null,file.fieldname + 'avatar-' + Date.now() + path.extname(file.originalname))
+    }
+})
+
+const upload = multer({
+    storage,
+})
+
+module.exports = upload;

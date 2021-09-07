@@ -14,11 +14,13 @@
     
                 <div class="form-admin__box">
                     <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto">
+                    <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                 </div>
     
                 
                 <div class="form-admin__box">
                     <input class="form-admin__input" type="number" name="price" id="price" placeholder="Precio del Producto">
+                    <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
                 </div>
     
                 <div class="form-admin__box">
@@ -40,6 +42,7 @@
                         <option class="fom-admin__option" value="rol">Juego de Rol</option>
                         <option class="fom-admin__option" value="previa">Juego de Previa</option>
                     </select>
+                    <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                 </div>
             </div>
             

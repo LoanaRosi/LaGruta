@@ -94,6 +94,12 @@
     margin-top: 30px;
 }
 
+.recordar {
+    padding: 10px 10px;
+    align-items: center;
+    color: white;
+}
+
 .vista-login .login .box-button button{
     padding: 12px;
     width: 100%;
