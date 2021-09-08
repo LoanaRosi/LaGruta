@@ -1,37 +1,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 body.carrito {
+   /*  margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+    background-color: #0D0C0C;
+    color: white; ?????????*/
     margin: 10px;
     padding: 10px;
     box-sizing: border-box;
     font-family: 'Lora', serif;
     background-color: #0D0C0C;
     color: white;
+    width: 425px; /* franco */
 }
 
-.carrito .sup {
+.carrito .sup { /* titulo del carrito */
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid white;
 }
 
-.carrito .sup a {
+/* .carrito .sup a { 
     color: white;
+} ????????*/
+
+.carrito .container-cart{ /* contiene todos los datos del carrito de compras */
+
 }
 
-.carrito .bloque img {
+.carrito .bloque{ /* article contiene todos los datos del carrito de compras */
+
+}
+
+/* .carrito .bloque img {
     width: 60%;
+} ????????*/
+
+.carrito .container-product{ /* contiene los datos del producto */
+    display: flex;
+    justify-content: space-between;
 }
 
-.carrito .bloque input {
+.carrito .arriba{ /* contiene la imagen */
+    width: 120px;
+}
+
+.carrito .arriba img{ /* imagen del producto */
+    width: 100%;
+}
+
+.carrito .container-datos-products{ /* name,price,catidad */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.carrito .container-name-price{ /* contiene el nombre y el precio del producto */
+    margin-top: -15px;
+}
+
+.carrito .container-name{ /* contiene el nombre del producto */
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    font-family: var(--fontFamily-Titulo);
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 19px;
+}
+
+.carrito .container-name__name{ /* nombre del producto */
+
+}
+
+.carrito .container-price{ /* contiene el precio del producto */
+    font-family: var(--fontFamily-Textos);
+    color: #fff;
+    font-size: 17px;
+}
+
+.carrito .container-price__price{ /* precio del producto */
+
+}
+
+.carrito .cantidad{ /* contiene cuantos unidades del mismo producto compra*/
+    width: 50%;
+}
+
+.carrito .cantidad__input{ /* numero de productos */
+    width: 100%;
+    padding: 6px 5px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #000;
+}
+
+.carrito .delete-product{ /* contiene icono de eliminar */
+    margin-top: 6px;
+}
+
+.carrito .delete-product a{ /* link para eliminar */
+    width: 100%;
+}
+
+.carrito .delete-product a i{ /* icono para eliminar */
+    color: var(--color-Rojo3);
+    font-size: 21px;
+}
+
+/* .carrito .bloque input {
     margin-top: 20%;
     width: 60px;
     height: 40px;
-}
+} ???????*/
 
-.carrito .bloque .arriba {
+/* .carrito .bloque .arriba {
     display: flex;
     justify-content: space-between;
+} ????????*/
+
+.carrito .datos-envios{ /* contiene datos de envio como codigo postal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrito .input-postal{
+    padding: 13px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+
+.carrito .calular-postal{
+    padding: 13px;
+    border: 1px solid #fff;
+    background: var(--color-Gris3);
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    width: 30%;
+}
+
+
+.carrito .container-detaller{ /* contiene al detalle de la compra */
+
 }
 
 .carrito .detalle1, .detalle2 {
@@ -43,7 +159,7 @@ body.carrito {
     border-bottom: 1px solid white;
 }
 
-.carrito .bloque button {
+.carrito .bloque .continue-form {
     float: right;
     text-decoration: none;
     color: rgb(54, 106, 165);
@@ -52,7 +168,7 @@ body.carrito {
     margin: 10px;
 }
 
-.carrito button a {
+.carrito .continue-form a {
     text-decoration: none;
     color: rgb(54, 106, 165);
 }
