@@ -14,51 +14,105 @@
 <body class="carrito">
     <main>
         <section class="seccion">
-            <div class="sup">
-                <h3 class="titulo">Carrito de compra</h3>
-            </div>
-            <div class="container-cart">
-                <article class="bloque">
-                    <div class="container-product">
-                        <div class="arriba">
-                            <img src="../images/img.jpg" alt="">
-                        </div>
-                        <div class="container-datos-products">
-                            <div class="container-name-price">
-                                <div class="container-name">
-                                    <p class="container-name__name">Carcassone</p>
-                                </div>
-                                <div class="container-price">
-                                    <span class="container-price__price">$1983</span>
-                                </div>
+                <div class="bloque">
+                    <div class="container-full">
+                        <div class="cart-product-sup">
+                            <div class="sup">
+                                <h3 class="titulo">Carrito de compra</h3>
                             </div>
+                            <div class="container-products">
+                                <article class="container-product">
+                                    <div class="arriba">
+                                        <img src="../images/productos/mesa-1.png" alt="">
+                                    </div>
+                                    <div class="container-datos-products">
+                                        <div class="container-name-price">
+                                            <div class="container-name">
+                                                <p class="container-name__name">Carcassone</p>
+                                            </div>
+                                            <div class="container-price">
+                                                <span class="container-price__price">$1983</span>
+                                            </div>
+                                        </div>
+            
+                                        <div class="cantidad">
+                                            <input class="cantidad__input" type="number" id="numero" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="delete-product">
+                                        <a href="/"><i class="far fa-trash-alt"></i></a>
+                                    </div>
+                                </article>
+                                <article class="container-product">
+                                    <div class="arriba">
+                                        <img src="../images/productos/mesa-1.png" alt="">
+                                    </div>
+                                    <div class="container-datos-products">
+                                        <div class="container-name-price">
+                                            <div class="container-name">
+                                                <p class="container-name__name">Carcassone</p>
+                                            </div>
+                                            <div class="container-price">
+                                                <span class="container-price__price">$1983</span>
+                                            </div>
+                                        </div>
+            
+                                        <div class="cantidad">
+                                            <input class="cantidad__input" type="number" id="numero" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="delete-product">
+                                        <a href="/"><i class="far fa-trash-alt"></i></a>
+                                    </div>
+                                </article>
+                                <article class="container-product">
+                                    <div class="arriba">
+                                        <img src="../images/productos/mesa-1.png" alt="">
+                                    </div>
+                                    <div class="container-datos-products">
+                                        <div class="container-name-price">
+                                            <div class="container-name">
+                                                <p class="container-name__name">Carcassone</p>
+                                            </div>
+                                            <div class="container-price">
+                                                <span class="container-price__price">$1983</span>
+                                            </div>
+                                        </div>
+            
+                                        <div class="cantidad">
+                                            <input class="cantidad__input" type="number" id="numero" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="delete-product">
+                                        <a href="/"><i class="far fa-trash-alt"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                            
+                        </div>
+                        <div class="container-product-envios">
+                            <h3 class="title-envio">Medios De Envio</h3>
+                        <div class="datos-envios">
+                            <input type="number" class="input-postal">
+                            <button type="submit" class="calular-postal">Calcular</button>
+                        </div>
+                        
+                        </div>
+                    </div>
 
-                            <div class="cantidad">
-                                <input class="cantidad__input" type="number" id="numero" value="1">
-                            </div>
-                        </div>
-                        <div class="delete-product">
-                            <a href="/"><i class="far fa-trash-alt"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="title-envio">Medios De Envio</h3>
-                    <div class="datos-envios">
-                        <input type="number" class="input-postal">
-                        <button type="submit" class="calular-postal">Calcular</button>
-                    </div>
                     <div class="conatiner-detalle">
                         <div class="detalle1">
-                            <p>Precio del producto</p>
-                            <p>$5000</p>
+                            <p>sub-total(sin envio)</p>
+                            <span>$5000</span>
                         </div>
                         <div class="detalle2">
-                            <p>Total(con envío)</p>
-                            <p>$5500</p>
+                            <p>Total</p>
+                            <span>$5500</span>
                         </div>
                         <button class="continue-form"><a href="/cart/formulario1">Continuar</a></button>
                     </div>
-                </article>
-            </div>
+                    
+                </div>
         </section>
     </main>
 </body>
