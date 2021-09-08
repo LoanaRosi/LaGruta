@@ -20,7 +20,7 @@ body.carrito {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px 0 10px 10px;
-    z-index: -1;
+    z-index: 900;
     position: relative;
 }
 
@@ -149,7 +149,7 @@ body.carrito {
     position: relative;
     top: -10px;
     padding: 20px;
-    z-index: -2;
+    z-index: 800;
 }
 
 .carrito .title-envio{ /* titulo de envio */
@@ -189,6 +189,7 @@ body.carrito {
 
 
 .carrito .conatiner-detalle{ /* contiene al detalle de la compra */
+    position: relative;
     background-color: #000;
     margin-top: -23px;
     padding: 15px;
