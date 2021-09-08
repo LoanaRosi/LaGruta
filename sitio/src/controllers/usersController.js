@@ -75,10 +75,9 @@ module.exports ={
     },
 
     //vista admin
-
-    admin : (req,res) => {
-        return res.render('admin/index',{
-            title : "Administración"
-        })
-    },
+    admin: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
+        return res.render("admin/admin",{products})
+        
+    }
 }

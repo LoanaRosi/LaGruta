@@ -1,38 +1,36 @@
 var express = require('express');
 var router = express.Router();
+const multer = require('multer');
 const path = require('path');
 
-const multer = require('multer');
 const productsValidation = require('../validations/productsValidation');
 
-const { list, detail, create, store, edit, update,destroy,} = require("../controllers/productsController");
+const { list, detail, create, store, edit, update,destroy, banner, bannerAdd,bannerDestroy} = require("../controllers/productsController");
 
-
-const storage = multer.diskStorage({
-    destination : (req,file,callback) => {
-        callback(null,'public/images/productos')  //ubicacion para guardar los archivos
-    },
-    filename : (req,file,callback) => {
-        callback(null,file.fieldname + 'product-' + Date.now() + path.extname(file.originalname))
-    }
-})
-
-const upload = multer({
-    storage,
-})
+//middlewares users check
+const userAdminCheck = require("../Middlewares/userAdminCheck"); //chequea que el usuari sea admin
+//middlewares productos
+const uploadBanner = require("../Middlewares/bannerImg");
+const uploadProduct = require("../Middlewares/productMulter");
+ 
 
 
 router.get("/list",list); /* muestra todos los productos */
 
-router.get("/detail/:id",detail);
+router.get("/detail/:id",userAdminCheck,detail);
 
-router.get("/create",create); /* ruta de cracion de producto */
-router.post("/create",upload.single("img-product"), productsValidation, store); /* guarda un producto */
+router.get("/create",userAdminCheck,create); /* ruta de cracion de producto */
+router.post("/create",uploadProduct.single("img-product"), productsValidation, store); /* guarda un producto */
 
-router.get('/edit/:id', edit); /* edita un producto */
-router.put('/edit/:id',upload.single('img'), update); /* actualiza datos de un producto */
+router.get('/edit/:id',userAdminCheck,edit); /* edita un producto */
+router.put('/edit/:id',uploadProduct.single('img'), update); /* actualiza datos de un producto */
 
 router.delete("/delete/:id",destroy) /* elimina un producto */
+
+// rutas banner
+router.get("/banner",userAdminCheck,banner);
+router.post("/banner",uploadBanner.single("banner"),bannerAdd);
+router.delete("/banner/delete/:id",bannerDestroy);
 
 
 module.exports = router
