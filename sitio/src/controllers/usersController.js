@@ -55,8 +55,8 @@ module.exports ={
                 rol : user.rol
             }
 
-            if(req.body.recordar){
-                res.cookie("Login", req.session.userLogin, {maxAge:1000 * 60})
+            if(req.body.recordar != undefined){
+                res.cookie("recordame", req.session.userLogin, {maxAge: 365 * 24 * 60 * 60 * 1000})
             }
             res.redirect('/')
 
