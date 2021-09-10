@@ -19,13 +19,23 @@
             </form>
             <div class="container-login-register"> <!-- conatainer del login y del register -->
                 <div class="container-login"> <!-- conatiner del icono login y de la a -->
-                    <a href="/user/login" class="login"><i class="fas fa-user-circle"></i></a> <!-- icono del login -->
-                    <a href="/user/login" class="login-frase">Ingresar</a> <!-- "a" link del login -->
-                </div>
-                <div class="container-register"> <!-- conatiner del icono register y de la a -->
-                    <a href="/user/register" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
-                    <a href="/user/register" class="register-frase">Registrarte</a> <!-- "a" link del register -->
-                </div>
+                    <% if (locals.userLogin) { %>
+                        <a href="/user/profile" class="login"><i class="fas fa-user-circle"></i></a> <!-- icono del login -->
+                        <a href="/user/profile" class="login-frase"><%= locals.userLogin.name %></a> <!-- "a" link del login -->
+                    </div>
+                    <div class="container-register"> <!-- conatiner del icono register y de la a -->
+                        <a href="/user/logout" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
+                        <a href="/user/logout" class="register-frase">Cerrar sesión</a> <!-- "a" link del register -->
+                    </div>
+                    <% } else{ %>                
+                        <a href="/user/login" class="login"><i class="fas fa-user-circle"></i></a> <!-- icono del login -->
+                        <a href="/user/login" class="login-frase">Ingresar</a> <!-- "a" link del login -->
+                    </div>
+                    <div class="container-register"> <!-- conatiner del icono register y de la a -->
+                        <a href="/user/register" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
+                        <a href="/user/register" class="register-frase">Registrarte</a> <!-- "a" link del register -->
+                    </div>
+                    <% } %>                                         
             </div>
             <div class="container-cart-shop"> <!-- conatiner del carrito, la img y el icono -->
                 <a href="/cart"><img src="/images/flag/bandera-cart-tablet.svg" alt="carrito" class="flag-nav"> <!-- img de bandera -->
@@ -49,11 +59,9 @@
                     <label for="burguer"><i class="fas fa-bars"></i></label> <!-- icono hamburguer -->
                     <div class="menu-options"> <!-- conatiner de las opcines del menu hamburguer version mobile -->
                         <div class="menu-options-usuario"> <!-- container de las opciones de usuario -->
-                            <% if (locals.userLogin) { %>
-                            
                             <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
-                            <a href="/user/login" class="login">ingresar</a> <!-- link login -->
-                            <a href="/user/register" class="register">rgistrarse</a> <!-- link register -->
+                            <a href="/user/login" class="login">Ingresar</a> <!-- link login -->
+                            <a href="/user/register" class="register">Registrarte</a> <!-- link register -->
                             <a href="#" class="exit-menu"><i class="fas fa-times"></i></a> <!-- icono para salir -->
                         </div>
                         <ul class="options-categorias"> <!-- container del las opciones de categorias -->

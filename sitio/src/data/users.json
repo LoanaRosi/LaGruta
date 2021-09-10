@@ -19,5 +19,12 @@
     "email": "marielaerobles@gmail.com",
     "password": "$2a$10$7hNIIfk8yzY9n4HTrrHsT.9hc3HOoxEJMXIXQf4njWJV6M7OjfQgO",
     "rol": "admin"
+  },
+  {
+    "id": 4,
+    "name": "Elizabeth",
+    "email": "elizabeth@gmail.com",
+    "password": "$2a$10$mKc2u1Avv8qp87ZkMHatRuJIcp/m4V.28.T2Qtn/0zNvucIEJlQxa",
+    "rol": "user"
   }
 ]
