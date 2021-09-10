@@ -79,7 +79,6 @@ module.exports ={
         res.cookie("recordame",null,{maxAge : -1})
         req.session.destroy();
         res.redirect('/')
-
     },
 
     //vista admin

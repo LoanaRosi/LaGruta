@@ -60,17 +60,26 @@
                     <label for="burguer"><i class="fas fa-bars"></i></label> <!-- icono hamburguer -->
                     <div class="menu-options"> <!-- conatiner de las opcines del menu hamburguer version mobile -->
                         <div class="menu-options-usuario"> <!-- container de las opciones de usuario -->
+                            <% if (locals.userLogin) { %>
+                            <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
+                            <a href="/user/profile" class="login"><%= locals.userLogin.name %></a> <!-- link login -->
+                            <a href="#" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
+                            <a href="/user/logout" class="register">Cerrar sesión</a> <!-- link register -->
+                            <% } else{ %>   
                             <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
                             <a href="/user/login" class="login">Ingresar</a> <!-- link login -->
                             <a href="/user/register" class="register">Registrarte</a> <!-- link register -->
                             <a href="#" class="exit-menu"><i class="fas fa-times"></i></a> <!-- icono para salir -->
                         </div>
-                        <ul class="options-categorias"> <!-- container del las opciones de categorias -->
+                        <% } %>
+                        <div class= "categorias">
+                            <ul class="options-categorias"> <!-- container del las opciones de categorias -->
                             <li><a href="/juegos-de-mesa">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
                             <li><a href="/juegos-de-previa">juegos de previa</a><i class="fas fa-chevron-down"></i></li>
                             <li><a href="/juegos-de-rol">juegos de rol</a><i class="fas fa-chevron-down"></i></li>
                             <li><a href="/product/list">todos los juegos</a><i class="fas fa-chevron-down"></i></li>
                         </ul>
+                        </div>
                     </div>
                 </div>
 
