@@ -58,6 +58,10 @@ module.exports ={
             if(req.body.recordar){
                 res.cookie("Login", req.session.userLogin, {maxAge:1000 * 60})
             }
+            
+            if(user.rol === "admin"){
+                res.redirect("/user/admin")
+            }
             res.redirect('/')
 
         }else{
