@@ -45,6 +45,7 @@ module.exports ={
     
     processLogin : (req,res) => {
         let errors = validationResult(req);
+
         
         if(errors.isEmpty()){
             let user = users.find(user => user.email === req.body.email.trim());
@@ -54,9 +55,14 @@ module.exports ={
                 name : user.name,
                 rol : user.rol
             }
-
-            if(req.body.recordar != undefined){
+            const{recordar} = req.body
+            
+            if(recordar){
                 res.cookie("recordame", req.session.userLogin, {maxAge: 365 * 24 * 60 * 60 * 1000})
+            }
+            
+            if(user.rol === "admin"){
+                res.redirect("/user/admin")
             }
             res.redirect('/')
 
@@ -70,6 +76,7 @@ module.exports ={
     profile : (req,res) => res.render('profile'),
 
     logout : (req,res) => {
+        res.cookie("recordame",null,{maxAge : -1})
         req.session.destroy();
         res.redirect('/')
     },

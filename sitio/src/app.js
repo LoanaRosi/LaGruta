@@ -5,13 +5,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require("method-override");
 const session = require('express-session')
+
+// middlewares
 const localsUserCheck = require('./Middlewares/localsUserCheck');
+const recordame = require('./Middlewares/cookie');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const productsRouter = require("./routes/products");
 var formularioRouter = require('./routes/formulario');
-var recordame = require('./Middlewares/cookie');
+
 const { addAbortSignal } = require('stream');
 
 
@@ -32,17 +35,13 @@ app.use(session({
   resave : false,
 }));
 
+// cookie para recordar usuario
+app.use(recordame);
+
 /* envia los datos del usuario logueado al cliente */
 app.use(localsUserCheck);
 
-app.use(cookieParser());
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
 app.use(methodOverride('_method'));
-app.use(recordame);
-
-
 
 /* rutas */
 app.use('/', indexRouter);
@@ -50,9 +49,6 @@ app.use('/user', usersRouter);
 app.use("/product",productsRouter); 
 app.use("/cart",formularioRouter);
 /* app.use("admin/edit",productsRouter); */
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
