@@ -136,7 +136,7 @@ body{
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario a{  /* a del icono usuario */
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .usuario{ /* afecta a todas las a */
@@ -144,7 +144,7 @@ body{
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .register .fa-plus-circle{ /* icono de registrarse */
-    padding: 10px 12px;
+    padding: 12px 12px;
     border-radius: 50px;
     background-color: var(--color-Rojo2);
     border: 1px solid #000;
@@ -152,19 +152,20 @@ body{
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .usuario .fa-user{ /* icono de usuario */
-    padding: 10px 12px;
+    padding: 11px 12px;
     border-radius: 50px;
     background-color: var(--color-Rojo2);
-    border: 1px solid #000;
+    border: 1px solid #000;;
    
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .login{  /* link login */
-    margin-left: 50px;
+    margin-left: 5px;
     font-family: var(--fontFamily-Textos);
-    font-size: 1em;
+    font-size: .8em;
     text-transform: uppercase;
-    transition:  border-bottom .3s ;
+    transition: border-bottom .3s;
+    margin-right: 20px;
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .login:hover{
@@ -172,12 +173,12 @@ body{
 }
 
 
-.container-menu .container-menu-bar .menu-options .menu-options-usuario .register{  /* link register */
-    margin-left: 50px;
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .register__frase{  /* link register */
+    margin-left: 5px;
     font-family: var(--fontFamily-Textos);
-    font-size: 1em;
+    font-size: .8rem;
     text-transform: uppercase;
-    transition:  border-bottom .3s ;
+    transition: border-bottom .3s;
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .register:hover{
@@ -397,6 +398,7 @@ body{
         display: flex;
         margin-left: 35px;
         flex-direction: column;
+        font-size: 1.1rem;
     }
     
     .container-menu .container-menu-center .container-login-register .container-login{ /* conatiner del icono login y de la a */

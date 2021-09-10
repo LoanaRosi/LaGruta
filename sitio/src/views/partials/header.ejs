@@ -28,7 +28,8 @@
                         <a href="/user/logout" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
                         <a href="/user/logout" class="register-frase">Cerrar sesión</a> <!-- "a" link del register -->
                     </div>
-                    <% } else{ %>                
+                    <% } else{ %>        
+                    <div class="container-login"> <!-- conatiner del icono login y de la a -->        
                         <a href="/user/login" class="login"><i class="fas fa-user-circle"></i></a> <!-- icono del login -->
                         <a href="/user/login" class="login-frase">Ingresar</a> <!-- "a" link del login -->
                     </div>
@@ -64,14 +65,17 @@
                             <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
                             <a href="/user/profile" class="login"><%= locals.userLogin.name %></a> <!-- link login -->
                             <a href="#" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
-                            <a href="/user/logout" class="register">Cerrar sesión</a> <!-- link register -->
+                            <a href="/user/logout" class="register__frase">Cerrar sesión</a> <!-- link register -->
+                            <a href="#" class="exit-menu"><i class="fas fa-times"></i></a> <!-- icono para salir -->
                             <% } else{ %>   
                             <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
                             <a href="/user/login" class="login">Ingresar</a> <!-- link login -->
-                            <a href="/user/register" class="register">Registrarte</a> <!-- link register -->
+                            <a href="#" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
+                            <a href="/user/register" class="register__frase">Registrarte</a> <!-- link register -->
                             <a href="#" class="exit-menu"><i class="fas fa-times"></i></a> <!-- icono para salir -->
+                        
+                            <% } %>
                         </div>
-                        <% } %>
                         <div class= "categorias">
                             <ul class="options-categorias"> <!-- container del las opciones de categorias -->
                             <li><a href="/juegos-de-mesa">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
