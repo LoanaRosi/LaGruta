@@ -5,5 +5,12 @@
     "email": "francoromangimenez@gmail.com",
     "password": "$2a$10$6cXRCe18.ZCIq7bq6wXA8OjfJ3kKw83iAE.lVsSQCOikKNSt6xCjK",
     "rol": "admin"
+  },
+  {
+    "id": 2,
+    "name": "Mariela Elizabeth Robles",
+    "email": "marielaerobles@gmail.com",
+    "password": "$2a$10$7hNIIfk8yzY9n4HTrrHsT.9hc3HOoxEJMXIXQf4njWJV6M7OjfQgO",
+    "rol": "admin"
   }
 ]

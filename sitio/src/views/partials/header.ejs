@@ -49,6 +49,8 @@
                     <label for="burguer"><i class="fas fa-bars"></i></label> <!-- icono hamburguer -->
                     <div class="menu-options"> <!-- conatiner de las opcines del menu hamburguer version mobile -->
                         <div class="menu-options-usuario"> <!-- container de las opciones de usuario -->
+                            <% if (locals.userLogin) { %>
+                            
                             <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
                             <a href="/user/login" class="login">ingresar</a> <!-- link login -->
                             <a href="/user/register" class="register">rgistrarse</a> <!-- link register -->
