@@ -8,6 +8,13 @@
   },
   {
     "id": 2,
+    "name": "Loana Rosi",
+    "email": "loarosi24@gmail.com",
+    "password": "$2a$10$BKq1eeinqA6H3c6o8Hf22u5/xve5QB4pUhDO0MfkM7GZNFOQQcvSe",
+    "rol": "admin"
+  },
+  {
+    "id": 3,
     "name": "Mariela Elizabeth Robles",
     "email": "marielaerobles@gmail.com",
     "password": "$2a$10$7hNIIfk8yzY9n4HTrrHsT.9hc3HOoxEJMXIXQf4njWJV6M7OjfQgO",

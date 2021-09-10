@@ -12,9 +12,8 @@
 }
 
 
-.index-admin .admin { 
-  margin: 10px;  
-  width: 98%; 
+.index-admin .admin {   
+  width: 100%; 
   border-collapse: collapse;
   
   }

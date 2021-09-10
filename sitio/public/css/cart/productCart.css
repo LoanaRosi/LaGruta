@@ -7,28 +7,45 @@ body.carrito {
     font-family: 'Lora', serif;
     background-color: #0D0C0C;
     color: white; ?????????*/
-    margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: 'Lora', serif;
-    background-color: #0D0C0C;
     color: white;
     width: 425px; /* franco */
 }
 
+.carrito .container-full{
+    overflow-y: auto;
+    max-height: 510px;
+}
+
+.carrito .cart-product-sup{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px 0 10px 10px;
+    z-index: 900;
+    position: relative;
+}
+
+
 .carrito .sup { /* titulo del carrito */
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.carrito .container-products{ /* contiene todos los productos */
+ 
+}
+
+.carrito .titulo{ /* titulo "carrito de compra" */
+    color: #000;
+    font-size: 30px;
+    font-family: var(--fontFamily-Titulo);
+    text-transform: uppercase;
 }
 
 /* .carrito .sup a { 
     color: white;
 } ????????*/
-
-.carrito .container-cart{ /* contiene todos los datos del carrito de compras */
-
-}
 
 .carrito .bloque{ /* article contiene todos los datos del carrito de compras */
 
@@ -41,6 +58,12 @@ body.carrito {
 .carrito .container-product{ /* contiene los datos del producto */
     display: flex;
     justify-content: space-between;
+    box-shadow: 4px 4px 13px -2px #000;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    background-color: #000;
+    margin-bottom: 15px;
+    margin-right: 8px;
 }
 
 .carrito .arriba{ /* contiene la imagen */
@@ -120,10 +143,29 @@ body.carrito {
     justify-content: space-between;
 } ????????*/
 
+.carrito .container-product-envios{
+    background-color: var(--color-Gris1);
+    padding-top: 20px;
+    position: relative;
+    top: -10px;
+    padding: 20px;
+    z-index: 800;
+}
+
+.carrito .title-envio{ /* titulo de envio */
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-size: 24px;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
 .carrito .datos-envios{ /* contiene datos de envio como codigo postal */
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .carrito .input-postal{
@@ -146,8 +188,13 @@ body.carrito {
 }
 
 
-.carrito .container-detaller{ /* contiene al detalle de la compra */
-
+.carrito .conatiner-detalle{ /* contiene al detalle de la compra */
+    position: relative;
+    background-color: #000;
+    margin-top: -23px;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    z-index: 1000;
 }
 
 .carrito .detalle1, .detalle2 {
@@ -157,41 +204,46 @@ body.carrito {
 
 .carrito .detalle1 {
     border-bottom: 1px solid white;
+    font-size: 17px;
+}
+
+.carrito .detalle2 {
+    font-size: 25px;
 }
 
 .carrito .bloque .continue-form {
-    float: right;
-    text-decoration: none;
-    color: rgb(54, 106, 165);
-    background-color: white;
-    padding: 5px;
-    margin: 10px;
+    background-color: var(--color-Rojo2);
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #000;
 }
 
 .carrito .continue-form a {
     text-decoration: none;
-    color: rgb(54, 106, 165);
+    color: #fff;
 }
 
 @media (min-width : 500px) {
     .carrito {
-        width: 450px;
+        /* width: 450px; ??????*/
         float: right;
-        border: 1px solid grey;
+        /* border: 1px solid grey; ?????*/
     }
     .carrito main {
-        padding: 20px;
+        /* padding: 20px; ??????? */
     }
 }
 
 @media (min-width : 768px) {
     .carrito {
-        width: 450px;
+       /*  width: 450px; ????????*/
         float: right;
-        border: 1px solid grey;
+       /*  border: 1px solid grey; ?????????*/
     }
     .carrito main {
-        padding: 20px;
+        /* padding: 20px; ??????? */
     }
 }
 

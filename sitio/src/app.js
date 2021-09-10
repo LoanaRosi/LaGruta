@@ -9,7 +9,8 @@ const session = require('express-session')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const productsRouter = require("./routes/products");
-var formularioRouter = require('./routes/formulario')
+var formularioRouter = require('./routes/formulario');
+var recordame = require('./Middlewares/cookie')
 
 
 var app = express();
@@ -33,6 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(methodOverride('_method'));
+app.use(recordame);
 
 /* rutas */
 app.use('/', indexRouter);
