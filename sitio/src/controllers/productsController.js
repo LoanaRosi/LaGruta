@@ -38,7 +38,9 @@ module.exports ={
 
 	// formulario de creacion de producto
 	create: (req, res) => { /* esto solo renderiza la vista */
-		res.render("admin/create") 
+		res.render("admin/create",{
+			products
+		}) 
 	},
 	
 	// metodo para crear el producto

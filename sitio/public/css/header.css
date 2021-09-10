@@ -402,12 +402,12 @@ body{
     .container-menu .container-menu-center .container-login-register .container-login .login-frase{ /* "a" link del login */
         color: #fff;
         font-family: var(--fontFamily-Textos);
-        font-size: .8em;
+        font-size: .7em;
       
     }
     
     .container-menu .container-menu-center .container-login-register .container-register{ /* conatiner del icono register y de la a */
-        font-size: .9em;
+        font-size: 1em;
     }
     
     .container-menu .container-menu-center .container-login-register .container-register .register{ /*  icono del register */
@@ -417,7 +417,7 @@ body{
     .container-menu .container-menu-center .container-login-register .container-register .register-frase{ /* "a" link del register */
         color: #fff;
         font-family: var(--fontFamily-Textos);
-        font-size: .8em;
+        font-size: .7em;
         
     }
     
@@ -535,16 +535,12 @@ body{
       
     }
     
-    .container-menu .container-menu-center .container-login-register .container-register{ /* conatiner del icono register y de la a */
-        font-size: .9em;
-    }
-    
     .container-menu .container-menu-center .container-login-register .container-register .register{ /*  icono del register */
         color: var(--color-Rojo2);
     }
     
     .container-menu .container-menu-center .container-login-register .container-register .register-frase{ /* "a" link del register */
-        font-size: 1em;
+        font-size: .9em;
         
     }
     

@@ -18,8 +18,9 @@
                 </div>
             </form>
             <div class="container-login-register"> <!-- conatainer del login y del register -->
-                <div class="container-login"> <!-- conatiner del icono login y de la a -->
+               
                     <% if (locals.userLogin) { %>
+                    <div class="container-login"> <!-- conatiner del icono login y de la a -->
                         <a href="/user/profile" class="login"><i class="fas fa-user-circle"></i></a> <!-- icono del login -->
                         <a href="/user/profile" class="login-frase"><%= locals.userLogin.name %></a> <!-- "a" link del login -->
                     </div>
