@@ -76,6 +76,7 @@ module.exports ={
     profile : (req,res) => res.render('profile'),
 
     logout : (req,res) => {
+        res.cookie("recordame",null,{maxAge : -1})
         req.session.destroy();
         res.redirect('/')
 
