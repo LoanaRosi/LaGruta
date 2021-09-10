@@ -36,7 +36,7 @@ body{
     justify-content: flex-end;
 }
 
-.container-menu .container-redes-sociales i{ /* afecta a todos los icono de redes */
+.container-menu .container-redes-sociales i{ /* afecta a todos los iconos de redes */
     font-size: 20px;
     padding: 6px 8px;
     color: var(--color-Rojo3);
@@ -62,15 +62,15 @@ body{
     display: none;
 }
 
-.container-menu .container-menu-center .container-login-register{ /* conatainer del login y del register */
+.container-menu .container-menu-center .container-login-register{ /* container del login y del register */
     display: none;
 }
 
-.container-menu .container-menu-center .container-cart-shop{ /* conatiner del carrito, la img y el icono */
+.container-menu .container-menu-center .container-cart-shop{ /* container del carrito, la img y el icono */
     display: none;
 }
 
-.container-menu .container-menu-bar-pc{ /* conatiner del menu de catalogos */
+.container-menu .container-menu-bar-pc{ /* container del menu de catalogos */
     display: none;
 }
 
@@ -112,7 +112,7 @@ body{
     transition: transform .8ys;
 }
 
-.container-menu .container-menu-bar .menu-options{ /* conatiner de las opcines del menu hamburguer version mobile  */
+.container-menu .container-menu-bar .menu-options{ /* container de las opcines del menu hamburguer version mobile  */
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -141,6 +141,14 @@ body{
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .usuario{ /* afecta a todas las a */
     margin-left: 20px;
+}
+
+.container-menu .container-menu-bar .menu-options .menu-options-usuario .register .fa-plus-circle{ /* icono de registrarse */
+    padding: 10px 12px;
+    border-radius: 50px;
+    background-color: var(--color-Rojo2);
+    border: 1px solid #000;
+   
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .usuario .fa-user{ /* icono de usuario */
@@ -387,7 +395,8 @@ body{
     
     .container-menu .container-menu-center .container-login-register{ /* conatainer del login y del register */
         display: flex;
-        margin-left: 25px;
+        margin-left: 35px;
+        flex-direction: column;
     }
     
     .container-menu .container-menu-center .container-login-register .container-login{ /* conatiner del icono login y de la a */
@@ -402,7 +411,7 @@ body{
     .container-menu .container-menu-center .container-login-register .container-login .login-frase{ /* "a" link del login */
         color: #fff;
         font-family: var(--fontFamily-Textos);
-        font-size: .8em;
+        font-size: .7em;
       
     }
     
@@ -417,7 +426,7 @@ body{
     .container-menu .container-menu-center .container-login-register .container-register .register-frase{ /* "a" link del register */
         color: #fff;
         font-family: var(--fontFamily-Textos);
-        font-size: .8em;
+        font-size: .7em;
         
     }
     
