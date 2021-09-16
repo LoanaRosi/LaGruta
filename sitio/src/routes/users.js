@@ -5,17 +5,18 @@ const {login, register, processLogin, processRegister, profile, logout,admin} = 
 const registerValidation = require('../validations/registerValidation');
 const loginValidation = require('../validations/loginValidation');
 
-const upload = require('../Middlewares/userAvatarImg');
+
 
 // middlewares de usuarios
 const userLoginCheck = require("../Middlewares/userLoginCheck");
 const userAdminCheck = require("../Middlewares/userAdminCheck");
+const userAvatarImg = require('../Middlewares/userAvatarImg');
 
 
 /* GET users listing. */
 
 router.get("/register",userLoginCheck, register);
-router.post("/register", registerValidation, processRegister);
+router.post("/register",userAvatarImg.single("imgUser"),registerValidation, processRegister);
 
 router.get("/login",userLoginCheck, login);
 router.post("/login", loginValidation, processLogin);

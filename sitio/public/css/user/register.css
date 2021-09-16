@@ -72,6 +72,31 @@
     padding: 5px
 }
 
+/* IMAGEN DE PERFIL USUARIO */
+
+.vista-register .register .img-perfil{
+    padding: 8px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+    background-color: var(--color-Rojo1);
+    border-radius: 3px;
+    color: #fff;
+    width: 45%;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0 0 8px #000;
+}
+
+.vista-register .register .img-perfil:hover{
+    background-color: var(--color-Rojo3);
+}
+
+.vista-register .register .img-input{
+    display: none;
+}
+
+/* ------------------------ */
+
 
 
 .vista-register .register .box-form input{ /* todos los inputs del formulario */

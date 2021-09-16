@@ -13,7 +13,7 @@
 }
 
 .profile .user-info .user-avatar img{
-    width: 10%;
+    width: 135px;
     border: white, 1px, solid;
 }
 
@@ -27,7 +27,7 @@
     /* text-transform: uppercase; */
 }
 
-.profile .user-info .mensaje p, a{
+.profile .user-info .mensaje p, .profile .user-info a{
     color: white;
     font-family: var(--fontFamily-Titulo);
     font-weight: 200;

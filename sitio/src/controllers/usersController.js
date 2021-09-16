@@ -14,13 +14,14 @@ module.exports ={
             let errors = validationResult(req);
 
             if(errors.isEmpty()){
-                const {name, email, password} = req.body;
+                const {name, email, password,} = req.body;
                 let user = {
                     id : users.length > 0 ? users[users.length -1].id +1 : 1,
                     name : name.trim(),
                     email : email.trim(),
                     password : bcrypt.hashSync(password.trim(), 10),
                     rol : 'user',
+                    imgUser : req.file ? req.file.filename : "avatar.png"
                 }
                 users.push(user);
                 fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json'), JSON.stringify(users, null, 2), 'utf-8');

@@ -17,7 +17,7 @@ const uploadProduct = require("../Middlewares/productMulter");
 
 router.get("/list",list); /* muestra todos los productos */
 
-router.get("/detail/:id",userAdminCheck,detail);
+router.get("/detail/:id",detail);
 
 router.get("/create",userAdminCheck,create); /* ruta de cracion de producto */
 router.post("/create",uploadProduct.single("img-product"), productsValidation, store); /* guarda un producto */
