@@ -30,7 +30,8 @@ module.exports ={
                 req.session.userLogin = {
                     id : user.id,
                     name : user.name,
-                    rol : user.rol
+                    rol : user.rol,
+                    img : user.imgUser
                 }
                 return res.redirect('/')
             }else{
@@ -54,7 +55,8 @@ module.exports ={
             req.session.userLogin = {
                 id : user.id,
                 name : user.name,
-                rol : user.rol
+                rol : user.rol,
+                img : user.imgUser
             }
             const{recordar} = req.body
             

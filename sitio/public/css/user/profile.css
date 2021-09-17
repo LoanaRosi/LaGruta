@@ -13,8 +13,10 @@
 }
 
 .profile .user-info .user-avatar img{
-    width: 135px;
-    border: white, 1px, solid;
+    width: 140px;
+    height: 135px;
+    border-radius: 50%;
+    border: 1px solid var(--color-negro3);
 }
 
 .profile .user-info .user-email p{

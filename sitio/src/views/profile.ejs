@@ -6,7 +6,7 @@
         <p>¡Hola <%= locals.userLogin.name %>!</p>
     </div>
     <div class="user-avatar">
-        <a href="/"> <img src="/images/users/avatar.png"></a>
+        <a href="/"> <img src="/images/users/<%= locals.userLogin.img %>"></a>
     </div>
     <div class="user-email">
        <p>Mi e-mail: <%= locals.userLogin.email %></p>

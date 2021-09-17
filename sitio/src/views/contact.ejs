@@ -1,0 +1,47 @@
+<%- include("./partials/head") %> 
+
+<body class="productos">
+    <%- include("./partials/header") %> 
+
+    <main class="vista-contact">
+        <section class="container-nav-vistas">
+          <!--   <div class="nav-vistas"> 
+                <a class="nav-vistas__inicio" href="/">inicio</a>
+                <span class="nav-vistas__barra">/</span>
+                <span class="nav-vistas__contacto">contacto</span> 
+            </div> -->
+            <div class="box-contact">
+                <h3 class="box-contact__title">Contacto</h3>
+                <a class="box-contact_whatsApp" href="">WhatsApp:************</a>
+                <a class="box-contact_gmail" href="">LagrutaDelDragon@gmail.com</a>
+            </div>
+        </section>
+        
+        <section class="container-form-contact">
+            <div class="form-contact">
+                <label class="form-contac__label" for="name">Ingresa Tu Nombre</label>
+                <input class="form-contac__input" type="text" name="name" id="name">
+            </div>
+            <div class="form-contact">
+                <label class="form-contac__label" for="email">Ingresa Tu Email</label>
+                <input class="form-contac__input" type="text" name="email" id="email">
+            </div>
+            <div class="form-contact">
+                <label class="form-contac__label" for="namber">Ingresa Tu Numero</label>
+                <input class="form-contac__input" type="text" name="number" id="namber">
+            </div>
+            <div class="form-contact">
+                <label class="form-contac__label" for="mensaje">Mensaje</label>
+                <textarea class="form-contac__textarea" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            </div>
+            <div class="container-button">
+                <button class="container-button__send" type="submit">Enviar</button>
+            </div>
+            
+        </section>
+    </main>
+
+    <%- include("./partials/footer") %> 
+</body>
+
+</html>

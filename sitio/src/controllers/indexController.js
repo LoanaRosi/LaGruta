@@ -37,6 +37,10 @@ module.exports ={
     // vita de detalle de producto
     detail: (req,res) =>{
         return res.render("productDetail")
+    },
+
+    contact: (req,res) => {
+        res.render("contact")
     }
 }
 

@@ -1,0 +1,129 @@
+.vista-contact{
+
+}
+
+.vista-contact .container-nav-vistas{ /* contiene la informacion de contacto*/
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+
+.vista-contact .nav-vistas{ /* contien la navegacion de vistas */
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.vista-contact .nav-vistas__inicio{
+    color: var(--color-Rojo3);
+}
+
+.vista-contact .nav-vistas__barra{
+    color: #fff;
+}
+
+.vista-contact .nav-vistas__contacto{
+    color: #fff;
+}
+
+.vista-contact .box-contact{ /* contiene formas de contacto */
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.vista-contact .box-contact__title{ /* titulo */
+    color: #fff;
+    font-size: 45px;
+    font-family: var(--fontFamily-Titulo);
+    margin-bottom: 12px;
+    width: 200px;
+    border-bottom: 1px solid #fff
+}
+
+.vista-contact .box-contact_whatsApp{
+    color: #fff;
+    font-size: 17px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.vista-contact .box-contact_gmail{
+    color: #fff;
+    font-size: 17px;
+    width: 100%;
+}
+
+.vista-contact .container-form-contact{ /* CONTIENE TODO EL FORMULARIO PARA ENVIAR MENSAJE */
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.vista-contact .form-contact{ /* contenedor de label y inpunt */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.vista-contact .form-contac__label{
+    color: #fff;
+    font-size: 18px;
+}
+
+.vista-contact .form-contac__input{
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #000;
+}
+
+.vista-contact .form-contac__textarea{ 
+    border-radius: 8px;
+}
+
+.vista-contact .container-button{ /* contiene el boton de enviar */
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+
+.vista-contact .container-button__send{
+    width: 100%;
+    background-color: var(--color-Rojo2);
+    padding: 7px;
+    border: 1px solid #000;
+    color: #fff;
+    font-family: var(--fontFamily-Textos);
+    border-radius: 8px;
+}
+
+@media (min-width:768px) {
+
+    .vista-contact .container-form-contact{ /* CONTIENE TODO EL FORMULARIO PARA ENVIAR MENSAJE */
+        width: 50%;
+    }
+
+}
+
+@media (min-width:1024px) {
+
+    .vista-contact .box-contact{ /* contiene formas de contacto */
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .vista-contact .container-form-contact{ /* CONTIENE TODO EL FORMULARIO PARA ENVIAR MENSAJE */
+        width: 30%;
+    }
+
+}

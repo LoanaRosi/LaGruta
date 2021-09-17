@@ -5,7 +5,13 @@ module.exports = [
     .notEmpty().withMessage('El nombre es obligatorio'),
 
     check('email')
-    .isEmail().withMessage('Debe ingresar un email válido'),
+    .isEmail().withMessage('Debe ingresar un email válido').bail()
+    .custom(({req})=>{
+        if(req !== locals.userLogin.email){
+            return false
+        }
+        return true
+    }).withMessage("Ese Gmail Ya Exite"),
 
     check('password')
     .isLength({
