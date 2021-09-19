@@ -292,6 +292,7 @@
 .main-home .main-category .container-ofertas .glider-contain .glider{
    
     margin-bottom: 50px;
+    overflow: hidden
 }
 .main-home .main-category .container-ofertas .glider-contain .glider-prev{ /* este es el boton para deslizar el carusel de productos */
     left: 10px;
@@ -674,6 +675,10 @@ footer .iconos a i {
     border-radius: 50%;
 }
 
+footer .iconos a .fa-instagram{
+    padding: 10px 11px;
+}
+
 footer .pie {
     margin: 10px;
     display: flex;
@@ -728,6 +733,7 @@ footer .bot {
     footer .pie i {
         border: none;
     }
+
 }
 
 

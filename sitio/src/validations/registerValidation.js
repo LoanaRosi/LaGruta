@@ -11,7 +11,7 @@ module.exports = [
             return false
         }
         return true
-    }).withMessage("Ese Gmail Ya Exite"),
+    }).withMessage("Ese Email Ya Exite"),
 
     check('password')
     .isLength({

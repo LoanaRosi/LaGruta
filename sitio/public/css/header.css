@@ -305,7 +305,7 @@ body{
 
 .container-menu .container-menu-bar .container-categorias ul li a{ /* link a las categorias */
     padding: 10px 18%;
-    font-size: 10px;
+    font-size: 13px;
     text-transform: uppercase;
     color: #fff;
     font-family: var(--fontFamily-Textos);
@@ -501,6 +501,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        display: none; /* para que no aparesca la flecha */
     }
 
     .container-menu .container-menu-bar-pc .more-catalogos i{ /* icono de flecha */
