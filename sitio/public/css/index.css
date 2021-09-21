@@ -67,6 +67,12 @@
     border: 1px solid #ccc;
     text-align: left;
     font-family: var(--fontFamily-Titulo);
-    font-weight: 600
+    font-weight: 600;
+    font-size: small;
   }
   
+@media (min-width:768px){
+  .index-admin td,.index-admin th {
+    font-size: medium;
+  }
+}
