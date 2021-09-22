@@ -1,0 +1,9 @@
+.about .caja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+}
