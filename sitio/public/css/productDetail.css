@@ -566,7 +566,7 @@ margin: 20px 0;
     }
 
     .product-detail .carrusel-img{ /* contenedor de las imagenes chicas */
-        width: 1012.5px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         overflow-y: hidden;

@@ -25,7 +25,6 @@ module.exports ={
                 }
                 users.push(user);
                 fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json'), JSON.stringify(users, null, 2), 'utf-8');
-                res.redirect('/user/login')
 
                 req.session.userLogin = {
                     id : user.id,

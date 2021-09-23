@@ -1,8 +1,9 @@
 module.exports = (req,res,next) => {
-    if(req.session.userLogin && req.session.userLogin.rol === ""){
-        res.redirect('/')
-    }else{
+    if(req.session.userLogin && req.session.userLogin.rol){
         next()
+    }else{
+       
+        res.redirect('/user/login')
     }
 }
 

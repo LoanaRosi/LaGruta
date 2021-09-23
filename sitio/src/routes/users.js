@@ -11,6 +11,7 @@ const loginValidation = require('../validations/loginValidation');
 const userLoginCheck = require("../Middlewares/userLoginCheck");
 const userAdminCheck = require("../Middlewares/userAdminCheck");
 const userAvatarImg = require('../Middlewares/userAvatarImg');
+const userRegisterCheck = require("../Middlewares/userRegisterCheck");
 
 
 /* GET users listing. */
@@ -24,7 +25,7 @@ router.post("/login", loginValidation, processLogin);
 router.get("/admin",userAdminCheck,admin);
 
 
-router.get('/profile', profile)
+router.get('/profile', userRegisterCheck,profile)
 router.get('/logout', logout)
 
 

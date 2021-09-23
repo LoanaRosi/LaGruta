@@ -1,17 +1,20 @@
 const {check, body} = require('express-validator');
 
+const users = require('../data/users.json');
+
 module.exports = [
     check('name')
     .notEmpty().withMessage('El nombre es obligatorio'),
 
-    check('email')
-    .isEmail().withMessage('Debe ingresar un email válido').bail()
-    .custom(({req})=>{
-        if(req !== locals.userLogin.email){
+    body('email')
+    .isEmail().withMessage('Debe ingresar un email válido')/* .bail()
+    .custom(({email})=>{
+        let user = users.find(user => user.email !== req.body.email)
+        if(user){
             return false
         }
         return true
-    }).withMessage("Ese Email Ya Exite"),
+    }).withMessage("Ese Email Ya Exite") */,
 
     check('password')
     .isLength({
