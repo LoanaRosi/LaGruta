@@ -5,25 +5,25 @@
     <table class="admin">
         <thead>
             <tr>
-                <th style="max-width: 14%;">ID</th>
-                <th style="max-width: 14%;">Imagen</th>
-                <th style="max-width: 14%;">Nombre</th>
-                <th style="max-width: 14%;">Precio</th>
-                <th style="max-width: 14%;">Categoria</th>
-                <th style="max-width: 14%;">Oferta</th>
-                <th style="max-width: 14%;">Opciones</th>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Oferta</th>
+                <th>Opciones</th>
             </tr>
         </thead>
             <tbody>
                 <% products.forEach(product => { %>
                     <tr>
-                        <td style="max-width: 14%;"><%= product.id %> </td>
-                        <td style="max-width: 14%;" class="imgProduct-container"><img class="imgProduct-container__img" src="/images/productos/<%= product.img %>" alt="imagen producto"></td>
-                        <td style="max-width: 14%;"><%= product.name %> </td>
-                        <td style="max-width: 14%;"><%= product.price %> </td>
-                        <td style="max-width: 14%;"><%= product.category %> </td>
-                        <td style="max-width: 14%;"><%= product.sale %> </td> 
-                        <td style="max-width: 14%;" class="container-form">
+                        <td><%= product.id %> </td>
+                        <td class="imgProduct-container"><img class="imgProduct-container__img" src="/images/productos/<%= product.img %>" alt="imagen producto"></td>
+                        <td><%= product.name %> </td>
+                        <td><%= product.price %> </td>
+                        <td><%= product.category %> </td>
+                        <td><%= product.sale %> </td> 
+                        <td class="container-form">
                             <form class="container-delete" action="/product/delete/<%= product.id %>?_method=DELETE" method="POST">
                                 <button type="submit" class="container-form__delete"><a href="#"><i class="far fa-trash-alt"></i></i></a></button>
                             </form>

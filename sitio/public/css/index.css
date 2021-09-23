@@ -1,3 +1,11 @@
+.index-admin thead tr th {
+  max-width: 14%;
+}
+
+.index-admin tbody tr td {
+  max-width: 14%;
+}
+
 .index-admin{
     background-color: white;
 }
