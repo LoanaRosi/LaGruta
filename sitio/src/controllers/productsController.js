@@ -35,6 +35,10 @@ module.exports ={
 		})
 	},
 
+	mediosPago: (req, res) => {
+		return res.render('medios-pago')
+	},
+
 	// formulario de creacion de producto
 	create: (req, res) => { /* esto solo renderiza la vista */
 		res.render("admin/create",{

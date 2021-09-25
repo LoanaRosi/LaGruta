@@ -5,7 +5,7 @@ const path = require('path');
 
 const productsValidation = require('../validations/productsValidation');
 
-const { list, detail, create, store, edit, update,destroy, banner, bannerAdd,bannerDestroy} = require("../controllers/productsController");
+const { list, detail, create, store, edit, update,destroy, banner, bannerAdd,bannerDestroy, mediosPago} = require("../controllers/productsController");
 
 //middlewares users check
 const userAdminCheck = require("../Middlewares/userAdminCheck"); //chequea que el usuari sea admin
@@ -18,6 +18,8 @@ const uploadProduct = require("../Middlewares/productMulter");
 router.get("/list",list); /* muestra todos los productos */
 
 router.get("/detail/:id",detail);
+
+router.get("/medios-pago",mediosPago); /* medios de pago y tarjetas */
 
 router.get("/create",userAdminCheck,create); /* ruta de cracion de producto */
 router.post("/create",uploadProduct.single("img-product"), productsValidation, store); /* guarda un producto */
