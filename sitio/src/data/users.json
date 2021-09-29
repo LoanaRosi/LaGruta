@@ -26,5 +26,13 @@
     "email": "elizabeth@gmail.com",
     "password": "$2a$10$mKc2u1Avv8qp87ZkMHatRuJIcp/m4V.28.T2Qtn/0zNvucIEJlQxa",
     "rol": "user"
+  },
+  {
+    "id": 5,
+    "name": "franco gimenez",
+    "email": "francogimenez@gmail.com",
+    "password": "$2a$10$rokQ8lEN4QD8O8tYTTP7IuyWO7DTVA2ktFFhd.TYOrra7tRzzkhGe",
+    "rol": "user",
+    "imgUser": "imgUseravatar-1632606766987.jpg"
   }
 ]

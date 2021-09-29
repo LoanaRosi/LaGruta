@@ -7,14 +7,16 @@ module.exports = [
     .notEmpty().withMessage('El nombre es obligatorio'),
 
     body('email')
-    .isEmail().withMessage('Debe ingresar un email válido')/* .bail()
-    .custom(({email})=>{
-        let user = users.find(user => user.email !== req.body.email)
-        if(user){
+    .isEmail().withMessage('Debe ingresar un email válido').bail()
+    .custom((value,{req})=>{
+        let user = users.filter(user => user.email == req.body.email)
+
+        if(user == false){
+            return true
+        }else{
             return false
         }
-        return true
-    }).withMessage("Ese Email Ya Exite") */,
+    }).withMessage("Ese Email Ya Existe"),
 
     check('password')
     .isLength({
