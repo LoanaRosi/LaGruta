@@ -290,9 +290,7 @@
 
 }
 .main-home .main-category .container-ofertas .glider-contain .glider{
-   
     margin-bottom: 50px;
-    overflow: hidden
 }
 .main-home .main-category .container-ofertas .glider-contain .glider-prev{ /* este es el boton para deslizar el carusel de productos */
     left: 10px;
