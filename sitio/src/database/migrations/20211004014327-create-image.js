@@ -20,7 +20,9 @@ module.exports = {
             tableName : 'Products'
           },
           key : 'id'
-        }
+        },
+        onDelete : 'cascade' //cuando se borra un producto que borre la imagen
+
       },
       createdAt: {
         allowNull: false,

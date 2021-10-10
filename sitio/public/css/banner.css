@@ -102,8 +102,8 @@
 }
 
 .control-banner .buttonDelete{ /* boton para borrar banner */
-    margin-left: 85%;
-    margin-top: -100px;
+    margin-left: 75vw;
+    margin-top: -10%;
     position: absolute;
     padding: 5px 20px;
     border-radius: 7px;
@@ -113,6 +113,7 @@
     box-shadow: 0 0 25px 4px #000, 0 0 10px -4px #000 inset;
     font-family: var(--fontFamily-Titulo);
     text-transform: uppercase;
+    font-size: 1.6vw;
 }
 
 @media (min-width:768px) {
