@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Category.init({
-    tipe: DataTypes.DECIMAL(8,2)
+    name: DataTypes.STRING(100)
   }, {
     sequelize,
     modelName: 'Category',

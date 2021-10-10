@@ -9,15 +9,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING(100)
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING(100)
       },
       password: {
+        allowNull: false,
         type: Sequelize.STRING(100)
       },
       rollId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -27,6 +31,7 @@ module.exports = {
         }
       },
       avatarId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {

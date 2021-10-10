@@ -9,36 +9,45 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING(100)
       },
       price: {
+        allowNull: false,
         type: Sequelize.DECIMAL(8,2)
       },
       discount: {
         type: Sequelize.INTEGER
       },
       player: {
+        allowNull: false,
         type: Sequelize.STRING(100)
       },
       timeGame: {
+        allowNull: false,
         type: Sequelize.STRING(100)
       },
       author: {
+        allowNull: false,
         type: Sequelize.STRING(100)
       },
       publisher: {
+        allowNull: false,
         type: Sequelize.STRING(100)
       },
       thematic: {
+        allowNull: false,
         type: Sequelize.STRING(500)
       },
       content: {
         type: Sequelize.STRING(500)
       },
       mechanic: {
+        allowNull: false,
         type: Sequelize.STRING(500)
       },
       statusId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -48,6 +57,7 @@ module.exports = {
         }
       },
       complexityId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -57,6 +67,7 @@ module.exports = {
         }
       },
       categoryId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -66,6 +77,7 @@ module.exports = {
         }
       },
       laguageId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
