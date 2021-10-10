@@ -11,7 +11,7 @@ module.exports = {
          name : 'admin',
          email: 'francoromangimenez@gmail.com',
          password: bcrypt.hashSync('123123', 10),
-         avatarId: 'avatar.png',
+         avatarId: 1,
          rollId: 1,
          createdAt: new Date,
          updatedAt: new Date
@@ -20,7 +20,7 @@ module.exports = {
          name : 'admin',
          email: 'loarosi24@gmail.com',
          password: bcrypt.hashSync('123123', 10),
-         avatarId: 'avatar.png',
+         avatarId: 1,
          rollId: 1,
          createdAt: new Date,
          updatedAt: new Date
@@ -29,7 +29,7 @@ module.exports = {
          name : 'admin',
          email: 'marielaerobles@gmail.com',
          password: bcrypt.hashSync('123123', 10),
-         avatarId: 'avatar.png',
+         avatarId: 1,
          rollId: 1,
          createdAt: new Date,
          updatedAt: new Date

@@ -1,7 +1,7 @@
 'use strict';
 
 const avatars = [
-  {
+  {/* 1 */
     file : 'avatar.png',
     createdAt: new Date,
     updatedAt : new Date
