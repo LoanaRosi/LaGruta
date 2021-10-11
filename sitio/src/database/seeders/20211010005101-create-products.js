@@ -5,12 +5,12 @@ const products = require("../../data/productsDB");
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-    await queryInterface.bulkInsert('product', products , {});
+    await queryInterface.bulkInsert('products', products , {});
     
   },
   down: async (queryInterface, Sequelize) => {
     
-    await queryInterface.bulkDelete('product', null, {});
+    await queryInterface.bulkDelete('products', null, {});
      
   }
 };

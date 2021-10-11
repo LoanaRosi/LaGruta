@@ -5,13 +5,13 @@ const images = require("../../data/imagesDB")
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
-    await queryInterface.bulkInsert('image', images, {});
+    await queryInterface.bulkInsert('images', images, {});
   
   },
 
   down: async (queryInterface, Sequelize) => {
     
-    await queryInterface.bulkDelete('image', null, {});
+    await queryInterface.bulkDelete('images', null, {});
     
   }
 };

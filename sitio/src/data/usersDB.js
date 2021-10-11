@@ -3,7 +3,7 @@ module.exports = [
     "name": "franco gimenez",
     "email": "francoromangimenez@gmail.com",
     "password": "$2a$10$6cXRCe18.ZCIq7bq6wXA8OjfJ3kKw83iAE.lVsSQCOikKNSt6xCjK",
-    "rolIdId": 1,
+    "rolId": 1,
     "createdAt" : new Date,
     "updatedAt" : new Date
   },

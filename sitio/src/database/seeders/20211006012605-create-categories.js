@@ -1,6 +1,6 @@
 'use strict';
 
-const categories = require("../../data/categoriesDB");
+const categories = require("../../data/categoriesDB.js");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {

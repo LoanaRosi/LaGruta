@@ -15,7 +15,8 @@ module.exports = {
         type: Sequelize.DECIMAL(8,2)
       },
       discount: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue : 0
       },
       player: {
         type: Sequelize.STRING(100)

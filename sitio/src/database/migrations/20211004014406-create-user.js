@@ -17,7 +17,7 @@ module.exports = {
       password: {
         type: Sequelize.STRING(100)
       },
-      rollId: {
+      rolId: {
         type: Sequelize.INTEGER,
         references : {
           model : {

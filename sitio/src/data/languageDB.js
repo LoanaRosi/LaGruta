@@ -1,11 +1,11 @@
 module.exports = [
     {
-        espanol : "Español",
+        name : "Español",
         createdAt : new Date,
         updatedAt : new Date
     },
     {
-        ingles : "Ingles",
+        name : "Ingles",
         createdAt : new Date,
         updatedAt : new Date
     },

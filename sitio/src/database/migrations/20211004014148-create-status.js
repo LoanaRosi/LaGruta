@@ -8,8 +8,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      tipe: {
-        type: Sequelize.DECIMAL
+      name: {
+        type: Sequelize.STRING(100)
       },
       createdAt: {
         allowNull: false,
