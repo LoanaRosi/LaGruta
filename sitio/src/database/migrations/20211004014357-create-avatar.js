@@ -9,7 +9,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       file: {
-        type: Sequelize.STRING(500)
+        type: Sequelize.STRING(500),
+        defaultValue : "avatar.png"
       },
       createdAt: {
         allowNull: false,

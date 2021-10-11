@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -18,6 +19,7 @@ module.exports = {
         }
       },
       productId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -27,12 +29,15 @@ module.exports = {
         }
       },
       quantity: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       subtotal: {
+        allowNull: false,
         type: Sequelize.DECIMAL(8,2)
       },
       total: {
+        allowNull: false,
         type: Sequelize.DECIMAL(8,2)
       },
       createdAt: {

@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Avatar.init({
-    file: DataTypes.STRING(500)
+    file: DataTypes.STRING(500),
+    defaultValue : "avatar.png"
   }, {
     sequelize,
     modelName: 'Avatar',
