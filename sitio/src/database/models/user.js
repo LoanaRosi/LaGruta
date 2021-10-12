@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       User.belongsTo(models.Rol,{
         as : "rols"
       })
+
+      User.belongsTo(models.Avatar,{
+        as : "avatars"
+      })
     }
   };
   User.init({
