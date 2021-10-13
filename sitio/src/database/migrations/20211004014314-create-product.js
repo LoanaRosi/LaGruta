@@ -41,7 +41,7 @@ module.exports = {
         type: Sequelize.STRING(500)
       },
       content: {
-        type: Sequelize.STRING(500)
+        type: Sequelize.TEXT
       },
       mechanic: {
         allowNull: false,
