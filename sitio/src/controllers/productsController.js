@@ -12,13 +12,27 @@ const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","pro
 
 let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
 
+const db = require("../database/models");
+const { Op } = require("sequelize");
+
 module.exports ={
 
     // muestra todos los productos y tambien por categoria
 	list: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
-		
-		return res.render("listProducts",{products,descuento,tothousand})
+
+		db.Product.findAll({
+			include : [
+				"images"
+			]
+		})
+		.then(products =>{
+			res.render("listProducts",{
+				products,
+				descuento,
+				tothousand
+			})
+		})
+		.catch(error => console.log(error)) 
 	},
 
 	// pagina detalle de producto
@@ -41,44 +55,78 @@ module.exports ={
 
 	// formulario de creacion de producto
 	create: (req, res) => { /* esto solo renderiza la vista */
-		res.render("admin/create",{
-			products
-		}) 
+		let categories = db.Category.findAll()
+		let status = db.Status.findAll()
+		let complexities = db.Complexity.findAll()
+
+		Promise.all([categories,status,complexities])
+		.then(([categories,status,complexities]) =>{
+			
+			res.render("admin/create",{
+				categories,
+				status,
+				complexities
+			})
+		})
+		.catch(error => console.log(error))
 	},
 	
 	// metodo para crear el producto
 	store: (req, res) => { /* esta manda los datos */
 		let errors = validationResult(req);
 		if(errors.isEmpty()){
-		const {name,price,category,discount,sale,autor,mecanica,tematica,jugadores,tiempo,medidas,complejidad,editorial,idioma,contenido,} = req.body
-		let product ={
-			id : products[products.length - 1].id +1,
+		const {name,price,category,discount,sale,autor,mecanica,tematica,jugadores,tiempo,complejidad,editorial,idioma,contenido,} = req.body
+
+		db.Product.create({
 			name : name.trim(),
 			price : +price,
-			category,
-			img : req.file ? req.file.filename : "default-image.jpg",
 			discount : +discount,
-			sale,
-			autor : autor.trim(),
-			mecanica : mecanica.trim(),
-			tematica : tematica.trim(),
-			jugadores : jugadores.trim(),
-			tiempo : tiempo.trim(),
-			medidas : medidas.trim(),
-			complejidad,
-			editorial : editorial.trim(),
-			idioma,
-			contenido : contenido.trim()
-		}
-
-		products.push(product)
-		save(products)
-		res.redirect("/product/list")
-	} else {
-		return res.render('admin/create',{
-			errors : errors.mapped(),
-			old : req.body
+			player : jugadores.trim(),
+			timeGame : tiempo.trim(),
+			author : autor.trim(),
+			publisher : editorial.trim(),
+			thematic : tematica.trim(),
+			content : contenido.trim(),
+			mechanic : mecanica.trim(),
+			statusId : sale,
+			complexityId : complejidad,
+			categoryId : category,
+			languageId : idioma,
+			
 		})
+		.then(product =>{ 
+
+			if(req.file.length > 0){
+				let images = req.file.map(image =>{
+					let item = {
+						file : image.filename,
+						productId : product.id /* esto lo saca de then de arriba, el de product*/
+					}
+					return item
+				})
+				db.Image.bulkCreate(images,{validate : true})
+				.then( () => console.log('imagenes guardadas'))
+			}
+
+			res.redirect("/product/list")
+		})
+		.catch(error => console.log(error))
+	} else {
+
+		let categories = db.Category.findAll()
+		let status = db.Status.findAll()
+
+		Promise.all([categories,status])
+		.then(([categories,status]) =>{
+			
+			res.render("admin/create",{
+				categories,
+				status,
+				errors : errors.mapped(),
+				old : req.body
+			})
+		})
+		.catch(error => console.log(error))
 	  }
 	
 	},

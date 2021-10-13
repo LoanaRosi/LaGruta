@@ -25,9 +25,10 @@
     
                 <div class="form-admin__box">
                     <select class="form-admin__select" name="sale" id="category">
-                        <option class="fom-admin__option" value="" hidden>Dato del Producto</option>
-                        <option class="fom-admin__option" value="true">En Oferta</option>
-                        <option class="fom-admin__option" value="false">Destacados</option>
+                        <option class="fom-admin__option" value="" hidden>Elija El Estado</option>
+                        <% status.forEach(stat => { %>
+                            <option class="fom-admin__option" value="<%= stat.id %>" <%= locals.old && old.stat.name === stat.name ? 'selected' : null %> ><%= stat.name %> </option>
+                        <% }) %>
                     </select>
                 </div>
     
@@ -38,9 +39,9 @@
                 <div class="form-admin__box">
                     <select class="form-admin__select" name="category" id="category">
                         <option class="fom-admin__option" value="" hidden>Categoria</option>
-                        <option class="fom-admin__option" value="mesa">Juegos de Mesa</option>
-                        <option class="fom-admin__option" value="rol">Juego de Rol</option>
-                        <option class="fom-admin__option" value="previa">Juego de Previa</option>
+                        <% categories.forEach(categoria => { %>
+                            <option class="fom-admin__option" value="<%= categoria.id %>" <%= locals.old && old.categoria.name === categoria.name ? 'selected' : null %> ><%= categoria.name %> </option>
+                        <% }) %>
                     </select>
                     <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                 </div>
@@ -73,15 +74,11 @@
                 </div>
 
                 <div class="form_desciption__box">
-                    <input type="text" name="medidas" id="" placeholder="Medidas">
-                </div>
-
-                <div class="form_desciption__box">
                     <select name="complejidad" id="">
                         <option value="" hidden>Complejidad</option>
-                        <option value="facil">Facil</option>
-                        <option value="medio">Medio</option>
-                        <option value="dificil">Dificil</option>
+                        <% complexities.forEach(complexity => { %>
+                            <option class="fom-admin__option" value="<%= complexity.id %>" <%= locals.old && old.complexity.name === complexity.name ? 'selected' : null %> ><%= complexity.name %> </option>
+                        <% }) %>
                     </select>
                 </div>
         
