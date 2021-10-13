@@ -11,23 +11,28 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Product.hasMany(models.Image,{
-        as : "images"
+        as : "images",
+        foreignKey : "productId"
       })
 
       Product.belongsTo(models.Status,{
-        as : "status"
+        as : "status",
+        foreignKey : "statusId"
       })
 
       Product.belongsTo(models.Complexity,{
-        as : "complexities"
+        as : "complexities",
+        foreignKey : "complexityId"
       })
 
       Product.belongsTo(models.Category,{
-        as : "categories"
+        as : "categories",
+        foreignKey : "categoryId"
       })
 
       Product.belongsTo(models.Language,{
-        as : "languages"
+        as : "languages",
+        foreignKey : "laguageId"
       })
 
     }

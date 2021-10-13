@@ -16,11 +16,11 @@
     
                         <div class="conatiner-inside-producto">
                             <a href="/product/detail/<%= product.id %>" class="container-img">
-                                <img src="/images/productos/<%=product.img %>" alt="" class="img-product">
+                                <img src="/images/productos/<%=product.images[0].file %>" alt="" class="img-product">
                             </a>
                             <div class="container-name-precio">
                                 <h2 class="name-product"><%= product.name %></h2>
-                                <p class="precio">$<%=descuento(product.discount,product.price)%></p>
+                                <p class="precio">$<%=descuento(product.discount, product.price)%></p>
                             </div>
                             <div class="container-option-product">
                                 <div class="option-detalle">

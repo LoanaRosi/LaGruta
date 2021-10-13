@@ -8,6 +8,9 @@ const banner = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","banne
 const tothousand = require("../utils/thotousand")
 const descuento = require("../utils/discount")
 
+const db = require("../database/models");
+
+const { Op } = require("sequelize");
 
 module.exports ={
     // vista del home
@@ -18,15 +21,29 @@ module.exports ={
     },
 
     search: (req,res) => {
-        let busqueda = products.filter(product => product.name.toLowerCase().trim().includes(req.query.busqueda.trim().toLowerCase()));
-        
 
-        res.render("result-search",{
-            tothousand,
-            descuento,
-            products : busqueda,
-            resultado : req.query.busqueda
+        db.Product.findAll({
+            include : [
+                "images",
+                "categories",
+            ],
+
+            where : {
+                name : { 
+                    [Op.substring] : req.query.busqueda /* Op.substring funciona como un like */
+                },
+            }
         })
+        .then(products =>{
+            res.render("result-search",{
+                tothousand,
+                descuento,
+                products,
+                resultado : req.query.busqueda
+            })
+        })
+        .catch(error => console.log(error)) 
+
     },
 
     // vita del carrito

@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Language.hasMany(models.Product,{
-        as : "Products"
+        as : "Products",
+        foreignKey : "laguageId"
       })
     }
   };
