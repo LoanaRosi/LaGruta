@@ -4,105 +4,115 @@
     <%- include("./partials/header") %> 
     <main class="admin__container">
         <h2 class="admin__title">crear producto</h2> 
+
         <form class="form-admin" action="" method="POST" enctype="multipart/form-data"> 
 
-            <div class="container-form-add">
-
-                <div class="form-admin__box">
-                    <input class="form-admin__input" type="file" name="img-product" id="img" placeholder="Imagen del Producto">
-                </div>
-    
+            <div class="form-admin__container">
                 <div class="form-admin__box">
                     <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto">
-                    <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                    <span class="text-danger small"> </span>
                 </div>
-    
-                
                 <div class="form-admin__box">
                     <input class="form-admin__input" type="number" name="price" id="price" placeholder="Precio del Producto">
-                    <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
+                    <span class="text-danger small"> </span>
                 </div>
-    
                 <div class="form-admin__box">
                     <select class="form-admin__select" name="sale" id="category">
-                        <option class="fom-admin__option" value="" hidden>Elija El Estado</option>
+                        <option class="fom-admin__option" value="" hidden="">Estado del producto</option>
                         <% status.forEach(stat => { %>
                             <option class="fom-admin__option" value="<%= stat.id %>" <%= locals.old && old.stat.name === stat.name ? 'selected' : null %> ><%= stat.name %> </option>
                         <% }) %>
                     </select>
                 </div>
-    
+                
                 <div class="form-admin__box">
                     <input class="form-admin__input" type="number" name="discount" id="discount" placeholder="Descuento del Producto">
                 </div>
-    
-                <div class="form-admin__box">
+                <div class="form-admin__box form-admin__box--active ">
                     <select class="form-admin__select" name="category" id="category">
-                        <option class="fom-admin__option" value="" hidden>Categoria</option>
+                        <option class="fom-admin__option" value="" hidden="">Categoria</option>
                         <% categories.forEach(categoria => { %>
                             <option class="fom-admin__option" value="<%= categoria.id %>" <%= locals.old && old.categoria.name === categoria.name ? 'selected' : null %> ><%= categoria.name %> </option>
                         <% }) %>
                     </select>
-                    <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
+                    <span class="text-danger small"> </span>
                 </div>
-            </div>
-            
-            <!-- -------------------------- -->
-            <!-- --formulario descripcion-- -->
-            <!-- -------------------------- -->
 
-            <div class="form-description">
                 <h2 class="title-description">Descripcion Del Producto</h2>
-                <div class="form_desciption__box">
-                    <input type="text" name="autor" id="" placeholder="Autor">
-                </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="mecanica" id="" placeholder="Mecánica">
-                </div>
+                <div class="form-description">
+                    <div class="form_desciption__box">
+                        <input type="text" name="autor" id="" placeholder="Autor">
+                    </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="tematica" id="" placeholder="Temática">
-                </div>
+                    <div class="form_desciption__box">
+                        <input type="text" name="mecanica" id="" placeholder="Mecánica">
+                    </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="jugadores" id="" placeholder="Núm. jugadores">
-                </div>
+                    <div class="form_desciption__box">
+                        <input type="text" name="tematica" id="" placeholder="Temática">
+                    </div>
+                    
+                    <div class="form_desciption__box form_desciption__box--active">
+                        <input type="text" name="editorial" id="" placeholder="Editorial">
+                    </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="tiempo" id="" placeholder="Tiempo de juego">
-                </div>
+                    <div class="form_desciption__box">
+                        <input type="text" name="tiempo" id="" placeholder="Tiempo de juego">
+                    </div>
 
-                <div class="form_desciption__box">
-                    <select name="complejidad" id="">
-                        <option value="" hidden>Complejidad</option>
-                        <% complexities.forEach(complexity => { %>
+                    <div class="form_desciption__box form_desciption__box--active">
+                        <select name="complejidad" id="">
+                            <option value="" hidden="">Complejidad</option>
+                            <% complexities.forEach(complexity => { %>
                             <option class="fom-admin__option" value="<%= complexity.id %>" <%= locals.old && old.complexity.name === complexity.name ? 'selected' : null %> ><%= complexity.name %> </option>
-                        <% }) %>
-                    </select>
-                </div>
-        
-                <div class="form_desciption__box">
-                    <input type="text" name="editorial" id="" placeholder="Editorial">
-                </div>
+                            <% }) %>
+                        </select>
+                    </div>
 
-                <div class="form_desciption__box">
-                    <select name="complejidad" id="">
-                        <option value="" hidden>idioma</option>
-                        <option value="es">Español</option>
-                        <option value="en">Ingles</option>
-                    </select>
-                </div>
+                    <div class="form_desciption__box">
+                        <select name="idioma" id="">
+                            <option value="" hidden="">idioma</option>
+                            <% languages.forEach(language => { %>
+                            <option class="fom-admin__option" value="<%= language.id %>" <%= locals.old && old.language.name === language.name ? 'selected' : null %> ><%= language.name %> </option>
+                            <% }) %>
+                        </select>
+                    </div>
 
-                <div class="form_desciption__box">
-                    <textarea name="contenido" id="" cols="30" rows="10"  placeholder="Contenido"></textarea>
+                    <div class="form-admin__box form-admin__box--active">
+                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
+                    </div>
+                    <div class="form_desciption__box">
+                        <input type="text" name="jugadores" id="" placeholder="Núm. jugadores">
+                    </div>
+
+                   <!--  <div class="form_desciption__box form_desciption__box--active">
+                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
+                    </div>
+                    <div class="form_desciption__box form_desciption__box--active">
+                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
+                    </div> -->
+
+                    <div class="form_desciption__box">
+                        <textarea name="contenido" id="" cols="30" rows="10"  placeholder="Contenido"></textarea>
+                    </div>
+
                 </div>
                 <div class="create-button">
                     <button class="create-button__button" type="submit">Crear producto</button>
                 </div>
             </div>
+            
+            <section class="img-product">
+                <div class="img-product__container">
+                    <img class="img-product__img" src="/images/productos/mesa-1.png" alt="">
+                </div>
+            </section>
+    
  
         </form>
+
+       
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>

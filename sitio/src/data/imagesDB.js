@@ -1,6 +1,6 @@
 module.exports = [
     {/* 1 */
-        file : "mesa-?.png",
+        file : "mesa-1.png",
         productId : 1,
         createdAt : new Date,
         updatedAt : new Date

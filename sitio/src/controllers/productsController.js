@@ -58,14 +58,16 @@ module.exports ={
 		let categories = db.Category.findAll()
 		let status = db.Status.findAll()
 		let complexities = db.Complexity.findAll()
+		let languages = db.Language.findAll()
 
-		Promise.all([categories,status,complexities])
-		.then(([categories,status,complexities]) =>{
+		Promise.all([categories,status,complexities,languages])
+		.then(([categories,status,complexities,languages]) =>{
 			
 			res.render("admin/create",{
 				categories,
 				status,
-				complexities
+				complexities,
+				languages
 			})
 		})
 		.catch(error => console.log(error))
@@ -79,8 +81,8 @@ module.exports ={
 
 		db.Product.create({
 			name : name.trim(),
-			price : +price,
-			discount : +discount,
+			price : price,
+			discount : discount,
 			player : jugadores.trim(),
 			timeGame : tiempo.trim(),
 			author : autor.trim(),
@@ -91,10 +93,11 @@ module.exports ={
 			statusId : sale,
 			complexityId : complejidad,
 			categoryId : category,
-			languageId : idioma,
+			laguageId : idioma,
 			
 		})
 		.then(product =>{ 
+			console.log(product);
 
 			if(req.file.length > 0){
 				let images = req.file.map(image =>{
