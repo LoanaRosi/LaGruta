@@ -1,23 +1,4 @@
 module.exports = [
-    {/* 1 */
-        name: "cyclades",
-        price: 13900,
-        discount : 0,
-        player : "De 2 a 5",
-        timeGame : "90 minutos",
-        author : "Ludovic Maublanc y Bruno Cathala",
-        publisher: "Asmodée",
-        thematic : "Histórica",
-        content : "tablero 2 dados especiales 16 marcadores de prosperidad 5 figuras: Kraken, Minotauro, Medusa, Polifemo, Quirón  17 cartas de Criaturas Mitológicas 17 cartas de Filósofo 18 cartas de Sacerdote 4 tablero de Dioses 40 edificios: 10 Puertos, 10Fortalezas, 10 Universidades, 10 Metrópolis 10 marcadores de ofrendas 40 marcadores de Flota 40 marcadores de Tropa 15 marcadores de territorio 5 pantallas Instrucciones",
-        mechanic :"Juego competitivo",
-        statusId : 2,
-        complexityId : 3,
-        categoryId : 1,
-        laguageId : 1,
-       /*  imagesId : "", */
-        createdAt : new Date,
-        updatedAt : new Date
-    },
     {/* 2 */
         name: "Kemet",
         price: 13900,
@@ -69,6 +50,25 @@ module.exports = [
         mechanic :"Filler de cartas",
         statusId : 2,
         complexityId : 2,
+        categoryId : 1,
+        laguageId : 1,
+       /*  imagesId : "", */
+        createdAt : new Date,
+        updatedAt : new Date
+    },
+    {/* 1 */
+        name: "cyclades",
+        price: 13900,
+        discount : 0,
+        player : "De 2 a 5",
+        timeGame : "90 minutos",
+        author : "Ludovic Maublanc y Bruno Cathala",
+        publisher: "Asmodée",
+        thematic : "Histórica",
+        content : "tablero 2 dados especiales 16 marcadores de prosperidad 5 figuras: Kraken, Minotauro, Medusa, Polifemo, Quirón  17 cartas de Criaturas Mitológicas 17 cartas de Filósofo 18 cartas de Sacerdote 4 tablero de Dioses 40 edificios: 10 Puertos, 10Fortalezas, 10 Universidades, 10 Metrópolis 10 marcadores de ofrendas 40 marcadores de Flota 40 marcadores de Tropa 15 marcadores de territorio 5 pantallas Instrucciones",
+        mechanic :"Juego competitivo",
+        statusId : 2,
+        complexityId : 3,
         categoryId : 1,
         laguageId : 1,
        /*  imagesId : "", */

@@ -22,7 +22,7 @@ router.get("/detail/:id",detail);
 router.get("/medios-pago",mediosPago); /* medios de pago y tarjetas */
 
 router.get("/create",userAdminCheck,create); /* ruta de cracion de producto */
-router.post("/create",uploadProduct.single("fileImage"), productsValidation, store); /* guarda un producto */
+router.post("/create",uploadProduct.any("fileImage"), productsValidation, store); /* guarda un producto */
 
 router.get('/edit/:id',userAdminCheck,edit); /* edita un producto */
 router.put('/edit/:id',uploadProduct.single('img'), update); /* actualiza datos de un producto */

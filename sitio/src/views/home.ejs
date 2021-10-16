@@ -14,11 +14,11 @@
               <% } %>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active" style="background-image: url('/images/banner-img/<%= banner[0].imgBanner %>')">
+              <div class="carousel-item active" style="background-image: url('/images/banner-img/<%= banner[0].name %>')">
                 <!-- imagen que va como background-image -->
               </div>
-              <% for( let index = 0; index < banner.length-1; index++ ) { %>
-                <div class="carousel-item" style="background-image: url('/images/banner-img/<%= banner[index+1].imgBanner %>')">
+              <% for( let index = 0; index < banner.length -1; index++ ) { %>
+                <div class="carousel-item" style="background-image: url('/images/banner-img/<%= banner[index+1].name %>')">
                     <!-- imagen que va como background-image -->
                   </div>
               <% } %>
@@ -65,7 +65,7 @@
                     <article>
 
                         <div class="conatiner-inside-article">
-                            <a href="/product/detail/<%= product.id %>" class="container-img"><img class="img-product" src="/images/productos/<%= product.img %>" alt=""></a>
+                            <a href="/product/detail/<%= product.id %>" class="container-img"><img class="img-product" src="/images/productos/<%= product.images[0].file %>" alt=""></a>
     
                             <div class="container-name-precio">
                                 <h3 class="name-product"><%= product.name %></h3>
@@ -114,7 +114,7 @@
                                 <div class="column">
                                     <article class="product-oferta">
                                             <div class="container-img-oferta">
-                                            <img src="/images/productos/<%= productsOfert[index].img %>" alt="">
+                                            <img src="/images/productos/<%= productsOfert[index].images[0].name %>" alt="">
                                         </div>
                                         <div class="detail-oferta">
                                             <h4><%= productsOfert[index].name %></h4>
@@ -128,7 +128,7 @@
                                     </article>
                                     <article class="product-oferta">
                                         <div class="container-img-oferta">
-                                        <img src="/images/productos/<%= productsOfert[index +1].img %>" alt="">
+                                        <img src="/images/productos/<%= productsOfert[index +1].images[0].file %>" alt="">
                                     </div>
                                     <div class="detail-oferta">
                                         <h4><%= productsOfert[index +1].name %></h4>

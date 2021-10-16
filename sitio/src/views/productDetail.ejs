@@ -7,7 +7,7 @@
         <div class="breadcrumbs">
             <a class="breadcrumbs-inicio" href="/" title="La cueva del dragón">Inicio</a>
             <span class="breadcrumb-divider">/</span>
-            <a class="breadcrumbs-juego-mesa" href="/" title="Juegos de mesa"><%= productDetail.category%> </a>
+            <a class="breadcrumbs-juego-mesa" href="/" title="Juegos de mesa"><%= productDetail.categories.name%> </a>
             <span class="breadcrumb-divider">/</span>
             <span class="breadcrumbs-activo"><%= productDetail.name %></span>   
     </div>
@@ -20,20 +20,18 @@
                 <div class="product-container-photos__2">
                     <div class=product-photo-big>
                         <div class="glider-contain-img-big">
-                            <div class="glider-img-big">
-                              <div class="container-img-big"><img class="product-photo-big__img" src="/images/productos/<%= productDetail.img %>" alt=""></div>
+                            <div class="glider">
+                              <div class="container-img-big" id='masterImg'><img class="product-photo-big__img" src="/images/productos/<%= productDetail.images[0].file %>" alt=""></div>
                             </div>
-                          
-                            <button aria-label="Previous" class="glider-prev-">«</button>
-                            <button aria-label="Next" class="glider-next-">»</button>
-                            <div role="tablist" class="dots"></div>
-                          </div>
+                        </div>
                         
                     </div> 
                     <div class="carrusel-container">
-                        <div class="carrusel-img"><img class="product-photo-small__img" src="/images/detail-product/Juego-2.jpg" alt=""></div>
-                        <div class="carrusel-img"> <img class="product-photo-small__img" src="/images/detail-product/Juego-3.jpg" alt=""></div>
-                        <div class="carrusel-img"><img class="product-photo-small__img" src="/images/detail-product/Juego-4.jpg" alt=""> </div>
+                        <% productDetail.images.forEach(image => { %>
+                            <% if (productDetail.id == image.productId) { %>
+                                <img class="product-photo-small__img" src="/images/productos/<%= image.file %>" alt="" onclick="document.getElementById('masterImg').setAttribute('src','/images/productos/<%= image.file %>')">
+                            <% } %>  
+                      <% }) %>
                     </div>
                 </div>
             </div>
@@ -82,53 +80,40 @@
                 <tbody>
                 <tr style="height: 23px;">
                 <td style="width: 116.983px; height: 23px;">&nbsp;Autor</td>
-                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.autor %> &nbsp;</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.author %>&nbsp;</td>
                 </tr>
-                <tr style="height: 33px;">
-                <td style="width: 116.983px; height: 33px;">
-                <p>&nbsp;Mec&aacute;nica</p>
-                </td>
-                <td style="width: 169.017px; height: 33px;">&nbsp;<%= productDetail.mecanica %></td>
+                <tr style="height: 25px;">
+                <td style="width: 116.983px; height: 25px;">&nbsp;Mec&aacute;nica</td>
+                <td style="width: 169.017px; height: 25px;">&nbsp;<%= productDetail.mechanic%></td>
                 </tr>
                 <tr style="height: 25px;">
                 <td style="width: 116.983px; height: 25px;">&nbsp;Tem&aacute;tica</td>
-                <td style="width: 169.017px; height: 25px;">&nbsp;TV/Series/Cine</td>
+                <td style="width: 169.017px; height: 25px;">&nbsp;<%= productDetail.thematic%></td>
                 </tr>
                 <tr style="height: 23px;">
                 <td style="width: 116.983px; height: 23px;">&nbsp;N&uacute;m. jugadores</td>
-                <td style="width: 169.017px; height: 23px;">&nbsp;2, 3, 4, 5, 6</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.player%></td>
                 </tr>
                 <tr style="height: 23px;">
                 <td style="width: 116.983px; height: 23px;">&nbsp;Tiempo de juego</td>
-                <td style="width: 169.017px; height: 23px;">&nbsp;15 mins.</td>
-                </tr>
-                <tr style="height: 23px;">
-                <td style="width: 116.983px; height: 23px;">&nbsp;Medidas</td>
-                <td style="width: 169.017px; height: 23px;">&nbsp;310 x 170 x 50 mm</td>
-                </tr>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.timeGame%></td>
                 <tr style="height: 23px;">
                 <td style="width: 116.983px; height: 23px;">&nbsp;Complejidad</td>
-                <td style="width: 169.017px; height: 23px;">&nbsp;Media</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.complexities.name%></td>
                 </tr>
                 <tr style="height: 23px;">
                 <td style="width: 116.983px; height: 23px;">&nbsp;Editorial</td>
-                <td style="width: 169.017px; height: 23px;">&nbsp;Gen X Games</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.publisher%></td>
                 </tr>
                 <tr style="height: 23px;">
                 <td style="width: 116.983px; height: 23px;">&nbsp;Contenido</td>
                 <td style="width: 169.017px; height: 23px;">
-                <p>-7 miniaturas coleccionables de 32mm: Connor, Ramirez, Kastagir, Fasil, Naminaga, Talia y el Kurgan.</p>
-                <p>-1 libro de Reglas.</p>
-                <p>-1 tablero 40x15.</p>
-                <p>-10 dados poli&eacute;dricos.</p>
-                <p>-7 fichas de personaje.</p>
-                <p>-Fichas de juego.</p>
-                <p>-110 cartas.</p>
+                <%= productDetail.content%>
                 </td>
                 </tr>
                 <tr style="height: 23px;">
                 <td style="width: 116.983px; height: 23px;">&nbsp;Idioma</td>
-                <td style="width: 169.017px; height: 23px;">&nbsp;Espa&ntilde;ol</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.languages.name%></td>
                 </tr>
                 </tbody>
                 </table>
@@ -144,28 +129,12 @@
                                 <div class="column">
                                     <article class="product-oferta">
                                             <div class="container-img-oferta">
-                                            <img src="/images/productos/<%= productRelacion[index].img %>" alt="">
+                                            <img src="/images/productos/<%= productRelacion[index].images[0].file %>" alt="">
                                         </div>
                                         <div class="detail-oferta">
                                             <h4><%= productRelacion[index].name %></h4>
                                             <div class="container-precios">
                                             <p class="new-oferta">$<%=descuento(productRelacion[index].discount,productRelacion[index].price)%></p>
-                                            <% if (productRelacion.discount > 0) { %>
-                                                <p class="precio-old"><%=productRelacion[index +1].discount%>% OFF</p>
-                                            <% } %>
-                                            </div> 
-                                            <a href="/productDetail" class="botn-comprar">comprar</a>
-                                        </div>
-                                    </article>
-
-                                    <article class="product-oferta">
-                                            <div class="container-img-oferta">
-                                            <img src="/images/productos/<%= productRelacion[index +1].img %>" alt="">
-                                        </div>
-                                        <div class="detail-oferta">
-                                            <h4><%= productRelacion[index +1].name %></h4>
-                                            <div class="container-precios">
-                                            <p class="new-oferta">$<%=descuento(productRelacion[index +1].discount,productRelacion[index].price)%></p>
                                             <% if (productRelacion.discount > 0) { %>
                                                 <p class="precio-old"><%=productRelacion[index +1].discount%>% OFF</p>
                                             <% } %>
