@@ -115,11 +115,9 @@ module.exports ={
 			laguageId : idioma,
 			
 		})
-		.then(product =>{ 
-			console.log(product);
-
+		.then(product =>{
 			if(req.files.length != 0){
-				let images = req.file.map(image =>{
+				let images = req.files.map(image =>{
 					let item = {
 						file : image.filename,
 						productId : product.id /* esto lo saca de then de arriba, el de product*/
@@ -149,9 +147,12 @@ module.exports ={
 				status,
 				complexities,
 				languages,
-				products,
+				mechanic : products.mechanic,
+				thematic : products.thematic,
+				publisher : products.publisher,
+				timeGame : products.timeGame,
+				player : products.player,
 				errors : errors.mapped(),
-				old : req.body
 			})
 		})
 		.catch(error => console.log(error))

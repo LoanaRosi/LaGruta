@@ -23,7 +23,7 @@
                             <option class="fom-admin__option" value="<%= stat.id %>" <%= locals.old && old.stat.name === stat.name ? 'selected' : null %> ><%= stat.name %> </option>
                         <% }) %>
                     </select>
-                    <span class="text-danger small"><%= locals.errors && errors.status ? errors.status.msg : null %> </span>
+                    <span class="text-danger small"><%= locals.errors && errors.sale ? errors.sale.msg : null %> </span>
                 </div>
                 
                 <div class="form-admin__box">
@@ -44,27 +44,27 @@
                 <div class="form-description">
                     <div class="form_desciption__box">
                         <input type="text" name="autor" id="" placeholder="Autor">
-                        <span class="text-danger small"><%= locals.errors && errors.author ? errors.author.msg : null %> </span>
+                        <span class="text-danger small"><%= locals.errors && errors.autor ? errors.autor.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box">
                         <input type="text" name="mecanica" id="" placeholder="Mecánica">
-                        <span class="text-danger small"><%= locals.errors && errors.products.mechanic ? errors.mechanic.msg : null %> </span>
+                        <span class="text-danger small"><%= locals.errors && errors.mecanica ? errors.mecanica.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box">
                         <input type="text" name="tematica" id="" placeholder="Temática">
-                        <span class="text-danger small"><%= locals.errors && errors.products.thematic ? errors.thematic.msg : null %> </span>
+                        <span class="text-danger small"><%= locals.errors && errors.tematica ? errors.tematica.msg : null %> </span>
                     </div>
                     
                     <div class="form_desciption__box form_desciption__box--active">
                         <input type="text" name="editorial" id="" placeholder="Editorial">
-                        <span class="text-danger small"><%= locals.errors && errors.products.publisher ? errors.publisher.msg : null %> </span>
+                        <span class="text-danger small"><%= locals.errors && errors.editorial ? errors.editorial.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box">
                         <input type="text" name="tiempo" id="" placeholder="Tiempo de juego">
-                        <span class="text-danger small"><%= locals.errors && errors.products.timeGame ? errors.timeGame.msg : null %> </span>
+                        <span class="text-danger small"><%= locals.errors && errors.tiempo ? errors.tiempo.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box form_desciption__box--active">
@@ -74,7 +74,7 @@
                             <option class="fom-admin__option" value="<%= complexity.id %>" <%= locals.old && old.complexity.name === complexity.name ? 'selected' : null %> ><%= complexity.name %> </option>
                             <% }) %>
                         </select>
-                        <span class="text-danger small"><%= locals.errors && errors.complexities ? errors.complexities.msg : null %> </span>
+                        <span class="text-danger small"><%= locals.errors && errors.complejidad ? errors.complejidad.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box">
@@ -84,15 +84,15 @@
                             <option class="fom-admin__option" value="<%= language.id %>" <%= locals.old && old.language.name === language.name ? 'selected' : null %> ><%= language.name %> </option>
                             <% }) %>
                         </select>
-                        <span class="text-danger small"><%= locals.errors && errors.languages ? errors.languages.msg : null %> </span>
+                        <span class="text-danger small"><%= locals.errors && errors.idioma ? errors.idioma.msg : null %> </span>
                     </div>
 
                     <div class="form-admin__box form-admin__box--active">
-                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
+                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
                     </div>
                     <div class="form_desciption__box">
                         <input type="text" name="jugadores" id="" placeholder="Núm. jugadores">
-                        <span class="text-danger small"><%= locals.errors && errors.products.player ? errors.products.player.msg : null %> </span>
+                        <span class="text-danger small"><%= locals.errors && errors.jugadores ? errors.jugadores.msg : null %> </span>
                     </div>
 
                    <!--  <div class="form_desciption__box form_desciption__box--active">
@@ -102,7 +102,7 @@
                         <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
                     </div> -->
 
-                    <div class="form_desciption__box">
+                    <div class="form_desciption__box form_desciption__box--active">
                         <textarea name="contenido" id="" cols="30" rows="10"  placeholder="Contenido"></textarea>
                     </div>
 
