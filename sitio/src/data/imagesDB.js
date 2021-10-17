@@ -25,7 +25,7 @@ module.exports = [
     },
 
     {/* 2 */
-        file : "mesa-1.png",
+        file : "mesa-2.png",
         productId : 2,
         createdAt : new Date,
         updatedAt : new Date
@@ -207,7 +207,7 @@ module.exports = [
     },
 
     {/* 10 */
-        file : "previa-2.jpg",
+        file : "previa-2.png",
         productId : 10,
         createdAt : new Date,
         updatedAt : new Date
@@ -270,7 +270,7 @@ module.exports = [
         updatedAt : new Date
     },
     {/* 13 */
-        file : "previa-5-1.jpg",
+        file : "previa-5-1.png",
         productId : 13,
         createdAt : new Date,
         updatedAt : new Date
@@ -346,7 +346,7 @@ module.exports = [
     },
 
     {/* 17 */
-        file : "previa-9.jpg",
+        file : "previa-9.png",
         productId : 17,
         createdAt : new Date,
         updatedAt : new Date
@@ -408,7 +408,7 @@ module.exports = [
         updatedAt : new Date
     },
 
-    {/* 20 */
+    {/* 20 */ // hasta aca
         file : "rol-1.jpg",
         productId : 20,
         createdAt : new Date,
@@ -458,14 +458,14 @@ module.exports = [
     },
 
     {/* 27 */
-        file : "rol-9.jpg",
+        file : "rol-9.png",
         productId : 27,
         createdAt : new Date,
         updatedAt : new Date
     },
 
     {/* 28 */
-        file : "rol-10.png",
+        file : "rol-10.jpg",
         productId : 28,
         createdAt : new Date,
         updatedAt : new Date
@@ -479,7 +479,7 @@ module.exports = [
     },
 
     {/* 30 */
-        file : "rol-12.jpg",
+        file : "rol-12.png",
         productId : 30,
         createdAt : new Date,
         updatedAt : new Date

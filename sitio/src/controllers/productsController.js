@@ -38,16 +38,35 @@ module.exports ={
 
 	// pagina detalle de producto
 	detail: (req, res) => {
-		let productDetail = products.find(product => product.id === +req.params.id); /* usamos find para que devuelva un objeti literarl en vez de un array como lo aria filter */
 
-		let productRelacion = products.filter(product => product.category === productDetail.category);
-
-		return res.render("productDetail",{
-			productDetail,
-			productRelacion,
-			descuento,
-			tothousand
+		let productDetail = db.Product.findByPk(req.params.id,{
+			include :[
+				{association : "images"},
+				{association : "categories"},
+				{association : "complexities"},
+				{association : "languages"}
+			]
 		})
+		.then((productDetail) =>{
+			let productRelacion = db.Product.findAll({
+				where : {
+					categoryId : productDetail.categoryId
+				},
+				include : [
+					{association : "images"}
+				]
+			})
+			.then((productRelacion) =>{
+				res.render("productDetail",{
+					productDetail,
+					productRelacion,
+					descuento,
+					tothousand
+				})
+			})
+			
+		})
+		.catch(error => console.log(error))
 	},
 
 	mediosPago: (req, res) => {
@@ -97,11 +116,9 @@ module.exports ={
 			laguageId : idioma,
 			
 		})
-		.then(product =>{ 
-			console.log(product);
-
-			if(req.file.length > 0){
-				let images = req.file.map(image =>{
+		.then(product =>{
+			if(req.files.length != 0){
+				let images = req.files.map(image =>{
 					let item = {
 						file : image.filename,
 						productId : product.id /* esto lo saca de then de arriba, el de product*/
@@ -119,15 +136,24 @@ module.exports ={
 
 		let categories = db.Category.findAll()
 		let status = db.Status.findAll()
+		let complexities = db.Complexity.findAll()
+		let languages = db.Language.findAll()
+		let products = db.Product.findAll()
 
-		Promise.all([categories,status])
-		.then(([categories,status]) =>{
+		Promise.all([categories,status,complexities,languages,products])
+		.then(([categories,status,complexities,languages,products]) =>{
 			
 			res.render("admin/create",{
 				categories,
 				status,
+				complexities,
+				languages,
+				mechanic : products.mechanic,
+				thematic : products.thematic,
+				publisher : products.publisher,
+				timeGame : products.timeGame,
+				player : products.player,
 				errors : errors.mapped(),
-				old : req.body
 			})
 		})
 		.catch(error => console.log(error))

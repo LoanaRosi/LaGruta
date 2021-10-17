@@ -1,12 +1,12 @@
-new Glider(document.querySelector('.glider'), {
+new Glider(document.querySelector('.glider-img-big'), {
     // Mobile-first defaults
     slidesToShow: 1,
     slidesToScroll: 1,
     scrollLock: true,
     dots: '.dots',
     arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
+      prev: '.glider-prev-',
+      next: '.glider-next-'
     },
     responsive: [
       {
@@ -25,7 +25,7 @@ new Glider(document.querySelector('.glider'), {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          itemWidth: 150,
+          itemWidth: 200,
           duration: 0.25
         }
       }

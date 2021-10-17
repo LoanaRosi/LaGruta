@@ -36,11 +36,15 @@ margin: 20px 0;
 
 /* --------------------------------------- */
 
-.product-detail  .product-container-photos{
+.product-detail  .product-container-photos{ /* contiene todas las imagenes y divs de imagen */
     width: 90%;
     margin: 0 auto;
     display: flex;
-    /* margin-left: 35%  ???*/
+    background-color: var(--color-Gris1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px -4px var(--color-negro3), 0 0 10px 0px #000 inset;
+    margin-bottom: 30px;
 }
 
 .product-detail .product-container-photos__2{
@@ -63,37 +67,8 @@ margin: 20px 0;
     display: none;
 }
 
-
-.product-detail .carrusel-img{ /* contenedor de las imagenes chicas */
-    width: 1012.5px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: hidden;
-    max-height: 450px;
-}
-
-
-.product-detail .product-photo-small{
-    display: flex;
-    flex-direction: column;
-    width: 6%;
-}
-
 .product-detail .product-photo-small__img{
-    margin-bottom: 10px;
     width: 100%;
-}
-
-.product-detail .product-name article .product-photo img{
-    width: 40%;            
-}
-
-.product-detail .price{
-    text-align: center;
-    color: #fff;
-    font-size: 25px;
-    margin-bottom: 15px;
-    font-family: var(--fontFamily-Textos);
 }
 
 .product-detail .product-info{
@@ -104,38 +79,13 @@ margin: 20px 0;
     font-size: 20px;
 }
 
-/* ---------------------------------------- */
-
-
-/* .product-detail .product-name article .product-photo img{
-    display: block;
-    width: 60%;
-    background-color: var(--color-negro4);
-    border: 1.5px solid var(--color-Rojo2);
-    border-radius: 5px;
-    margin: 10px auto;    
-} ????????????*/
-
-/* .product-detail .product span{
+.product-detail .price{
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 15px;
     font-family: var(--fontFamily-Textos);
-    color: white;
-} ???????*/
-
-/* .product-detail .product .price{
-    display: block;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-} ??????*/
-
-/* .product-detail .product .credit{
-    display: block;
-    text-align: center;
-    font-size: 0.7rem;
-    padding-bottom: 10px;
-    margin: 0 auto;
-
-} ????????*/
+}
 
 .product-detail .payment{
     display: flex;
@@ -290,9 +240,8 @@ margin: 20px 0;
 .product-detail .product-name .info p{  /* Detalles */
     font-family: var(--fontFamily-Textos);
     color: white;
-    font-size: 0.7rem;
     padding-bottom: 10px;
-    
+    font-size: 17px;
 }
 
 .product-detail table{
@@ -336,13 +285,13 @@ margin: 20px 0;
 /* --------------------------------- */
 
 .product-detail .glider-contain .gliderRelacion{
-   
     margin-bottom: 50px;
+    width: 95%;
 }
 .product-detail .glider-contain .glider-prevRelacion{ /* este es el boton para deslizar el carusel de productos */
     left: 15px;
-    top: 31%;
-    font-size: 46px;
+    top: 25%;
+    font-size: 25px;
     background: none;
     border: navajowhite;
     position: absolute;
@@ -351,8 +300,8 @@ margin: 20px 0;
 
 .product-detail .glider-contain .glider-nextRelacion{ /* este es el boton para deslizar el carusel de productos */
     right: 15px;
-    top: 31%;
-    font-size: 46px;
+    top: 25%;
+    font-size: 25px;
     background: none;
     border: navajowhite;
     position: absolute;
@@ -461,88 +410,13 @@ margin: 20px 0;
 
 .product-detail .productos-relacionados{ /* contenedor */
     display: flex;
-    /* width: 90%; ??????*/
-    /* margin: auto 5px; */
 }
-
-/* .product-detail .productos-relacionados .more{
-    width: 50px;
-    font-size: 1rem;
-    margin: 20px;
-} */
-
-
-/* .product-detail .productos-relacionados .more i{
-    width: 50px;
-    font-size: 1rem;
-    padding: 30px 0;
-} ????? */
-
-/* .product-detail .productos-relacionados .product-1{
-    width: 100%;
-    margin-right: 10px;
-}
-
-.product-detail .productos-relacionados .container-img{
-    
-}
-
-.product-detail .productos-relacionados img{
-    width: 70%;
-    
-}
-
-.product-detail .productos-relacionados img:hover{
-    border: 1px solid #8E1212;
-    transition: .2s;
-    
-} ???????*/
-
-
-/* .product-detail .productos-relacionados .product-3{
-    display: none;
-}
-
-.product-detail .productos-relacionados .product-4{
-    display: none;
-}
-
-.product-detail .productos-relacionados .product-5{
-    display: none;
-} ??????*/
-
-/* .product-detail .productos-relacionados p{
-    font-family: var(--fontFamily-Textos);
-    color: white;
-    font-size: 0.7rem;
-    padding-top: 5px;
-    padding-bottom: 10px;    
-}
-
-.product-detail .productos-relacionados button{
-    font-size: 0.7rem;
-    font-family: var(--fontFamily-Textos);
-    padding: 5px 20px;
-    border-radius: 10px;
-    border: none;
-}    
-
-
-.product-detail .productos-relacionados button:hover{
-    background-color: #8E1212 ;
-    color: white;
-    transition: .2s;
-    border: none;
-} ?????????????????'*/
-
 
 @media (min-width:768px){
     
     .product-detail  .product-container-photos{
-        width: 50%;
-        margin: 0 auto;
-        display: flex;
-        /* margin-left: 35%  ???*/
+        width: 100%;
+        max-width: 660px;
     }
 
     .product-detail .product-container-photos__2{
@@ -555,6 +429,11 @@ margin: 20px 0;
         display: flex;
         justify-content: center;
         width: 100%;
+        background-color: var(--color-negro1);
+        margin-left: 25px;
+        box-shadow: 0 0 10px 5px #000 inset;
+        border-radius: 8px;
+        padding: 10px;
     }
     
     .product-detail .product-photo-big__img{
@@ -581,12 +460,8 @@ margin: 20px 0;
     }
 
     .product-detail .product-photo-small__img{
-        margin-bottom: 10px;
         width: 100%;
-    }
-
-    .product-detail .product-name article .product-photo img{
-        width: 40%;            
+        margin-bottom: 10px;
     }
 
     .product-detail .price{
@@ -667,13 +542,14 @@ margin: 20px 0;
 
 @media (min-width:1024px){
 
-    .product-detail .carrusel-container{ /* carrusel de imagenes chicas */
-        width: 20%;
-        display: block;
-    }
-
-    .product-detail .product-name article .product-photo img{
-        width: 35%;            
+    .product-detail .carrusel-container{ /* carrusel de imagenes chicas */ /* -------------------------- */
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 9px;
+        overflow-y: auto;
+        max-height: 470px;
     }
 
     .product-detail .product .price{
@@ -699,10 +575,5 @@ margin: 20px 0;
         width: 49%; 
         height: 70%;
     }
-    
-   /*  .product-detail .productos-relacionados{ /* contenedor 
-        margin: 0 -25%;
-        width: 100%;
-    } ?????????????*/
 
 }

@@ -15,9 +15,39 @@ const { Op } = require("sequelize");
 module.exports ={
     // vista del home
     index : (req,res) =>{
-        const productsOfert = products.filter(product=>product.sale === true);
-        return res.render("home",{products,productsOfert,banner,descuento,tothousand})
 
+        let products = db.Product.findAll({
+            include : [
+                "images",
+                "categories",
+                "status"
+            ]
+        })
+
+        let productsOfert = db.Product.findAll({
+            include : [
+                "images",
+                "categories",
+                "status"
+            ],
+            where : {
+                statusId : 1
+            }
+        })
+
+        let banner = db.Banner.findAll()
+
+        Promise.all([products,productsOfert,banner])
+        .then(([products,productsOfert,banner]) =>{
+            res.render("home",{
+                tothousand,
+                descuento,
+                products,
+                productsOfert,
+                banner
+            })
+        })
+        .catch(error => console.log(error)) 
     },
 
     search: (req,res) => {
