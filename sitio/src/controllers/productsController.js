@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const db = require('../database/models');
 
 const banner = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","banner.json"),"utf-8")); // imagenes banner
 let saveBanner = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','banner.json'),JSON.stringify(dato,null,2),'utf-8')
