@@ -4,7 +4,7 @@
 <body class="admin-creation">
     <%- include("./partials/header") %> 
     <main class="admin__container">
-        <h2 class="admin__title">Editar "<%= product.name %><%= product.category %>" </h2> 
+        <h2 class="admin__title">Editar "<%= product.name %><%= product.category.name %>" </h2> 
         <form class="form-admin" action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                        
             <div class="container-form-add">
