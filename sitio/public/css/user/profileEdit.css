@@ -1,0 +1,37 @@
+.profileEdit h2{
+    font-family: var(--fontFamily-Titulo);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    background-color: var(--color-negro4);
+    padding: 10px;
+    
+}
+
+.box-forms{ 
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px
+}
+
+.box-buttons{
+    padding-bottom: 20px;
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.box-buttons button{
+    padding: 12px;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-family: var(--fontFamily-Textos);
+    text-transform: uppercase;
+    
+}
