@@ -10,13 +10,15 @@ module.exports ={
 
     // vista register
     register: (req,res) => { 
-        db.Avatar.findAll()
+        /* db.Avatar.findAll()
         .then(avatars => {
             res.render('user/register', {
                 avatars
             })
         })
-        .catch(error => console.log(error))
+        .catch(error => console.log(error)) */
+        res.render('user/register')
+
         },
 
         processRegister : (req, res) => {
@@ -29,15 +31,24 @@ module.exports ={
                     email : email.trim(),
                     password : bcrypt.hashSync(password.trim(), 10),
                     rolId : 2,
-                    avatarId : imgUser
+                    avatarId : 1
                 })
                     .then(user => {
-                        req.session.userLogin = {
+                        let {imgUser} = req.body
+
+                    db.Avatar.create({
+
+                     
+                        file : imgUser
+                    })
+
+                    req.session.userLogin = {
                     id : user.id,
                     name : user.name,
                     rol : user.rol,
                     img : user.imgUser
                 }
+
                 return res.redirect('/')
 
                 })
