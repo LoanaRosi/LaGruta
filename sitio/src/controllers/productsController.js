@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const db = require('../database/models');
 
 const banner = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","banner.json"),"utf-8")); // imagenes banner
 let saveBanner = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','banner.json'),JSON.stringify(dato,null,2),'utf-8')
@@ -12,7 +13,7 @@ const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","pro
 
 let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
 
-const db = require("../database/models");
+
 const { Op } = require("sequelize");
 
 module.exports ={
@@ -162,46 +163,88 @@ module.exports ={
 
 	// pagina de edicion de producto
 	edit : (req,res) => {
+		let categories = db.Category.findAll()
+		let status = db.Status.findAll()
+		let complexities = db.Complexity.findAll()
+		let languages = db.Language.findAll()
+		let product = db.Product.findByPk(req.params.id, { 
+			include: ['categories', 'images']
+
+		})
+		Promise.all(([categories, product]))
+		.then(([categories, product]) =>{
 			return res.render('admin/edit',{
-				product : products.find(product => product.id === +req.params.id),
+				categories,
+				product,
+				status,
+				complexities,
+				languages
 			})
+
+		})
+		.catch(error => console.log(error))			
 	},
 
 
 	// metodo para subir el producto editado
 	update: (req, res) => {
-		const {name,price,category,discount,sale,autor,mecanica,tematica,jugadores,tiempo,medidas,complejidad,editorial,idioma,contenido} = req.body;
-		 products.map(product => {
-			if (product.id === +req.params.id) { /* recordar poner el +, si no no va a comparar number con string */
-				product.name = name;
-				product.price = +price;
-				product.category = category;
-				product.img = req.file ? req.file.filename : product.img;
-				product.discount = +discount;
-				product.sale = sale ? true : false;
-				product.autor =  autor.trim(),
-				product.mecanica =  mecanica.trim(),
-				product.tematica =  tematica.trim(),
-				product.jugadores =  jugadores.trim(),
-				product.tiempo =  tiempo.trim(),
-				product.medidas =  medidas.trim(),
-				product.complejidad =  complejidad,
-				product.editorial =  editorial.trim(),
-				product.idioma =  idioma,
-				product.contenido =  contenido.trim()
-				
-			}
+		const {name,price, discount,autor,mecanica,tematica,editorial,tiempo,idioma,jugadores,contenido} = req.body;
+		db.Product.update(
+			{
+			name : name.trim(),
+			price : price,
+			discount : discount,
+			author : autor.trim(),
+			mechanic : mecanica.trim(),
+			thematic : tematica.trim(),
+			publisher : editorial.trim(),
+			timeGame : tiempo.trim(),
+			complexityId : complejidad,
+			laguageId : idioma,
+			player : jugadores.trim(),			
+			content : contenido.trim(),			
+			statusId : sale,			
+			categoryId : category,
 			
-		});
-		save(products)
-		res.redirect("/admin");
+			},
+			{
+				where : {
+					id : req.params.id
+				}
+
+			}
+			.then(() => {
+				return res.redirect("/admin");
+
+			})
+		)
+			.catch(error => console.log(error))	
     },
 
 	// metodo para eliminar un producto
 	destroy : (req, res) => {
-		let productsModifi = products.filter(product=> product.id !== +req.params.id);  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
-		save(productsModifi);
-		res.redirect("/admin");
+		db.Product.findByPk(req.params.id,{
+			include : ['images']
+		})
+			.then(products =>{
+				products.images.forEach(image => {
+					if(fs.existsSync(path.join(__dirname,'../public/images', image.file))){
+                        fs.unlinkSync(path.join(__dirname,'../public/images',image.file))
+                    }
+					
+				}); 
+				 
+			})		
+		db.Product.destroy({
+			where : {
+				id : req.params.id
+			}
+
+		})
+		.then(() =>{
+			res.redirect("/admin");
+		})
+		.catch(error => console.log(error))			
 
 	},
 
