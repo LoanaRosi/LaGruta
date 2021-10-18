@@ -1,0 +1,35 @@
+<%- include("./partials/head") %> 
+<body class= "profileEdit">
+<%- include("./partials/header") %> 
+
+    <main class="profileEdit">
+        <h2>Editar cuenta</h2> 
+        <form action="" method="POST" enctype="multipart/form-data"> 
+            <div class="box-forms">
+                <input type="text" name="name" placeholder="Nombre y Apellido">
+            </div>
+
+            <div class="box-forms">
+                <input type="email" name="email" id="email" placeholder="Correo electrónico">
+            </div>
+
+            <div class="box-forms">
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+            </div>
+
+            <div class="box-forms">
+                <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
+                <input class="img-input" type="file" name="imgUser" id="imgUser">
+            </div>
+
+            <div class="box-buttons">
+                <button type="submit">Editar</button>
+            </div>
+
+        </form>
+    </main>
+
+
+<%- include("./partials/footer") %>    
+</body>
+</html>

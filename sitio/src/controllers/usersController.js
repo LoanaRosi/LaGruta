@@ -3,36 +3,46 @@ const bcrypt = require('bcryptjs')
 const fs = require("fs");
 const path = require("path");
 const users = require('../data/users.json');
+const db = require('../database/models');
 
 
 module.exports ={
 
     // vista register
-    register: (req,res) => res.render('user/register'),
+    register: (req,res) => { 
+        db.Avatar.findAll()
+        .then(avatars => {
+            res.render('user/register', {
+                avatars
+            })
+        })
+        .catch(error => console.log(error))
+        },
 
         processRegister : (req, res) => {
             let errors = validationResult(req);
 
             if(errors.isEmpty()){
-                const {name, email, password,} = req.body;
-                let user = {
-                    id : users.length > 0 ? users[users.length -1].id +1 : 1,
+                const {name, email, password,imgUser} = req.body;
+                db.User.create({
                     name : name.trim(),
                     email : email.trim(),
                     password : bcrypt.hashSync(password.trim(), 10),
-                    rol : 'user',
-                    imgUser : req.file ? req.file.filename : "avatar.png"
-                }
-                users.push(user);
-                fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json'), JSON.stringify(users, null, 2), 'utf-8');
-
-                req.session.userLogin = {
+                    rolId : 2,
+                    avatarId : imgUser
+                })
+                    .then(user => {
+                        req.session.userLogin = {
                     id : user.id,
                     name : user.name,
                     rol : user.rol,
                     img : user.imgUser
                 }
                 return res.redirect('/')
+
+                })
+                .catch(error => console.log(error))
+                
             }else{
                 return res.render('user/register',{
                     old : req.body,
@@ -66,7 +76,7 @@ module.exports ={
             if(user.rol === "admin"){
                 res.redirect("/user/admin")
             }
-            res.redirect('/')
+            res.redirect('profile')
 
         }else{
             return res.render('user/login',{
@@ -76,6 +86,8 @@ module.exports ={
     },
 
     profile : (req,res) => res.render('profile'),
+
+    profileEdit: (req, res) => res.render('profileEdit'),
 
     logout : (req,res) => {
         res.cookie("recordame",null,{maxAge : -1})

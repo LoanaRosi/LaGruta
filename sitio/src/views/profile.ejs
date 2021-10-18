@@ -5,11 +5,13 @@
     <div class="saludo">
         <p>¡Hola <%= locals.userLogin.name %>!</p>
     </div>
+
+    <div class="user-email">
+       <a href="profileEdit">Editar detalles de mi perfil</a>
+    </div>
+    <br>
     <div class="user-avatar">
         <a href="/"> <img src="/images/users/<%= locals.userLogin.img %>"></a>
-    </div>
-    <div class="user-email">
-       <p>Mi e-mail: <%= locals.userLogin.email %></p>
     </div>
     <div class="mensaje">
         <p>¡Hacé tu primera compra!</p>
