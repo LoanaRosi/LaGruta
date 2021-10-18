@@ -25,7 +25,7 @@ module.exports ={
             let errors = validationResult(req);
 
             if(errors.isEmpty()){
-                const {name, email, password,imgUser} = req.body;
+                const {name, email, password} = req.body;
                 db.User.create({
                     name : name.trim(),
                     email : email.trim(),
@@ -34,11 +34,10 @@ module.exports ={
                     avatarId : 1
                 })
                     .then(user => {
-                        let {imgUser} = req.body
+                        const {imgUser} = req.body
 
                     db.Avatar.create({
 
-                     
                         file : imgUser
                     })
 
