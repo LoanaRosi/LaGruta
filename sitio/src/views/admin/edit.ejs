@@ -5,17 +5,19 @@
     <%- include("./partials/header") %> 
     <main class="admin__container">
         <h2 class="admin__title">Editar "<%= product.name %> <%= product.categories.name %>" </h2> 
+
         <form class="form-admin" action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                        
-            <div class="container-form-add">
+           <!--  <div class="container-form-add"> -->
 
-                <div class="form-admin__box">
+                <!-- <div class="form-admin__box">
                     <input class="form-admin__input" type="file" name="img-product" id="img" placeholder="Imagen del Producto" >
-                </div>
+                </div> -->
     
-                <div class="form-admin__box">
-                    <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto" value= "<%= product.name %>">
-                    <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                <div class="form-admin__container">
+                    <div class="form-admin__box"></div>
+                        <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto" value= "<%= product.name %>">
+                        <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                 </div>
     
                 
@@ -36,34 +38,52 @@
                     <input class="form-admin__input" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">
                 </div>
     
-                <div class="form-admin__box">
+                <div class="form-admin__box form-admin__box--active ">
                     <select class="form-admin__select" name="category" id="category">
-                        <option class="fom-admin__option" value="" hidden>Categoria</option>
-                        <option class="fom-admin__option" value="mesa">Juegos de Mesa</option>
-                        <option class="fom-admin__option" value="rol">Juego de Rol</option>
-                        <option class="fom-admin__option" value="previa">Juego de Previa</option>
+                        <option class="fom-admin__option" value="" hidden="">Categoria</option>
+                        <% categories.forEach(categoria => { %>
+                            <option class="fom-admin__option" value="<%= categoria.id %>" <%= locals.old && old.categoria.name === categoria.name ? 'selected' : null %> ><%= categoria.name %> </option>
+                        <% }) %>
                     </select>
                     <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                 </div>
-            </div>
             
             <!-- -------------------------- -->
             <!-- --formulario descripcion-- -->
             <!-- -------------------------- -->
 
-            <div class="form-description">
-                
+            <h2 class="title-description">Descripcion Del Producto</h2>
+
+            <div class="form-description">                
                 <div class="form_desciption__box">
                     <input type="text" name="autor" id="" placeholder="Autor" value= "<%= product.autor %>">
+                    <span class="text-danger small"><%= locals.errors && errors.autor ? errors.autor.msg : null %> </span>
                 </div>
 
                 <div class="form_desciption__box">
                     <input type="text" name="mecanica" id="" placeholder="Mecánica" value= "<%= product.mecanica %>">
+                    <span class="text-danger small"><%= locals.errors && errors.mecanica ? errors.mecanica.msg : null %> </span>
                 </div>
 
                 <div class="form_desciption__box">
                     <input type="text" name="tematica" id="" placeholder="Temática" value= "<%= product.tematica %>">
+                    <span class="text-danger small"><%= locals.errors && errors.tematica ? errors.tematica.msg : null %> </span>
                 </div>
+
+                <div class="form_desciption__box form_desciption__box--active">
+                    <input type="text" name="editorial" id="" placeholder="Editorial" value= "<%= product.editorial %>">
+                    <span class="text-danger small"><%= locals.errors && errors.editorial ? errors.editorial.msg : null %> </span>
+                </div>
+
+                <div class="form_desciption__box">
+                    <input type="text" name="tiempo" id="" placeholder="Tiempo de juego" value= "<%= product.tiempo %>">>
+                    <span class="text-danger small"><%= locals.errors && errors.tiempo ? errors.tiempo.msg : null %> </span>
+                </div>
+
+                <div class="form-admin__box form-admin__box--active">
+                    <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
+                </div>
+                
 
                 <div class="form_desciption__box">
                     <input type="text" name="jugadores" id="" placeholder="Núm. jugadores" value= "<%= product.jugadores %>">
@@ -101,8 +121,8 @@
                 <div class="form_desciption__box">
                     <textarea name="contenido" id="" cols="30" rows="10"  placeholder="Contenido"><%= product.contenido %></textarea>
                 </div>
-                <div class="create-button">
-                    <button class="create-button__button" type="submit">Crear producto</button>
+                <div class="edit-button">
+                    <button class="create-button__button" type="submit">Editar producto</button>
                 </div>
             </div>
             
