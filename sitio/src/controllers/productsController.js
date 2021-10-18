@@ -208,7 +208,10 @@ module.exports ={
 	// control del banner
 
 	banner: (req,res) =>{
-        return res.render("admin/banner",{banner})
+		db.Banner.findAll()
+		.then(banner => {
+			res.render("admin/banner",{banner})
+		})
     },
 
     bannerAdd: (req,res) =>{
