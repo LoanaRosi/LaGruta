@@ -7,12 +7,12 @@ const banners = [
     updatedAt : new Date
   },
   {/* 2 */
-    name : 'banner-2.png"',
+    name : 'banner-2.png',
     createdAt: new Date,
     updatedAt : new Date
   },
   {/* 3 */
-    name : 'bannerbanner-1630204422358.png"',
+    name : 'bannerbanner-1630204422358.png',
     createdAt: new Date,
     updatedAt : new Date
   },

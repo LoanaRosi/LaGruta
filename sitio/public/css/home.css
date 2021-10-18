@@ -702,8 +702,10 @@ footer .pie i {
 }
 
 footer .bot {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    background-color: #0e0e0ea6;
+    color: #fff;
 }
 
 @media (min-width : 768px) {
