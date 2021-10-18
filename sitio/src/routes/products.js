@@ -5,7 +5,7 @@ const path = require('path');
 
 const productsValidation = require('../validations/productsValidation');
 
-const { list, detail, create, store, edit, update,destroy, banner, bannerAdd,bannerDestroy, mediosPago} = require("../controllers/productsController");
+const { list, detail, create, store, edit, update,destroy, banner, bannerAdd,bannerDestroy, mediosPago,listMesa} = require("../controllers/productsController");
 
 //middlewares users check
 const userAdminCheck = require("../Middlewares/userAdminCheck"); //chequea que el usuari sea admin
@@ -16,6 +16,8 @@ const uploadProduct = require("../Middlewares/productMulter");
 
 
 router.get("/list",list); /* muestra todos los productos */
+
+router.get("/juegosDeMesa",listMesa)
 
 router.get("/detail/:id",detail);
 

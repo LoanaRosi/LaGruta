@@ -2,7 +2,7 @@
     <!-- menu version pc -->
     <nav class="container-menu"> <!-- container de todo el menu de navegacion -->
         <div class="container-redes-sociales"> <!-- conatiner de redes sociales -->
-            <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+            <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
                 <a class="control-admin" href="/user/admin">Administrador</a>
                 <% } else { %>
                 
@@ -52,7 +52,7 @@
         </div>
         <div class="container-menu-bar-pc"> <!-- conatiner del menu de catalogos del la version pc -->
             <ul>
-                <a href="/product/list"><li>juegos de mesa</li></a>
+                <a href="/product/juegosDeMesa"><li>juegos de mesa</li></a>
                 <a href="/product/list"><li>juegos de rol</li></a>
                 <a href="/product/list"><li>juegos de previa</li></a>
                 <a href="/product/list"><li>todos los juegos</li></a>
@@ -84,7 +84,7 @@
                         </div>
                         <div class= "categorias">
                             <ul class="options-categorias"> <!-- container del las opciones de categorias -->
-                            <li><a href="/product/list">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
+                            <li><a href="/product/juegosDeMesa">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
                             <li><a href="/product/list">juegos de previa</a><i class="fas fa-chevron-down"></i></li>
                             <li><a href="/product/list">juegos de rol</a><i class="fas fa-chevron-down"></i></li>
                             <li><a href="/product/list">todos los juegos</a><i class="fas fa-chevron-down"></i></li>

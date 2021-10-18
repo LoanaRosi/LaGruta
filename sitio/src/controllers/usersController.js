@@ -19,10 +19,10 @@ module.exports ={
             let errors = validationResult(req);
 
             if(errors.isEmpty()){
-                const {name, email, password,imgUser} = req.body;
+                const {name, email, password} = req.body;
                 db.User.create({
                     name : name.trim(),
-                    email : name.trim(),
+                    email : email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
                     password : bcrypt.hashSync(password, 10),
                     rolId : 2,
                     avatar : req.file ? req.file.filename : "avatar.png",
@@ -56,7 +56,7 @@ module.exports ={
             const {email,recordar} = req.body;
             db.User.findOne({
                 where : {
-                    email
+                    email : email 
                 }
             })
             .then(user => {
@@ -64,7 +64,7 @@ module.exports ={
                     id : user.id,
                     name : user.name,
                     avatar : user.avatar,
-                    rolId : user.rolId
+                    rol :  user.rolId// ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
                 }
                 if(recordar){
                     res.cookie('LaGrutaDelDragon', req.session.userLogin,{maxAge: 365 * 24 * 60 * 60 * 1000})
@@ -80,12 +80,12 @@ module.exports ={
     },
 
     profile : (req,res) => {
-        db.User.findByPk(req.session.user.id)
+        db.User.findByPk(req.session.user.id) /* req.session.userLogin.id  */
         .then((user) => {
             res.send(user)
-            res.render('profileEdit', {
+            res.render('profile', { /* profile */
                 user,
-                session: req.session,
+                session: req.session, /*  */
             })
         })
         .catch(error => console.log(error))
@@ -105,7 +105,7 @@ module.exports ={
                 avatar : req.file ? req.file.filename : user.avatar
             },{
                 where: {
-                    id: req.session.user.id
+                    id: req.session.userLogin.id
                 }
             })
             .then(() => {
