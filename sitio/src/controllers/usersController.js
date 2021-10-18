@@ -56,7 +56,7 @@ module.exports ={
             const {email,recordar} = req.body;
             db.User.findOne({
                 where : {
-                    email : email /*  */
+                    email : email 
                 }
             })
             .then(user => {
@@ -64,7 +64,7 @@ module.exports ={
                     id : user.id,
                     name : user.name,
                     avatar : user.avatar,
-                    rolId : user.rolId // ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
+                    rol :  user.rolId// ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
                 }
                 if(recordar){
                     res.cookie('LaGrutaDelDragon', req.session.userLogin,{maxAge: 365 * 24 * 60 * 60 * 1000})
@@ -83,7 +83,7 @@ module.exports ={
         db.User.findByPk(req.session.user.id) /* req.session.userLogin.id  */
         .then((user) => {
             res.send(user)
-            res.render('profileEdit', { /* profile */
+            res.render('profile', { /* profile */
                 user,
                 session: req.session, /*  */
             })
@@ -105,7 +105,7 @@ module.exports ={
                 avatar : req.file ? req.file.filename : user.avatar
             },{
                 where: {
-                    id: req.session.user.id /*  */
+                    id: req.session.userLogin.id
                 }
             })
             .then(() => {

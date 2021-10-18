@@ -36,6 +36,63 @@ module.exports ={
 		.catch(error => console.log(error)) 
 	},
 
+	listMesa : (req,res) =>{
+		db.Product.findAll({
+			include : [
+				"images"
+			],
+			where :{
+				categoryId : 1
+			}
+		})
+		.then(products =>{
+			res.render("juegos-mesa",{
+				products,
+				descuento,
+				tothousand
+			})
+		})
+		.catch(error => console.log(error)) 
+	},
+
+	listPrevia : (req,res) =>{
+		db.Product.findAll({
+			include : [
+				"images"
+			],
+			where :{
+				categoryId : 3
+			}
+		})
+		.then(products =>{
+			res.render("juegos-mesa",{
+				products,
+				descuento,
+				tothousand
+			})
+		})
+		.catch(error => console.log(error)) 
+	},
+
+	listRol : (req,res) =>{
+		db.Product.findAll({
+			include : [
+				"images"
+			],
+			where :{
+				categoryId : 2
+			}
+		})
+		.then(products =>{
+			res.render("juegos-mesa",{
+				products,
+				descuento,
+				tothousand
+			})
+		})
+		.catch(error => console.log(error)) 
+	},
+
 	// pagina detalle de producto
 	detail: (req, res) => {
 
