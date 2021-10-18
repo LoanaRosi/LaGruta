@@ -170,8 +170,8 @@ module.exports ={
 		let product = db.Product.findByPk(req.params.id, { 
 			include: ['categories', 'images']
 		})
-		Promise.all(([categories, product]))
-		.then(([categories, product]) =>{
+		Promise.all(([categories, product, status, complexities,languages]))
+		.then(([categories, product, status, complexities,languages]) => {
 			return res.render('admin/edit',{
 				categories,
 				product,

@@ -1,132 +1,126 @@
-<!DOCTYPE html>
-<html>
-<%- include("../partials/head", {title: "Editar"}) %> 
-<body class="admin-edition">
+<%- include("../partials/head", {title: "Editar producto"}) %> 
+
+<body class="admin-creation">
     <%- include("./partials/header") %> 
     <main class="admin__container">
         <h2 class="admin__title">Editar "<%= product.name %> <%= product.categories.name %>" </h2> 
+        <form class="form-admin" action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">  
 
-        <form class="form-admin" action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
-                       
-           <!--  <div class="container-form-add"> -->
-
-                <!-- <div class="form-admin__box">
-                    <input class="form-admin__input" type="file" name="img-product" id="img" placeholder="Imagen del Producto" >
-                </div> -->
-    
-                <div class="form-admin__container">
-                    <div class="form-admin__box"></div>
-                        <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto" value= "<%= product.name %>">
-                        <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
-                </div>
-    
-                
+            <div class="form-admin__container">
                 <div class="form-admin__box">
-                    <input class="form-admin__input" type="number" name="price" id="price" placeholder="Precio del Producto" value= "<%= product.price %>">
+                    <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto" value="<%= product.name %> ">
+                    <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                </div>
+                <div class="form-admin__box">
+                    <input class="form-admin__input" type="number" name="price" id="price" placeholder="Precio del Producto" value= "<%= product.price %>">>
                     <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
                 </div>
-    
                 <div class="form-admin__box">
                     <select class="form-admin__select" name="sale">
-                        <option class="fom-admin__option" value="" hidden="">Estado del Producto</option>
-                        <option class="fom-admin__option" value="true">En Oferta</option>
-                        <option class="fom-admin__option" value="false">Destacados</option>
+                        <option class="fom-admin__option" value="" hidden="">Estado del producto</option>
+                        <% status.forEach(stat => { %>
+                            <option class="fom-admin__option" value="<%= stat.id %>" <%= locals.old && old.stat.name === stat.name ? 'selected' : null %> ><%= stat.name %> </option>
+                        <% }) %>
                     </select>
+                    <span class="text-danger small"><%= locals.errors && errors.sale ? errors.sale.msg : null %> </span>
                 </div>
-    
+                
                 <div class="form-admin__box">
-                    <input class="form-admin__input" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">
+                    <input class="form-admin__input" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">>
                 </div>
-    
                 <div class="form-admin__box form-admin__box--active ">
                     <select class="form-admin__select" name="category" id="category">
                         <option class="fom-admin__option" value="" hidden="">Categoria</option>
-                        <% categories.forEach(categoria => { %>
-                            <option class="fom-admin__option" value="<%= categoria.id %>" <%= locals.old && old.categoria.name === categoria.name ? 'selected' : null %> ><%= categoria.name %> </option>
-                        <% }) %>
+                        <% categories.forEach(category=> { %>
+                            <option value="<%= product.categories.name %>" <%= product.categoryId === product.categories.name ? 'selected' : null %> ><%= categories %> </option>
+                            <% }) %>
                     </select>
                     <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                 </div>
-            
-            <!-- -------------------------- -->
-            <!-- --formulario descripcion-- -->
-            <!-- -------------------------- -->
 
-            <h2 class="title-description">Descripcion Del Producto</h2>
+                <h2 class="title-description">Descripcion Del Producto</h2>
 
-            <div class="form-description">                
-                <div class="form_desciption__box">
-                    <input type="text" name="autor" id="" placeholder="Autor" value= "<%= product.autor %>">
-                    <span class="text-danger small"><%= locals.errors && errors.autor ? errors.autor.msg : null %> </span>
-                </div>
+                <div class="form-description">
+                    <div class="form_desciption__box">
+                        <input type="text" name="autor" id="" placeholder="Autor" value= "<%= product.author %>">>
+                        <span class="text-danger small"><%= locals.errors && errors.autor ? errors.autor.msg : null %> </span>
+                    </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="mecanica" id="" placeholder="Mecánica" value= "<%= product.mecanica %>">
-                    <span class="text-danger small"><%= locals.errors && errors.mecanica ? errors.mecanica.msg : null %> </span>
-                </div>
+                    <div class="form_desciption__box">
+                        <input type="text" name="mecanica" id="" placeholder="Mecánica" value= "<%= product.mechanic %>">                     
+                        <span class="text-danger small"><%= locals.errors && errors.mecanica ? errors.mecanica.msg : null %> </span>
+                    </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="tematica" id="" placeholder="Temática" value= "<%= product.tematica %>">
-                    <span class="text-danger small"><%= locals.errors && errors.tematica ? errors.tematica.msg : null %> </span>
-                </div>
+                    <div class="form_desciption__box">
+                        <input type="text" name="tematica" id="" placeholder="Temática" value= "<%= product.thematic %>"> 
+                        <span class="text-danger small"><%= locals.errors && errors.tematica ? errors.tematica.msg : null %> </span>
+                    </div>
+                    
+                    <div class="form_desciption__box form_desciption__box--active">
+                        <input type="text" name="editorial" id="" placeholder="Editorial" value= "<%= product.publisher %>"> 
+                        <span class="text-danger small"><%= locals.errors && errors.editorial ? errors.editorial.msg : null %> </span>
+                    </div>
 
-                <div class="form_desciption__box form_desciption__box--active">
-                    <input type="text" name="editorial" id="" placeholder="Editorial" value= "<%= product.editorial %>">
-                    <span class="text-danger small"><%= locals.errors && errors.editorial ? errors.editorial.msg : null %> </span>
-                </div>
+                    <div class="form_desciption__box">
+                        <input type="text" name="tiempo" id="" placeholder="Tiempo de juego" value= "<%= product.timeGame %>"> 
+                        <span class="text-danger small"><%= locals.errors && errors.tiempo ? errors.tiempo.msg : null %> </span>
+                    </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="tiempo" id="" placeholder="Tiempo de juego" value= "<%= product.tiempo %>">>
-                    <span class="text-danger small"><%= locals.errors && errors.tiempo ? errors.tiempo.msg : null %> </span>
-                </div>
+                    <div class="form_desciption__box form_desciption__box--active">
+                        <select name="complejidad" id="">
+                            <option value="" hidden="">Complejidad</option>
+                            <% complexities.forEach(complexity => { %>
+                            <option class="fom-admin__option" value="<%= complexity.id %>" <%= locals.old && old.complexity.name === complexity.name ? 'selected' : null %> ><%= complexity.name %> </option>
+                            <% }) %>
+                        </select>
+                        <span class="text-danger small"><%= locals.errors && errors.complejidad ? errors.complejidad.msg : null %> </span>
+                    </div>
 
-                <div class="form-admin__box form-admin__box--active">
-                    <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
-                </div>
-                
+                    <div class="form_desciption__box">
+                        <select name="idioma" id="">
+                            <option value="" hidden="">idioma</option>
+                            <% languages.forEach(language => { %>
+                            <option class="fom-admin__option" value="<%= language.id %>" <%= locals.old && old.language.name === language.name ? 'selected' : null %> ><%= language.name %> </option>
+                            <% }) %>
+                        </select>
+                        <span class="text-danger small"><%= locals.errors && errors.idioma ? errors.idioma.msg : null %> </span>
+                    </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="jugadores" id="" placeholder="Núm. jugadores" value= "<%= product.jugadores %>">
-                </div>
+                    <div class="form-admin__box form-admin__box--active">
+                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
+                    </div>
+                    <div class="form_desciption__box">
+                        <input type="text" name="jugadores" id="" placeholder="Núm. jugadores" value= "<%= product.player %>"> 
+                        <span class="text-danger small"><%= locals.errors && errors.jugadores ? errors.jugadores.msg : null %> </span>
+                    </div>
 
-                <div class="form_desciption__box">
-                    <input type="text" name="tiempo" id="" placeholder="Tiempo de juego" value= "<%= product.tiempo %>">
-                </div>
+                   <!--  <div class="form_desciption__box form_desciption__box--active">
+                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
+                    </div>
+                    <div class="form_desciption__box form_desciption__box--active">
+                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
+                    </div> -->
 
-                <div class="form_desciption__box">
-                    <input type="text" name="medidas" id="" placeholder="Medidas" value= "<%= product.medidas %>">
-                </div>
+                    <div class="form_desciption__box">
+                        <textarea name="contenido" id="" cols="30" rows="10"  placeholder="Contenido"><%= product.content %></textarea>
+                    </div>
 
-                <div class="form_desciption__box">
-                    <select name="complejidad" id="">
-                        <option value="" hidden>Complejidad</option>
-                        <option value="facil">Facil</option>
-                        <option value="medio">Medio</option>
-                        <option value="dificil">Dificil</option>
-                    </select>
                 </div>
-        
-                <div class="form_desciption__box">
-                    <input type="text" name="editorial" id="" placeholder="Editorial" value= "<%= product.editorial %>">
-                </div>
-
-                <div class="form_desciption__box">
-                    <select name="complejidad" id="">
-                        <option value="" hidden>idioma</option>
-                        <option value="es">Español</option>
-                        <option value="en">Ingles</option>
-                    </select>
-                </div>
-
-                <div class="form_desciption__box">
-                    <textarea name="contenido" id="" cols="30" rows="10"  placeholder="Contenido"><%= product.contenido %></textarea>
-                </div>
-                <div class="edit-button">
+                <div class="create-button">
                     <button class="create-button__button" type="submit">Editar producto</button>
                 </div>
             </div>
             
+            <section class="img-product">
+                <div class="img-product__container">
+                    <img class="img-product__img" src="/images/productos/mesa-1.png" alt="">
+                </div>
+            </section>
+    
+ 
         </form>
+
+       
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
