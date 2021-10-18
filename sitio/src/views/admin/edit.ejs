@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <%- include("../partials/head", {title: "Editar"}) %> 
-<body class="admin-creation">
+<body class="admin-edition">
     <%- include("./partials/header") %> 
     <main class="admin__container">
-        <h2 class="admin__title">Editar "<%= product.name %><%= product.category %>" </h2> 
+        <h2 class="admin__title">Editar "<%= product.name %> <%= product.categories.name %>" </h2> 
         <form class="form-admin" action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                        
             <div class="container-form-add">
@@ -25,8 +25,8 @@
                 </div>
     
                 <div class="form-admin__box">
-                    <select class="form-admin__select" name="sale" id="category">
-                        <option class="fom-admin__option" value="" hidden>Dato del Producto</option>
+                    <select class="form-admin__select" name="sale">
+                        <option class="fom-admin__option" value="" hidden="">Estado del Producto</option>
                         <option class="fom-admin__option" value="true">En Oferta</option>
                         <option class="fom-admin__option" value="false">Destacados</option>
                     </select>
@@ -52,7 +52,7 @@
             <!-- -------------------------- -->
 
             <div class="form-description">
-                <h2 class="title-description">Descripcion Del Producto</h2>
+                
                 <div class="form_desciption__box">
                     <input type="text" name="autor" id="" placeholder="Autor" value= "<%= product.autor %>">
                 </div>
