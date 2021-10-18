@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <%- include("../partials/head", {title: "Editar"}) %> 
-<body class="admin-edition">
+<body class="admin-creation">
     <%- include("./partials/header") %> 
     <main class="admin__container">
         <h2 class="admin__title">Editar "<%= product.name %> <%= product.categories.name %>" </h2> 
@@ -16,8 +16,7 @@
                 <div class="form-admin__box">
                     <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto" value= "<%= product.name %>">
                     <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
-                </div>
-    
+                </div>   
                 
                 <div class="form-admin__box">
                     <input class="form-admin__input" type="number" name="price" id="price" placeholder="Precio del Producto" value= "<%= product.price %>">
@@ -25,8 +24,8 @@
                 </div>
     
                 <div class="form-admin__box">
-                    <select class="form-admin__select" name="sale">
-                        <option class="fom-admin__option" value="" hidden="">Estado del Producto</option>
+                    <select class="form-admin__select" name="sale" id="category">
+                        <option class="fom-admin__option" value="" hidden>Dato del Producto</option>
                         <option class="fom-admin__option" value="true">En Oferta</option>
                         <option class="fom-admin__option" value="false">Destacados</option>
                     </select>
@@ -52,7 +51,7 @@
             <!-- -------------------------- -->
 
             <div class="form-description">
-                
+                <h2 class="title-description">Descripcion Del Producto</h2>
                 <div class="form_desciption__box">
                     <input type="text" name="autor" id="" placeholder="Autor" value= "<%= product.autor %>">
                 </div>

@@ -168,7 +168,7 @@ module.exports ={
 		let complexities = db.Complexity.findAll()
 		let languages = db.Language.findAll()
 		let product = db.Product.findByPk(req.params.id, { 
-			include: ['category', 'images']
+			include: ['categories', 'images']
 
 		})
 		Promise.all(([categories, product]))
@@ -223,9 +223,28 @@ module.exports ={
 
 	// metodo para eliminar un producto
 	destroy : (req, res) => {
-		let productsModifi = products.filter(product=> product.id !== +req.params.id);  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
-		save(productsModifi);
-		res.redirect("/admin");
+		db.Product.findByPk(req.params.id,{
+			include : ['images']
+		})
+			.then(products =>{
+				products.images.forEach(image => {
+					if(fs.existsSync(path.join(__dirname,'../public/images', image.file))){
+                        fs.unlinkSync(path.join(__dirname,'../public/images',image.file))
+                    }
+					
+				}); 
+				 
+			})		
+		db.Product.destroy({
+			where : {
+				id : req.params.id
+			}
+
+		})
+		.then(() =>{
+			res.redirect("/admin");
+		})
+		.catch(error => console.log(error))			
 
 	},
 
