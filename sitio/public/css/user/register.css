@@ -92,7 +92,7 @@
 }
 
 .vista-register .register .img-input{
-    display: none;
+    visibility: hidden;
 }
 
 /* ------------------------ */

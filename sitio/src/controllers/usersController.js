@@ -24,26 +24,39 @@ module.exports ={
                     name : name.trim(),
                     email : email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
                     password : bcrypt.hashSync(password, 10),
-                    rol : 2,
-                    imgUser : req.file ? req.file.filename : "avatar.png",
+                    avatarId : 1,
+                    rolId : 2,
                 })
-                .then(user => {
+                .then( user => {
+
+                    if(req.files != 0){
+                        db.Avatar.create({
+                            file : req.files.filename
+                        })
+                        .then( () => console.log('imagenes guardadas'))
+                    }else{
+                        console.log("imagen no encontrada")
+                    }
+
+                   
                     req.session.userLogin = {
-                        id : userId,
+                        id : user.id,
                         name : user.name,
                         avatar : user.avatar,
                         rolId : user.rolId
                     }
-                    return res.redirect('/')
+
+                    return res.redirect('/')    
                 })
-                
+                .catch(error => console.log(error))
+           
             }else{
                 return res.render('user/register',{
                     old : req.body,
                     errors : errors.mapped()
                 })
             }
-    },
+        },
 
     //vista login
     login : (req,res) => res.render('user/login'),
