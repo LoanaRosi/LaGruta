@@ -18,10 +18,10 @@
                 <% products.forEach(product => { %>
                     <tr>
                         <td><%= product.id %> </td>
-                        <td class="imgProduct-container"><img class="imgProduct-container__img" src="/images/productos/<%= product.img %>" alt="imagen producto"></td>
+                        <td class="imgProduct-container"><img class="imgProduct-container__img" src="/images/productos/<%= product.images[0].file %>" alt="imagen producto"></td>
                         <td><%= product.name %> </td>
                         <td><%= product.price %> </td>
-                        <td><%= product.category %> </td>
+                        <td><%= product.categories.name %> </td>
                         <td><%= product.sale %> </td> 
                         <td class="container-form">
                             <form class="container-delete" action="/product/delete/<%= product.id %>?_method=DELETE" method="POST">

@@ -65,7 +65,7 @@ module.exports ={
 			}
 		})
 		.then(products =>{
-			res.render("juegos-mesa",{
+			res.render("juegos-previa",{
 				products,
 				descuento,
 				tothousand
@@ -84,7 +84,7 @@ module.exports ={
 			}
 		})
 		.then(products =>{
-			res.render("juegos-mesa",{
+			res.render("juegos-rol",{
 				products,
 				descuento,
 				tothousand

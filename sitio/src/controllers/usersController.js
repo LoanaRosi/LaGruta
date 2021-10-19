@@ -24,8 +24,8 @@ module.exports ={
                     name : name.trim(),
                     email : email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
                     password : bcrypt.hashSync(password, 10),
-                    rolId : 2,
-                    avatar : req.file ? req.file.filename : "avatar.png",
+                    rol : 2,
+                    imgUser : req.file ? req.file.filename : "avatar.png",
                 })
                 .then(user => {
                     req.session.userLogin = {
@@ -36,7 +36,6 @@ module.exports ={
                     }
                     return res.redirect('/')
                 })
-                .catch(error => console.log(error))
                 
             }else{
                 return res.render('user/register',{
@@ -53,7 +52,7 @@ module.exports ={
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
-            const {email,recordar} = req.body;
+            let {email,recordame} = req.body;
             db.User.findOne({
                 where : {
                     email : email 
@@ -66,7 +65,7 @@ module.exports ={
                     avatar : user.avatar,
                     rol :  user.rolId// ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
                 }
-                if(recordar){
+                if(recordame){
                     res.cookie('LaGrutaDelDragon', req.session.userLogin,{maxAge: 365 * 24 * 60 * 60 * 1000})
                 }
                 return res.redirect('/')
@@ -92,7 +91,9 @@ module.exports ={
     },
 
     profileEdit: (req, res) => {
-        let errors = validationResults(req);
+        res.render('profileEdit')
+
+        let errors = validationResult(req);
         
         if(errors.isEmpty()){
 
@@ -123,8 +124,18 @@ module.exports ={
 
     //vista admin
     admin: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
-        return res.render("admin/admin",{products})
+
+        db.Product.findAll({
+			include : [
+				"images","categories"
+			]
+		})
+		.then(products =>{
+			res.render("admin/admin",{
+				products,
+			})
+		})
+		.catch(error => console.log(error)) 
         
     }
 }

@@ -1,77 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>juegos de rol</title>
-    <script src="https://kit.fontawesome.com/778560f052.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+
+<%- include("./partials/head") %> 
+
 <body class="productos">
     <!-- header -->
-    <header>
-        <nav class="container-menu">
-            <div class="container-redes-sociales">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="container-menu-nav">
-                <div class="container-bars">
-                    <a href="#"><i class="fas fa-bars"></i></a>
-                </div>
-                <div class="container-buscador">
-                    <a href="/" class="container-nav-logo"><img src="/images/Logo_sin_dragon.png" alt="la gruta del dragon logo" class="nav-logo"></a>
-                    <input class="buscador" type="text" name="buscador" placeholder="buscador...">
-                    <div class="container-search-user">
-                        <a href="#"><i class="fas fa-search"></i></a>
-                        <a href="/login" class="login"><i class="fas fa-user-circle"></i></a><a href="/login" class="login">ingresar</a> 
-                        <a href="/register" class="register"><i class="fas fa-plus-circle"></i></a><a href="/register" class="register">registrarte</a>
-                    </div>
-                    <div class="container-cart-shop">
-                        <a href="/productCart"><img src="/images/bandera-cart-tablet.svg" alt="carrito" class="flag-nav"> <i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="container-menu-bar-pc"><!-- mobile -->
-                <ul>
-                    <li><a href="/juegos-de-mesa">juegos de mesa</a></li>
-                    <li><a href="/juegos-de-rol">juegos de rol</a></li>
-                    <li><a href="/juegos-de-previa">juegos de previa</a></li>
-                    <li><a href="/productos">todos los juegos</a></li>
-                    <div class="more-catalogos"><i class="fas fa-chevron-right"></i></div>
-                </ul>
-            </div>
-            <div class="container-menu-bar "><!-- mobile -->
-                <div class="logo">
-                    <a href="/"> <img src="/images/Logo_sin_dragon.png"></a>
-                </div>
-                <ul>
-                    <li><a href="/">inicio</a></li>
-                    <li><a href="/productos">productos</a></li>
-                    <li><a href="/productCart">carrito</a></li>
-                </ul>
-                <div class="menu-options">
-                    <div class="menu-options-usuario">
-                        <a href="#"><i class="fas fa-user"></i></a>
-                        <a href="/login" class="login">ingresar</a>
-                        <a href="/register" class="register">rgistrarse</a>
-                        <a href="#" class="extit-menu"><i class="fas fa-times"></i></a>
-                    </div>
-                    <ul class="options">
-                        <li><a href="/juegos-de-mesa">juegos de mesa</a><i class="fas fa-chevron-down"></i></li>
-                        <li><a href="/juegos-de-previa">juegos de previa</a><i class="fas fa-chevron-down"></i></li>
-                        <li><a href="/juegos-de-rol">juegos de rol</a><i class="fas fa-chevron-down"></i></li>
-                        <li><a href="/productos">todos los juegos</a><i class="fas fa-chevron-down"></i></li>
-                    </ul>
-                </div>
-        </nav>
-    </header>
+    <%- include("./partials/header") %> 
 
     <!-- main -->
     <main class="main-products">
-        <h1>juegos de rol</h1>
+        <h1 class="title-result">Juegos De Rol</h1>
 
         <div class="container-filtros">
             <div class="filtro-orden">
@@ -108,295 +44,35 @@
                     <li><a href="/productos">todos los juegos</a></li>
                 </ul>
             </div>
+            
+            <% products.forEach(product => { %>
+                <article class="producto">
 
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-1.png" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
+                    <div class="conatiner-inside-producto">
+                        <a href="/product/detail/<%= product.id %>" class="container-img">
+                            <img src="/images/productos/<%=product.images[0].file %>" alt="" class="img-product">
+                        </a>
+                        <div class="container-name-precio">
+                            <h2 class="name-product"><%= product.name %></h2>
+                            <p class="precio">$<%=descuento(product.discount,product.price)%></p>
                         </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-2.png" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
+                        <div class="container-option-product">
+                            <div class="option-detalle">
+                                <a href="/product/detail/<%= product.id %>"><i class="far fa-eye"></i>
+                                    <p>detalles</p>
+                                </a>
+                            </div>
+                            <div class="option-cart-shop">
+                                <a href="#"><i class="fas fa-shopping-cart"></i>
+                                    <p>agregar</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-3.png" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-4.png" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-5.png" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-6.png" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-7.jpg" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-8.jpg" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-9.png" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-10.jpg" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-11.jpg" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="producto">
-
-                <div class="conatiner-inside-producto">
-                    <a href="#" class="container-img">
-                        <img src="/images/juegos-rol/rol-12.png" alt="" class="img-product">
-                    </a>
-                    <div class="container-name-precio">
-                        <h2 class="name-product">juego de mesa</h2>
-                        <p class="precio">$100000</p>
-                    </div>
-                    <div class="container-option-product">
-                        <div class="option-detalle">
-                            <a href="#"><i class="far fa-eye"></i>
-                                <p>detalles</p>
-                            </a>
-                        </div>
-                        <div class="option-cart-shop">
-                            <a href="#"><i class="fas fa-shopping-cart"></i>
-                                <p>agregar</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>
+                </article>
+            <% }) %>
+           
+           
 
             <div class="conatner-mas-products">
                 <a href="#" class="mas-products">mostrar mas productos</a>
@@ -404,5 +80,7 @@
 
         </section>
     </main>
+    <%- include("./partials/footer") %> 
 </body>
+
 </html>

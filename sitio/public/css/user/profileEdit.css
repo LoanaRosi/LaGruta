@@ -22,12 +22,16 @@
     padding-bottom: 20px;
     display: flex;
     margin: 0 auto;
-    width: 90%;
+    width: 50%;
+}
+
+.box-buttons a {
+    color: black;
 }
 
 .box-buttons button{
-    padding: 12px;
-    width: 60%;
+    padding: 8px;
+    width: 50%;
     margin: 0 auto;
     border: 1px solid #000;
     border-radius: 4px;
