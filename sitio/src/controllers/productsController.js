@@ -151,7 +151,7 @@ module.exports ={
 	},
 	
 	// metodo para crear el producto
-	store: (req, res) => { /* esta manda los datos */
+	store: (req, res) => { /* esto manda los datos */
 		let errors = validationResult(req);
 		if(errors.isEmpty()){
 		const {name,price,category,discount,sale,autor,mecanica,tematica,jugadores,tiempo,complejidad,editorial,idioma,contenido,} = req.body

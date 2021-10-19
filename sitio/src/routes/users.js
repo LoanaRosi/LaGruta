@@ -17,7 +17,7 @@ const userRegisterCheck = require("../Middlewares/userRegisterCheck");
 /* GET users listing. */
 
 router.get("/register",userLoginCheck, register);
-router.post("/register",userAvatarImg.single("imgUser"),registerValidation, processRegister);
+router.post("/register",userAvatarImg.array("avatar"),registerValidation, processRegister);
 
 router.get("/login",userLoginCheck, login);
 router.post("/login", loginValidation, processLogin);

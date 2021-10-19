@@ -1,4 +1,4 @@
-const {validationResult} = require('express-validator');
+const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
 const fs = require("fs");
 const path = require("path");
@@ -6,131 +6,137 @@ const users = require('../data/users.json');
 const db = require('../database/models');
 
 
-module.exports ={
+module.exports = {
 
     // vista register
-    register: (req,res) => { 
-        
+    register: (req, res) => {
+
         res.render('user/register')
 
-        },
-
-        processRegister : (req, res) => {
-            let errors = validationResult(req);
-
-            if(errors.isEmpty()){
-                const {name, email, password} = req.body;
-                db.User.create({
-                    name : name.trim(),
-                    email : email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
-                    password : bcrypt.hashSync(password, 10),
-                    avatarId : 1,
-                    rolId : 2,
-                })
-                .then( user => {
-
-                    if(req.files != 0){
-                        db.Avatar.create({
-                            file : req.files.filename
-                        })
-                        .then( () => console.log('imagenes guardadas'))
-                    }else{
-                        console.log("imagen no encontrada")
-                    }
-
-                   
-                    req.session.userLogin = {
-                        id : user.id,
-                        name : user.name,
-                        avatar : user.avatar,
-                        rolId : user.rolId
-                    }
-
-                    return res.redirect('/')    
-                })
-                .catch(error => console.log(error))
-           
-            }else{
-                return res.render('user/register',{
-                    old : req.body,
-                    errors : errors.mapped()
-                })
-            }
-        },
-
-    //vista login
-    login : (req,res) => res.render('user/login'),
-    
-    processLogin : (req,res) => {
-        let errors = validationResult(req);
-
-        if(errors.isEmpty()){
-            let {email,recordame} = req.body;
-            db.User.findOne({
-                where : {
-                    email : email 
-                }
-            })
-            .then(user => {
-                req.session.userLogin = {
-                    id : user.id,
-                    name : user.name,
-                    avatar : user.avatar,
-                    rol :  user.rolId// ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
-                }
-                if(recordame){
-                    res.cookie('LaGrutaDelDragon', req.session.userLogin,{maxAge: 365 * 24 * 60 * 60 * 1000})
-                }
-                return res.redirect('/')
-            })
-            .catch(error => console.log(error))
-        }else{
-            return res.render('user/login',{
-                errors : errors.mapped()
-            }
-        )}
     },
 
-    profile : (req,res) => {
-        db.User.findByPk(req.session.user.id) /* req.session.userLogin.id  */
-        .then((user) => {
-            res.send(user)
-            res.render('profile', { /* profile */
-                user,
-                session: req.session, /*  */
+    processRegister: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            const { name, email, password } = req.body;
+
+            if (req.files.length != 0) {
+
+                let images = req.files.map(image => {
+                    let item = {
+                        file: image.filename,
+                    }
+                    return item
+                })
+                db.Avatar.bulkCreate(images, { validate: true })
+                    .then(avatarImg => {
+                        console.log('imagenes guardadas')
+
+                        db.User.create({
+                            name: name.trim(),
+                            email: email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
+                            password: bcrypt.hashSync(password, 10),
+                            avatarId: avatarImg,
+                            rolId: 2,
+                        })
+                            .then(user => {
+
+                                req.session.userLogin = {
+                                    id: user.id,
+                                    name: user.name,
+                                    avatar: user.avatarId,
+                                    rolId: user.rolId
+                                }
+
+                                return res.redirect('/')
+                            })
+                            .catch(error => console.log(error))
+                    })
+            }
+
+        } else {
+            return res.render('user/register', {
+                old: req.body,
+                errors: errors.mapped()
             })
-        })
-        .catch(error => console.log(error))
+        }
+    },
+
+    //vista login
+    login: (req, res) => res.render('user/login'),
+
+    processLogin: (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            let { email, recordame } = req.body;
+            db.User.findOne({
+                where: {
+                    email: email
+                }
+            })
+                .then(user => {
+                    req.session.userLogin = {
+                        id: user.id,
+                        name: user.name,
+                        avatar: user.avatar,
+                        rol: user.rolId// ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
+                    }
+                    if (recordame) {
+                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: 365 * 24 * 60 * 60 * 1000 })
+                    }
+                    return res.redirect('/')
+                })
+                .catch(error => console.log(error))
+        } else {
+            return res.render('user/login', {
+                errors: errors.mapped()
+            }
+            )
+        }
+    },
+
+    profile: (req, res) => {
+        db.User.findByPk(req.session.user.id) /* req.session.userLogin.id  */
+            .then((user) => {
+                res.send(user)
+                res.render('profile', { /* profile */
+                    user,
+                    session: req.session, /*  */
+                })
+            })
+            .catch(error => console.log(error))
     },
 
     profileEdit: (req, res) => {
         res.render('profileEdit')
 
         let errors = validationResult(req);
-        
-        if(errors.isEmpty()){
 
-            let {name,email,password} = req.body
+        if (errors.isEmpty()) {
+
+            let { name, email, password } = req.body
 
             db.User.update({
                 name,
                 email,
                 password,
-                avatar : req.file ? req.file.filename : user.avatar
-            },{
+                avatar: req.file ? req.file.filename : user.avatar
+            }, {
                 where: {
                     id: req.session.userLogin.id
                 }
             })
-            .then(() => {
-                res.redirect('profile')
-            })
-            .catch(error => console.log(error))
+                .then(() => {
+                    res.redirect('profile')
+                })
+                .catch(error => console.log(error))
         }
     },
 
-    logout : (req,res) => {
-        res.cookie("recordame",null,{maxAge : -1})
+    logout: (req, res) => {
+        res.cookie("recordame", null, { maxAge: -1 })
         req.session.destroy();
         res.redirect('/')
     },
@@ -139,16 +145,16 @@ module.exports ={
     admin: (req, res) => {
 
         db.Product.findAll({
-			include : [
-				"images","categories"
-			]
-		})
-		.then(products =>{
-			res.render("admin/admin",{
-				products,
-			})
-		})
-		.catch(error => console.log(error)) 
-        
+            include: [
+                "images", "categories"
+            ]
+        })
+            .then(products => {
+                res.render("admin/admin", {
+                    products,
+                })
+            })
+            .catch(error => console.log(error))
+
     }
 }
