@@ -22,12 +22,12 @@ const banners = [
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-   await queryInterface.bulkInsert('banners',banners, {});
+   await queryInterface.bulkInsert('Banners',banners, {});
   },
 
   down: async (queryInterface, Sequelize) => {
 
-   await queryInterface.bulkDelete('banners', null, {});
+   await queryInterface.bulkDelete('Banners', null, {});
   
   }
 };

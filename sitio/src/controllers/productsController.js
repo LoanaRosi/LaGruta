@@ -225,9 +225,9 @@ module.exports ={
 		let categories = db.Category.findAll()
 		let status = db.Status.findAll()
 		let complexities = db.Complexity.findAll()
-		let languages = db.Language.findAll()
+		let languages = db.Language.findAll()		
 		let product = db.Product.findByPk(req.params.id, { 
-			include: ['categories', 'images', 'status','complexities', 'languages' ]
+			include: ['categories', 'images', 'status','complexities', 'languages']
 		})
 		Promise.all(([categories, status, complexities, languages, product]))
 		.then(([categories, status, complexities, languages, product]) => {
@@ -249,7 +249,7 @@ module.exports ={
 
         if(errors.isEmpty()){
 
-			const {name,price, discount,autor,mecanica,tematica,editorial,tiempo,idioma,jugadores,contenido} = req.body;
+			const {name,price, discount,autor,mecanica,tematica,editorial,tiempo,complejidad,idioma,jugadores,contenido,sale,category} = req.body;
 			db.Product.update(
 				{
 					name : name.trim(),
@@ -274,7 +274,7 @@ module.exports ={
 				}
 			)
 				.then(() => {
-					return res.redirect("/admin");
+					return res.redirect("/user/admin");
 
 				})
 				.catch(error => console.log(error))	
@@ -282,53 +282,39 @@ module.exports ={
 				let categories = db.Category.findAll()
 				let status = db.Status.findAll()
 				let complexities = db.Complexity.findAll()
-				let languages = db.Language.findAll()
-				let products = db.Product.findAll()
-		
-				Promise.all([categories,status,complexities,languages,products])
-				.then(([categories,status,complexities,languages,products]) =>{
-					
-					res.render("admin/edit",{
+				let languages = db.Language.findAll()		
+				let product = db.Product.findByPk(req.params.id, { 
+					include: ['categories', 'images', 'status','complexities', 'languages']
+				})
+				Promise.all(([categories, status, complexities, languages, product]))
+				.then(([categories, status, complexities, languages, product]) => {
+					return res.render('admin/edit',{
 						categories,
 						status,
 						complexities,
 						languages,
-						mechanic : products.mechanic,
-						thematic : products.thematic,
-						publisher : products.publisher,
-						timeGame : products.timeGame,
-						player : products.player,
+						product,
 						errors : errors.mapped(),
 					})
 				})
-				.catch(error => console.log(error))
+				.catch(error => console.log(error))		
+				
 			  }			
 			},
 
 	// metodo para eliminar un producto
 	destroy : (req, res) => {
-		db.Product.findByPk(req.params.id,{
-			include : ['images']
-		})
-			.then(products =>{
-				products.images.forEach(image => {
-					if(fs.existsSync(path.join(__dirname,'../public/images', image.file))){
-                        fs.unlinkSync(path.join(__dirname,'../public/images',image.file))
-                    }					
-				}); 
-				db.Product.destroy({
-					where : {
-						id : req.params.id
-					}
-		
-				})	
-				.then(() =>{
-					res.redirect("/admin");
-				})			 
-			})			
-			.catch(error => console.log(error))			
+		db.Product.destroy({
+			where : {
+				id : req.params.id
+			}					
+			})	
+			.then(() => {
+				return res.redirect("/user/admin");
 
-	},
+			})	 
+			.catch(error => console.log(error))	
+			},
 
 	// control del banner
 

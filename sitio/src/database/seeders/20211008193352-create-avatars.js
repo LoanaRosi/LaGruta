@@ -12,13 +12,13 @@ const avatars = [
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-     await queryInterface.bulkInsert('avatars', avatars, {});
+     await queryInterface.bulkInsert('Avatars', avatars, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
     
-     await queryInterface.bulkDelete('avatars', null, {});
+     await queryInterface.bulkDelete('Avatars', null, {});
      
   }
 };

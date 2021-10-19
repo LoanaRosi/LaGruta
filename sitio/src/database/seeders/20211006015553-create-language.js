@@ -5,13 +5,13 @@ const language = require("../../data/languageDB");
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-     await queryInterface.bulkInsert('languages', language, {});
+     await queryInterface.bulkInsert('Languages', language, {});
   
   },
 
   down: async (queryInterface, Sequelize) => {
     
-     await queryInterface.bulkDelete('languages', null, {});
+     await queryInterface.bulkDelete('Languages', null, {});
     
   }
 };
