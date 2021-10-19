@@ -61,8 +61,11 @@
 }
 
 .admin-creation .form-admin__select{
+    padding: 8px;
     width: 100%;
-    padding: 8px
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
 }
 
 .admin-creation .fom-admin__option{
