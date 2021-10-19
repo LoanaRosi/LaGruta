@@ -25,10 +25,10 @@ router.post("/login", loginValidation, processLogin);
 router.get("/admin",userAdminCheck,admin);
 
 
-router.get('/profile', userRegisterCheck,profile)
-router.get('/logout', logout)
+router.get('/profile', userRegisterCheck,profile);
+router.get('/logout', logout);
 
-router.get('/profileEdit', profileEdit)
+router.get('/profileEdit', profileEdit);
 
 
 module.exports = router;

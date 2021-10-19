@@ -22,10 +22,10 @@ module.exports ={
                 const {name, email, password,imgUser} = req.body;
                 db.User.create({
                     name : name.trim(),
-                    email : name.trim(),
+                    email : email.trim(),
                     password : bcrypt.hashSync(password, 10),
-                    rolId : 2,
-                    avatar : req.file ? req.file.filename : "avatar.png",
+                    rol : 2,
+                    imgUser : req.file ? req.file.filename : "avatar.png",
                 })
                 .then(user => {
                     req.session.userLogin = {
@@ -36,7 +36,6 @@ module.exports ={
                     }
                     return res.redirect('/')
                 })
-                .catch(error => console.log(error))
                 
             }else{
                 return res.render('user/register',{
@@ -53,20 +52,20 @@ module.exports ={
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
-            const {email,recordar} = req.body;
+            let {email,recordame} = req.body;
             db.User.findOne({
                 where : {
-                    email
+                    email : email
                 }
             })
             .then(user => {
                 req.session.userLogin = {
                     id : user.id,
                     name : user.name,
-                    avatar : user.avatar,
-                    rolId : user.rolId
+                    img : user.avatar,
+                    rol : user.rolId
                 }
-                if(recordar){
+                if(recordame){
                     res.cookie('LaGrutaDelDragon', req.session.userLogin,{maxAge: 365 * 24 * 60 * 60 * 1000})
                 }
                 return res.redirect('/')
@@ -80,19 +79,20 @@ module.exports ={
     },
 
     profile : (req,res) => {
-        db.User.findByPk(req.session.user.id)
+        db.User.findByPk(req.sessionLogin)
         .then((user) => {
-            res.send(user)
-            res.render('profileEdit', {
+            res.render('profile', {
                 user,
-                session: req.session,
+                session: req.sessionLogin,
             })
         })
         .catch(error => console.log(error))
     },
 
     profileEdit: (req, res) => {
-        let errors = validationResults(req);
+        res.render('profileEdit')
+
+        let errors = validationResult(req);
         
         if(errors.isEmpty()){
 
@@ -105,7 +105,7 @@ module.exports ={
                 avatar : req.file ? req.file.filename : user.avatar
             },{
                 where: {
-                    id: req.session.user.id
+                    id: req.params.id
                 }
             })
             .then(() => {
