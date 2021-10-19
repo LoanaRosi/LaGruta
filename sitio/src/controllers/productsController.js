@@ -36,6 +36,63 @@ module.exports ={
 		.catch(error => console.log(error)) 
 	},
 
+	listMesa : (req,res) =>{
+		db.Product.findAll({
+			include : [
+				"images"
+			],
+			where :{
+				categoryId : 1
+			}
+		})
+		.then(products =>{
+			res.render("juegos-mesa",{
+				products,
+				descuento,
+				tothousand
+			})
+		})
+		.catch(error => console.log(error)) 
+	},
+
+	listPrevia : (req,res) =>{
+		db.Product.findAll({
+			include : [
+				"images"
+			],
+			where :{
+				categoryId : 3
+			}
+		})
+		.then(products =>{
+			res.render("juegos-previa",{
+				products,
+				descuento,
+				tothousand
+			})
+		})
+		.catch(error => console.log(error)) 
+	},
+
+	listRol : (req,res) =>{
+		db.Product.findAll({
+			include : [
+				"images"
+			],
+			where :{
+				categoryId : 2
+			}
+		})
+		.then(products =>{
+			res.render("juegos-rol",{
+				products,
+				descuento,
+				tothousand
+			})
+		})
+		.catch(error => console.log(error)) 
+	},
+
 	// pagina detalle de producto
 	detail: (req, res) => {
 
@@ -169,7 +226,6 @@ module.exports ={
 		let languages = db.Language.findAll()
 		let product = db.Product.findByPk(req.params.id, { 
 			include: ['categories', 'images']
-
 		})
 		Promise.all(([categories, product]))
 		.then(([categories, product]) =>{
@@ -180,46 +236,72 @@ module.exports ={
 				complexities,
 				languages
 			})
-
 		})
-		.catch(error => console.log(error))			
+		.catch(error => console.log(error))		
 	},
 
 
 	// metodo para subir el producto editado
 	update: (req, res) => {
-		const {name,price, discount,autor,mecanica,tematica,editorial,tiempo,idioma,jugadores,contenido} = req.body;
-		db.Product.update(
-			{
-			name : name.trim(),
-			price : price,
-			discount : discount,
-			author : autor.trim(),
-			mechanic : mecanica.trim(),
-			thematic : tematica.trim(),
-			publisher : editorial.trim(),
-			timeGame : tiempo.trim(),
-			complexityId : complejidad,
-			laguageId : idioma,
-			player : jugadores.trim(),			
-			content : contenido.trim(),			
-			statusId : sale,			
-			categoryId : category,
-			
-			},
-			{
-				where : {
-					id : req.params.id
+		let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+
+			const {name,price, discount,autor,mecanica,tematica,editorial,tiempo,idioma,jugadores,contenido} = req.body;
+			db.Product.update(
+				{
+					name : name.trim(),
+					price : price,
+					discount : discount,
+					author : autor.trim(),
+					mechanic : mecanica.trim(),
+					thematic : tematica.trim(),
+					publisher : editorial.trim(),
+					timeGame : tiempo.trim(),
+					complexityId : complejidad,
+					laguageId : idioma,
+					player : jugadores.trim(),			
+					content : contenido.trim(),			
+					statusId : sale,			
+					categoryId : category,			
+				},
+				{
+					where : {
+						id : req.params.id
+					}
 				}
+			)
+				.then(() => {
+					return res.redirect("/admin");
 
-			}
-			.then(() => {
-				return res.redirect("/admin");
-
-			})
-		)
-			.catch(error => console.log(error))	
-    },
+				})
+				.catch(error => console.log(error))	
+			} else {
+				let categories = db.Category.findAll()
+				let status = db.Status.findAll()
+				let complexities = db.Complexity.findAll()
+				let languages = db.Language.findAll()
+				let products = db.Product.findAll()
+		
+				Promise.all([categories,status,complexities,languages,products])
+				.then(([categories,status,complexities,languages,products]) =>{
+					
+					res.render("admin/edit",{
+						categories,
+						status,
+						complexities,
+						languages,
+						mechanic : products.mechanic,
+						thematic : products.thematic,
+						publisher : products.publisher,
+						timeGame : products.timeGame,
+						player : products.player,
+						errors : errors.mapped(),
+					})
+				})
+				.catch(error => console.log(error))
+			  }			
+			},
 
 	// metodo para eliminar un producto
 	destroy : (req, res) => {
@@ -230,21 +312,19 @@ module.exports ={
 				products.images.forEach(image => {
 					if(fs.existsSync(path.join(__dirname,'../public/images', image.file))){
                         fs.unlinkSync(path.join(__dirname,'../public/images',image.file))
-                    }
-					
+                    }					
 				}); 
-				 
-			})		
-		db.Product.destroy({
-			where : {
-				id : req.params.id
-			}
-
-		})
-		.then(() =>{
-			res.redirect("/admin");
-		})
-		.catch(error => console.log(error))			
+				db.Product.destroy({
+					where : {
+						id : req.params.id
+					}
+		
+				})	
+				.then(() =>{
+					res.redirect("/admin");
+				})			 
+			})			
+			.catch(error => console.log(error))			
 
 	},
 

@@ -19,10 +19,10 @@ module.exports ={
             let errors = validationResult(req);
 
             if(errors.isEmpty()){
-                const {name, email, password,imgUser} = req.body;
+                const {name, email, password} = req.body;
                 db.User.create({
                     name : name.trim(),
-                    email : email.trim(),
+                    email : email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
                     password : bcrypt.hashSync(password, 10),
                     rol : 2,
                     imgUser : req.file ? req.file.filename : "avatar.png",
@@ -55,15 +55,15 @@ module.exports ={
             let {email,recordame} = req.body;
             db.User.findOne({
                 where : {
-                    email : email
+                    email : email 
                 }
             })
             .then(user => {
                 req.session.userLogin = {
                     id : user.id,
                     name : user.name,
-                    img : user.avatar,
-                    rol : user.rolId
+                    avatar : user.avatar,
+                    rol :  user.rolId// ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
                 }
                 if(recordame){
                     res.cookie('LaGrutaDelDragon', req.session.userLogin,{maxAge: 365 * 24 * 60 * 60 * 1000})
@@ -79,11 +79,12 @@ module.exports ={
     },
 
     profile : (req,res) => {
-        db.User.findByPk(req.sessionLogin)
+        db.User.findByPk(req.session.user.id) /* req.session.userLogin.id  */
         .then((user) => {
-            res.render('profile', {
+            res.send(user)
+            res.render('profile', { /* profile */
                 user,
-                session: req.sessionLogin,
+                session: req.session, /*  */
             })
         })
         .catch(error => console.log(error))
@@ -105,7 +106,7 @@ module.exports ={
                 avatar : req.file ? req.file.filename : user.avatar
             },{
                 where: {
-                    id: req.params.id
+                    id: req.session.userLogin.id
                 }
             })
             .then(() => {
@@ -123,8 +124,18 @@ module.exports ={
 
     //vista admin
     admin: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
-        return res.render("admin/admin",{products})
+
+        db.Product.findAll({
+			include : [
+				"images","categories"
+			]
+		})
+		.then(products =>{
+			res.render("admin/admin",{
+				products,
+			})
+		})
+		.catch(error => console.log(error)) 
         
     }
 }
