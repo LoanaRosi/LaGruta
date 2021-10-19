@@ -27,7 +27,7 @@ module.exports ={
 			]
 		})
 		.then(products =>{
-			res.render("listProducts",{
+			return res.render("listProducts",{
 				products,
 				descuento,
 				tothousand
@@ -183,10 +183,12 @@ module.exports ={
 					return item
 				})
 				db.Image.bulkCreate(images,{validate : true})
-				.then( () => console.log('imagenes guardadas'))
+				.then( () => {
+					return res.redirect("/product/list")
+					console.log('imagenes guardadas')})
 			}
 
-			res.redirect("/product/list")
+			return res.redirect("/product/list")
 		})
 		.catch(error => console.log(error))
 	} else {
@@ -225,16 +227,16 @@ module.exports ={
 		let complexities = db.Complexity.findAll()
 		let languages = db.Language.findAll()
 		let product = db.Product.findByPk(req.params.id, { 
-			include: ['categories', 'images']
+			include: ['categories', 'images', 'status','complexities', 'languages' ]
 		})
-		Promise.all(([categories, product, status, complexities,languages]))
-		.then(([categories, product, status, complexities,languages]) => {
+		Promise.all(([categories, status, complexities, languages, product]))
+		.then(([categories, status, complexities, languages, product]) => {
 			return res.render('admin/edit',{
 				categories,
-				product,
 				status,
 				complexities,
-				languages
+				languages,
+				product
 			})
 		})
 		.catch(error => console.log(error))		

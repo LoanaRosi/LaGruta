@@ -16,29 +16,25 @@
                     <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
                 </div>
                 <div class="form-admin__box">
-                    <select class="form-admin__select" name="sale">
-                        <option class="fom-admin__option" value="" hidden="">Estado del producto</option>
-                        <% status.forEach(stat => { %>
-                            <option class="fom-admin__option" value="<%= stat.id %>" <%= locals.old && old.stat.name === stat.name ? 'selected' : null %> ><%= stat.name %> </option>
-                        <% }) %>
+                    <select name="sale" id="">
+                        <% status.forEach(item => { %>
+                            <option <%= item.id === product.status.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
+                        <% }) %>                        
                     </select>
-                    <span class="text-danger small"><%= locals.errors && errors.sale ? errors.sale.msg : null %> </span>
                 </div>
                 
                 <div class="form-admin__box">
                     <input class="form-admin__input" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">>
                 </div>
                 <div class="form-admin__box form-admin__box--active ">
-                    <select class="form-admin__select" name="category" id="category">
-                        <option class="fom-admin__option" value="" hidden="">Categoria</option>
-                        <% categories.forEach(category=> { %>
-                            <option value="<%= product.categories.name %>" <%= product.categoryId === product.categories.name ? 'selected' : null %> ><%= categories %> </option>
-                            <% }) %>
+                    <select name="category" id="">
+                        <% categories.forEach(item => { %>
+                            <option <%= item.id === product.categories.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
+                        <% }) %>                        
                     </select>
-                    <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                 </div>
 
-                <h2 class="title-description">Descripcion Del Producto</h2>
+                <h2 class="title-description">Descripción Del Producto</h2>
 
                 <div class="form-description">
                     <div class="form_desciption__box">
@@ -68,22 +64,18 @@
 
                     <div class="form_desciption__box form_desciption__box--active">
                         <select name="complejidad" id="">
-                            <option value="" hidden="">Complejidad</option>
-                            <% complexities.forEach(complexity => { %>
-                            <option class="fom-admin__option" value="<%= complexity.id %>" <%= locals.old && old.complexity.name === complexity.name ? 'selected' : null %> ><%= complexity.name %> </option>
-                            <% }) %>
+                            <% complexities.forEach(item => { %>
+                                <option <%= item.id === product.complexities.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
+                            <% }) %>                       
                         </select>
-                        <span class="text-danger small"><%= locals.errors && errors.complejidad ? errors.complejidad.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box">
                         <select name="idioma" id="">
-                            <option value="" hidden="">idioma</option>
-                            <% languages.forEach(language => { %>
-                            <option class="fom-admin__option" value="<%= language.id %>" <%= locals.old && old.language.name === language.name ? 'selected' : null %> ><%= language.name %> </option>
-                            <% }) %>
+                            <% languages.forEach(item => { %>
+                                <option <%= item.id === product.languages.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
+                            <% }) %>                        
                         </select>
-                        <span class="text-danger small"><%= locals.errors && errors.idioma ? errors.idioma.msg : null %> </span>
                     </div>
 
                     <div class="form-admin__box form-admin__box--active">
@@ -116,7 +108,7 @@
                     <img class="img-product__img" src="/images/productos/mesa-1.png" alt="">
                 </div>
             </section>
-    
+
  
         </form>
 
