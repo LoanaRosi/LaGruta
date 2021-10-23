@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const users = require('../data/users.json');
 const db = require('../database/models');
+const avatar = require('../database/models/avatar');
 
 
 module.exports = {
@@ -22,7 +23,7 @@ module.exports = {
             const { name, email, password } = req.body;
 
             if (req.files.length != 0) {
-
+                console.log(req.files);
                 let images = req.files.map(image => {
                     let item = {
                         file: image.filename,
@@ -32,12 +33,11 @@ module.exports = {
                 db.Avatar.bulkCreate(images, { validate: true })
                     .then(avatarImg => {
                         console.log('imagenes guardadas')
-
                         db.User.create({
                             name: name.trim(),
                             email: email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
                             password: bcrypt.hashSync(password, 10),
-                            avatarId: avatarImg,
+                            avatarId: avatarImg[0].dataValues.id,
                             rolId: 2,
                         })
                             .then(user => {
@@ -53,6 +53,25 @@ module.exports = {
                             })
                             .catch(error => console.log(error))
                     })
+            } else {
+                db.User.create({
+                    name: name.trim(),
+                    email: email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
+                    password: bcrypt.hashSync(password, 10),
+                    avatarId: 1,
+                    rolId: 2,
+                })
+                    .then(user => {
+
+                        req.session.userLogin = {
+                            id: user.id,
+                            name: user.name,
+                            rolId: user.rolId
+                        }
+
+                        return res.redirect('/')
+                    })
+                    .catch(error => console.log(error))
             }
 
         } else {
@@ -98,9 +117,9 @@ module.exports = {
     },
 
     profile: (req, res) => {
-        db.User.findByPk(req.session.user.id) /* req.session.userLogin.id  */
+        db.User.findByPk(req.session.userLogin.id) /* req.session.userLogin.id  */
             .then((user) => {
-                res.send(user)
+                console.log(user);
                 res.render('profile', { /* profile */
                     user,
                     session: req.session, /*  */
