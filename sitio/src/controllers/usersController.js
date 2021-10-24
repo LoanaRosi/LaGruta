@@ -5,6 +5,7 @@ const path = require("path");
 const users = require('../data/users.json');
 const db = require('../database/models');
 const avatar = require('../database/models/avatar');
+const { CLIENT_RENEG_LIMIT } = require('tls');
 
 
 module.exports = {
@@ -116,16 +117,26 @@ module.exports = {
         }
     },
 
-    profile: (req, res) => {
-        db.User.findByPk(req.session.userLogin.id) /* req.session.userLogin.id  */
-            .then((user) => {
-                console.log(user);
-                res.render('profile', { /* profile */
-                    user,
-                    session: req.session, /*  */
-                })
-            })
-            .catch(error => console.log(error))
+    // profile: (req, res) => {
+    //     db.User.findByPk(req.session.userLogin.id) /* req.session.userLogin.id  */
+    //         .then((user) => {
+    //             console.log(req.session);
+    //             res.render('profile', { /* profile */
+    //                 user,
+    //                 session: req.session, /*  */
+    //             })
+    //         })
+    //         .catch(error => console.log(error))
+    // },
+
+    profile: async(req,res) => {
+        let user = await db.User.findByPk(req.session.userLogin.id)
+        let avatar = await db.Avatar.findByPk(user.avatarId);
+        res.render("profile", {
+            user,
+            avatar,
+            session: req.session
+        })
     },
 
     profileEdit: (req, res) => {
