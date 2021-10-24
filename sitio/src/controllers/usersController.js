@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 const users = require('../data/users.json');
 const db = require('../database/models');
+const avatar = require('../database/models/avatar');
+const { CLIENT_RENEG_LIMIT } = require('tls');
 
 
 module.exports = {
@@ -22,7 +24,7 @@ module.exports = {
             const { name, email, password } = req.body;
 
             if (req.files.length != 0) {
-
+                console.log(req.files);
                 let images = req.files.map(image => {
                     let item = {
                         file: image.filename,
@@ -32,12 +34,11 @@ module.exports = {
                 db.Avatar.bulkCreate(images, { validate: true })
                     .then(avatarImg => {
                         console.log('imagenes guardadas')
-
                         db.User.create({
                             name: name.trim(),
                             email: email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
                             password: bcrypt.hashSync(password, 10),
-                            avatarId: avatarImg,
+                            avatarId: avatarImg[0].dataValues.id,
                             rolId: 2,
                         })
                             .then(user => {
@@ -53,6 +54,25 @@ module.exports = {
                             })
                             .catch(error => console.log(error))
                     })
+            } else {
+                db.User.create({
+                    name: name.trim(),
+                    email: email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
+                    password: bcrypt.hashSync(password, 10),
+                    avatarId: 1,
+                    rolId: 2,
+                })
+                    .then(user => {
+
+                        req.session.userLogin = {
+                            id: user.id,
+                            name: user.name,
+                            rolId: user.rolId
+                        }
+
+                        return res.redirect('/')
+                    })
+                    .catch(error => console.log(error))
             }
 
         } else {
@@ -97,16 +117,26 @@ module.exports = {
         }
     },
 
-    profile: (req, res) => {
-        db.User.findByPk(req.session.user.id) /* req.session.userLogin.id  */
-            .then((user) => {
-                res.send(user)
-                res.render('profile', { /* profile */
-                    user,
-                    session: req.session, /*  */
-                })
-            })
-            .catch(error => console.log(error))
+    // profile: (req, res) => {
+    //     db.User.findByPk(req.session.userLogin.id) /* req.session.userLogin.id  */
+    //         .then((user) => {
+    //             console.log(req.session);
+    //             res.render('profile', { /* profile */
+    //                 user,
+    //                 session: req.session, /*  */
+    //             })
+    //         })
+    //         .catch(error => console.log(error))
+    // },
+
+    profile: async(req,res) => {
+        let user = await db.User.findByPk(req.session.userLogin.id)
+        let avatar = await db.Avatar.findByPk(user.avatarId);
+        res.render("profile", {
+            user,
+            avatar,
+            session: req.session
+        })
     },
 
     profileEdit: (req, res) => {
