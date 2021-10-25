@@ -114,7 +114,7 @@
                                 <div class="column">
                                     <article class="product-oferta">
                                             <div class="container-img-oferta">
-                                            <img src="/images/productos/<%= productsOfert[index].images[0].name %>" alt="">
+                                            <img src="/images/productos/<%= productsOfert[index].images[0].file %>" alt="">
                                         </div>
                                         <div class="detail-oferta">
                                             <h4><%= productsOfert[index].name %></h4>
@@ -134,7 +134,40 @@
                                         <h4><%= productsOfert[index +1].name %></h4>
                                         <div class="container-precios">
                                         <p class="new-oferta">$<%=descuento(productsOfert[index+1].discount,productsOfert[index+1].price)%></p>
-                                        <p class="precio-old"><%=productsOfert[index].discount%>% OFF</p>
+                                        <p class="precio-old"><%=productsOfert[index +1].discount%>% OFF</p>
+                                        </div> 
+                                        <a href="/productDetail" class="botn-comprar">comprar</a>
+                                    </div>
+                                
+                                    </article>
+                                </div>
+                         
+                        <% } %>
+                         <% for( let index = 0; index < productsOfert.length -1; index++) { %>
+                                <div class="column">
+                                    <article class="product-oferta">
+                                            <div class="container-img-oferta">
+                                            <img src="/images/productos/<%= productsOfert[index].images[0].file %>" alt="">
+                                        </div>
+                                        <div class="detail-oferta">
+                                            <h4><%= productsOfert[index].name %></h4>
+                                            <div class="container-precios">
+                                            <p class="new-oferta">$<%=descuento(productsOfert[index].discount,productsOfert[index].price)%></p>
+                                            <p class="precio-old"><%=productsOfert[index].discount%>% OFF</p>
+                                            </div> 
+                                            <a href="/productDetail" class="botn-comprar">comprar</a>
+                                        </div>
+                                        
+                                    </article>
+                                    <article class="product-oferta">
+                                        <div class="container-img-oferta">
+                                        <img src="/images/productos/<%= productsOfert[index +1].images[0].file %>" alt="">
+                                    </div>
+                                    <div class="detail-oferta">
+                                        <h4><%= productsOfert[index +1].name %></h4>
+                                        <div class="container-precios">
+                                        <p class="new-oferta">$<%=descuento(productsOfert[index+1].discount,productsOfert[index+1].price)%></p>
+                                        <p class="precio-old"><%=productsOfert[index +1].discount%>% OFF</p>
                                         </div> 
                                         <a href="/productDetail" class="botn-comprar">comprar</a>
                                     </div>
