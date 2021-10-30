@@ -27,7 +27,7 @@ router.get("/detail/:id",detail);
 
 router.get("/medios-pago",mediosPago); /* medios de pago y tarjetas */
 
-router.get("/create",userAdminCheck,create); /* ruta de cracion de producto */
+router.get("/create"/* ,userAdminCheck */,create); /* ruta de cracion de producto */
 router.post("/create",uploadProduct.array("fileImage"), productsValidation, store); /* guarda un producto */
 
 router.get('/edit/:id',userAdminCheck,edit); /* edita un producto */

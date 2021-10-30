@@ -22,7 +22,7 @@ router.post("/register",userAvatarImg.array("avatar"),registerValidation, proces
 router.get("/login",userLoginCheck, login);
 router.post("/login", loginValidation, processLogin);
 
-router.get("/admin",userAdminCheck,admin);
+router.get("/admin"/* ,userAdminCheck */,admin);
 
 
 router.get('/profile', userRegisterCheck,profile);

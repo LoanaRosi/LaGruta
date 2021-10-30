@@ -8,15 +8,15 @@
 
             <div class="form-admin__container">
                 <div class="form-admin__box">
-                    <input class="form-admin__input" type="text" name="name" placeholder="Nombre del Producto" value="<%= product.name %> ">
-                    <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                    <input class="form-admin__input" id="name-validate" type="text" name="name" placeholder="Nombre del Producto" value="<%= product.name %> ">
+                    <span class="text-danger small" id="name-error"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                 </div>
                 <div class="form-admin__box">
-                    <input class="form-admin__input" type="number" name="price" id="price" placeholder="Precio del Producto" value= "<%= product.price %>">>
-                    <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
+                    <input class="form-admin__input" id="productPrice" type="number" name="price" id="price" placeholder="Precio del Producto" value= "<%= product.price %>">>
+                    <span class="text-danger small" id="price-error"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
                 </div>
                 <div class="form-admin__box">
-                    <select class="form-admin__select" name="sale" id="">
+                    <select class="form-admin__select" name="sale" id="product-status">
                         <% status.forEach(item => { %>
                             <option <%= item.id === product.status.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
                         <% }) %>                        
@@ -24,10 +24,10 @@
                 </div>
                 
                 <div class="form-admin__box">
-                    <input class="form-admin__input" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">>
+                    <input class="form-admin__input" type="number" name="discount" id="product-discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">>
                 </div>
                 <div class="form-admin__box form-admin__box--active ">
-                    <select class="form-admin__select" name="category" id="">
+                    <select class="form-admin__select" name="category" id="product-category">
                         <% categories.forEach(item => { %>
                             <option <%= item.id === product.categories.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
                         <% }) %>                        
@@ -38,32 +38,32 @@
 
                 <div class="form-description">
                     <div class="form_desciption__box">
-                        <input type="text" name="autor" id="" placeholder="Autor" value= "<%= product.author %>">>
-                        <span class="text-danger small"><%= locals.errors && errors.autor ? errors.autor.msg : null %> </span>
+                        <input type="text" name="autor" id="product-autor" placeholder="Autor" value= "<%= product.author %>">
+                        <span class="text-danger small" id="autor-error"><%= locals.errors && errors.autor ? errors.autor.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box">
-                        <input type="text" name="mecanica" id="" placeholder="Mecánica" value= "<%= product.mechanic %>">                     
-                        <span class="text-danger small"><%= locals.errors && errors.mecanica ? errors.mecanica.msg : null %> </span>
+                        <input type="text" name="mecanica" id="product-mechanic" placeholder="Mecánica" value= "<%= product.mechanic %>">                     
+                        <span class="text-danger small" id="mechanic-error"><%= locals.errors && errors.mecanica ? errors.mecanica.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box">
-                        <input type="text" name="tematica" id="" placeholder="Temática" value= "<%= product.thematic %>"> 
-                        <span class="text-danger small"><%= locals.errors && errors.tematica ? errors.tematica.msg : null %> </span>
+                        <input type="text" name="tematica" id="product-tematic" placeholder="Temática" value= "<%= product.thematic %>"> 
+                        <span class="text-danger small" id="tematic-error"><%= locals.errors && errors.tematica ? errors.tematica.msg : null %> </span>
                     </div>
                     
                     <div class="form_desciption__box form_desciption__box--active">
-                        <input type="text" name="editorial" id="" placeholder="Editorial" value= "<%= product.publisher %>"> 
-                        <span class="text-danger small"><%= locals.errors && errors.editorial ? errors.editorial.msg : null %> </span>
+                        <input type="text" name="editorial" id="product-publisher" placeholder="Editorial" value= "<%= product.publisher %>"> 
+                        <span class="text-danger small" id="publisher-error"><%= locals.errors && errors.editorial ? errors.editorial.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box">
-                        <input type="text" name="tiempo" id="" placeholder="Tiempo de juego" value= "<%= product.timeGame %>"> 
-                        <span class="text-danger small"><%= locals.errors && errors.tiempo ? errors.tiempo.msg : null %> </span>
+                        <input type="text" name="tiempo" id="product-time" placeholder="Tiempo de juego" value= "<%= product.timeGame %>"> 
+                        <span class="text-danger small" id="time-error"><%= locals.errors && errors.tiempo ? errors.tiempo.msg : null %> </span>
                     </div>
 
                     <div class="form_desciption__box form_desciption__box--active">
-                        <select name="complejidad" id="">
+                        <select name="complejidad" id="product-status">
                             <% complexities.forEach(item => { %>
                                 <option <%= item.id === product.complexities.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
                             <% }) %>                       
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="form_desciption__box">
-                        <select name="idioma" id="">
+                        <select name="idioma" id="product-status">
                             <% languages.forEach(item => { %>
                                 <option <%= item.id === product.languages.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
                             <% }) %>                        
@@ -79,11 +79,12 @@
                     </div>
 
                     <div class="form-admin__box form-admin__box--active">
-                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        <input class="form-admin__input" id="product-img" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        <span class="text-danger small" id="img-error"></span>
                     </div>
                     <div class="form_desciption__box">
-                        <input type="text" name="jugadores" id="" placeholder="Núm. jugadores" value= "<%= product.player %>"> 
-                        <span class="text-danger small"><%= locals.errors && errors.jugadores ? errors.jugadores.msg : null %> </span>
+                        <input class="form-control" type="text" name="jugadores" id="product-player" placeholder="Núm. jugadores" value= "<%= product.player %>"> 
+                        <span class="text-danger small" id="player-error"><%= locals.errors && errors.jugadores ? errors.jugadores.msg : null %> </span>
                     </div>
 
                    <!--  <div class="form_desciption__box form_desciption__box--active">
@@ -94,7 +95,8 @@
                     </div> -->
 
                     <div class="form_desciption__box">
-                        <textarea name="contenido" id="" cols="30" rows="10"  placeholder="Contenido"><%= product.content %></textarea>
+                        <textarea class="form-control" name="contenido" id="product-content" cols="30" rows="10"  placeholder="Contenido"><%= product.content %></textarea>
+                        <span class="text-danger small" id="content-error"></span>
                     </div>
 
                 </div>
@@ -113,6 +115,9 @@
 
        
     </main>
+
+    <script src="/javascripts/productCreate.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -23,14 +23,6 @@ module.exports = {
         if (errors.isEmpty()) {
             const { name, email, password } = req.body;
 
-            if (req.files.length != 0) {
-                console.log(req.files);
-                let images = req.files.map(image => {
-                    let item = {
-                        file: image.filename,
-                    }
-                    return item
-                })
                 db.Avatar.bulkCreate(images, { validate: true })
                     .then(avatarImg => {
                         console.log('imagenes guardadas')
@@ -42,6 +34,16 @@ module.exports = {
                             rolId: 2,
                         })
                             .then(user => {
+
+                                if (req.files.length != 0) {
+                                    console.log(req.files);
+                                    let images = req.files.map(image => {
+                                        let item = {
+                                            file: image.filename,
+                                        }
+                                        return item
+                                    })
+                                }
 
                                 req.session.userLogin = {
                                     id: user.id,
@@ -60,7 +62,6 @@ module.exports = {
                     errors: errors.mapped()
                 })
             }
-        }
     },
 
     //vista login
