@@ -5,7 +5,6 @@ const path = require("path");
 const users = require('../data/users.json');
 const db = require('../database/models');
 const avatar = require('../database/models/avatar');
-const { CLIENT_RENEG_LIMIT } = require('tls'); 
 
 
 module.exports = {
@@ -98,17 +97,6 @@ module.exports = {
         }
     },
 
-    // profile: (req, res) => {
-    //     db.User.findByPk(req.session.userLogin.id) /* req.session.userLogin.id  */
-    //         .then((user) => {
-    //             console.log(req.session);
-    //             res.render('profile', { /* profile */
-    //                 user,
-    //                 session: req.session, /*  */
-    //             })
-    //         })
-    //         .catch(error => console.log(error))
-    // },
 
     profile: async(req,res) => {
         let user = await db.User.findByPk(req.session.userLogin.id)
@@ -120,31 +108,28 @@ module.exports = {
         })
     },
 
-    profileEdit: (req, res) => {
-        res.render('profileEdit')
-
-        let errors = validationResult(req);
-
-        if (errors.isEmpty()) {
-
-            let { name, email, password } = req.body
-
-            db.User.update({
-                name,
-                email,
-                password,
-                avatar: req.file ? req.file.filename : user.avatar
-            }, {
-                where: {
-                    id: req.session.userLogin.id
-                }
-            })
-                .then(() => {
-                    res.redirect('profile')
-                })
-                .catch(error => console.log(error))
-        }
+    profileEdit: async(req, res) => {
+        let user = await db.User.findByPk(req.session.userLogin.id);
+        res.render('profileEdit', {
+            user,
+        });
     },
+
+    profileUpdate: async(req, res) => {
+        const { name, email, password } = req.body;
+        await db.User.update({
+            name,
+            email,
+            password : bcrypt.hashSync(password, 10),
+        },
+        {
+            where: { id : req.session.userLogin.id }
+        });
+        res.cookie("recordame", null, { maxAge: -1 })
+        req.session.destroy();
+        res.redirect("/");
+    },
+
 
     logout: (req, res) => {
         res.cookie("recordame", null, { maxAge: -1 })
