@@ -73,3 +73,45 @@
 
 ## Hacer más: 
 * Reunirnos para discutir avances y ponernos al día.
+
+## Sprint6
+
+## Seguir haciendo: 
+* Reuniones para organizarnos y dividir las tareas. 
+* Cumplir con las fechas de entrega.
+
+## Hacer menos:
+* Dejar que se acumulen las tareas.
+
+## Dejar de hacer:
+* Crear dificultades tratando de hacer más de lo que se pide.
+
+## Empezar a hacer:
+* Organizar reuniones los dias jueves despues de clases para trabajar juntos.  
+
+## Hacer más: 
+* Reunirnos para discutir avances y ponernos al día.
+* Implementar fechas de vencimiento en las tareas individuales en trello.
+
+## Sprint7
+
+## Seguir haciendo: 
+* Mantener una comunicación activa.
+* Cumplir con las fechas de entrega.
+* Ayudarnos cuando nos sea posible.
+
+## Hacer menos:
+* Procrastinar tareas. (Franco)
+* Subestimar los tiempos para resolver las tareas. (Mar)
+* Descuidar la organización de las tareas para resolverlas. (Loa)
+
+## Dejar de hacer:
+* Tratar de resolver las cosas sin ayuda cuando es necesaria.
+
+## Empezar a hacer:
+* Tratar de mejorar el proyecto lo más posible hasta el final del curso y hasta después.
+
+## Hacer más: 
+* Organizar reuniones los dias jueves despues de clases para trabajar juntos.
+* Reunirnos para discutir avances y ponernos al día.
+* Implementar fechas de vencimiento en las tareas individuales en trello.
