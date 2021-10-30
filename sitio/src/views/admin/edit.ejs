@@ -87,12 +87,15 @@
                         <span class="text-danger small" id="player-error"><%= locals.errors && errors.jugadores ? errors.jugadores.msg : null %> </span>
                     </div>
 
-                   <!--  <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
+                    <div class="form_desciption__box form_desciption__box--active">
+                        <input class="form-admin__input" id="product-sub-img-1" type="file" name="fileImage" placeholder="Imagen del Producto">
                     </div>
                     <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" type="file" name="fileImage" placeholder="Imagen del Producto">
-                    </div> -->
+                        <input class="form-admin__input" id="product-sub-img-2" type="file" name="fileImage" placeholder="Imagen del Producto">
+                    </div>
+                    <div class="form_desciption__box form_desciption__box--active">
+                        <input class="form-admin__input" id="product-sub-img-3" type="file" name="fileImage" placeholder="Imagen del Producto">
+                    </div>
 
                     <div class="form_desciption__box">
                         <textarea class="form-control" name="contenido" id="product-content" cols="30" rows="10"  placeholder="Contenido"><%= product.content %></textarea>
@@ -107,7 +110,19 @@
             
             <section class="img-product">
                 <div class="img-product__container">
-                    <img class="img-product__img" src="/images/productos/<%= product.images[0].file %>" alt="">
+                    <img class="img-product__img" id="img-preview" src="/images/productos/<%= product.images[0].file %>" alt="">
+                </div>
+
+                <div class="container-sub-img">
+                    <div class="sub-img-product__container">
+                        <img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/<%= product.images[1].file %>" alt="">
+                    </div>
+                    <div class="sub-img-product__container">
+                        <img id="sub-img-preview-2" class="sub-img-product__img" src="/images/productos/<%= product.images[2].file %>" alt="">
+                    </div>
+                    <div class="sub-img-product__container">
+                        <img id="sub-img-preview-3" class="sub-img-product__img" src="/images/productos/<%= product.images[3].file %>" alt="">
+                    </div>
                 </div>
             </section>
 

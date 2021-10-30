@@ -141,6 +141,21 @@
     width: 100%;
 }
 
+
+.admin-creation .container-sub-img{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.admin-creation .sub-img-product__container{
+    width: 30%;
+}
+
+.admin-creation .sub-img-product__img{
+    width: 100%;
+}
+
 /* -------------------------------------- */
 /* ------BOTON PARA CREAR PRODUCTO------- */
 /* -------------------------------------- */
