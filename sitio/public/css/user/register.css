@@ -85,6 +85,7 @@
     margin: 0;
     text-align: center;
     box-shadow: 0 0 8px #000;
+    cursor: pointer;
 }
 
 .vista-register .register .img-perfil:hover{

@@ -5,7 +5,10 @@ const users = require('../data/users.json');
 
 module.exports = [
     check('name')
-    .notEmpty().withMessage('El nombre es obligatorio'),
+    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .isLength({
+        min : 2
+    }).withMessage('El nombre debe tener un mínimo de 2 caracteres'),
 
     body('email')
     .isEmail().withMessage('Debe ingresar un email válido').bail()

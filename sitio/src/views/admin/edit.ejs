@@ -16,7 +16,7 @@
                     <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
                 </div>
                 <div class="form-admin__box">
-                    <select name="sale" id="">
+                    <select class="form-admin__select" name="sale" id="">
                         <% status.forEach(item => { %>
                             <option <%= item.id === product.status.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
                         <% }) %>                        
@@ -27,7 +27,7 @@
                     <input class="form-admin__input" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">>
                 </div>
                 <div class="form-admin__box form-admin__box--active ">
-                    <select name="category" id="">
+                    <select class="form-admin__select" name="category" id="">
                         <% categories.forEach(item => { %>
                             <option <%= item.id === product.categories.id ? 'selected' : null %>  value=<%= item.id %>><%= item.name %> </option>                             
                         <% }) %>                        

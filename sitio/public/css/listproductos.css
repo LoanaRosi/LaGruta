@@ -147,6 +147,22 @@
     padding-top: 20px;
 }
 
+.productos .main-products .priceYdiscount{
+    display: flex;
+    justify-content: center;
+}
+
+.productos .main-products .precio-old{
+    padding-left: 10px;
+    color: var(--color-Rojo3);
+}
+
+.productos .main-products .precio-tachado{
+    padding-right: 5px;
+    color: #6b6b6b;
+    text-decoration: line-through;
+}
+
 .productos .main-products .container-productos .producto .conatiner-inside-producto .container-name-precio .precio{ /* precio del producto */
     color: #fff;
     padding-bottom: 15px;

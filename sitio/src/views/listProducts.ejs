@@ -53,7 +53,15 @@
                         </a>
                         <div class="container-name-precio">
                             <h2 class="name-product"><%= product.name %></h2>
-                            <p class="precio">$<%=descuento(product.discount,product.price)%></p>
+                            <% if (product.discount > 0) { %>
+                                <p class="precio-tachado">$<%=product.price%></p>
+                            <% } %>
+                            <div class="priceYdiscount">
+                                <p class="precio">$<%=descuento(product.discount,product.price)%></p>
+                                <% if (product.discount > 0) { %>
+                                    <p class="precio-old"><%=product.discount%>% OFF</p>
+                                <% } %>
+                            </div>
                         </div>
                         <div class="container-option-product">
                             <div class="option-detalle">

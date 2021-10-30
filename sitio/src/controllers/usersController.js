@@ -7,7 +7,6 @@ const db = require('../database/models');
 const avatar = require('../database/models/avatar');
 
 
-
 module.exports = {
 
     // vista register
@@ -36,7 +35,7 @@ module.exports = {
                         console.log('imagenes guardadas')
                         db.User.create({
                             name: name.trim(),
-                            email: email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
+                            email: email.trim(),
                             password: bcrypt.hashSync(password, 10),
                             avatarId: avatarImg[0].dataValues.id,
                             rolId: 2,
@@ -55,31 +54,11 @@ module.exports = {
                             .catch(error => console.log(error))
                     })
             } else {
-                db.User.create({
-                    name: name.trim(),
-                    email: email.trim(), // aca no pueder it name, tiene que estar el valor del gmail que viene del formulario gracias a la etiqueta name
-                    password: bcrypt.hashSync(password, 10),
-                    avatarId: 1,
-                    rolId: 2,
+                return res.render('user/register', {
+                    old: req.body,
+                    errors: errors.mapped()
                 })
-                    .then(user => {
-
-                        req.session.userLogin = {
-                            id: user.id,
-                            name: user.name,
-                            rolId: user.rolId
-                        }
-
-                        return res.redirect('/')
-                    })
-                    .catch(error => console.log(error))
             }
-
-        } else {
-            return res.render('user/register', {
-                old: req.body,
-                errors: errors.mapped()
-            })
         }
     },
 
@@ -150,29 +129,6 @@ module.exports = {
         res.redirect("/");
     },
 
-/*     profileEdit: (req, res) => {
-        // res.render('profileEdit');
-
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
-            let { name, email, password } = req.body
-            db.User.update({
-                name,
-                email,
-                password
-            }, 
-            {
-                where: {
-                    id: req.session.userLogin.id
-                }
-            })
-                .then(() => {
-                    res.redirect('profile')
-                })
-                .catch(error => console.log(error))
-        }      
-        
-    }, */
 
     logout: (req, res) => {
         res.cookie("recordame", null, { maxAge: -1 })
