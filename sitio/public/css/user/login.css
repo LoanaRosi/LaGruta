@@ -61,6 +61,10 @@
     color: #fff;
 }
 
+#emailErrors, #passwordErrors {
+    color: red;
+}
+
 
 /* ----------------parte de los inputs de usuario--------------------- */
 

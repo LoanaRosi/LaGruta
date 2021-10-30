@@ -12,17 +12,19 @@
             
 
             <div class="box-form">
-                <input type="email" name="email" placeholder="Correo electrónico">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico">
                 <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
+                <span id="emailErrors"></span>
             </div>
 
             <div class="box-form">
                 <input type="password" name="password" id="password" placeholder="Contraseña">
                 <span class="text-danger small"><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
+                <span id="passwordErrors"></span>
             </div>
             <a href="#" class="recuperar-contra">Olvidaste tu contraseña?</a>
 
-            <div class="recordar">
+            <div class="recordar" id="recordar">
                 <label for="conditions">Recordar</label>
                 <input type="checkbox" name="recordar">
             </div>
@@ -36,5 +38,6 @@
         </form>
     </main>
 </body>
+<script src="/javascripts/login.js"></script>
 </html>
 
