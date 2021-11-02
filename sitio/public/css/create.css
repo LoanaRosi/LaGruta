@@ -3,6 +3,23 @@
 
 }
 
+/* errores */
+
+.admin-creation .contain-form-error{
+    margin-bottom: 20px;
+    color: var(--color-Rojo3);
+}
+
+.admin-creation .contain-form-error__error{
+
+}
+
+.admin-creation .fa-exclamation-triangle{
+    margin-left: 5px;
+}
+
+/*------------------  */
+
 .admin-creation .admin__container{ 
     display: flex;
     flex-direction: column;

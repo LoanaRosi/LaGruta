@@ -282,13 +282,17 @@ window.addEventListener("load", ()=> {
         event.preventDefault();
 
         let elementsForm = formCreate.elements;
+        console.log(elementsForm)
         let error = false;
 
         for (let i = 0; i < elementsForm.length - 1; i++) {
             
             if(!elementsForm[i].value){
                 elementsForm[i].classList.add('is-invalid')
-                formError.innerText = "Los campos señalados son obligatorios";
+                formError.style.border = "1px solid var(--color-Rojo3)"
+                formError.style.padding = "6px"
+                formError.style.borderRadius = "50px"
+                formError.innerHTML = "Los campos señalados son obligatorios" + "<i class='fas fa-exclamation-triangle'></i>";
                 error = true
             }
         }
@@ -300,10 +304,9 @@ window.addEventListener("load", ()=> {
             }
         }
 
-       
 
         if(error == false){
-            $('form-register').submit()
+            formCreate.submit()
         }
     })
 
