@@ -12,7 +12,7 @@
                     <span class="text-danger small" id="name-error"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                 </div>
                 <div class="form-admin__box">
-                    <input class="form-admin__input" id="productPrice" type="number" name="price" id="price" placeholder="Precio del Producto" value= "<%= product.price %>">>
+                    <input class="form-admin__input" id="productPrice" type="number" name="price" id="price" placeholder="Precio del Producto" value= "<%= product.price %>">
                     <span class="text-danger small" id="price-error"><%= locals.errors && errors.price ? errors.price.msg : null %> </span>
                 </div>
                 <div class="form-admin__box">
@@ -24,7 +24,7 @@
                 </div>
                 
                 <div class="form-admin__box">
-                    <input class="form-admin__input" type="number" name="discount" id="product-discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">>
+                    <input class="form-admin__input" type="number" name="discount" id="product-discount" placeholder="Descuento del Producto" value= "<%= product.discount %>">
                 </div>
                 <div class="form-admin__box form-admin__box--active ">
                     <select class="form-admin__select" name="category" id="product-category">
@@ -121,7 +121,7 @@
                         <img id="sub-img-preview-2" class="sub-img-product__img" src="/images/productos/<%= product.images[2].file %>" alt="">
                     </div>
                     <div class="sub-img-product__container">
-                        <img id="sub-img-preview-3" class="sub-img-product__img" src="/images/productos/<%= product.images[3].file %>" alt="">
+                        <img id="sub-img-preview-4" class="sub-img-product__img" src="/images/productos/<%= product.images[3].file %>" alt="">
                     </div>
                 </div>
             </section>

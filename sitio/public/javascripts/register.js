@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 let regExLetter = /^[A-Z]+$/i; //para validar que solo se ingresen letras
 let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/; //para email valido
-let regExPass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/; // validar contraseña. Debe contener mayuscula, numero y 6 a 12 caracteres
+let regExPass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // validar contraseña. Mínimo ocho caracteres, al menos una letra y un número
 
 window.addEventListener('load', function(){
     $('name').addEventListener('blur', () =>{
@@ -56,7 +56,7 @@ window.addEventListener('load', function(){
                 $('password').classList.add('is-invalid')
                 break;
             case !regExPass.test($('password').value):
-                $('passwordErrors').innerText = "La contraseña debe tener entre 8 y 16 caracteres, una mayúscula, un número y un caracter especial";
+                $('passwordErrors').innerText = "La contraseña debe tener Mínimo 8 caracteres, al menos una letra y un número";
                 $('password').classList.add('is-invalid')
                 break; 
             default:
@@ -69,17 +69,17 @@ window.addEventListener('load', function(){
     })
 
     
-    $('passwordConfirm').addEventListener('blur',() => {
-        if($('password').value !== $('passwordConfirm').value){
+    $('password-confirm').addEventListener('blur',() => {
+        if($('password').value !== $('password-confirm').value){
             $('passwordConfirmErrors').innerText = "Las contraseñas no coinciden"
-            $('passwordConfirm').classList.add('is-invalid')
+            $('password-confirm').classList.add('is-invalid')
         }else if($('password').value == ""){
             $('passwordConfirmErrors').innerText = "Debes ingresar tu contraseña nuevamente"
-            $('passwordConfirm').classList.add('is-invalid')
+            $('password-confirm').classList.add('is-invalid')
         }else{
             $('passwordConfirmErrors').innerText = null
-            $('passwordConfirm').classList.remove('is-invalid')
-            $('passwordConfirm').classList.add('is-valid')            
+            $('password-confirm').classList.remove('is-invalid')
+            $('password-confirm').classList.add('is-valid')            
         }
     })
 
