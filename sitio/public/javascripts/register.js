@@ -1,7 +1,9 @@
 const $ = id => document.getElementById(id);
 let regExLetter = /^[A-Z]+$/i; //para validar que solo se ingresen letras
 let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/; //para email valido
-let regExPass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/; // validar contraseña. Debe contener mayuscula, numero, caracter especial y de 8 a 16 caracteres
+let regExPass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{6,12}$/; // validar contraseña. Debe contener mayuscula, numero, caracter especial y de 8 a 16 caracteres
+
+let regExgImg = /(.jpg|.jpeg|.png|.gif|.webp)$/i;
 
 window.addEventListener('load', function(){
     $('name').addEventListener('blur', () =>{
@@ -124,18 +126,18 @@ window.addEventListener('load', function(){
         }
     })
 
-    $('imgUser').addEventListener('change', (e) => {
-        let extPermitidas = /(.jpg|.jpeg|.png|.gif)$/i;
-        let reader = new FileReader(); 
-        reader.readAsDataURL(e.target.files[0]);
-
-        reader.onload = () => imgUser.src = reader.result
-
-    })
-
-
-
-
-
-    
+    $('imgUser').addEventListener('blur', ()=>{
+        $('imgErrors').innerText = null
+        switch (true) {               
+            case !regExgImg.test($('imgUser').value):
+                $('imgErrors').innerText = "solo se permiten imagenes jpg, jpeg, png, gif, webp"
+                $('imgUser').classList.add("is-invalid")
+            break;        
+            default:
+                $('imgUser').classList.remove('is-invalid')
+                $('imgUser').classList.add('is-valid')
+                $('imgErrors').innerText = null
+            break;
+        }
+    })    
 })
