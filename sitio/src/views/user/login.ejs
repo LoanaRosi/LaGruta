@@ -3,7 +3,7 @@
 <body class="vista-login">
     <main class="login">
         <h2>INICIAR SESIÓN</h2> 
-        <form action="" method="POST"> 
+        <form id="formLogin" action="" method="POST"> 
             <div class="option-login"> <!-- container de opciones alternativas de registro -->
                 <a href=""><i class="fab fa-facebook"></i> Facebook Login</a>
                 <a href=""> <i class="fab fa-google"></i> Google Login</a>
@@ -12,6 +12,7 @@
             
 
             <div class="box-form">
+                <span id="form-error"></span>
                 <input type="email" id="email" name="email" placeholder="Correo electrónico">
                 <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
                 <span id="emailErrors"></span>
