@@ -4,7 +4,7 @@
 <body class="vista-register">
     <main class="register">
         <h2>Crear cuenta</h2> 
-        <form action="" method="POST" enctype="multipart/form-data"> 
+        <form action="" method="POST" id= "form-register" enctype="multipart/form-data"> 
             <div class="option-register"> <!-- container de opciones alternativas de registro -->
                 <a href=""><i class="fab fa-facebook"></i> Ingresá con Facebook </a>
                 <a href=""> <i class="fab fa-google"></i> Ingresá con Google</a>
@@ -12,23 +12,27 @@
             </div>
 
             <div class="box-form">
-                <input type="text" name="name" placeholder="Nombre y Apellido" value="<%= locals.old && old.name ? old.name : null  %>">
+                <input type="text" name="name" id="name" placeholder="Nombre y Apellido" value="<%= locals.old && old.name ? old.name : null  %>">
                 <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                <span id="nameErrors"></span>
             </div>
 
             <div class="box-form">
                 <input type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && old.email ? old.email : null  %>">
                 <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
+                <span id="emailErrors"></span>
             </div>
 
             <div class="box-form">
                 <input type="password" name="password" id="password" placeholder="Contraseña">
                 <span class="text-danger small"><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
+                <span id="passwordErrors"></span>
             </div>
 
             <div class="box-form">
                 <input type="password" name="passwordConfirm" id="password-confirm" placeholder="Confirmar contraseña">
                 <span class="text-danger small"><%= locals.errors && errors.passwordConfirm ? errors.passwordConfirm.msg : null %> </span>
+                <span id="passwordConfirmErrors"></span>
             </div>
 
             <div class="box-form">
@@ -40,6 +44,7 @@
                 <label for="conditions">Acepto términos y condiciones</label>
                 <input type="checkbox" name="terminos">
                 <span class="text-danger small"><%= locals.errors && errors.terminos ? errors.terminos.msg : null %></span>
+                <span id="terminosErrors"></span>
             </div>
 
             <div class="box-form promociones">
@@ -52,7 +57,10 @@
                 <button type="submit">Crear cuenta</button>
             </div>
 
+            <p id= "error-empty"></p>
+
         </form>
     </main>
+    <script src="/javascripts/register.js"></script>
 </body>
 </html>
