@@ -154,3 +154,9 @@ module.exports = {
 
     }
 }
+
+//nombre no se puede poner espacios
+//contraseña sacar caracteres especiales
+
+
+

@@ -12,25 +12,25 @@
             </div>
 
             <div class="box-form">
-                <input type="text" name="name" id="name" placeholder="Nombre y Apellido" value="<%= locals.old && old.name ? old.name : null  %>">
+                <input type="text" name="name" id="name" placeholder="* Nombre y Apellido" value="<%= locals.old && old.name ? old.name : null  %>">
                 <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                 <span id="nameErrors"></span>
             </div>
 
             <div class="box-form">
-                <input type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && old.email ? old.email : null  %>">
+                <input type="email" name="email" id="email" placeholder="* Correo electrónico" value="<%= locals.old && old.email ? old.email : null  %>">
                 <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
                 <span id="emailErrors"></span>
             </div>
 
             <div class="box-form">
-                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <input type="password" name="password" id="password" placeholder="* Contraseña">
                 <span class="text-danger small"><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
                 <span id="passwordErrors"></span>
             </div>
 
             <div class="box-form">
-                <input type="password" name="passwordConfirm" id="password-confirm" placeholder="Confirmar contraseña">
+                <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="* Confirmar contraseña">
                 <span class="text-danger small"><%= locals.errors && errors.passwordConfirm ? errors.passwordConfirm.msg : null %> </span>
                 <span id="passwordConfirmErrors"></span>
             </div>
@@ -41,8 +41,8 @@
             </div>
 
             <div class="box-form condiciones">
-                <label for="conditions">Acepto términos y condiciones</label>
-                <input type="checkbox" name="terminos">
+                <label for="conditions">* Acepto términos y condiciones</label>
+                <input type="checkbox" name="terminos" id="terminos">
                 <span class="text-danger small"><%= locals.errors && errors.terminos ? errors.terminos.msg : null %></span>
                 <span id="terminosErrors"></span>
             </div>
@@ -53,11 +53,13 @@
             </div>
             <br>
 
+            <p id= "error-empty"></p>
+
             <div class="box-button">
                 <button type="submit">Crear cuenta</button>
             </div>
 
-            <p id= "error-empty"></p>
+            
 
         </form>
     </main>

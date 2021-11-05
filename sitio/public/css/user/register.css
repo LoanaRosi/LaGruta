@@ -65,6 +65,19 @@
     color: red;
 }
 
+#terminosErrors{
+    color: red;
+    margin-left: 20px;
+}
+
+#error-empty{
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+
 
 /* ----------------parte de los inputs de usuario--------------------- */
 

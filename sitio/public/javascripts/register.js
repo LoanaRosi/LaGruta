@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 let regExLetter = /^[A-Z]+$/i; //para validar que solo se ingresen letras
 let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/; //para email valido
-let regExPass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/; // validar contraseña. Debe contener mayuscula, numero y 6 a 12 caracteres
+let regExPass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/; // validar contraseña. Debe contener mayuscula, numero, caracter especial y de 8 a 16 caracteres
 
 window.addEventListener('load', function(){
     $('name').addEventListener('blur', () =>{
@@ -32,7 +32,7 @@ window.addEventListener('load', function(){
         $('emailErrors').innerText = null
         switch(true){
             case !$('email').value.trim():
-                $('emailErrors').innerText = "El correo electrónico es obligatorio";
+                $('emailErrors').innerText = "Debes ingresar un correo electrónico";
                 $('email').classList.add('is-invalid')
                 break;
             case !regExEmail.test($('email').value):
@@ -52,7 +52,7 @@ window.addEventListener('load', function(){
         $('passwordErrors').innerText = null
         switch(true){
             case !$('password').value.trim():
-                $('passwordErrors').innerText = "El campo contraseña es obligatorio"
+                $('passwordErrors').innerText = "Debes ingresar una contraseña"
                 $('password').classList.add('is-invalid')
                 break;
             case !regExPass.test($('password').value):
@@ -89,35 +89,50 @@ window.addEventListener('load', function(){
         $('terminosErrors').innerHTML = null
     })
 
-    $('form-register').addEventListener('submit', e => {
-        e.preventDefault();
+    $('form-register').addEventListener('submit', event => {
+        event.preventDefault();
 
         let elementsForm = $('form-register').elements;
-
+        
         let error = false;
 
-        for (let i = 0; i < elementsForm.length -2; i++) {
+        for (let i = 0; i < elementsForm.length - 2; i++) {
             
-            if (!elementsForm[i].value) {
-                 elementsForm[i].classList.add('is-invalid')
-                 $('error-empty').innerHTML = "Los campos señalados son obligatorios"
-                 error = true; 
-                
+            if(!elementsForm[i].value){
+                elementsForm[i].classList.add('is-invalid')
+                $('error-empty').innerHTML = "Los campos señalados con * son obligatorios";
+                error = true
             }
+        }
+
+        if(!$('terminos').checked) {
             
+            $('terminos').classList.add('is-invalid')
+            $('terminosErrors').innerText = "Debes aceptar los términos y condiciones";
+            error = true
+        }
+
+        for (let i = 0; i < elementsForm.length - 2; i++) {
+            
+            if(elementsForm[i].classList.contains('is-invalid')){
+                error = true
+            }
+        }
+
+        if(!error){
+            $('form-register').submit()
         }
     })
 
-    if(!$('terminos').checked) {
-            
-        $('terminos').classList.add('is-invalid')
-        $('terminosErrors').innerText = "Debes aceptar los términos y condiciones";
-        error = true
-    }
+    $('imgUser').addEventListener('change', (e) => {
+        let extPermitidas = /(.jpg|.jpeg|.png|.gif)$/i;
+        let reader = new FileReader(); 
+        reader.readAsDataURL(e.target.files[0]);
 
-    if(!error){
-        $('form-register').submit()
-    }
+        reader.onload = () => imgUser.src = reader.result
+
+    })
+
 
 
 
