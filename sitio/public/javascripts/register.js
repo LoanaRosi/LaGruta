@@ -13,12 +13,8 @@ window.addEventListener('load', function(){
                 $('nameErrors').innerText = "Debes ingresar tu nombre y apellido"
                 $('name').classList.add('is-invalid')
                 break;
-            case !regExLetter.test($('name').value.trim()):
-                $('nameErrors').innerText = "Solo se admiten letras"
-                $('name').classList.add('is-invalid')
-                break;
             case $('name').value.trim().length < 2 || $('name').value.trim().length > 100 :
-                 $('nameErrors').innerText = "Debe tener un mínimo 2 caracteres y un máximo de 100"
+                 $('nameErrors').innerText = "Debe tener un mínimo 2 caracteres"
                  $('name').classList.add('is-invalid')
                  break;
             default:
@@ -126,11 +122,11 @@ window.addEventListener('load', function(){
         }
     })
 
-    $('imgUser').addEventListener('blur', ()=>{
+    $('imgUser').addEventListener('change', ()=>{
         $('imgErrors').innerText = null
         switch (true) {               
             case !regExgImg.test($('imgUser').value):
-                $('imgErrors').innerText = "solo se permiten imagenes jpg, jpeg, png, gif, webp"
+                $('imgErrors').innerText = "Solo se permiten imagenes jpg, jpeg, png, gif, webp"
                 $('imgUser').classList.add("is-invalid")
             break;        
             default:
