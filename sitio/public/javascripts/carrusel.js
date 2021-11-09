@@ -1,7 +1,7 @@
 new Glider(document.querySelector('.glider'), {
     // Mobile-first defaults
     slidesToShow: 1,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     scrollLock: true,
     dots: '.dots',
     arrows: {
@@ -15,7 +15,7 @@ new Glider(document.querySelector('.glider'), {
         settings: {
           // Set to `auto` and provide item width to adjust to viewport
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           itemWidth: 150,
           duration: 0.25
         }

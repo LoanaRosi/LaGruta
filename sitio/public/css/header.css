@@ -107,22 +107,31 @@ body{
 .container-menu .container-menu-bar .container-hamburguer-buscador .container-bars input{
     visibility: hidden;
 }
-.container-menu .container-menu-bar .container-hamburguer-buscador .container-bars input:checked ~ .menu-options{
-    transform: translateY(18%);
-    transition: transform .8ys;
-}
+
 
 .container-menu .container-menu-bar .menu-options{ /* container de las opcines del menu hamburguer version mobile  */
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 96px;
+    top: 0;
     left: 0;
-    transform: translateY(-150%);
+    transform: translateX(-150%);
+    transition: transform 1.3s;
     width: 100%;
     background-color: var(--color-negro1);
     height: 100%;
+    z-index: 1500;
+    overflow-y: scroll;
 }
+
+/* ------ */
+
+.container-menu .container-menu-bar .menuActive{
+    transform: translateX(0%);
+    transition: transform .8s;
+}
+
+/* -------- */
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario{ /* container del opciones de usuario */
     display: flex;
@@ -189,6 +198,7 @@ body{
     position: absolute;
     right: 12px;
     top: 10px;
+    font-size: 26px;
 }
 
 .container-menu .container-menu-bar .menu-options .menu-options-usuario .exit-menu .fa-times{ /* icono de cruz */
