@@ -6,7 +6,6 @@ const registerValidation = require('../validations/registerValidation');
 const loginValidation = require('../validations/loginValidation');
 
 
-
 // middlewares de usuarios
 const userLoginCheck = require("../Middlewares/userLoginCheck");
 const userAdminCheck = require("../Middlewares/userAdminCheck");

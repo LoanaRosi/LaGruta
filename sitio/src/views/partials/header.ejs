@@ -37,11 +37,11 @@
                     <% } else{ %>        
                     <div class="container-login"> <!-- conatiner del icono login y de la a -->        
                         <a href="/user/login" class="login"><i class="fas fa-user-circle"></i></a> <!-- icono del login -->
-                        <a href="/user/login" class="login-frase">Ingresar</a> <!-- "a" link del login -->
+                        <a href="/user/login" class="login-frase" id="openLogin">Ingresar</a> <!-- "a" link del login -->
                     </div>
                     <div class="container-register"> <!-- conatiner del icono register y de la a -->
                         <a href="/user/register" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
-                        <a href="/user/register" class="register-frase">Registrarte</a> <!-- "a" link del register -->
+                        <a href="/user/register" class="register-frase" id="openRegister">Registrarte</a> <!-- "a" link del register -->
                     </div>
                     <% } %>                                         
             </div>
@@ -75,9 +75,9 @@
                             <a href="#" class="exit-menu" id="exit-menuBurguer"><i class="fas fa-times"></i></a> <!-- icono para salir -->
                             <% } else{ %>   
                             <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
-                            <a href="/user/login" class="login">Ingresar</a> <!-- link login -->
+                            <a href="/user/login" class="login" id="openLogin">Ingresar</a> <!-- link login -->
                             <a href="#" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
-                            <a href="/user/register" class="register__frase">Registrarte</a> <!-- link register -->
+                            <a href="/user/register" class="register__frase" id="openRegister">Registrarte</a> <!-- link register -->
                             <a href="#" class="exit-menu" id="exit-menuBurguer"><i class="fas fa-times"></i></a> <!-- icono para salir -->
                         
                             <% } %>
@@ -112,6 +112,11 @@
                 </ul>
             </div>
 
+            <!-- LOGIN/REGISTER/CARRITO -->
+                <%- include("../user/modalLogin") %> 
+                <%- include("../user/modalRegister") %> 
+
+            <!-- ---------------------- -->
         <script src="/javascripts/header.js"></script>
     </nav>
 </header>

@@ -1,19 +1,32 @@
-.vista-login{
-
+.vista-modalLogin{
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000082;
+    visibility: hidden;
 }
 
+.openLogin{
+    visibility: unset;
+}
 
-.vista-login .Login{ /* container main */
+.vista-modalLogin .login{ /* container main */
     background-color: var(--color-negro5);
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     margin: 0 auto;
-    margin-top: 10px;
+    /* modal */
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100px;
 }
 
-.vista-login .Login h2{
+.vista-modalLogin .login h2{
     font-family: var(--fontFamily-Titulo);
     text-transform: uppercase;
     display: flex;
@@ -25,7 +38,7 @@
     
 }
 
-.vista-login .Login .option-login{ /* container de opciones alternativas de login, facebook, gmail */
+.vista-modalLogin .login .option-login{ /* container de opciones alternativas de login, facebook, gmail */
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -33,7 +46,7 @@
     align-items: center;
 }
 
-.vista-login .Login .option-login a{ /* afecta a las ocipondes de login facebook y gmail */
+.vista-modalLogin .login .option-login a{ /* afecta a las ocipondes de login facebook y gmail */
     width: 100%;
     color: var(--color-Rojo2);
     display: flex;
@@ -50,13 +63,13 @@
 
 }
 
-.vista-login .Login .option-login a i{
+.vista-modalLogin .login .option-login a i{
     color: var(--color-Rojo3);
     font-size: 20px;
     padding-right: 20px;
 }
 
-.vista-login .Login .option-login span{
+.vista-modalLogin .login .option-login span{
        width: 90%;
     display: flex;
     justify-content: center;
@@ -70,7 +83,7 @@
 
 /* ----------------parte de los inputs de usuario--------------------- */
 
-.vista-login .Login .box-form{ /* contenedor de los formularios */
+.vista-modalLogin .login .box-form{ /* contenedor de los formularios */
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -81,7 +94,7 @@
 
 
 
-.vista-login .Login .box-form input{ /* todos los inputs del formulario */
+.vista-modalLogin .login .box-form input{ /* todos los inputs del formulario */
     padding: 8px;
     border:1px solid var(--color-Gris1);
     font-family: var(--fontFamily-Textos);
@@ -92,7 +105,7 @@
 }
 
 
-.vista-login .Login .box-button{
+.vista-modalLogin .login .box-button{
     padding-bottom: 20px;
     display: flex;
     margin: 0 auto;
@@ -106,7 +119,7 @@
     color: white;
 }
 
-.vista-login .Login .box-button button{
+.vista-modalLogin .login .box-button button{
     padding: 12px;
     width: 100%;
     margin: 0 auto;
@@ -117,12 +130,12 @@
     
 }
 
-.vista-login .Login .box-button button:hover{
+.vista-modalLogin .login .box-button button:hover{
     background-color: var(--color-Rojo3);
     color: #fff;
 }
 
-.vista-login .Login .recuperar-contra{
+.vista-modalLogin .login .recuperar-contra{
     display: flex;
     justify-content: flex-end;
     color: #fff;
@@ -133,11 +146,11 @@
 
 @media (min-width:768px) {
 
-    .vista-login .Login{ /* container main */
+    .vista-modalLogin .login{ /* container main */
         width: 80%;
     }
 
-    .vista-login .Login .recuperar-contra{
+    .vista-modalLogin .login .recuperar-contra{
         margin-right: 6%;
 
     }
@@ -145,12 +158,12 @@
 
 @media (min-width:1024px) {
 
-    .vista-login .Login{ /* container main */
+    .vista-modalLogin .login{ /* container main */
         width: 60%;
     }
 
     
-    .vista-login .Login .option-login{ /* container de opciones alternativas de registro, facebook, gmail */
+    .vista-modalLogin .login .option-login{ /* container de opciones alternativas de registro, facebook, gmail */
         display: flex;
         width: 90%;
         align-items: center;
@@ -163,24 +176,24 @@
 
     }
 
-    .vista-login .Login .option-login span{
+    .vista-modalLogin .login .option-login span{
      display: none;
     }
 
-    .vista-login .Login .option-login a{ /* afecta a las ocipondes de registro facebook y gmail */
+    .vista-modalLogin .login .option-login a{ /* afecta a las ocipondes de registro facebook y gmail */
         width: 250px;
     
     }
 
-    .vista-login .Login .box-form{ /* contenedor de los formularios */
+    .vista-modalLogin .login .box-form{ /* contenedor de los formularios */
         width: 80%;
     }
 
-    .vista-login .Login .box-form input{ /* todos los inputs del formulario */
+    .vista-modalLogin .login .box-form input{ /* todos los inputs del formulario */
      
     }
 
-    .vista-login .Login .recuperar-contra{
+    .vista-modalLogin .login .recuperar-contra{
         margin-right: 11%;
 
     }

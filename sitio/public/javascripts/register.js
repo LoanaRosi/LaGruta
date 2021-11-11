@@ -66,17 +66,17 @@ window.addEventListener('load', function(){
     })
 
     
-    $('password-confirm').addEventListener('blur',() => {
-        if($('password').value !== $('password-confirm').value){
+    $('passwordConfirm').addEventListener('blur',() => {
+        if($('password').value !== $('passwordConfirm').value){
             $('passwordConfirmErrors').innerText = "Las contraseñas no coinciden"
-            $('password-confirm').classList.add('is-invalid')
+            $('passwordConfirm').classList.add('is-invalid')
         }else if($('password').value == ""){
             $('passwordConfirmErrors').innerText = "Debes ingresar tu contraseña nuevamente"
-            $('password-confirm').classList.add('is-invalid')
+            $('passwordConfirm').classList.add('is-invalid')
         }else{
             $('passwordConfirmErrors').innerText = null
-            $('password-confirm').classList.remove('is-invalid')
-            $('password-confirm').classList.add('is-valid')            
+            $('passwordConfirm').classList.remove('is-invalid')
+            $('passwordConfirm').classList.add('is-valid')            
         }
     })
 

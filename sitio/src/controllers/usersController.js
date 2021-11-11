@@ -22,6 +22,14 @@ module.exports = {
         if (errors.isEmpty()) {
             const { name, email, password } = req.body;
 
+            if (req.files.length != 0) {
+
+                let images = req.files.map(image => {
+                    let item = {
+                        file: image.filename,
+                    }
+                    return item
+                })
                 db.Avatar.bulkCreate(images, { validate: true })
                     .then(avatarImg => {
                         console.log('imagenes guardadas')
@@ -55,6 +63,7 @@ module.exports = {
                             })
                             .catch(error => console.log(error))
                     })
+                }
             } else {
                 return res.render('user/register', {
                     old: req.body,
