@@ -1,0 +1,590 @@
+.product-detail{
+    background-color: var(--color-Body);
+}
+
+.product-detail .main-products .breadcrumbs{
+font-family: var(--fontFamily-Titulo);
+font-size: 0.7rem;
+
+text-align: center;
+margin: 40px 0;
+}
+
+.product-detail .main-products .breadcrumbs a{
+    color: whitesmoke;
+}
+
+.product-detail .main-products .breadcrumbs a:hover{
+    color: #8E1212;
+    transition: .2s;
+}
+
+.product-detail .main-products .breadcrumbs span{
+    color: whitesmoke;
+}
+
+.product-detail .product-name h1{
+text-transform: uppercase;
+font-family: var(--fontFamily-Titulo);
+font-size: 1rem;
+color: white;
+text-align: center;
+margin: 20px 0;
+}
+
+
+
+/* --------------------------------------- */
+
+.product-detail  .product-container-photos{ /* contiene todas las imagenes y divs de imagen */
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    /* background-color: var(--color-Gris1); */
+    padding: 15px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 30px -4px var(--color-negro3), 0 0 10px 0px #000 inset; */
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.product-detail .product-container-photos__2{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse
+}
+
+.product-detail .product-photo-big{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
+}
+
+.product-detail .product-photo-big__img{
+    width:100%;
+}
+
+
+.product-detail .carrusel-container{
+    display: none;
+}
+
+.product-detail .product-photo-small__img{
+    width: 100%;
+}
+
+.product-detail .product-info{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: var(--fontFamily-Textos);
+    font-size: 20px;
+}
+
+.product-detail .price{
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-family: var(--fontFamily-Textos);
+}
+
+.product-detail .payment{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.product-detail .payment a{
+    width: 15%;
+        
+}
+
+.product-detail .product-name .payment img{ /* imagenes tarjetas de credito */
+    width: 100%;
+    
+} 
+
+.product-detail .product-name .payment img:hover{
+    opacity: .50;
+    transition: .3s;
+}
+
+.product-detail .product-name .payment-link{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product-detail .product-name .payment-link a:hover{
+    color: #8E1212;
+    transition: .2s;
+}
+
+.product-detail .product-name .payment-link a{
+    font-family: var(--fontFamily-Textos);
+    color: whitesmoke;
+    font-style: italic;
+    font-size: 0.6rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.product-detail .product-name .button{
+    text-align: center;
+}
+
+
+.product-detail .product-name .button input{
+    font-family: var(--fontFamily-Textos);
+    padding: 7px 20px;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+.product-detail .product-name .button input:hover{
+    background-color: #8E1212 ;
+    color: white;
+    transition: .2s;
+    border: none;
+}
+
+.product-detail .envio { /* Medios de envio */
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    width: 70%;
+    margin: 20px auto;
+    padding: 0 0 10px;
+    
+}
+
+.product-detail .envio__datos{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+.product-detail .product-name .envio p{
+    text-align: center;
+    margin: 8px auto;
+
+}
+
+.product-detail .product-name .envio i{
+    color: white;
+    font-size: 0.8rem;
+}
+
+.product-detail .product-name .envio span{
+    color: white;
+    font-size: 0.7rem;
+    
+}
+
+.product-detail .product-name .envio input{
+    font-size: 0.7rem;
+    padding: 7px 0;
+    border-radius: 3px;
+    border: none;
+    margin-inline-start: 20px;
+    padding-left: 5px;
+    width: 120px
+}
+
+.product-detail .product-name .envio button{
+    font-size: 0.7rem;
+    padding: 7px 30px;
+    border-radius: 10px;
+    border: none;
+    margin-inline-start: 10px;
+}
+
+.product-detail .product-name .envio .calcular span{
+    color: black;
+    
+}
+
+.product-detail .product-name .envio button:hover{
+    background-color: #8E1212 ;
+    transition: .2s;
+    border: none;
+}
+
+.product-detail .product-name .envio .calcular span:hover{
+    color: white;
+    
+}
+
+.product-detail .product-name .envio .cp-link{
+    font-family: var(--fontFamily-Textos);
+    color: whitesmoke;
+    font-style: italic;
+    font-size: 0.6rem;
+    margin-left: 20px;
+    text-decoration: underline;
+
+}
+
+.product-detail .product-name .envio .cp-link:hover{
+    color: #8E1212;
+    transition: .2s;
+}
+
+.product-detail .product-name .info { /* todo el contenedor de la tabla */
+    color: white;
+    font-size: 0.7rem;
+    text-align: left;
+    width: 70%;
+    margin: 0 auto
+} 
+
+.product-detail .product-name .info p{  /* Detalles */
+    font-family: var(--fontFamily-Textos);
+    color: white;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+
+.product-detail table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+       
+}
+
+.product-detail th, .product-detail td {
+        width: 25%;
+        font-family: var(--fontFamily-Textos);
+        text-align: left;
+        vertical-align: center;
+        border: 1px solid whitesmoke;
+        /* border-radius: 5px; */
+        border-collapse: collapse;
+        padding: 0.3em;
+        caption-side: bottom;
+        letter-spacing: 1px;
+        border-spacing: 20px;
+     }
+
+.product-detail th, .product-detail td p{
+    padding: 8px 0;
+}
+
+.product-detail .more-products{   /* Tambien te pueden gustar */
+    font-family: var(--fontFamily-Titulo);
+    color: white;
+    font-size: 1rem;
+    padding-top: 25px;
+    padding-bottom: 10px; 
+    margin: auto;
+}
+
+/* ----------------------- */
+/* seccion de relacionados */
+/* ----------------------- */
+
+/* --------------------------------- */
+
+.product-detail .glider-contain .gliderRelacion{
+    margin-bottom: 50px;
+    width: 95%;
+}
+.product-detail .glider-contain .glider-prevRelacion{ /* este es el boton para deslizar el carusel de productos */
+    left: 15px;
+    top: 25%;
+    font-size: 25px;
+    background: none;
+    border: navajowhite;
+    position: absolute;
+    color: #fff;
+}
+
+.product-detail .glider-contain .glider-nextRelacion{ /* este es el boton para deslizar el carusel de productos */
+    right: 15px;
+    top: 25%;
+    font-size: 25px;
+    background: none;
+    border: navajowhite;
+    position: absolute;
+    color: #fff;
+}
+
+.product-detail .glider-contain .glider-dot{ /* estos son los puntos debajo del carrusel */
+    height: 5px;
+    width: 18px;
+    background-color: #fff;
+    display: none;
+}
+
+.product-detail .glider-contain .glider-dot.active{ /* estos son los puntos debajo del carrusel */
+   background-color: var(--color-Rojo2);
+}
+
+
+.product-detail .product-oferta {
+    display: flex;
+    background-color: var(--color-negro4);
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    height: 170px;
+}
+
+
+
+.product-detail .product-oferta .container-img-oferta {
+    width: 150px;
+    height: 150px;
+}
+
+.product-detail .product-oferta .container-img-oferta img {
+    width: 100%;
+    background-color: var(--color-negro5);
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    height: -webkit-fill-available;
+}
+
+.product-detail .product-oferta .detail-oferta{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.product-detail .product-oferta .detail-oferta h4 {
+    color: #fff;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    max-width: 154px;
+}
+
+.product-detail .product-oferta .detail-oferta .container-precios{
+    display: flex;
+}
+
+.product-detail .product-oferta .detail-oferta p.precio-old{
+    color: var(--color-Rojo3);
+    font-size: 16px;
+    font-family: var(--fontFamily-Textos);
+}
+
+.product-detail .product-oferta .detail-oferta p.new-oferta{
+    color: #fff;
+    font-size: 17px;
+    font-family: var(--fontFamily-Textos);
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+.product-detail .product-oferta .detail-oferta a{
+    color: #000;
+    padding: 6px;
+    width: 130px;
+    font-family: var(--fontFamily-Textos);
+    font-size: 16px;
+    font-weight: 450;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    transition: background-color .3s;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.product-detail .product-oferta .detail-oferta a:hover{
+    background-color: var(--color-Rojo2);
+}
+
+/* --------------------------------- */
+
+
+.product-detail .container-carrusel-detail{ /* controla el ancho de la de la caja contenedora de los productos relacionados */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.product-detail .productos-relacionados{ /* contenedor */
+    display: flex;
+}
+
+@media (min-width:768px){
+    
+    .product-detail  .product-container-photos{
+        width: 100%;
+        max-width: 660px;
+    }
+
+    .product-detail .product-container-photos__2{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+/*         height: 670px; */
+    }
+
+    .product-detail .product-photo-big{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+       /*  background-color: var(--color-negro1); */
+        margin-left: 25px;
+       /*  box-shadow: 0 0 10px 5px #000 inset; */
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
+    .product-detail .product-photo-big__img{
+        width:100%;
+    }
+
+    .product-detail .carrusel-container{
+       
+    }
+
+    .product-detail .carrusel-img{ /* contenedor de las imagenes chicas */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: hidden;
+        max-height: 450px;
+    }
+
+
+    .product-detail .product-photo-small{
+        display: flex;
+        flex-direction: column;
+        width: 6%;
+    }
+
+    .product-detail .product-photo-small__img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .product-detail .price{
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+        margin-bottom: 15px;
+        font-family: var(--fontFamily-Textos);
+    }
+
+    .product-detail .product-info{
+        text-align: center;
+        color: #fff;
+        margin-bottom: 10px;
+        font-family: var(--fontFamily-Textos);
+        font-size: 20px;
+    }
+
+    .product-detail .product .price{
+        font-size: 1.2rem ;
+    }
+
+    .product-detail .payment{
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    .product-detail .payment a{
+        width: 10%;
+        margin-right: 25px;
+    }
+    
+    .product-detail .product-name .payment img{ /* imagenes tarjetas de credito */
+        width: 100%;
+        
+    } 
+
+    .product-detail .envio { /* contenedor de datos de envio */
+        border: 1px solid whitesmoke;
+        border-radius: 7px;
+        width: 50%;
+        margin: 20px auto;
+        padding: 0 0 10px;
+    }
+
+    .product-detail .product-name .envio input{ /* input codigo postal */
+        font-size: 0.7rem;
+        padding: 7px 0;
+        border-radius: 3px;
+        border: none;
+        margin-inline-start: 20px;
+        padding-left: 5px;
+        width: 200px
+    }
+
+    .product-detail .product-name .info { /* todo el contenedor de la tabla  ????*/
+        width: 50%;
+    } 
+    
+    .product-detail .productos-relacionados .product-3{
+        display: initial;
+    }
+    
+    .product-detail .productos-relacionados .product-4{
+        display: initial;
+    }
+
+    .product-detail .productos-relacionados{ /* contenedor */
+        margin: 0 -15%;
+    }
+
+}
+
+
+
+@media (min-width:1024px){
+
+    .product-detail .carrusel-container{ /* carrusel de imagenes chicas */ /* -------------------------- */
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        overflow-y: auto;
+        max-height: 470px;
+        margin-top: 26px;
+        padding: 10px;
+    }
+
+    .product-detail .carrusel-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-detail .product .price{
+    font-size: 1.5rem ;
+    }
+
+    .product-detail .product .credit{
+        font-size: 0.9rem;
+           
+    }
+
+    .product-detail .product-name .payment-link a{
+        font-size: 0.7rem;
+       
+    }
+
+    .product-detail .product-name .info { /* todo el contenedor de la tabla */
+    } 
+    
+    
+    .product-detail .productos-relacionados .product-5{
+        display: initial;
+        width: 49%; 
+        height: 70%;
+    }
+
+}

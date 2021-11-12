@@ -1,0 +1,56 @@
+<%- include("./partials/head") %> 
+
+<body class="productos">
+    <!-- header -->
+    <%- include("./partials/header") %> 
+
+    <!-- main -->
+    <main class="main-products">  
+            <% if (products.length != 0) { %>
+                <h1 class="title-result">El resultado de "<%= resultado %>" es: </h1>
+
+                <section class="container-productos">
+        
+                <% products.forEach(product => { %>
+                    <article class="producto">
+    
+                        <div class="conatiner-inside-producto">
+                            <a href="/product/detail/<%= product.id %>" class="container-img">
+                                <img src="/images/productos/<%=product.images[0].file %>" alt="" class="img-product">
+                            </a>
+                            <div class="container-name-precio">
+                                <h2 class="name-product"><%= product.name %></h2>
+                                <p class="precio">$<%=descuento(product.discount, product.price)%></p>
+                            </div>
+                            <div class="container-option-product">
+                                <div class="option-detalle">
+                                    <a href="/product/detail/<%= product.id %>"><i class="far fa-eye"></i>
+                                        <p>detalles</p>
+                                    </a>
+                                </div>
+                                <div class="option-cart-shop">
+                                    <a href="#"><i class="fas fa-shopping-cart"></i>
+                                        <p>agregar</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                <% }) %>
+                <div class="conatner-mas-products">
+                    <a href="#" class="mas-products">mostrar mas productos</a>
+                </div>
+                <% } else { %>
+                    <h3 class="no-result"> NO SE ENCONTRÓ RESULTADO PARA LA BÚSQUEDA DE: "<%= resultado  %>" </h3>
+            <% } %>
+           
+             
+            
+           
+
+        </section>
+    </main>
+    <%- include("./partials/footer") %> 
+</body>
+
+</html>

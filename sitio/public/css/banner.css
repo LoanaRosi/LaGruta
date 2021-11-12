@@ -1,0 +1,129 @@
+.control-banner{
+
+}
+
+.nav-admin .navbar{ /* contenedor nav */
+    background-color: var(--color-header)!important;
+    
+}
+
+.nav-admin .navbar-brand{ /* contenedor de el logo */
+    width: 50%;
+}
+
+.nav-admin .navbar-brand__logo{ /* logo */
+    width: 100%;
+}
+
+.nav-admin .navbar-collapse { /* opciones de navegacion */
+    justify-content: flex-end;
+}
+
+
+.nav-admin .navbar-toggler{ /* contenedor del menu hamburguer */
+    border-color: var(--color-Rojo1);
+    color: rgba(0,0,0,.55);
+    padding: .25rem .4rem;
+}
+
+.nav-admin .navbar-toggler-icon{
+    background-image: none
+}
+
+.nav-admin .fa-bars{ /* barritas del menu hamburguer */
+    color: var(--color-Rojo1);
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.nav-admin .nav-link{ /* link para ir a las diferentes vistas de admin */
+    color: rgba(255,255,255,.55);
+    color: #fff;
+}
+
+/* ---------------- */
+/* termina boostrap */
+/* ---------------- */
+.control-banner .container-form{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.control-banner .form-banner{ /* formulario del banner */
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.control-banner .form-banner__label{ /* banners de 350px de alto */
+    color: #fff;
+    margin-right: 6px;
+    text-transform: capitalize;
+}
+
+.control-banner .form-banner__imgBanner{ /* input para elegir el banner */
+    width: 180px;
+    margin-right: 15px
+}
+
+.control-banner .form-banner__button{ /* boton para subir banner */
+    width: 170px;
+    height: 32px;
+    background-color: var(--color-Rojo2);
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.control-banner .title{ /* titulo de la vista */
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+}
+
+.control-banner .container-banner{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.control-banner .container-banner__article{
+    box-shadow: 0 0 20px 6px #000;
+    padding: 10px;
+    background-color: var(--color-Gris1);
+    border-radius: 5px;
+}
+
+.control-banner .container-img{
+    position: relative;
+}
+
+.control-banner .container-img__img{ /* imagen banner */
+    width: 100%;
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px #000;
+    margin-bottom: 10px;
+}
+
+.control-banner .buttonDelete{ /* boton para borrar banner */
+    padding: 5px 20px;
+    border-radius: 7px;
+    border: 1px solid #000;
+    background-color: var(--color-Rojo1);
+    color: #fff;
+    box-shadow: 0 0 5px 2px #000, 0 0 10px -4px #000 inset;
+    font-family: var(--fontFamily-Titulo);
+    text-transform: uppercase;
+    font-size: 1.6vw;
+}
+
+@media (min-width:768px) {
+
+    .control-banner .form-banner__imgBanner{ /* input para elegir el banner */
+        width: 30%;
+    }
+}

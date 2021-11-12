@@ -1,0 +1,27 @@
+<%- include("../partials/head") %> 
+<body class="control-banner">
+    <%- include("./partials/header") %> 
+    <main class="container-form">
+        <form class="form-banner" action="" method="POST" enctype="multipart/form-data">
+            <label for="banner" class="form-banner__label">banners de 350px de alto:</label>
+        <input class="form-banner__imgBanner" type="file" name="banner" id="banner">
+        <button class="form-banner__button" type="submit"> Agregar Banner</button>
+        </form>
+        <h1 class="title">Control Banner</h1>
+    <section class="container-banner">
+        <article class="container-banner__article">
+            <div class="container-img">
+                <% banner.forEach(item => { %>
+                    <img class="container-img__img" src="/images/banner-img/<%= item.name %>" alt="">
+                    <form action="product/banner/delete/<%= item.id %>?_method=DELETE" method="POST">
+                        <button class="buttonDelete" type="submit">Eliminiar</button>
+                    </form>
+                <% }) %>
+            </div>
+        </article>
+    </section>
+    </main>
+    <%- include("../partials/footer") %> 
+    <%- include("../partials/scripts") %> 
+</body>
+</html>

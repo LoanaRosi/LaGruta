@@ -1,0 +1,86 @@
+.index-admin thead tr th {
+  max-width: 14%;
+}
+
+.index-admin tbody tr td {
+  max-width: 14%;
+}
+
+.index-admin{
+    background-color: white;
+}
+
+.index-admin button {
+    margin: 2px;
+    padding: 5px;
+}
+
+.index-admin button a {
+  color: black;
+}
+
+
+.index-admin .admin {   
+  width: 100%; 
+  border-collapse: collapse;
+  
+  }
+  /* Zebra striping */
+  .index-admin tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  .index-admin th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+
+  .index-admin .imgProduct-container{
+    width: 12%;
+  }
+
+  .index-admin .imgProduct-container__img{
+    width: 100%
+  }
+
+  .index-admin .container-form{
+    text-align: center;
+  }
+
+  .index-admin .container-delete{
+    display: inline-block;
+  }
+
+  .index-admin .container-form__delete{
+    padding: 5px 7px;
+    background-color: var(--color-Rojo3);
+  }
+
+  .index-admin .container-form__delete:hover{
+    background-color: var(--color-Rojo2);
+  }
+
+  .index-admin .container-form__edit{
+    background: #e4e40b;
+  }
+
+  .index-admin .container-form__edit:hover{
+    background: #bdbd09;
+  }
+
+  .index-admin td,.index-admin th { 
+    border: 1px solid #ccc; 
+    text-align: left; 
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-family: var(--fontFamily-Titulo);
+    font-weight: 600;
+    font-size: small;
+  }
+  
+@media (min-width:768px){
+  .index-admin td,.index-admin th {
+    font-size: medium;
+  }
+}

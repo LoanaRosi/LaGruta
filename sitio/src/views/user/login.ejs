@@ -1,0 +1,46 @@
+<%- include("../partials/head") %> 
+
+<%- include("../partials/header") %> 
+
+<body class="vista-login">
+    <main class="Login">
+        <h2>INICIAR SESIÓN</h2> 
+        <form id="formLogin" action="" method="POST"> 
+            <div class="option-login"> <!-- container de opciones alternativas de registro -->
+                <a href=""><i class="fab fa-facebook"></i> Facebook Login</a>
+                <a href=""> <i class="fab fa-google"></i> Google Login</a>
+                <span>o</span>
+            </div>
+            
+
+            <div class="box-form">
+                <span id="form-error"></span>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico">
+                <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
+                <span id="emailErrors"></span>
+            </div>
+
+            <div class="box-form">
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <span class="text-danger small"><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
+                <span id="passwordErrors"></span>
+            </div>
+            <a href="#" class="recuperar-contra">Olvidaste tu contraseña?</a>
+
+            <div class="recordar" id="recordar">
+                <label for="conditions">Recordar</label>
+                <input type="checkbox" name="recordar">
+            </div>
+            
+            <div class="box-button">
+                <button type="submit">Iniciar sesión</button>
+            </div>
+            
+            
+
+        </form>
+    </main>
+</body>
+<script src="/javascripts/login.js"></script>
+</html>
+

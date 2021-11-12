@@ -1,0 +1,188 @@
+.vista-login{
+
+}
+
+
+.vista-login .Login{ /* container main */
+    background-color: var(--color-negro5);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.vista-login .Login h2{
+    font-family: var(--fontFamily-Titulo);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    background-color: var(--color-negro4);
+    padding: 10px;
+    
+}
+
+.vista-login .Login .option-login{ /* container de opciones alternativas de login, facebook, gmail */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.vista-login .Login .option-login a{ /* afecta a las ocipondes de login facebook y gmail */
+    width: 100%;
+    color: var(--color-Rojo2);
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--fontFamily-Textos);
+    font-weight: 400;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: var(--color-negro4);
+    align-items: center;
+    border-radius: 3px;
+
+}
+
+.vista-login .Login .option-login a i{
+    color: var(--color-Rojo3);
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.vista-login .Login .option-login span{
+       width: 90%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+#emailErrors, #passwordErrors {
+    color: red;
+}
+
+
+/* ----------------parte de los inputs de usuario--------------------- */
+
+.vista-login .Login .box-form{ /* contenedor de los formularios */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+
+
+.vista-login .Login .box-form input{ /* todos los inputs del formulario */
+    padding: 8px;
+    border:1px solid var(--color-Gris1);
+    font-family: var(--fontFamily-Textos);
+    background-color: var(--color-negro4);
+    border-radius: 3px;
+    color: #fff;
+ 
+}
+
+
+.vista-login .Login .box-button{
+    padding-bottom: 20px;
+    display: flex;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.recordar {
+    padding: 10px 10px;
+    align-items: center;
+    color: white;
+}
+
+.vista-login .Login .box-button button{
+    padding: 12px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-family: var(--fontFamily-Textos);
+    text-transform: uppercase;
+    
+}
+
+.vista-login .Login .box-button button:hover{
+    background-color: var(--color-Rojo3);
+    color: #fff;
+}
+
+.vista-login .Login .recuperar-contra{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    text-decoration: underline;
+    margin-right: 24px;
+    padding-top: 5px;
+}
+
+@media (min-width:768px) {
+
+    .vista-login .Login{ /* container main */
+        width: 80%;
+    }
+
+    .vista-login .Login .recuperar-contra{
+        margin-right: 6%;
+
+    }
+}
+
+@media (min-width:1024px) {
+
+    .vista-login .Login{ /* container main */
+        width: 60%;
+    }
+
+    
+    .vista-login .Login .option-login{ /* container de opciones alternativas de registro, facebook, gmail */
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        flex-direction: row;
+        border-bottom: 1px solid #fff;
+        padding: 20px 0px;
+        margin-bottom: 30px;
+
+    }
+
+    .vista-login .Login .option-login span{
+     display: none;
+    }
+
+    .vista-login .Login .option-login a{ /* afecta a las ocipondes de registro facebook y gmail */
+        width: 250px;
+    
+    }
+
+    .vista-login .Login .box-form{ /* contenedor de los formularios */
+        width: 80%;
+    }
+
+    .vista-login .Login .box-form input{ /* todos los inputs del formulario */
+     
+    }
+
+    .vista-login .Login .recuperar-contra{
+        margin-right: 11%;
+
+    }
+
+}

@@ -1,0 +1,197 @@
+<%- include("./partials/head") %> 
+
+<body class="home">
+    <!-- header -->
+    <%- include("./partials/header") %> 
+
+    <!-- main -->
+    <main class="main-home">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <% for( let index = 0; index < banner.length-1; index++ ) { %>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= index+1 %>" aria-label="Slide 2"></button>
+              <% } %>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image: url('/images/banner-img/<%= banner[0].name %>')">
+                <!-- imagen que va como background-image -->
+              </div>
+              <% for( let index = 0; index < banner.length -1; index++ ) { %>
+                <div class="carousel-item" style="background-image: url('/images/banner-img/<%= banner[index+1].name %>')">
+                    <!-- imagen que va como background-image -->
+                  </div>
+              <% } %>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!-- --------------------------------- -->
+        <!-- seccion de categorias principlaes -->
+        <!-- --------------------------------- -->
+        <section class="main-category">
+            <h3 class="titulo-categorias">categorías principales</h3>
+
+            <section class="container-catalogos">
+                <article class="catalogo">
+                    <a href="/product/juegosDePrevia"><img src="/images/catalogo-1.png" alt=""></a>
+                </article>
+
+                <article class="catalogo">
+                    <a href="/product/juegosDeMesa"><img src="/images/catalogo-2.png" alt=""></a>
+                </article>
+
+                <article class="catalogo">
+                    <a href="/product/juegosDeRol"><img src="/images/catalogo-3.png" alt=""></a>
+                </article>
+            </section>
+
+            <!-- ------------------------------- -->
+            <!-- seccion de productos destacados -->
+            <!-- ------------------------------- -->
+
+            <div class="container-titulo-destacados">
+                <h3 class="destacados">productos destacados</h3>
+            </div>
+
+            <section class="conatiner-product">
+                <% products.forEach(product => { %>
+                    <article>
+
+                        <div class="conatiner-inside-article">
+                            <a href="/product/detail/<%= product.id %>" class="container-img"><img class="img-product" src="/images/productos/<%= product.images[0].file %>" alt=""></a>
+    
+                            <div class="container-name-precio">
+                                <h3 class="name-product"><%= product.name %></h3>
+                                <h3 class="precio">$<%=descuento(product.discount,product.price) %></h3>
+                            </div>
+    
+                            <div class="container-option-product">
+                                <div class="option-detalle">
+                                    <a href="/product/detail/<%= product.id %>"><i class="far fa-eye"></i>
+                                        <p>detalles</p>
+                                    </a>
+                                </div>
+                                <div class="option-cart-shop">
+                                    <a href="#"><i class="fas fa-shopping-cart"></i>
+                                        <p>agregar</p>
+                                    </a>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </article>
+                <% }) %>
+
+            </section>
+
+            <div class="botton-full-productos">
+                <h2>todavia no te decides por un juego?</h2>
+                <div class="more-product-p">
+                    <p>podés ver más variedad de juegos y seguir divirtiéndote!</p>
+                </div>
+                <a href="/product/list">Ver todos los productos</a>
+            </div>
+
+            <!-- ------------------------------- -->
+            <!-- seccion de productos en ofertas -->
+            <!-- ------------------------------- -->
+
+            <section class="container-ofertas">
+                <div class="container-titulo-oferta">
+                    <h3 class="title-oferta">Productos en oferta</h3>
+                </div>
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% for( let index = 0; index < productsOfert.length -1; index++) { %>
+                                <div class="column">
+                                    <article class="product-oferta">
+                                            <div class="container-img-oferta">
+                                            <img src="/images/productos/<%= productsOfert[index].images[0].file %>" alt="">
+                                        </div>
+                                        <div class="detail-oferta">
+                                            <h4><%= productsOfert[index].name %></h4>
+                                            <div class="container-precios">
+                                            <p class="new-oferta">$<%=descuento(productsOfert[index].discount,productsOfert[index].price)%></p>
+                                            <p class="precio-old"><%=productsOfert[index].discount%>% OFF</p>
+                                            </div> 
+                                            <a href="/productDetail" class="botn-comprar">comprar</a>
+                                        </div>
+                                        
+                                    </article>
+                                    <article class="product-oferta">
+                                        <div class="container-img-oferta">
+                                        <img src="/images/productos/<%= productsOfert[index +1].images[0].file %>" alt="">
+                                    </div>
+                                    <div class="detail-oferta">
+                                        <h4><%= productsOfert[index +1].name %></h4>
+                                        <div class="container-precios">
+                                        <p class="new-oferta">$<%=descuento(productsOfert[index+1].discount,productsOfert[index+1].price)%></p>
+                                        <p class="precio-old"><%=productsOfert[index +1].discount%>% OFF</p>
+                                        </div> 
+                                        <a href="/productDetail" class="botn-comprar">comprar</a>
+                                    </div>
+                                
+                                    </article>
+                                </div>
+                         
+                        <% } %>
+                         <% for( let index = 0; index < productsOfert.length -1; index++) { %>
+                                <div class="column">
+                                    <article class="product-oferta">
+                                            <div class="container-img-oferta">
+                                            <img src="/images/productos/<%= productsOfert[index].images[0].file %>" alt="">
+                                        </div>
+                                        <div class="detail-oferta">
+                                            <h4><%= productsOfert[index].name %></h4>
+                                            <div class="container-precios">
+                                            <p class="new-oferta">$<%=descuento(productsOfert[index].discount,productsOfert[index].price)%></p>
+                                            <p class="precio-old"><%=productsOfert[index].discount%>% OFF</p>
+                                            </div> 
+                                            <a href="/productDetail" class="botn-comprar">comprar</a>
+                                        </div>
+                                        
+                                    </article>
+                                    <article class="product-oferta">
+                                        <div class="container-img-oferta">
+                                        <img src="/images/productos/<%= productsOfert[index +1].images[0].file %>" alt="">
+                                    </div>
+                                    <div class="detail-oferta">
+                                        <h4><%= productsOfert[index +1].name %></h4>
+                                        <div class="container-precios">
+                                        <p class="new-oferta">$<%=descuento(productsOfert[index+1].discount,productsOfert[index+1].price)%></p>
+                                        <p class="precio-old"><%=productsOfert[index +1].discount%>% OFF</p>
+                                        </div> 
+                                        <a href="/productDetail" class="botn-comprar">comprar</a>
+                                    </div>
+                                
+                                    </article>
+                                </div>
+                         
+                        <% } %>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                    <div role="tablist" class="dots"></div>
+                  </div>
+                   
+                    
+                </div>
+               
+            </section>
+
+    </main>
+    <%- include("./partials/footer") %> 
+    <%- include("./partials/scripts") %> 
+</body>
+    
+</html>

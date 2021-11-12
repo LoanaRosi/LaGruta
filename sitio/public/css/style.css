@@ -1,0 +1,24 @@
+@import url("./general.css");
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./home.css");
+@import url("./productDetail.css");
+@import url("./cart.css");
+@import url("./user/login.css");
+@import url("./user/modalLogin.css");
+@import url("./user/register.css");
+@import url("./listproductos.css");
+@import url("./index.css");
+@import url("./glider.css");
+@import url("./create.css");
+@import url("./banner.css");
+@import url("./user/profile.css");
+@import url("/css/contact.css");
+@import url("/css/about.css");
+@import url("./user/profileEdit.css");
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto+Slab:wght@300;400;500&display=swap');

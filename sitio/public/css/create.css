@@ -1,0 +1,294 @@
+/* contenedor body */
+.admin-creation{
+
+}
+
+/* errores */
+
+.admin-creation .contain-form-error{
+    margin-bottom: 20px;
+    color: var(--color-Rojo3);
+}
+
+.admin-creation .contain-form-error__error{
+
+}
+
+.admin-creation .fa-exclamation-triangle{
+    margin-left: 5px;
+}
+
+/*------------------  */
+
+.admin-creation .admin__container{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.admin-creation .admin__title{
+    color: #fff;
+    font-family: var(--fontFamily-Titulo);
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+/* ------------------------------ */
+/* -----EMPIEZA FORMULARIO------ */
+/* ----------------------------- */
+
+.admin-creation .container-form-add{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-creation .form-admin__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.admin-creation .form-admin{ /* contenedor del los formularios */
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin-creation .form-admin__box{ /* contenedor formulario */
+    width: 30%;
+    margin-bottom: 25px;
+}
+
+.admin-creation .form-admin__box--active{ 
+    width: 65%
+}
+
+.admin-creation .form-admin__input{ /* inpunt del formulario */
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+}
+
+.admin-creation .form-admin__select{
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+}
+
+.admin-creation .fom-admin__option{
+
+}
+
+/* -------------------------------------- */
+/* ------DESCIPCION DEL PRODUCTO--------- */
+/* -------------------------------------- */
+
+.admin-creation .title-description{
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: var(--fontFamily-Titulo);
+    text-transform: capitalize;
+    font-size: 28px;
+}
+
+.admin-creation .form-description{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.admin-creation .form-description .form_desciption__box{
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+.admin-creation .form-description .form_desciption__box--active{
+    width: 70%
+}
+
+.admin-creation .form-description .form_desciption__box input{
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+}
+
+.admin-creation .form-description .form_desciption__box select{
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+}
+
+.admin-creation .form-description .form_desciption__box textarea{
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: var(--fontFamily-Textos);
+    resize: none;
+}
+
+/* img de producto pc */
+
+.admin-creation .img-product{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.admin-creation .img-product__container{
+    width: 100%;
+    background-color: var(--color-header);
+}
+
+.admin-creation .img-product__img{
+    width: 100%;
+}
+
+
+.admin-creation .container-sub-img{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.admin-creation .sub-img-product__container{
+    width: 30%;
+}
+
+.admin-creation .sub-img-product__img{
+    width: 100%;
+}
+
+/* -------------------------------------- */
+/* ------BOTON PARA CREAR PRODUCTO------- */
+/* -------------------------------------- */
+
+.admin-creation .create-button{
+    width: 230px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.admin-creation .create-button__button{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: var(--color-Rojo1);
+    color: #fff;
+}
+
+@media (min-width:768px) {
+
+    .admin-creation .form-description .form_desciption__box {
+        width: 30%;
+        margin-bottom: 25px;
+    }
+
+    .admin-creation .form-description .form_desciption__box--active {
+        width: 65%
+    }
+
+    .admin-creation .img-product {
+        width: 45%;
+        margin: 0 auto;
+    }
+
+}
+
+@media (min-width:1024px) {
+
+    .admin-creation .form-admin{ /* contenedor del los formularios */
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .admin-creation .form-admin__box--active{
+        width: 65%
+    }
+    
+    /* -------------------------------------- */
+    /* ------DESCIPCION DEL PRODUCTO--------- */
+    /* -------------------------------------- */
+
+    .admin-creation .title-description{
+        color: #fff;
+        margin-bottom: 36px;
+        font-family: var(--fontFamily-Titulo);
+        text-transform: capitalize;
+    }
+
+    .admin-creation .form-description{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .admin-creation .form-description .form_desciption__box{
+        width: 30%;
+        margin-bottom: 25px;
+    }
+
+    .admin-creation .form-description .form_desciption__box--active{
+        width: 65%
+    }
+
+    .admin-creation .form-description .form_desciption__box input{
+        padding: 8px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #000;
+        font-family: var(--fontFamily-Textos);
+    }
+
+    .admin-creation .form-description .form_desciption__box select{
+        padding: 8px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #000;
+        font-family: var(--fontFamily-Textos);
+    }
+
+    .admin-creation .form-description .form_desciption__box textarea{
+        padding: 8px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #000;
+        font-family: var(--fontFamily-Textos);
+        resize: none;
+    }
+
+
+    /* img de producto pc */
+
+    .admin-creation .img-product{
+        margin-left: 30px;
+        width: 35%;
+    }
+
+    .admin-creation .img-product__container{
+        width: 100%;
+        background-color: var(--color-header);
+    }
+
+    .admin-creation .img-product__img{
+        width: 100%;
+    }
+
+}

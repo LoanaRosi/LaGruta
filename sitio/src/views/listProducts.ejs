@@ -1,0 +1,93 @@
+
+<%- include("./partials/head") %> 
+
+<body class="productos">
+    <!-- header -->
+    <%- include("./partials/header") %> 
+
+    <!-- main -->
+    <main class="main-products">
+        <h1 class="title-result">productos</h1>
+
+        <div class="container-filtros">
+            <div class="filtro-orden">
+                <small id="orden">ordenar por:</small>
+                <select name="orden" id="orden" class="order-products">
+                    <option value="nuevo-viej">mas nuevo al mas viejo</option> <!-- ordenar de nuevo a viejo -->
+                    <option value="viej-nuevo"> mas viejo al mas nuevo</option> <!-- ordenar de viejo a nuevo  -->
+                    <option value="p-mas-men">precio:mayor a menor</option> <!-- precio de mayor a menor -->
+                    <option value="p-men-mas">precio:menor a mayor</option> <!-- precio de menor a mayor -->
+                    <option value="a-z">A - Z</option> <!-- ordenar de A a Z  -->
+                    <option value="z-a">Z - A</option> <!-- ordenar de Z a A  -->
+                    <option value="mas-ven">mas vendidos</option> <!-- ordenar los mas vendidos  -->
+                </select>
+            </div>
+            <div class="fltro-categorias">
+                <select name="filtar" id="filtar" class="order-categoria">
+                    <option value="filtar">filtrar por</option>
+                    <option value="j-mesa">juegos de mesa</option> <!-- filtar por juegos de mesa -->
+                    <option value="j-previ">juegos de previa</option> <!-- filtar por juegos de previa -->
+                    <option value="j-rol">juegos de rol</option> <!-- filtrar por juegos de rol -->
+                </select>
+            </div>
+        </div>
+
+        
+        <section class="container-productos">
+
+            <div class="fltro-categorias-pc">
+                <h3>categorias</h3>
+                <ul>
+                    <li><a href="/juegos-de-mesa">juegos de mesa</a></li>
+                    <li><a href="/juegos-de-rol"> juegos de rol</a></li>
+                    <li><a href="/juegos-de-previa">juegos de previa</a></li>
+                    <li><a href="/productos">todos los juegos</a></li>
+                </ul>
+            </div>
+            <% products.forEach(product => { %>
+                <article class="producto">
+
+                    <div class="conatiner-inside-producto">
+                        <a href="/product/detail/<%= product.id %>" class="container-img">
+                            <img src="/images/productos/<%=product.images[0].file %>" alt="" class="img-product">
+                        </a>
+                        <div class="container-name-precio">
+                            <h2 class="name-product"><%= product.name %></h2>
+                            <% if (product.discount > 0) { %>
+                                <p class="precio-tachado">$<%=product.price%></p>
+                            <% } %>
+                            <div class="priceYdiscount">
+                                <p class="precio">$<%=descuento(product.discount,product.price)%></p>
+                                <% if (product.discount > 0) { %>
+                                    <p class="precio-old"><%=product.discount%>% OFF</p>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="container-option-product">
+                            <div class="option-detalle">
+                                <a href="/product/detail/<%= product.id %>"><i class="far fa-eye"></i>
+                                    <p>detalles</p>
+                                </a>
+                            </div>
+                            <div class="option-cart-shop">
+                                <a href="#"><i class="fas fa-shopping-cart"></i>
+                                    <p>agregar</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            <% }) %>
+           
+           
+
+            <div class="conatner-mas-products">
+                <a href="#" class="mas-products">mostrar mas productos</a>
+            </div>
+
+        </section>
+    </main>
+    <%- include("./partials/footer") %> 
+</body>
+
+</html>

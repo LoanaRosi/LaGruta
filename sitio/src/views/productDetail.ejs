@@ -1,0 +1,171 @@
+<%- include("./partials/head") %> 
+<body class="product-detail">
+    <!-- header -->
+    <%- include("./partials/header") %> 
+
+    <main class="main-products">
+        <div class="breadcrumbs">
+            <a class="breadcrumbs-inicio" href="/" title="La cueva del dragón">Inicio</a>
+            <span class="breadcrumb-divider">/</span>
+            <a class="breadcrumbs-juego-mesa" href="/" title="Juegos de mesa"><%= productDetail.categories.name%> </a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumbs-activo"><%= productDetail.name %></span>   
+    </div>
+    <section class="product-name">
+        <h1><%= productDetail.name %></h1>
+
+        <div>
+
+            <div class= product-container-photos> 
+                <div class="product-container-photos__2">
+                    <div class=product-photo-big>
+                        <div class="glider-contain-img-big">
+                            <div class="glider">
+                              <div class="container-img-big"><img class="product-photo-big__img" id='masterImg' src="/images/productos/<%= productDetail.images[0].file %>" alt=""></div>
+                            </div>
+                        </div>
+                        
+                    </div> 
+                    <div class="carrusel-container">
+                        <% productDetail.images.forEach(image => { %>
+                            <% if (productDetail.id == image.productId) { %>
+                                <img class="product-photo-small__img" src="/images/productos/<%= image.file %>" alt="" onclick="document.getElementById('masterImg').setAttribute('src','/images/productos/<%= image.file %>')">
+                            <% } %>  
+                      <% }) %>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-info">           
+            <span class="price">$10.000</span>           
+        </div>
+        
+            
+        <div class="payment">
+        <a href="/medios-pago"><img src="/images/cards/visa@2x.png" alt="Visa"></a>
+        <a href="/medios-pago"><img src="/images/cards/mastercard@2x.png" alt="Mastercard"></a>
+        <a href="/medios-pago"><img src="/images/cards/amex@2x.png" alt="Amex"></a>
+        <a href="/medios-pago"><img src="/images/cards/credit-card@2x.png" alt="Tarjeta"></a>
+        </div>
+        <div class="payment-link">
+            <a href="/medios-pago">Ver medios de pago</a>
+        </div>
+        <div class="button">
+            <input type="submit" value="Agregar al carrito +">
+        </div>
+        <div class="envio">
+            <p>
+                <i class="fas fa-truck"></i>
+                <span>Medios de envío </span>
+            </p>
+            <div class="envio__datos">
+                <input class="codigo-postal" type="tel" name="zipcode" placeholder="Tu código postal" value=""
+            aria-label="Tu código postal">
+            <button class="calcular" aria-label="Calcular envío">
+                <span>Calcular</span>
+            </button>
+            
+            </div>
+            <div>
+                <a class="cp-link" href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank">No sé mi código postal</a>
+            </div> 
+            
+        </div>  
+        </article>     
+        <div class="info">
+            <p>Detalles</p>
+            <table style="height: 744px; width: 100%;">
+                <tbody>
+                <tr style="height: 23px;">
+                <td style="width: 116.983px; height: 23px;">&nbsp;Autor</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.author %>&nbsp;</td>
+                </tr>
+                <tr style="height: 25px;">
+                <td style="width: 116.983px; height: 25px;">&nbsp;Mec&aacute;nica</td>
+                <td style="width: 169.017px; height: 25px;">&nbsp;<%= productDetail.mechanic%></td>
+                </tr>
+                <tr style="height: 25px;">
+                <td style="width: 116.983px; height: 25px;">&nbsp;Tem&aacute;tica</td>
+                <td style="width: 169.017px; height: 25px;">&nbsp;<%= productDetail.thematic%></td>
+                </tr>
+                <tr style="height: 23px;">
+                <td style="width: 116.983px; height: 23px;">&nbsp;N&uacute;m. jugadores</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.player%></td>
+                </tr>
+                <tr style="height: 23px;">
+                <td style="width: 116.983px; height: 23px;">&nbsp;Tiempo de juego</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.timeGame%></td>
+                <tr style="height: 23px;">
+                <td style="width: 116.983px; height: 23px;">&nbsp;Complejidad</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.complexities.name%></td>
+                </tr>
+                <tr style="height: 23px;">
+                <td style="width: 116.983px; height: 23px;">&nbsp;Editorial</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.publisher%></td>
+                </tr>
+                <tr style="height: 23px;">
+                <td style="width: 116.983px; height: 23px;">&nbsp;Contenido</td>
+                <td style="width: 169.017px; height: 23px;">
+                <%= productDetail.content%>
+                </td>
+                </tr>
+                <tr style="height: 23px;">
+                <td style="width: 116.983px; height: 23px;">&nbsp;Idioma</td>
+                <td style="width: 169.017px; height: 23px;">&nbsp;<%= productDetail.languages.name%></td>
+                </tr>
+                </tbody>
+                </table>
+                <p>&nbsp;</p>
+                <div class="more-products"><p>También te pueden gustar</p>
+                </div>
+            </div>
+            <section>
+                <div class="glider-contain">
+                    <div class="gliderRelacion">
+                       
+                        <% for( let index = 0; index < productRelacion.length -1; index++) { %>
+                                <div class="column">
+                                    <article class="product-oferta">
+                                            <div class="container-img-oferta">
+                                            <img src="/images/productos/<%= productRelacion[index].images[0].file %>" alt="">
+                                        </div>
+                                        <div class="detail-oferta">
+                                            <h4><%= productRelacion[index].name %></h4>
+                                            <div class="container-precios">
+                                            <p class="new-oferta">$<%=descuento(productRelacion[index].discount,productRelacion[index].price)%></p>
+                                            <% if (productRelacion.discount > 0) { %>
+                                                <p class="precio-old"><%=productRelacion[index +1].discount%>% OFF</p>
+                                            <% } %>
+                                            </div> 
+                                            <a href="/productDetail" class="botn-comprar">comprar</a>
+                                        </div>
+                                    </article>
+                                </div>
+                        <% } %>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prevRelacion"><i class="fas fa-chevron-left"></i></button>
+                    <button aria-label="Next" class="glider-nextRelacion"><i class="fas fa-chevron-right"></i></button>
+                    <div role="tablist" class="dotsRelacion"></div>
+                  </div>
+                   
+                    
+                </div>
+
+            </section>
+    </main>
+    <%- include("./partials/footer") %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="../../javascripts/glider.js"></script>
+    <script src="../../javascripts/carruselDetailRelacion.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
