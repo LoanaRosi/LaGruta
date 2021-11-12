@@ -1,19 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-body.carrito {
-   /*  margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: 'Lora', serif;
-    background-color: #0D0C0C;
-    color: white; ?????????*/
+.modal-cart{
+    z-index: 2000;
+    width: 100%;
+    background-color: #0000008c;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+
+.openCart{
+    visibility: unset;
+}
+
+.carrito {
     color: white;
-    width: 425px; /* franco */
+    width: 425px; 
+    float: right;
+    position: fixed;
+    z-index: 3000;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transform: translateX(650px);
+    transition: transform .8s;
+}
+
+.carrito.openCartProduct{
+    transform: translateX(0px);
+    opacity:unset;
+    transition: transform .8s;
 }
 
 .carrito .container-full{
     overflow-y: auto;
-    max-height: 510px;
+    max-height: 565px;
 }
 
 .carrito .cart-product-sup{
@@ -43,9 +65,14 @@ body.carrito {
     text-transform: uppercase;
 }
 
-/* .carrito .sup a { 
-    color: white;
-} ????????*/
+.carrito .closeModalCart{
+    color: #000;
+    font-size: 26px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    cursor: pointer;
+}
 
 .carrito .bloque{ /* article contiene todos los datos del carrito de compras */
 
@@ -56,6 +83,7 @@ body.carrito {
 } ????????*/
 
 .carrito .container-product{ /* contiene los datos del producto */
+    height: 110px;
     display: flex;
     justify-content: space-between;
     box-shadow: 4px 4px 13px -2px #000;
@@ -67,7 +95,7 @@ body.carrito {
 }
 
 .carrito .arriba{ /* contiene la imagen */
-    width: 120px;
+    width: 95px;
 }
 
 .carrito .arriba img{ /* imagen del producto */
@@ -149,6 +177,7 @@ body.carrito {
     position: relative;
     top: -10px;
     padding: 20px;
+    padding-bottom: 90px;
     z-index: 800;
 }
 
@@ -189,12 +218,14 @@ body.carrito {
 
 
 .carrito .conatiner-detalle{ /* contiene al detalle de la compra */
-    position: relative;
+    position: absolute;
     background-color: #000;
     margin-top: -23px;
     padding: 15px;
     border-radius: 10px 10px 0 0;
     z-index: 1000;
+    bottom: 0;
+    width: 100%;
 }
 
 .carrito .detalle1, .detalle2 {
@@ -227,9 +258,12 @@ body.carrito {
 
 @media (min-width : 500px) {
     .carrito {
-        /* width: 450px; ??????*/
         float: right;
-        /* border: 1px solid grey; ?????*/
+        position: fixed;
+        z-index: 3000;
+        right: 0;
+        top: 0;
+        height: 100%;
     }
     .carrito main {
         /* padding: 20px; ??????? */
@@ -238,9 +272,12 @@ body.carrito {
 
 @media (min-width : 768px) {
     .carrito {
-       /*  width: 450px; ????????*/
         float: right;
-       /*  border: 1px solid grey; ?????????*/
+        position: fixed;
+        z-index: 3000;
+        right: 0;
+        top: 0;
+        height: 100%;
     }
     .carrito main {
         /* padding: 20px; ??????? */
@@ -248,5 +285,8 @@ body.carrito {
 }
 
 @media (min-width : 1024px) {
-    
+
+    .carrito {
+        width: 45%;
+    }
 }

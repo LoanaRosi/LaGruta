@@ -23,7 +23,8 @@
     position: absolute;
     right: 0;
     left: 0;
-    top: 100px;
+    top: 60px;
+    box-shadow: 0 0 10px -2px var(--color-Rojo3);
 }
 
 .vista-modalLogin .login h2{
@@ -106,7 +107,7 @@
 
 
 .vista-modalLogin .login .box-button{
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     display: flex;
     margin: 0 auto;
     width: 300px;

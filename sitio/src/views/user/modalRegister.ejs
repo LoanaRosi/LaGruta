@@ -2,7 +2,7 @@
 <%- include("../partials/head") %> 
 
 <body class="vista-register">
-<div class="vista-register" id="modalRegister">
+<div class="vista-modalRegister" id="modalRegister">
     <main class="register">
         <h2>Crear cuenta</h2> 
         <form action="/user/register" method="POST" id= "form-register" enctype="multipart/form-data"> 
@@ -12,16 +12,18 @@
                 <span>o</span>
             </div>
 
-            <div class="box-form">
-                <input type="text" name="name" id="name" placeholder="* Nombre y Apellido" value="<%= locals.old && old.name ? old.name : null  %>">
-                <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
-                <span id="nameErrors"></span>
-            </div>
-
-            <div class="box-form">
-                <input type="email" name="email" id="email" placeholder="* Correo electrónico" value="<%= locals.old && old.email ? old.email : null  %>">
-                <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
-                <span id="emailErrors"></span>
+            <div class="form-nameYpass">
+                <div class="box-form">
+                    <input type="text" name="name" id="name" placeholder="* Nombre y Apellido" value="<%= locals.old && old.name ? old.name : null  %>">
+                    <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                    <span id="nameErrors"></span>
+                </div>
+    
+                <div class="box-form">
+                    <input type="email" name="email" id="email" placeholder="* Correo electrónico" value="<%= locals.old && old.email ? old.email : null  %>">
+                    <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
+                    <span id="emailErrors"></span>
+                </div>
             </div>
 
             <div class="box-form">
@@ -35,7 +37,7 @@
                 <span class="text-danger small"><%= locals.errors && errors.passwordConfirm ? errors.passwordConfirm.msg : null %> </span>
                 <span id="passwordConfirmErrors"></span>
             </div>
-
+            
             <div class="box-form">
                 <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
                 <input class="img-input" type="file" name="avatar" id="imgUser">

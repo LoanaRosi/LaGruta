@@ -12,109 +12,115 @@
 </head>
 
 <body class="carrito">
-    <main>
-        <section class="seccion">
-                <div class="bloque">
-                    <div class="container-full">
-                        <div class="cart-product-sup">
-                            <div class="sup">
-                                <h3 class="titulo">Carrito de compra</h3>
+<div class="modal-cart" id="modalCart">
+    <div class="carrito" id="modalCartProduct">
+        <main>
+            <section class="seccion">
+                    <div class="bloque">
+                        <div class="container-full">
+                            <div class="cart-product-sup">
+                                <div class="sup">
+                                    <h3 class="titulo">Carrito de compra</h3>
+                                    <i class="fas fa-times closeModalCart" id="closeModalCart"></i>
+                                </div>
+                                <div class="container-products">
+                                    <article class="container-product">
+                                        <div class="arriba">
+                                            <img src="../images/productos/mesa-1.png" alt="">
+                                        </div>
+                                        <div class="container-datos-products">
+                                            <div class="container-name-price">
+                                                <div class="container-name">
+                                                    <p class="container-name__name">Carcassone</p>
+                                                </div>
+                                                <div class="container-price">
+                                                    <span class="container-price__price">$1983</span>
+                                                </div>
+                                            </div>
+                
+                                            <div class="cantidad">
+                                                <input class="cantidad__input" type="number" id="numero" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="delete-product">
+                                            <a href="/"><i class="far fa-trash-alt"></i></a>
+                                        </div>
+                                    </article>
+                                    <article class="container-product">
+                                        <div class="arriba">
+                                            <img src="../images/productos/mesa-2.png" alt="">
+                                        </div>
+                                        <div class="container-datos-products">
+                                            <div class="container-name-price">
+                                                <div class="container-name">
+                                                    <p class="container-name__name">Carcassone</p>
+                                                </div>
+                                                <div class="container-price">
+                                                    <span class="container-price__price">$1983</span>
+                                                </div>
+                                            </div>
+                
+                                            <div class="cantidad">
+                                                <input class="cantidad__input" type="number" id="numero" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="delete-product">
+                                            <a href="/"><i class="far fa-trash-alt"></i></a>
+                                        </div>
+                                    </article>
+                                    <article class="container-product">
+                                        <div class="arriba">
+                                            <img src="../images/productos/mesa-3.png" alt="">
+                                        </div>
+                                        <div class="container-datos-products">
+                                            <div class="container-name-price">
+                                                <div class="container-name">
+                                                    <p class="container-name__name">Carcassone</p>
+                                                </div>
+                                                <div class="container-price">
+                                                    <span class="container-price__price">$1983</span>
+                                                </div>
+                                            </div>
+                
+                                            <div class="cantidad">
+                                                <input class="cantidad__input" type="number" id="numero" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="delete-product">
+                                            <a href="/"><i class="far fa-trash-alt"></i></a>
+                                        </div>
+                                    </article>
+                                </div>
+                                
                             </div>
-                            <div class="container-products">
-                                <article class="container-product">
-                                    <div class="arriba">
-                                        <img src="../images/productos/mesa-1.png" alt="">
-                                    </div>
-                                    <div class="container-datos-products">
-                                        <div class="container-name-price">
-                                            <div class="container-name">
-                                                <p class="container-name__name">Carcassone</p>
-                                            </div>
-                                            <div class="container-price">
-                                                <span class="container-price__price">$1983</span>
-                                            </div>
-                                        </div>
-            
-                                        <div class="cantidad">
-                                            <input class="cantidad__input" type="number" id="numero" value="1">
-                                        </div>
-                                    </div>
-                                    <div class="delete-product">
-                                        <a href="/"><i class="far fa-trash-alt"></i></a>
-                                    </div>
-                                </article>
-                                <article class="container-product">
-                                    <div class="arriba">
-                                        <img src="../images/productos/mesa-2.png" alt="">
-                                    </div>
-                                    <div class="container-datos-products">
-                                        <div class="container-name-price">
-                                            <div class="container-name">
-                                                <p class="container-name__name">Carcassone</p>
-                                            </div>
-                                            <div class="container-price">
-                                                <span class="container-price__price">$1983</span>
-                                            </div>
-                                        </div>
-            
-                                        <div class="cantidad">
-                                            <input class="cantidad__input" type="number" id="numero" value="1">
-                                        </div>
-                                    </div>
-                                    <div class="delete-product">
-                                        <a href="/"><i class="far fa-trash-alt"></i></a>
-                                    </div>
-                                </article>
-                                <article class="container-product">
-                                    <div class="arriba">
-                                        <img src="../images/productos/mesa-3.png" alt="">
-                                    </div>
-                                    <div class="container-datos-products">
-                                        <div class="container-name-price">
-                                            <div class="container-name">
-                                                <p class="container-name__name">Carcassone</p>
-                                            </div>
-                                            <div class="container-price">
-                                                <span class="container-price__price">$1983</span>
-                                            </div>
-                                        </div>
-            
-                                        <div class="cantidad">
-                                            <input class="cantidad__input" type="number" id="numero" value="1">
-                                        </div>
-                                    </div>
-                                    <div class="delete-product">
-                                        <a href="/"><i class="far fa-trash-alt"></i></a>
-                                    </div>
-                                </article>
+                            <div class="container-product-envios">
+                                <h3 class="title-envio">Medios De Envio</h3>
+                            <div class="datos-envios">
+                                <input type="number" class="input-postal">
+                                <button type="submit" class="calular-postal">Calcular</button>
                             </div>
                             
+                            </div>
                         </div>
-                        <div class="container-product-envios">
-                            <h3 class="title-envio">Medios De Envio</h3>
-                        <div class="datos-envios">
-                            <input type="number" class="input-postal">
-                            <button type="submit" class="calular-postal">Calcular</button>
+    
+                        <div class="conatiner-detalle">
+                            <div class="detalle1">
+                                <p>sub-total(sin envio)</p>
+                                <span>$5000</span>
+                            </div>
+                            <div class="detalle2">
+                                <p>Total</p>
+                                <span>$5500</span>
+                            </div>
+                            <button class="continue-form"><a href="/cart/formulario1">Continuar</a></button>
                         </div>
                         
-                        </div>
                     </div>
-
-                    <div class="conatiner-detalle">
-                        <div class="detalle1">
-                            <p>sub-total(sin envio)</p>
-                            <span>$5000</span>
-                        </div>
-                        <div class="detalle2">
-                            <p>Total</p>
-                            <span>$5500</span>
-                        </div>
-                        <button class="continue-form"><a href="/cart/formulario1">Continuar</a></button>
-                    </div>
-                    
-                </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
+</div>
+   
 </body>
 
 </html>

@@ -35,19 +35,19 @@
                         <a href="/user/logout" class="register-frase">Cerrar sesión</a> <!-- "a" link del register -->
                     </div>
                     <% } else{ %>        
-                    <div class="container-login"> <!-- conatiner del icono login y de la a -->        
-                        <a href="/user/login" class="login"><i class="fas fa-user-circle"></i></a> <!-- icono del login -->
-                        <a href="/user/login" class="login-frase" id="openLogin">Ingresar</a> <!-- "a" link del login -->
+                    <div class="container-login" id="openLogin"> <!-- conatiner del icono login y de la a -->        
+                        <a href="" class="login" ><i class="fas fa-user-circle"></i></a> <!-- icono del login -->
+                        <a href="" class="login-frase">Ingresar</a> <!-- "a" link del login -->
                     </div>
-                    <div class="container-register"> <!-- conatiner del icono register y de la a -->
-                        <a href="/user/register" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
-                        <a href="/user/register" class="register-frase" id="openRegister">Registrarte</a> <!-- "a" link del register -->
+                    <div class="container-register" id="openRegister"> <!-- conatiner del icono register y de la a -->
+                        <a href="" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
+                        <a href="" class="register-frase" >Registrarte</a> <!-- "a" link del register -->
                     </div>
                     <% } %>                                         
             </div>
             <div class="container-cart-shop"> <!-- conatiner del carrito, la img y el icono -->
-                <a href="/cart"><img src="/images/flag/bandera-cart-tablet.svg" alt="carrito" class="flag-nav"> <!-- img de bandera -->
-                <i class="fas fa-shopping-cart"></i></a> <!-- icono del carrtio -->
+                <a href="#" id="openModalCart"><img src="/images/flag/bandera-cart-tablet.svg" alt="carrito" class="flag-nav"> <!-- img de bandera -->
+                <i class="fas fa-shopping-cart" id="openModalCart"></i></a> <!-- icono del carrtio -->
             </div>
         </div>
         <div class="container-menu-bar-pc"> <!-- conatiner del menu de catalogos del la version pc -->
@@ -75,9 +75,9 @@
                             <a href="#" class="exit-menu" id="exit-menuBurguer"><i class="fas fa-times"></i></a> <!-- icono para salir -->
                             <% } else{ %>   
                             <a href="#" class="usuario"><i class="fas fa-user"></i></a> <!-- icono de usuario -->
-                            <a href="/user/login" class="login" id="openLogin">Ingresar</a> <!-- link login -->
+                            <a href="/user/login" class="login">Ingresar</a> <!-- link login -->
                             <a href="#" class="register"><i class="fas fa-plus-circle"></i></a> <!-- icono del register -->
-                            <a href="/user/register" class="register__frase" id="openRegister">Registrarte</a> <!-- link register -->
+                            <a href="/user/register" class="register__frase">Registrarte</a> <!-- link register -->
                             <a href="#" class="exit-menu" id="exit-menuBurguer"><i class="fas fa-times"></i></a> <!-- icono para salir -->
                         
                             <% } %>
@@ -108,14 +108,14 @@
                 <ul>
                     <li><a href="/">inicio</a></li>
                     <li><a href="/product/list">productos</a></li>
-                    <li><a href="/cart">carrito</a></li>
+                    <li id="openModalCartMovile"><a href="#">carrito</a></li>
                 </ul>
             </div>
 
             <!-- LOGIN/REGISTER/CARRITO -->
                 <%- include("../user/modalLogin") %> 
                 <%- include("../user/modalRegister") %> 
-
+                <%- include("../cart/productCart") %> 
             <!-- ---------------------- -->
         <script src="/javascripts/header.js"></script>
     </nav>
