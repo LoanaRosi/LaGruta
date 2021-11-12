@@ -17,7 +17,7 @@ window.addEventListener("load",()=>{
     })
 
 
-        // LOGIN Y REGISTER MODAL
+        // LOGIN Y REGISTER MODAL 
 
     let modalLogin = document.getElementById("modalLogin")
     let openLogin = document.getElementById("openLogin")
