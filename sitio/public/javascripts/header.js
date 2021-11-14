@@ -16,41 +16,6 @@ window.addEventListener("load",()=>{
         menuActive.classList.remove('menuActive')
     })
 
-
-        // LOGIN Y REGISTER MODAL 
-
-    let modalLogin = document.getElementById("modalLogin")
-    let openLogin = document.getElementById("openLogin")
-
-    openLogin.addEventListener("click", function(e){
-        e.preventDefault()
-        modalLogin.classList.add("openLogin")
-    })
-
-    window.addEventListener("click", (e) =>{
-        if(e.target == modalLogin){
-            modalLogin.classList.remove("openLogin")
-        }
-    })
-
-    //register
-
-    let modalRegister = document.getElementById("modalRegister")
-    let openRegister = document.getElementById("openRegister")
-
-    openRegister.addEventListener("click", function(e){
-        e.preventDefault()
-        modalRegister.classList.add("openRegister")
-    })
-
-    window.addEventListener("click", (e) =>{
-        if(e.target == modalRegister){
-            modalRegister.classList.remove("openRegister")
-        }
-    })
-
-    //cart-shop
-
     let openCart = document.getElementById('openModalCart')
     let openModalCartMovile = document.getElementById('openModalCartMovile')
     let modalCart = document.getElementById('modalCart')

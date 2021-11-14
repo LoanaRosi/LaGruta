@@ -1,11 +1,13 @@
-<%- include("../partials/head") %> 
+<%- include("../partials/head") %>
 
-<%- include("../partials/header") %> 
+
 
 <body class="vista-login">
+    <%- include("../partials/header") %>
+
     <main class="Login">
         <h2>INICIAR SESIÓN</h2> 
-        <form id="formLogin" action="" method="POST"> 
+        <form action="" method="POST"> 
             <div class="option-login"> <!-- container de opciones alternativas de registro -->
                 <a href=""><i class="fab fa-facebook"></i> Facebook Login</a>
                 <a href=""> <i class="fab fa-google"></i> Google Login</a>
@@ -40,7 +42,10 @@
 
         </form>
     </main>
+
+    <%- include("../partials/footer") %>
+    <script src="/javascripts/login.js"></script>
 </body>
-<script src="/javascripts/login.js"></script>
-</html>
+
+
 

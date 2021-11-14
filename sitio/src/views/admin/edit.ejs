@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="form-admin__box form-admin__box--active">
-                        <input class="form-admin__input" id="product-img" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        <input class="form-admin__input" id="product-img" type="file" name="img" placeholder="Imagen del Producto">
                         <span class="text-danger small" id="img-error"></span>
                     </div>
                     <div class="form_desciption__box">
@@ -88,13 +88,13 @@
                     </div>
 
                     <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-1" type="file" name="fileImage" placeholder="Imagen del Producto">
+                        <input class="form-admin__input" id="product-sub-img-1" type="file" name="img" placeholder="Imagen del Producto">
                     </div>
                     <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-2" type="file" name="fileImage" placeholder="Imagen del Producto">
+                        <input class="form-admin__input" id="product-sub-img-2" type="file" name="img" placeholder="Imagen del Producto">
                     </div>
                     <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-3" type="file" name="fileImage" placeholder="Imagen del Producto">
+                        <input class="form-admin__input" id="product-sub-img-3" type="file" name="img" placeholder="Imagen del Producto">
                     </div>
 
                     <div class="form_desciption__box">
@@ -114,15 +114,12 @@
                 </div>
 
                 <div class="container-sub-img">
-                    <div class="sub-img-product__container">
-                        <img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/<%= product.images[1].file %>" alt="">
-                    </div>
-                    <div class="sub-img-product__container">
-                        <img id="sub-img-preview-2" class="sub-img-product__img" src="/images/productos/<%= product.images[2].file %>" alt="">
-                    </div>
-                    <div class="sub-img-product__container">
-                        <img id="sub-img-preview-4" class="sub-img-product__img" src="/images/productos/<%= product.images[3].file %>" alt="">
-                    </div>
+                    <% for( let index = 1; index < product.images.length; index++ ) { %>
+                        <div class="sub-img-product__container">
+                            <img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/<%= product.images[index].file %>" alt="">
+                        </div>
+                    <% } %>
+
                 </div>
             </section>
 

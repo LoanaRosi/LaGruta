@@ -36,6 +36,37 @@ margin: 20px 0;
 
 /* --------------------------------------- */
 
+.product-detail .glider-contain-img-big--pc{
+    display: none;
+}
+
+.product-detail .glider-contain-img-big{
+    width: 90%;
+    position: relative;
+}
+
+.product-detail .container-img-big{
+ 
+}
+
+.product-detail .glider-prev-{
+    position: absolute;
+    top: 150px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: #fff;
+}
+.product-detail .glider-next-{
+    position: absolute;
+    top: 150px;
+    right: 0;
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: #fff;
+}
+
 .product-detail  .product-container-photos{ /* contiene todas las imagenes y divs de imagen */
     width: 90%;
     margin: 0 auto;
@@ -418,6 +449,13 @@ margin: 20px 0;
 }
 
 @media (min-width:768px){
+
+    .product-detail .glider-prev-{
+        top: 260px;
+    }
+    .product-detail .glider-next-{
+        top: 260px;
+    }
     
     .product-detail  .product-container-photos{
         width: 100%;
@@ -547,6 +585,14 @@ margin: 20px 0;
 
 
 @media (min-width:1024px){
+
+    .product-detail .glider-contain-img-big--pc{
+        display: unset;
+    }
+
+    .product-detail .glider-contain-img-big{
+        display: none;
+    }
 
     .product-detail .carrusel-container{ /* carrusel de imagenes chicas */ /* -------------------------- */
         width: 25%;

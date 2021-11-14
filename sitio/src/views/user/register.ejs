@@ -2,7 +2,10 @@
 <%- include("../partials/head") %> 
 
 <body class="vista-register">
-    <main class="register">
+
+    <%- include("../partials/header") %>
+
+    <main class="vi-register">
         <h2>Crear cuenta</h2> 
         <form action="" method="POST" id= "form-register" enctype="multipart/form-data"> 
             <div class="option-register"> <!-- container de opciones alternativas de registro -->
@@ -66,5 +69,7 @@
         </form>
     </main>
     <script src="/javascripts/register.js"></script>
+
+    <%- include("../partials/footer") %>
 </body>
 </html>

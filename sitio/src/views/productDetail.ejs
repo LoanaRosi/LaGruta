@@ -20,11 +20,23 @@
                 <div class="product-container-photos__2">
                     <div class=product-photo-big>
                         <div class="glider-contain-img-big">
+                            <div class="glider-Big">
+                                <% for( let i = 0; i < productDetail.images.length; i++ ) { %>
+                                    <div class="container-img-big"><img class="product-photo-big__img" src="/images/productos/<%= productDetail.images[i].file %>" alt=""></div>
+                                <% } %>
+                            </div>
+                            <% if ( productDetail.images.length > 2) { %>
+                                <button aria-label="Previous" class="glider-prev-"><i class="fas fa-angle-left"></i></button>
+                                <button aria-label="Next" class="glider-next-"><i class="fas fa-angle-right"></i></button>
+                            <% } %>
+                            <div role="tablist" class="dots"></div>
+                              
+                        </div>
+                        <div class="glider-contain-img-big--pc">
                             <div class="glider">
-                              <div class="container-img-big"><img class="product-photo-big__img" id='masterImg' src="/images/productos/<%= productDetail.images[0].file %>" alt=""></div>
+                                <div class="container-img-big"><img class="product-photo-big__img" id='masterImg' src="/images/productos/<%= productDetail.images[0].file %>" alt=""></div>
                             </div>
                         </div>
-                        
                     </div> 
                     <div class="carrusel-container">
                         <% productDetail.images.forEach(image => { %>
@@ -39,7 +51,7 @@
         </div>
 
         <div class="product-info">           
-            <span class="price">$10.000</span>           
+            <span class="price">$<%=descuento(productDetail.discount,productDetail.price) %></span>           
         </div>
         
             
@@ -160,6 +172,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="../../javascripts/glider.js"></script>
     <script src="../../javascripts/carruselDetailRelacion.js"></script>
+    <script src="../../javascripts/carruselDetailBig.js"></script>
     
 </body>
 </html>

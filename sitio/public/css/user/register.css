@@ -2,16 +2,19 @@
 
 }
 
-.vista-register .register{ /* container main */
+.vista-register .vi-register{ /* container main */
     background-color: var(--color-negro5);
     display: flex;
     justify-content: center;
     width: 90%;
     flex-direction: column;
     margin: 0 auto;
+    box-shadow: 10px 10px 15px #000;
+    margin-bottom: 70px;
+    margin-top: 50px;
 }
 
-.vista-register .register h2{
+.vista-register .vi-register h2{
     font-family: var(--fontFamily-Titulo);
     text-transform: uppercase;
     display: flex;
@@ -23,7 +26,7 @@
     
 }
 
-.vista-register .register .option-register{ /* container de opciones alternativas de registro, facebook, gmail */
+.vista-register .vi-register .option-register{ /* container de opciones alternativas de registro, facebook, gmail */
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -31,7 +34,7 @@
     align-items: center;
 }
 
-.vista-register .register .option-register a{ /* afecta a las ocipondes de registro facebook y gmail */
+.vista-register .vi-register .option-register a{ /* afecta a las ocipondes de registro facebook y gmail */
     width: 100%;
     color: var(--color-Rojo2);
     display: flex;
@@ -48,13 +51,13 @@
 
 }
 
-.vista-register .register .option-register a i{
+.vista-register .vi-register .option-register a i{
     color: var(--color-Rojo3);
     font-size: 20px;
     padding-right: 20px;
 }
 
-.vista-register .register .option-register span{
+.vista-register .vi-register .option-register span{
        width: 90%;
     display: flex;
     justify-content: center;
@@ -87,7 +90,7 @@
 
 /* ----------------parte de los inputs de usuario--------------------- */
 
-.vista-register .register .box-form{ /* contenedor de los formularios */
+.vista-register .vi-register .box-form{ /* contenedor de los formularios */
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -97,7 +100,7 @@
 
 /* IMAGEN DE PERFIL USUARIO */
 
-.vista-register .register .img-perfil{
+.vista-register .vi-register .img-perfil{
     padding: 8px;
     border: 1px solid #000;
     font-family: var(--fontFamily-Textos);
@@ -111,11 +114,11 @@
     cursor: pointer;
 }
 
-.vista-register .register .img-perfil:hover{
+.vista-register .vi-register .img-perfil:hover{
     background-color: var(--color-Rojo3);
 }
 
-.vista-register .register .img-input{
+.vista-register .vi-register .img-input{
     visibility: hidden;
 }
 
@@ -123,7 +126,7 @@
 
 
 
-.vista-register .register .box-form input{ /* todos los inputs del formulario */
+.vista-register .vi-register .box-form input{ /* todos los inputs del formulario */
     padding: 8px;
     border:1px solid var(--color-Gris1);
     font-family: var(--fontFamily-Textos);
@@ -133,34 +136,34 @@
  
 }
 
-.vista-register .register .box-form label{ /* label de condiciones */
+.vista-register .vi-register .box-form label{ /* label de condiciones */
     color: #fff;
     /* text-transform: capitalize; */
     margin-right: 10px;
 }
 
-.vista-register .register .condiciones{ /* checkbox para las condiciones */
+.vista-register .vi-register .condiciones{ /* checkbox para las condiciones */
     display: flex;
     flex-direction: row;
     padding: 10px 10px;
     align-items: center;
 }
 
-.vista-register .register .promociones{ /* checkbox para las promociones */
+.vista-register .vi-register .promociones{ /* checkbox para las promociones */
     display: flex;
     flex-direction: row;
     padding: 5px 10px 0px 10px;
     align-items: center;
 }
 
-.vista-register .register .box-button{
+.vista-register .vi-register .box-button{
     padding-bottom: 20px;
     display: flex;
     margin: 0 auto;
     width: 90%;
 }
 
-.vista-register .register .box-button button{
+.vista-register .vi-register .box-button button{
     padding: 12px;
     width: 60%;
     margin: 0 auto;
@@ -171,26 +174,26 @@
     
 }
 
-.vista-register .register .box-button button:hover{
+.vista-register .vi-register .box-button button:hover{
     background-color: var(--color-Rojo3);
     color: #fff;
 }
 
 @media (min-width:768px) {
 
-    .vista-register .register{ /* container main */
+    .vista-register .vi-register{ /* container main */
         width: 80%;
     }
 }
 
 @media (min-width:1024px) {
 
-    .vista-register .register{ /* container main */
+    .vista-register .vi-register{ /* container main */
         width: 70%;
     }
 
     
-    .vista-register .register .option-register{ /* container de opciones alternativas de registro, facebook, gmail */
+    .vista-register .vi-register .option-register{ /* container de opciones alternativas de registro, facebook, gmail */
         display: flex;
         width: 90%;
         align-items: center;
@@ -203,20 +206,20 @@
 
     }
 
-    .vista-register .register .option-register span{
+    .vista-register .vi-register .option-register span{
      display: none;
     }
 
-    .vista-register .register .option-register a{ /* afecta a las ocipondes de registro facebook y gmail */
+    .vista-register .vi-register .option-register a{ /* afecta a las ocipondes de registro facebook y gmail */
         width: 300px;
     
     }
 
-    .vista-register .register .box-form{ /* contenedor de los formularios */
+    .vista-register .vi-register .box-form{ /* contenedor de los formularios */
         width: 80%;
     }
 
-    .vista-register .register .box-form input{ /* todos los inputs del formulario */
+    .vista-register .vi-register .box-form input{ /* todos los inputs del formulario */
      
     }
 

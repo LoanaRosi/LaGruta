@@ -1,4 +1,6 @@
-new Glider(document.querySelector('.glider-img-big'), {
+window.addEventListener("load", ()=> {
+  
+  new Glider(document.querySelector('.glider-Big'), {
     // Mobile-first defaults
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -11,11 +13,11 @@ new Glider(document.querySelector('.glider-img-big'), {
     responsive: [
       {
         // screens greater than >= 775px
-        breakpoint: 768,
+        breakpoint: 775,
         settings: {
           // Set to `auto` and provide item width to adjust to viewport
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 'auto',
+          slidesToScroll: 'auto',
           itemWidth: 150,
           duration: 0.25
         }
@@ -31,3 +33,4 @@ new Glider(document.querySelector('.glider-img-big'), {
       }
     ]
   });
+})

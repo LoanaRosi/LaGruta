@@ -2,19 +2,16 @@ const fs = require("fs");
 const path = require("path");
 const db = require('../database/models');
 
-const banner = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","banner.json"),"utf-8")); // imagenes banner
-let saveBanner = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','banner.json'),JSON.stringify(dato,null,2),'utf-8')
+/* const banner = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","banner.json"),"utf-8")); // imagenes banner
+let saveBanner = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','banner.json'),JSON.stringify(dato,null,2),'utf-8') */
 
 const tothousand = require("../utils/thotousand");
 const descuento = require("../utils/discount");
 const {validationResult} = require('express-validator');
 
-const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
-
-let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
-
-
 const { Op } = require("sequelize");
+
+const queryInterface = db.sequelize.getQueryInterface();
 
 module.exports ={
 
@@ -273,11 +270,41 @@ module.exports ={
 					}
 				}
 			)
-				.then(() => {
-					return res.redirect("/user/admin");
-
+			.then( () =>{
+				db.Product.findByPk(req.params.id, {
+					include: ['images']
 				})
-				.catch(error => console.log(error))	
+					.then(async product => {
+						if (req.files.length != 0) {
+							/* product.images.forEach(image => {
+
+								if (fs.existsSync(path.join(__dirname, '../public/images/productos', image.file))) {
+									fs.unlinkSync(path.join(__dirname, '../public/images/productos', image.file))
+								}
+							}); */
+
+							await queryInterface.bulkDelete('images', {
+								productId: product.id
+							});
+
+							let images = req.files.map(image => {
+								let item = {
+									file: image.filename,
+									productId: product.id
+								}
+								return item
+							})
+
+							db.Image.bulkCreate(images, { validate: true })
+								.then(() =>{
+									return res.redirect("/user/admin");
+								})
+						}
+						return res.redirect("/user/admin");
+					})
+			})
+			.catch(error => console.log(error))
+
 			} else {
 				let categories = db.Category.findAll()
 				let status = db.Status.findAll()

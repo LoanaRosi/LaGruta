@@ -2,7 +2,6 @@
 
 }
 
-
 .vista-login .Login{ /* container main */
     background-color: var(--color-negro5);
     display: flex;
@@ -11,6 +10,9 @@
     flex-direction: column;
     margin: 0 auto;
     margin-top: 10px;
+    box-shadow: 10px 10px 15px #000;
+    margin-bottom: 70px;
+    margin-top: 50px;
 }
 
 .vista-login .Login h2{
@@ -146,7 +148,7 @@
 @media (min-width:1024px) {
 
     .vista-login .Login{ /* container main */
-        width: 60%;
+        width: 65%;
     }
 
     

@@ -31,7 +31,8 @@
                 </div>
                 
                 <div class="form-admin__box">
-                    <input class="form-admin__input form-control" id="product-discount" type="number" name="discount" id="discount" placeholder="Descuento del Producto" >
+                    <input class="form-admin__input form-control" id="product-discount" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value="0" >
+                    <span class="text-danger small" id="discountError"></span>
                 </div>
                 <div class="form-admin__box form-admin__box--active">
                     <select class="form-admin__select form-control" id="product-category" name="category" id="category">
@@ -91,25 +92,14 @@
                         <span class="text-danger small" id="language-error"><%= locals.errors && errors.idioma ? errors.idioma.msg : null %> </span>
                     </div>
 
-                    <div class="form-admin__box form-admin__box--active">
-                        <input class="form-admin__input form-control" id="product-img" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
-                        <span class="text-danger small" id="img-error"></span>
-                    </div>
-
                     <div class="form_desciption__box">
                         <input class="form-control" type="text" name="jugadores" id="product-player" placeholder="Núm. jugadores">
                         <span class="text-danger small" id="player-error"><%= locals.errors && errors.jugadores ? errors.jugadores.msg : null %> </span>
                     </div>
 
-                    <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-1" type="file" name="fileImage" placeholder="Imagen del Producto">
-                    </div>
-                    <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-2" type="file" name="fileImage" placeholder="Imagen del Producto">
-                    </div>
-                    <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-3" type="file" name="fileImage" placeholder="Imagen del Producto">
-                    </div>
+                    
+                    
+                   
 
                     <div class="form_desciption__box form_desciption__box--active">
                         <textarea class="form-control" name="contenido" id="product-content" cols="30" rows="10"  placeholder="Contenido"></textarea>
@@ -124,17 +114,30 @@
             
             <section class="img-product">
                 <div class="img-product__container">
-                    <img id="img-preview" class="img-product__img" src="/images/productos/default-image.jpg" alt="">
+                    <label class="selectImg" for="product-img"><div class="imgHover"></div><img id="img-preview" class="img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                    <div class="form-admin__box inactivo">
+                        <input class="form-admin__input form-control" id="product-img" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        <span class="text-danger small" id="img-error"></span>
+                    </div>
                 </div>
                 <div class="container-sub-img">
                     <div class="sub-img-product__container">
-                        <img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt="">
+                        <label class="selectImg" for="product-sub-img-1"><div class="imgHover"></div><img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                        <div class="form_desciption__box inactivo">
+                            <input class="form-admin__input" id="product-sub-img-1" type="file" name="fileImage" placeholder="Imagen del Producto">
+                        </div>
                     </div>
                     <div class="sub-img-product__container">
-                        <img id="sub-img-preview-2" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt="">
+                        <label class="selectImg" for="product-sub-img-2"><div class="imgHover"></div><img id="sub-img-preview-2" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                        <div class="form_desciption__box inactivo">
+                            <input class="form-admin__input" id="product-sub-img-2" type="file" name="fileImage" placeholder="Imagen del Producto">
+                        </div>
                     </div>
                     <div class="sub-img-product__container">
-                        <img id="sub-img-preview-3" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt="">
+                        <label class="selectImg" for="product-sub-img-3"><div class="imgHover"></div><img id="sub-img-preview-3" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                        <div class="form_desciption__box inactivo">
+                            <input class="form-admin__input" id="product-sub-img-3" type="file" name="fileImage" placeholder="Imagen del Producto">
+                        </div>
                     </div>
                 </div>
             </section>
