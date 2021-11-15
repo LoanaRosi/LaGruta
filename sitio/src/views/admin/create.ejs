@@ -5,10 +5,6 @@
     <main class="admin__container">
         <h2 class="admin__title">crear producto</h2> 
 
-        <div class="contain-form-error">
-            <span class="contain-form-error__error" id="form-error"></span>
-        </div>
-
         <form class="form-admin" id="form-create" action="" method="POST" enctype="multipart/form-data"> 
            
             <div class="form-admin__container">
@@ -107,41 +103,48 @@
                     </div>
 
                 </div>
-                <div class="create-button">
-                    <button class="create-button__button" type="submit">Crear producto</button>
-                </div>
             </div>
             
             <section class="img-product">
                 <div class="img-product__container">
-                    <label class="selectImg" for="product-img"><div class="imgHover"></div><img id="img-preview" class="img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                    <label class="selectImg" for="product-img"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="img-preview" class="img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
                     <div class="form-admin__box inactivo">
                         <input class="form-admin__input form-control" id="product-img" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
                         <span class="text-danger small" id="img-error"></span>
                     </div>
                 </div>
+                
                 <div class="container-sub-img">
                     <div class="sub-img-product__container">
-                        <label class="selectImg" for="product-sub-img-1"><div class="imgHover"></div><img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                        <label class="selectImg" for="product-sub-img-1"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
                         <div class="form_desciption__box inactivo">
                             <input class="form-admin__input" id="product-sub-img-1" type="file" name="fileImage" placeholder="Imagen del Producto">
                         </div>
                     </div>
                     <div class="sub-img-product__container">
-                        <label class="selectImg" for="product-sub-img-2"><div class="imgHover"></div><img id="sub-img-preview-2" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                        <label class="selectImg" for="product-sub-img-2"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-2" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
                         <div class="form_desciption__box inactivo">
                             <input class="form-admin__input" id="product-sub-img-2" type="file" name="fileImage" placeholder="Imagen del Producto">
                         </div>
                     </div>
                     <div class="sub-img-product__container">
-                        <label class="selectImg" for="product-sub-img-3"><div class="imgHover"></div><img id="sub-img-preview-3" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                        <label class="selectImg" for="product-sub-img-3"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-3" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
                         <div class="form_desciption__box inactivo">
                             <input class="form-admin__input" id="product-sub-img-3" type="file" name="fileImage" placeholder="Imagen del Producto">
                         </div>
                     </div>
                 </div>
+
+                <div class="contain-form-error">
+                    <span class="contain-form-error__error" id="form-error"></span>
+                </div>
+
+                <div class="create-button">
+                    <button class="create-button__button" type="submit">Crear producto</button>
+                </div>
             </section>
-    
+
+            
  
         </form>
 

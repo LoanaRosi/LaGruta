@@ -8,6 +8,7 @@
 .admin-creation .contain-form-error{
     margin-bottom: 20px;
     color: var(--color-Rojo3);
+    margin-top: 9px;
 }
 
 .admin-creation .contain-form-error__error{
@@ -176,6 +177,7 @@
     cursor: pointer;
     position: relative;
     width: 100%;
+    margin-bottom: -45px;
 }
 
 .admin-creation .imgHover{
@@ -184,6 +186,19 @@
     height: 100%;
     position: absolute;
     visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-creation .imgHover__p{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+    background-color: #00000059;
+    width: 100%;
+    padding: 5px 0px;
 }
 
 .admin-creation .selectImg:hover > .imgHover{
@@ -202,6 +217,7 @@
     width: 230px;
     margin-bottom: 50px;
     margin-top: 10px;
+    margin: 0 auto;
 }
 
 .admin-creation .create-button__button{
@@ -211,6 +227,11 @@
     border-radius: 5px;
     background-color: var(--color-Rojo1);
     color: #fff;
+}
+
+.admin-creation .create-button__button:hover{
+    background-color: var(--color-Rojo3);
+    transition: background-color .5s;
 }
 
 @media (min-width:768px) {

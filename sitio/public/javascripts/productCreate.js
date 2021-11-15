@@ -299,7 +299,7 @@ formCreate.addEventListener('submit', event => {
     console.log(elementsForm)
     let error = false;
 
-    for (let i = 0; i < elementsForm.length - 5; i++) {
+    for (let i = 0; i < elementsForm.length - 4; i++) {
 
         if (!elementsForm[i].value) {
             elementsForm[i].classList.add('is-invalid')
@@ -311,7 +311,7 @@ formCreate.addEventListener('submit', event => {
         }
     }
 
-    for (let i = 0; i < elementsForm.length - 5; i++) {
+    for (let i = 0; i < elementsForm.length - 4; i++) {
 
         if (elementsForm[i].classList.contains('is-invalid')) {
             error = true

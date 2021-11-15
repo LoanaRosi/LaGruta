@@ -78,48 +78,41 @@
                         </select>
                     </div>
 
-                    <div class="form-admin__box form-admin__box--active">
-                        <input class="form-admin__input" id="product-img" type="file" name="img" placeholder="Imagen del Producto">
-                        <span class="text-danger small" id="img-error"></span>
-                    </div>
                     <div class="form_desciption__box">
                         <input class="form-control" type="text" name="jugadores" id="product-player" placeholder="Núm. jugadores" value= "<%= product.player %>"> 
                         <span class="text-danger small" id="player-error"><%= locals.errors && errors.jugadores ? errors.jugadores.msg : null %> </span>
                     </div>
-
-                    <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-1" type="file" name="img" placeholder="Imagen del Producto">
-                    </div>
-                    <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-2" type="file" name="img" placeholder="Imagen del Producto">
-                    </div>
-                    <div class="form_desciption__box form_desciption__box--active">
-                        <input class="form-admin__input" id="product-sub-img-3" type="file" name="img" placeholder="Imagen del Producto">
-                    </div>
-
+                    
                     <div class="form_desciption__box">
                         <textarea class="form-control" name="contenido" id="product-content" cols="30" rows="10"  placeholder="Contenido"><%= product.content %></textarea>
                         <span class="text-danger small" id="content-error"></span>
                     </div>
 
                 </div>
-                <div class="create-button">
-                    <button class="create-button__button" type="submit">Editar producto</button>
-                </div>
             </div>
             
             <section class="img-product">
                 <div class="img-product__container">
-                    <img class="img-product__img" id="img-preview" src="/images/productos/<%= product.images[0].file %>" alt="">
+                    <label class="selectImg" for="product-img"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img class="img-product__img" id="img-preview" src="/images/productos/<%= product.images[0].file %>" alt=""></label>
+                    <div class="form-admin__box inactivo">
+                        <input class="form-admin__input form-control" id="product-img" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        <span class="text-danger small" id="img-error"></span>
+                    </div>
                 </div>
 
                 <div class="container-sub-img">
-                    <% for( let index = 1; index < product.images.length; index++ ) { %>
-                        <div class="sub-img-product__container">
-                            <img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/<%= product.images[index].file %>" alt="">
-                        </div>
-                    <% } %>
-
+                        <% for( let index = 1; index < product.images.length; index++ ) { %>
+                            <div class="sub-img-product__container">
+                                <label class="selectImg" for="product-sub-img-1"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/<%= product.images[index].file %>" alt=""></label>
+                                <div class="form_desciption__box inactivo">
+                                    <input class="form-admin__input" id="product-sub-img-1" type="file" name="fileImage" placeholder="Imagen del Producto">
+                                </div>
+                            </div>
+                        <% } %>
+                        
+                </div>
+                <div class="create-button">
+                    <button class="create-button__button" type="submit">Editar producto</button>
                 </div>
             </section>
 
