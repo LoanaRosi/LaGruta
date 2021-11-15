@@ -506,6 +506,7 @@ margin: 20px 0;
     .product-detail .product-photo-small__img{
         width: 100%;
         margin-bottom: 10px;
+        cursor: pointer;
     }
 
     .product-detail .price{
