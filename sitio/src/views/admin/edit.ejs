@@ -95,7 +95,7 @@
                 <div class="img-product__container">
                     <label class="selectImg" for="product-img"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img class="img-product__img" id="img-preview" src="/images/productos/<%= product.images[0].file %>" alt=""></label>
                     <div class="form-admin__box inactivo">
-                        <input class="form-admin__input form-control" id="product-img" type="file" name="fileImage" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        <input class="form-admin__input form-control" id="product-img" type="file" name="img" placeholder="Imagen del Producto">
                         <span class="text-danger small" id="img-error"></span>
                     </div>
                 </div>
@@ -103,13 +103,33 @@
                 <div class="container-sub-img">
                         <% for( let index = 1; index < product.images.length; index++ ) { %>
                             <div class="sub-img-product__container">
-                                <label class="selectImg" for="product-sub-img-1"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/<%= product.images[index].file %>" alt=""></label>
+                                <label class="selectImg" for="product-sub-img-<%= index %>"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-<%= index %>" class="sub-img-product__img" src="/images/productos/<%= product.images[index].file %>" alt=""></label>
                                 <div class="form_desciption__box inactivo">
-                                    <input class="form-admin__input" id="product-sub-img-1" type="file" name="fileImage" placeholder="Imagen del Producto">
+                                    <input class="form-admin__input" id="product-sub-img-<%= index %>" type="file" name="img" placeholder="Imagen del Producto">
                                 </div>
                             </div>
                         <% } %>
-                        
+                        <% if (product.images.length == 1) { %>
+                            <div class="sub-img-product__container">
+                                <label class="selectImg" for="product-sub-img-1"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-1" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                                <div class="form_desciption__box inactivo">
+                                    <input class="form-admin__input" id="product-sub-img-1" type="file" name="img" placeholder="Imagen del Producto">
+                                </div>
+                            </div>
+                            <div class="sub-img-product__container">
+                                <label class="selectImg" for="product-sub-img-2"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-2" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                                <div class="form_desciption__box inactivo">
+                                    <input class="form-admin__input" id="product-sub-img-2" type="file" name="img" placeholder="Imagen del Producto">
+                                </div>
+                            </div>
+                            <div class="sub-img-product__container">
+                                <label class="selectImg" for="product-sub-img-3"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img id="sub-img-preview-3" class="sub-img-product__img" src="/images/productos/default-image.jpg" alt=""></label>
+                                <div class="form_desciption__box inactivo">
+                                    <input class="form-admin__input" id="product-sub-img-3" type="file" name="img" placeholder="Imagen del Producto">
+                                </div>
+                            </div>
+                        <% } %>
+                       
                 </div>
                 <div class="create-button">
                     <button class="create-button__button" type="submit">Editar producto</button>

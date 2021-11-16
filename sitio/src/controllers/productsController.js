@@ -271,11 +271,29 @@ module.exports ={
 				}
 			)
 			.then( () =>{
+
+			/* let images = req.files
+
+			console.log(">>>>>>>>>>>>>>>",images)
+				db.Image.update({
+					file : images.filename
+				},{
+					where : {
+						productId : req.params.id
+					}
+				})
+				.then( () =>{
+				}) */
+
+
 				db.Product.findByPk(req.params.id, {
 					include: ['images']
 				})
 					.then(async product => {
-						if (req.files.length != 0) {
+						 if (req.files.length != 0) {
+							 const {img} = req.body // TRAE LAS IMAGENES
+							console.log(">>>>>>>",img)
+
 							/* product.images.forEach(image => {
 
 								if (fs.existsSync(path.join(__dirname, '../public/images/productos', image.file))) {
@@ -297,11 +315,13 @@ module.exports ={
 
 							db.Image.bulkCreate(images, { validate: true })
 								.then(() =>{
-									return res.redirect("/user/admin");
-								})
+								return res.redirect("/user/admin");
+							})
 						}
-						return res.redirect("/user/admin");
+						
 					})
+					
+				return res.redirect("/user/admin");
 			})
 			.catch(error => console.log(error))
 
