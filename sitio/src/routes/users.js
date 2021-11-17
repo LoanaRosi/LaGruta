@@ -4,13 +4,14 @@ var router = express.Router();
 const {login, register, processLogin, processRegister, profile, logout,admin,profileEdit, profileUpdate} = require("../controllers/usersController");
 const registerValidation = require('../validations/registerValidation');
 const loginValidation = require('../validations/loginValidation');
-
+const profileValidation = require('../validations/profileValidation');
 
 // middlewares de usuarios
 const userLoginCheck = require("../Middlewares/userLoginCheck");
 const userAdminCheck = require("../Middlewares/userAdminCheck");
 const userAvatarImg = require('../Middlewares/userAvatarImg');
 const userRegisterCheck = require("../Middlewares/userRegisterCheck");
+
 
 
 /* GET users listing. */
@@ -27,8 +28,8 @@ router.get("/admin"/* ,userAdminCheck */,admin);
 router.get('/profile', userRegisterCheck,profile);
 router.get('/logout', logout);
 
-router.get('/profileEdit', profileEdit);
-router.put('/profileUpdate', userAvatarImg.array("avatar"), profileUpdate);
+router.get('/profileEdit', userRegisterCheck, profileEdit);
+router.put('/profileUpdate', profileValidation, profileUpdate);
 
 
 module.exports = router;
