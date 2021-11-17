@@ -90,12 +90,52 @@ module.exports = {
                         id: user.id,
                         name: user.name,
                         avatar: user.avatar,
-                        rol: user.rolId// ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
+                        rol: user.rolId
                     }
                     if (recordame) {
                         res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: 365 * 24 * 60 * 60 * 1000 })
                     }
-                    return res.redirect('/')
+
+                    /*  carrito */
+
+                    req.session.cart = [] // va a hacer un array de objetos literales donde cada producto agregado se guarde ahi
+                    
+                   /*  db.Order.findOne({
+                        where :{
+                            userId : req.session.userLogin.id,
+                            status : 'pending'
+                        },
+                        include : [
+                            {
+                                association : 'carts',
+                                include :[
+                                    {
+                                        association : 'product',
+                                        include : ['categories','images']
+                                    }
+                                ]
+                            }
+                        ]
+                    })
+                    .then( order => {
+                        if(order){
+                            order.carts.forEach(item => {
+                                let product = {
+                                    id : item.productId,
+                                    name : item.product.name,
+                                    image : item.product.images[0].file,
+                                    price : item.product.price,
+                                    category : item.product.categories.name,
+                                    amount: +item.quantity,
+                                    subtotal : item.product.price * item.quantity,
+                                    orderId : order.id
+
+                                }
+                                req.session.cart.push(product)
+                            }) */
+                        /* } */
+                       /*  return res.redirect('/') */
+                    /* }) */
                 })
                 .catch(error => console.log(error))
         } else {

@@ -42,5 +42,29 @@ window.addEventListener("load",()=>{
         }
         
     })
+
+    let domSearchForm1 = document.getElementById('domSearchForm1')
+    let domSearch1 = document.getElementById('domSearch1')
+
+    domSearchForm1.addEventListener("submit", function(e){
+        e.preventDefault()
+
+        if (domSearch1.value != 0 ) {
+            domSearchForm1.submit()
+        }
+
+    })
+
+    let domSearchForm2 = document.getElementById('domSearchForm2')
+    let domSearch2 = document.getElementById('domSearch2')
+
+    domSearchForm2.addEventListener("submit", function(e){
+        e.preventDefault()
+
+        if (domSearch2.value != 0 ) {
+            domSearchForm2.submit()
+        }
+
+    })
 })
 
