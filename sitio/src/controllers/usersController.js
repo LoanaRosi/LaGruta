@@ -93,7 +93,7 @@ module.exports = {
                         rol: user.rolId
                     }
                     if (recordame) {
-                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: 365 * 24 * 60 * 60 * 1000 })
+                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: -1 })
                     }
 
                     /*  carrito */
@@ -150,7 +150,7 @@ module.exports = {
     profile: async(req,res) => {
         let user = await db.User.findByPk(req.session.userLogin.id)
         let avatar = await db.Avatar.findByPk(user.avatarId);
-        res.render("profile", {
+        res.render('user/profile', {
             user,
             avatar,
             session: req.session
@@ -165,6 +165,8 @@ module.exports = {
     },
 
     profileUpdate: async(req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
         const { name, email, password } = req.body;
         await db.User.update({
             name,
@@ -177,6 +179,10 @@ module.exports = {
         res.cookie("recordame", null, { maxAge: -1 })
         req.session.destroy();
         res.redirect("/");
+        } else {
+            return res.render('profileEdit', {
+                errors: errors.mapped()
+            })}
     },
 
 

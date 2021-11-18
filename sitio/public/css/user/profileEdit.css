@@ -1,4 +1,4 @@
-.profileEdit h2{
+.profileEdit .titulo{
     font-family: var(--fontFamily-Titulo);
     text-transform: uppercase;
     display: flex;
@@ -39,3 +39,4 @@
     text-transform: uppercase;
     
 }
+
