@@ -27,7 +27,7 @@
     transition: transform .8s;
 }
 
-.carrito .openCartProduct{
+.carrito.openCartProduct{
     transform: translateX(0px);
     opacity:unset;
     transition: transform .8s;

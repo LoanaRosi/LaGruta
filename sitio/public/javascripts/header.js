@@ -16,6 +16,8 @@ window.addEventListener("load",()=>{
         menuActive.classList.remove('menuActive')
     })
 
+    // carrito
+
     let openCart = document.getElementById('openModalCart')
     let openModalCartMovile = document.getElementById('openModalCartMovile')
     let modalCart = document.getElementById('modalCart')
@@ -67,12 +69,12 @@ window.addEventListener("load",()=>{
 
     })
 
-    let loginAvertCart = document.getElementById("loginAvertCart")
+    /* let loginAvertCart = document.getElementById("loginAvertCart")
     let avertCartOpen = document.getElementById("avertCartOpen")
 
     avertCartOpen.addEventListener("click", function(e){
         e.preventDefault()
         loginAvertCart.classList.add("modalAvertCart")
-    })
+    }) */
 })
 

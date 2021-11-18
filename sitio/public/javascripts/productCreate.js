@@ -23,6 +23,9 @@ const $ = id => document.getElementById(id)
 
 window.addEventListener("load", () => {
 
+
+    //
+
     /* imagen previa del producto */
 
     $("product-img").addEventListener('change', (e) => {
