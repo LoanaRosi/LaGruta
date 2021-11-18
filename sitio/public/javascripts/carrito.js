@@ -9,6 +9,7 @@ let cartEmpty = $("cartEmpty");
 let buyCart = $("buyCart"); //boton
 let goShop = $("goShop") //boton
 let btnEmptyCart = $("emptyCart")
+let spanCantidad = $('span-cantidad')
 
 const mostrarCantidad = cart => {
 
@@ -22,8 +23,9 @@ const mostrarCantidad = cart => {
         })
     }
 
+    spanCantidad.innerHTML = cantidad
     cartTotal.innerHTML = `$ ${total}`
-
+   
     if (cantidad === 0) {
         cardProduct.style.display = "none"
         cartEmpty.style.display = "block"
@@ -64,9 +66,6 @@ const cargarTabla = cart => {
                         <span class="h5">${product.amount}<span>
                     <a class="text-success h5" onClick="addItem(event,${product.id})"><i class="fas fa-plus-square"></i></a>
                 </div>
-            </div>
-            <div class="delete-product">
-                <a href="/"><i class="far fa-trash-alt"></i></a>
             </div>
         </article>
         `
@@ -133,5 +132,15 @@ btnEmptyCart.addEventListener("click", () =>{
     emptyCart()
 })
 
+let modalCart = document.getElementById('modalCart')
+let modalCartProduct = document.getElementById('modalCartProduct')
+
+window.addEventListener("click",(e)=>{
+    if(e.target ==  goShop || e.target == closeModalCart ){
+        modalCart.classList.remove("openCart")
+        modalCartProduct.classList.remove("openCartProduct")
+    }
+    
+})
 
 getCarrito()

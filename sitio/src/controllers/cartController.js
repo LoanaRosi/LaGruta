@@ -52,7 +52,7 @@ module.exports = {
                     }
                 })
         
-                if (!order) {
+                if(!order) {
                     order = await db.Order.create({
                         userId : req.session.userLogin.id,
                         status : "pending"
@@ -72,7 +72,7 @@ module.exports = {
                     userId: req.session.userLogin.id,
                     productId: item.id,
                     orderId: item.orderId,
-                    quantity: 1
+                    quantity: 1,
                 })
 
             }else{
@@ -98,7 +98,7 @@ module.exports = {
                     userId: req.session.userLogin.id,
                     productId: item.id,
                     orderId: item.orderId,
-                    quantity: 1
+                    quantity: 1,
                 })
 
                 }else{
@@ -136,7 +136,6 @@ module.exports = {
     
         } catch (error) {
             console.log(error)
-            return res.status(500).json(error)
         }
        
     },
@@ -199,7 +198,7 @@ module.exports = {
             await db.Order.destroy({
                 where:{
                     userId : req.session.userLogin.id,
-                    status : 'pending'
+                    status : "pending"
                 }
             });
 

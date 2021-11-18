@@ -100,10 +100,10 @@ module.exports = {
 
                     req.session.cart = [] // va a hacer un array de objetos literales donde cada producto agregado se guarde ahi
                     
-                   /*  db.Order.findOne({
+                    db.Order.findOne({
                         where :{
                             userId : req.session.userLogin.id,
-                            status : 'pending'
+                            status : "pending"
                         },
                         include : [
                             {
@@ -116,8 +116,7 @@ module.exports = {
                                 ]
                             }
                         ]
-                    })
-                    .then( order => {
+                    }).then( order => {
                         if(order){
                             order.carts.forEach(item => {
                                 let product = {
@@ -132,10 +131,10 @@ module.exports = {
 
                                 }
                                 req.session.cart.push(product)
-                            }) */
-                        /* } */
-                       /*  return res.redirect('/') */
-                    /* }) */
+                            })
+                        }
+                        return res.redirect('/')
+                    })
                 })
                 .catch(error => console.log(error))
         } else {
