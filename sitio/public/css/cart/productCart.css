@@ -27,23 +27,24 @@
     transition: transform .8s;
 }
 
-.carrito.openCartProduct{
+.carrito .openCartProduct{
     transform: translateX(0px);
     opacity:unset;
     transition: transform .8s;
 }
 
 .carrito .container-full{
-    overflow-y: auto;
-    max-height: 565px;
+   height: 100vh;
 }
 
 .carrito .cart-product-sup{
     background-color: #fff;
     padding: 20px;
+    padding-bottom: 58px;
     border-radius: 10px 0 10px 10px;
     z-index: 900;
-    position: relative;
+    /* position: relative; */
+    /* height: 100vh; */
 }
 
 
@@ -55,7 +56,12 @@
 }
 
 .carrito .container-products{ /* contiene todos los productos */
- 
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.carrito .cartNotProduct{ /* cuando el carrito no tiene productos */
+    color: #000;
 }
 
 .carrito .titulo{ /* titulo "carrito de compra" */
@@ -85,13 +91,13 @@
 .carrito .container-product{ /* contiene los datos del producto */
     height: 110px;
     display: flex;
-    justify-content: space-between;
     box-shadow: 4px 4px 13px -2px #000;
     border-radius: 10px 10px 10px 10px;
     padding: 10px;
     background-color: #000;
     margin-bottom: 15px;
     margin-right: 8px;
+    align-items: center;
 }
 
 .carrito .arriba{ /* contiene la imagen */
@@ -104,12 +110,12 @@
 
 .carrito .container-datos-products{ /* name,price,catidad */
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
 }
 
 .carrito .container-name-price{ /* contiene el nombre y el precio del producto */
     margin-top: -15px;
+    
 }
 
 .carrito .container-name{ /* contiene el nombre del producto */
@@ -136,7 +142,7 @@
 }
 
 .carrito .cantidad{ /* contiene cuantos unidades del mismo producto compra*/
-    width: 50%;
+    margin-left: 20px;
 }
 
 .carrito .cantidad__input{ /* numero de productos */
@@ -179,6 +185,7 @@
     padding: 20px;
     padding-bottom: 90px;
     z-index: 800;
+    display: none;
 }
 
 .carrito .title-envio{ /* titulo de envio */
@@ -218,7 +225,7 @@
 
 
 .carrito .conatiner-detalle{ /* contiene al detalle de la compra */
-    position: absolute;
+    position: relative;
     background-color: #000;
     margin-top: -23px;
     padding: 15px;

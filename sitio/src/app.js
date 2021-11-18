@@ -16,6 +16,7 @@ var usersRouter = require('./routes/users');
 const productsRouter = require("./routes/products");
 var formularioRouter = require('./routes/formulario');
 
+
 const { addAbortSignal } = require('stream');
 
 
@@ -49,6 +50,7 @@ app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use("/product",productsRouter); 
 app.use("/cart",formularioRouter);
+app.use('/api',require('./routes/apiCart'))
 /* app.use("admin/edit",productsRouter); */
 
 // catch 404 and forward to error handler

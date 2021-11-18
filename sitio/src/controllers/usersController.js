@@ -90,12 +90,51 @@ module.exports = {
                         id: user.id,
                         name: user.name,
                         avatar: user.avatar,
-                        rol: user.rolId// ahora en las vistas tene que pregunta por un numero, no por si es "admin" o "user"
+                        rol: user.rolId
                     }
                     if (recordame) {
-                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: 365 * 24 * 60 * 60 * 1000 })
+                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: -1 })
                     }
-                    return res.redirect('/')
+
+                    /*  carrito */
+
+                    req.session.cart = [] // va a hacer un array de objetos literales donde cada producto agregado se guarde ahi
+                    
+                    db.Order.findOne({
+                        where :{
+                            userId : req.session.userLogin.id,
+                            status : "pending"
+                        },
+                        include : [
+                            {
+                                association : 'carts',
+                                include :[
+                                    {
+                                        association : 'product',
+                                        include : ['categories','images']
+                                    }
+                                ]
+                            }
+                        ]
+                    }).then( order => {
+                        if(order){
+                            order.carts.forEach(item => {
+                                let product = {
+                                    id : item.productId,
+                                    name : item.product.name,
+                                    image : item.product.images[0].file,
+                                    price : item.product.price,
+                                    category : item.product.categories.name,
+                                    amount: +item.quantity,
+                                    subtotal : item.product.price * item.quantity,
+                                    orderId : order.id
+
+                                }
+                                req.session.cart.push(product)
+                            })
+                        }
+                        return res.redirect('/')
+                    })
                 })
                 .catch(error => console.log(error))
         } else {
@@ -110,7 +149,7 @@ module.exports = {
     profile: async(req,res) => {
         let user = await db.User.findByPk(req.session.userLogin.id)
         let avatar = await db.Avatar.findByPk(user.avatarId);
-        res.render("profile", {
+        res.render('user/profile', {
             user,
             avatar,
             session: req.session
@@ -125,6 +164,8 @@ module.exports = {
     },
 
     profileUpdate: async(req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
         const { name, email, password } = req.body;
         await db.User.update({
             name,
@@ -137,6 +178,10 @@ module.exports = {
         res.cookie("recordame", null, { maxAge: -1 })
         req.session.destroy();
         res.redirect("/");
+        } else {
+            return res.render('profileEdit', {
+                errors: errors.mapped()
+            })}
     },
 
 

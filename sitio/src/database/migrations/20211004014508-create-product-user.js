@@ -28,17 +28,29 @@ module.exports = {
           key : 'id'
         }
       },
+      orderId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Order'
+          },
+          key : 'id'
+        }
+      },
+      orderId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Orders'
+          },
+          key : 'id'
+        },
+        onDelete : 'cascade'
+      },
       quantity: {
         allowNull: false,
         type: Sequelize.INTEGER
-      },
-      subtotal: {
-        allowNull: false,
-        type: Sequelize.DECIMAL(8,2)
-      },
-      total: {
-        allowNull: false,
-        type: Sequelize.DECIMAL(8,2)
       },
       createdAt: {
         allowNull: false,

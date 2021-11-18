@@ -31,7 +31,7 @@ router.get("/create"/* ,userAdminCheck */,create); /* ruta de cracion de product
 router.post("/create",uploadProduct.array("fileImage"), productsValidation, store); /* guarda un producto */
 
 router.get('/edit/:id'/* ,userAdminCheck */,edit); /* edita un producto */
-router.put('/edit/:id',uploadProduct.array('img'), update); /* actualiza datos de un producto */
+router.put('/edit/:id',uploadProduct.array('img'),update); /* actualiza datos de un producto */
 
 router.delete("/delete/:id",destroy) /* elimina un producto */
 
