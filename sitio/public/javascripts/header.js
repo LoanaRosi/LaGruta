@@ -66,5 +66,13 @@ window.addEventListener("load",()=>{
         }
 
     })
+
+    let loginAvertCart = document.getElementById("loginAvertCart")
+    let avertCartOpen = document.getElementById("avertCartOpen")
+
+    avertCartOpen.addEventListener("click", function(e){
+        e.preventDefault()
+        loginAvertCart.classList.add("modalAvertCart")
+    })
 })
 

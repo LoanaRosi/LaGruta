@@ -27,24 +27,24 @@
     transition: transform .8s;
 }
 
-.carrito.openCartProduct{
+.carrito .openCartProduct{
     transform: translateX(0px);
     opacity:unset;
     transition: transform .8s;
 }
 
 .carrito .container-full{
-    overflow-y: auto;
-    max-height: 565px;
+   height: 100vh;
 }
 
 .carrito .cart-product-sup{
     background-color: #fff;
     padding: 20px;
+    padding-bottom: 58px;
     border-radius: 10px 0 10px 10px;
     z-index: 900;
-    position: relative;
-    height: 100vh;
+    /* position: relative; */
+    /* height: 100vh; */
 }
 
 
@@ -56,7 +56,8 @@
 }
 
 .carrito .container-products{ /* contiene todos los productos */
- 
+    overflow-y: auto;
+    max-height: 350px;
 }
 
 .carrito .cartNotProduct{ /* cuando el carrito no tiene productos */
@@ -224,7 +225,7 @@
 
 
 .carrito .conatiner-detalle{ /* contiene al detalle de la compra */
-    position: absolute;
+    position: relative;
     background-color: #000;
     margin-top: -23px;
     padding: 15px;

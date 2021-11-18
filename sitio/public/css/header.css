@@ -442,6 +442,44 @@ body{
         
     }
 
+    /* carrito */
+
+    .container-menu .avertCart{
+        background-color: #fff;
+        padding: 30px 10px;
+        position: absolute;
+        right: 6px;
+        top: 70px;
+        border-radius: 8px;
+        visibility: hidden;
+        transition: visibility .5s;
+    }
+
+    .container-menu .modalAvertCart{
+        visibility: unset;
+        transition: visibility .5s;
+    }
+
+    .container-menu .avertCart__triangle{
+        background-color: #fff;
+        width: 20px;
+        height: 20px;
+        padding: 20px;
+        position: absolute;
+        color: #000;
+        border-radius: 0px 0px 0px 500px;
+        transform: rotate(677deg);
+        top: 0;
+        right: 8px;
+        margin-top: -10px;
+    }
+
+    .container-menu .avertCart__h3{
+        color: #000;
+        font-family: var(--fontFamily-Textos);
+        font-size: 15px;
+    }
+
     .container-menu .spanCantidadCart{
         width: 20px;
         height: 20px;

@@ -52,9 +52,13 @@
                     <i class="fas fa-shopping-cart"></i></a> <!-- icono del carrtio -->
                 </div>
             <% } else { %>
-                <div class="container-cart-shop" id="cartRegister"> <!-- conatiner del carrito, la img y el icono -->
-                    <a href="/user/login"><img src="/images/flag/bandera-cart-tablet.svg" alt="carrito" class="flag-nav"> <!-- img de bandera -->
+                <div class="container-cart-shop" > <!-- conatiner del carrito, la img y el icono -->
+                    <a href="#" id="avertCartOpen" ><img src="/images/flag/bandera-cart-tablet.svg" alt="carrito" class="flag-nav"> <!-- img de bandera -->
                     <i class="fas fa-shopping-cart"></i></a> <!-- icono del carrtio -->
+                </div>
+                <div class="avertCart" id="loginAvertCart">
+                    <span class="avertCart__triangle"></span>
+                    <h3 class="avertCart__h3">Tenes Que Loguearte Primero</h3>
                 </div>
             <% } %>
              
