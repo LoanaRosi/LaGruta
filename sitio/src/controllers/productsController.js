@@ -183,9 +183,12 @@ module.exports ={
 				.then( () => {
 					return res.redirect("/product/list")
 					console.log('imagenes guardadas')})
+			}else{
+				db.Image.create({file:'default-image.jpg', productId:product.id})
+				.then(() => res.redirect("/product/list")) 
 			}
 
-			return res.redirect("/product/list")
+			/* return res.redirect("/product/list") */
 		})
 		.catch(error => console.log(error))
 	} else {
