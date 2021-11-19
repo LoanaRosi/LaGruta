@@ -23,6 +23,28 @@ const $ = id => document.getElementById(id)
 
 window.addEventListener("load", () => {
 
+    const changeImage = async (id, files) => {
+        var data = new FormData();
+        console.log(data)
+
+            data.append('images', files[0])
+        
+
+        console.log(data)
+
+        try {
+            let response = await fetch('/apis/change-image/' + id, {
+                method: 'POST',
+                body: data
+            });
+            let result = await response.json()
+            console.log(result)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
 
     //
 
@@ -34,6 +56,8 @@ window.addEventListener("load", () => {
         reader.readAsDataURL(e.target.files[0]);
 
         reader.onload = () => $("img-preview").src = reader.result
+        changeImage(e.target.name,e.target.files)
+
     })
 
     $("product-sub-img-1").addEventListener('change', (e) => {
@@ -42,6 +66,8 @@ window.addEventListener("load", () => {
         reader.readAsDataURL(e.target.files[0]);
 
         reader.onload = () => $("sub-img-preview-1").src = reader.result
+        changeImage(e.target.name,e.target.files)
+
     })
 
     $("product-sub-img-2").addEventListener('change', (e) => {
@@ -50,6 +76,8 @@ window.addEventListener("load", () => {
         reader.readAsDataURL(e.target.files[0]);
 
         reader.onload = () => $("sub-img-preview-2").src = reader.result
+        changeImage(e.target.name,e.target.files)
+
     })
 
     $("product-sub-img-3").addEventListener('change', (e) => {
@@ -58,6 +86,8 @@ window.addEventListener("load", () => {
         reader.readAsDataURL(e.target.files[0]);
 
         reader.onload = () => $("sub-img-preview-3").src = reader.result
+        changeImage(e.target.name,e.target.files)
+
     })
 
     nameProduct.addEventListener("blur", () => {
