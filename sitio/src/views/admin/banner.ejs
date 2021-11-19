@@ -13,7 +13,7 @@
             <div class="container-img">
                 <% banner.forEach(item => { %>
                     <img class="container-img__img" src="/images/banner-img/<%= item.name %>" alt="">
-                    <form action="/banner/delete/<%= item.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                    <form action="/product/banner/delete/<%= item.id %>?_method=DELETE" method="POST">
                         <button class="buttonDelete" type="submit">Eliminiar</button>
                     </form>
                 <% }) %>

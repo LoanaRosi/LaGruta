@@ -36,7 +36,7 @@ router.put('/edit/:id',uploadProduct.array('img'),update); /* actualiza datos de
 router.delete("/delete/:id",destroy) /* elimina un producto */
 
 // rutas banner
-router.get("/banner",userAdminCheck,banner);
+router.get("/banner",/* userAdminCheck, */banner);
 router.post("/banner",uploadBanner.single("banner"),bannerAdd);
 router.delete("/banner/delete/:id",bannerDestroy);
 

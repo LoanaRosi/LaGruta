@@ -39,6 +39,7 @@ module.exports = {
                 name : product.name,
                 image : product.images[0].file,
                 price : product.price,
+                discount : product.discount,
                 category : product.categories.name,
                 amount : 1,
                 subTotal : product.price

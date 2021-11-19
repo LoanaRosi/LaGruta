@@ -391,7 +391,7 @@ module.exports ={
 			}
 		})
 		.then( () =>{
-			res.redirect("/product/banner");
+			return res.redirect("/product/banner");
 		})
 		.catch(error => console.log(error))	
 		
