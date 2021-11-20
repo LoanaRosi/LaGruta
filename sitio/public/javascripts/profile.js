@@ -1,4 +1,4 @@
-let $ = id => document.getElementById(id)
+const $ = id => document.getElementById(id)
 
 function qs(element) {
     return document.querySelector(element);

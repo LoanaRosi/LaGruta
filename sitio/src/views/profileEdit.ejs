@@ -6,13 +6,13 @@
         <form class="formProfile" action="/user/profileUpdate?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <article class="formProfile__contain">
 
-                <div class="box-forms">
+                <div class="box-forms box-forms-avatar">
                     <label class="img-perfil" for="imgUser"><div class="imgHover"><p class="imgHover__p">selecionar Imagen</p></div><img class="box-forms__img" id="avatar-preview" src="/images/users/<%= user.avatars.file %> " alt=""></label>
                     <input class="img-input" type="file" name="imgUser" id="imgUser">
                 </div>
 
                 <div class="box-forms">
-                    <input type="text" name="name" id="name" placeholder="Nuevo nombre" value=" <%= locals.userLogin.name %> ">
+                    <input type="text" name="name" id="name" placeholder="Nuevo nombre" value="<%= locals.userLogin.name %> ">
                     <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                     <span id="nameErrors"></span>
                 </div>

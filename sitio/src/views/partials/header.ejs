@@ -45,13 +45,13 @@
                     </div>
                     <% } %>                                         
             </div>
+            <% if (locals.userLogin) { %>
             
                 <div class="container-cart-shop" id="openModalCart"> <!-- conatiner del carrito, la img y el icono -->
                     
                     <a href="#"><span id="span-cantidad" class="spanCantidadCart"></span><img src="/images/flag/bandera-cart-tablet.svg" alt="carrito" class="flag-nav"> <!-- img de bandera -->
                     <i class="fas fa-shopping-cart"></i></a> <!-- icono del carrtio -->
                 </div>
-<<<<<<< HEAD
             <% } else { %>
                <!--  <div class="container-cart-shop" >
                     <a href="#" id="avertCartOpen" ><img src="/images/flag/bandera-cart-tablet.svg" alt="carrito" class="flag-nav">
@@ -64,9 +64,6 @@
             <% } %>
              
             
-=======
-                       
->>>>>>> df816e3b3bb3b3f80709dbd97fb7718db40ea35a
         </div>
         <div class="container-menu-bar-pc"> <!-- conatiner del menu de catalogos del la version pc -->
             <ul>

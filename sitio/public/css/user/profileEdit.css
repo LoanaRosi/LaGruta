@@ -5,6 +5,10 @@
 .formProfile__contain {
     width: 50%;
     margin: 0 auto;
+    background-color: var(--color-negro2);
+    margin-bottom: 70px;
+    border-radius: 4px;
+    box-shadow: 10px 10px 15px #000;
 }
 
 .profileEdit .titulo{
@@ -27,11 +31,29 @@
     padding: 10px
 }
 
+.profileEdit .box-forms input{
+    padding: 4px;
+    border: 1px solid var(--color-Gris1);
+    font-family: var(--fontFamily-Textos);
+    border-radius: 4px;
+}
+
+.profileEdit .box-forms-avatar{
+    background: #D80000;
+    background: -moz-linear-gradient(left, #D80000 0%, #A80000 50%, #630000 100%);
+    background: -webkit-linear-gradient(left, #D80000 0%, #A80000 50%, #630000 100%);
+    background: linear-gradient(to right, #D80000 0%, #A80000 50%, #630000 100%);
+    width: 100%;
+    margin-bottom: 70px;
+    border-radius: 4px
+}
+
 .profileEdit .img-perfil{
     width: 160px;
     border-radius: 500px;
     margin: 0 auto;
     position: relative;
+    margin-bottom: -97px;
 }
 
 .profileEdit .box-forms__img{
@@ -73,6 +95,7 @@
     display: flex;
     margin: 0 auto;
     width: 50%;
+    margin-top: 20px;
 }
 
 .profileEdit .box-buttons a {
@@ -88,5 +111,10 @@
     font-family: var(--fontFamily-Textos);
     text-transform: uppercase;
     
+}
+
+.profileEdit .box-buttons  button:hover{
+    background-color: var(--color-Rojo3);
+    color: #fff;
 }
 

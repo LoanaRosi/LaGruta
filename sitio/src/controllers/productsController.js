@@ -7,8 +7,6 @@ let saveBanner = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','ban
 
 const tothousand = require("../utils/thotousand");
 const descuento = require("../utils/discount");
-
-let paresOfert = (i) => (i % 2 == 0)
 	
 const {validationResult} = require('express-validator');
 
