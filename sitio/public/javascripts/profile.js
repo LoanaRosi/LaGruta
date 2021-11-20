@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
       $name.addEventListener('blur', function() {
         switch (true) {
             case !$name.value.trim():
-                $nameErrors.innerHTML = 'El campo nombre es obligatorio';
+                $nameErrors.innerHTML = 'El campo nombre no puede estar vacío';
                 $name.classList.add('is-invalid')
                 break;
             case $name.value.trim().length < 2 || $name.value.trim().length > 20 :
@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
       $email.addEventListener('blur', function() {
         switch (true) {
             case !$email.value.trim():
-                $emailErrors.innerHTML = 'El campo email es obligatorio';
+                $emailErrors.innerHTML = 'El campo email no puede estar vacío';
                 $email.classList.add('is-invalid')
                 break;
             case !regExEmail.test($email.value):
@@ -55,7 +55,7 @@ window.addEventListener("load", function () {
     $password.addEventListener('blur', function() {
         switch (true) {
             case !$password.value.trim():
-                $passwordErrors.innerHTML = 'El campo contraseña es obligatorio';
+                $passwordErrors.innerHTML = 'El campo contraseña no puede estar vacío';
                 $password.classList.add('is-invalid')
                 break;
             default:

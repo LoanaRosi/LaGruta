@@ -1,4 +1,4 @@
-const $ = id => document.getElementById(id);
+/* const $ = id => document.getElementById(id); */
 let regExLetter = /^[A-Z]+$/i; //para validar que solo se ingresen letras
 let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/; //para email valido
 let regExPass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // validar contraseña. Mínimo ocho caracteres, al menos una letra y un número

@@ -86,8 +86,12 @@ module.exports = {
                         old: req.body,
                         errors: errors.mapped()
                     })
-                break;
-            }
+            } 
+        } else {
+            return res.render('user/register', {
+                old: req.body,
+                errors: errors.mapped()
+            })
         }
     },
 
