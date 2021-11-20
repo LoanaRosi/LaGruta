@@ -69,12 +69,30 @@ window.addEventListener("load",()=>{
 
     })
 
+    let agregarCart = document.querySelectorAll(".agregarCart")
+
+    agregarCart.forEach( item => {
+
+        item.addEventListener("click", ()=>{
+
+            modalCart.classList.add("openCart")
+            modalCartProduct.classList.add("openCartProduct")
+    
+        })
+    })
+    
+
+
     /* let loginAvertCart = document.getElementById("loginAvertCart")
     let avertCartOpen = document.getElementById("avertCartOpen")
 
-    avertCartOpen.addEventListener("click", function(e){
-        e.preventDefault()
-        loginAvertCart.classList.add("modalAvertCart")
+    window.addEventListener("click",(e)=>{
+        e.preventDefault();
+        if(e.target ==  avertCartOpen ){
+            
+            loginAvertCart.classList.add("modalAvertCart")
+        }
+        
     }) */
 })
 

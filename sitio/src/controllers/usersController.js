@@ -177,7 +177,9 @@ module.exports = {
     },
 
     profileEdit: async(req, res) => {
-        let user = await db.User.findByPk(req.session.userLogin.id);
+        let user = await db.User.findByPk(req.session.userLogin.id,{
+            include : ["avatars"]
+        });
         res.render('profileEdit', {
             user,
         });

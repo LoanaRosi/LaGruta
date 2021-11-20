@@ -62,7 +62,7 @@
             </div>
 
             <section class="conatiner-product">
-                <% products.forEach(product => { %>
+                <% products.forEach((product, i) => { %>
                     <article>
 
                         <div class="conatiner-inside-article">
@@ -80,7 +80,7 @@
                                     </a>
                                 </div>
                                 <div class="option-cart-shop">
-                                    <a href="#" onclick="addItem(event,'<%= product.id %>')"><i class="fas fa-shopping-cart"></i>
+                                    <a href="#" onclick="addItem(event,'<%= product.id %>')" class="agregarCart"><i class="fas fa-shopping-cart"></i>
                                         <p>agregar</p>
                                     </a>
                                 </div>
@@ -129,7 +129,7 @@
                                     </article>
                                     <article class="product-oferta">
                                         <div class="container-img-oferta">
-                                            <a href="/product/detail/<%= productsOfert[index + 1].id %>"><img src="/images/productos/<%= productsOfert[index +1].images[0].file %>" alt=""></a>
+                                            <a href="/product/detail/<%= productsOfert[index + 1].id %>"><img src="/images/productos/<%= productsOfert[index +1 ].images[0].file %>" alt=""></a>
                                     </div>
                                     <div class="detail-oferta">
                                         <h4><%= productsOfert[index +1].name %></h4>
@@ -138,39 +138,6 @@
                                         <p class="precio-old"><%=productsOfert[index +1].discount%>% OFF</p>
                                         </div> 
                                         <a href="#" class="botn-comprar" onclick="addItem(event,'<%= productsOfert[index].id %>')" >comprar</a>
-                                    </div>
-                                
-                                    </article>
-                                </div>
-                         
-                        <% } %>
-                         <% for( let index = 0; index < productsOfert.length -1; index++) { %>
-                                <div class="column">
-                                    <article class="product-oferta">
-                                            <div class="container-img-oferta">
-                                            <img src="/images/productos/<%= productsOfert[index].images[0].file %>" alt="">
-                                        </div>
-                                        <div class="detail-oferta">
-                                            <h4><%= productsOfert[index].name %></h4>
-                                            <div class="container-precios">
-                                            <p class="new-oferta">$<%=descuento(productsOfert[index].discount,productsOfert[index].price)%></p>
-                                            <p class="precio-old"><%=productsOfert[index].discount%>% OFF</p>
-                                            </div> 
-                                            <a href="/productDetail" class="botn-comprar">comprar</a>
-                                        </div>
-                                        
-                                    </article>
-                                    <article class="product-oferta">
-                                        <div class="container-img-oferta">
-                                        <img src="/images/productos/<%= productsOfert[index +1].images[0].file %>" alt="">
-                                    </div>
-                                    <div class="detail-oferta">
-                                        <h4><%= productsOfert[index +1].name %></h4>
-                                        <div class="container-precios">
-                                        <p class="new-oferta">$<%=descuento(productsOfert[index+1].discount,productsOfert[index+1].price)%></p>
-                                        <p class="precio-old"><%=productsOfert[index +1].discount%>% OFF</p>
-                                        </div> 
-                                        <a href="/productDetail" class="botn-comprar">comprar</a>
                                     </div>
                                 
                                     </article>
@@ -192,6 +159,7 @@
     </main>
     <%- include("./partials/footer") %> 
     <%- include("./partials/scripts") %> 
+    <script src="/javascripts/header.js"></script>
 </body>
     
 </html>

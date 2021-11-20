@@ -451,12 +451,7 @@ body{
         right: 6px;
         top: 70px;
         border-radius: 8px;
-        visibility: hidden;
-        transition: visibility .5s;
-    }
-
-    .container-menu .modalAvertCart{
-        visibility: unset;
+        display: none;
         transition: visibility .5s;
     }
 
@@ -472,6 +467,11 @@ body{
         top: 0;
         right: 8px;
         margin-top: -10px;
+    }
+
+    .container-menu .avertCart .modalAvertCart{
+        display: unset;
+        transition: visibility .5s;
     }
 
     .container-menu .avertCart__h3{

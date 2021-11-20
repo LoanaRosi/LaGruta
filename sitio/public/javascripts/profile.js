@@ -1,3 +1,5 @@
+let $ = id => document.getElementById(id)
+
 function qs(element) {
     return document.querySelector(element);
 }
@@ -113,5 +115,18 @@ window.addEventListener("load", function () {
             formProfile.submit()
         }
     }) */
+
+
+    //PROFILE EDIT
+
+    $("imgUser").addEventListener('change', (e) => {
+
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+
+        reader.onload = () => $("avatar-preview").src = reader.result
+        changeImage(e.target.name,e.target.files)
+
+    })
 )
 })
