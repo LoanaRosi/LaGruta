@@ -1,8 +1,67 @@
 
 /* let editar = document.querySelectorAll("button .container-form__edit"); */
-/* let eliminarAlerta = document.querySelectorAll('.container-form__delete'); */
-const Swal = require('sweetalert2');  
 
+const Swal = require('sweetalert2');  
+/* let button = document.querySelectorAll('button .container-form__delete');
+
+const confirmDelete = (e, form) => {
+  e.preventDefault();
+
+  Swal.fire({
+    title: '¿Estás seguro de eliminar el producto?',
+    text: "Los cambios no son reversibles!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Aceptar',
+    cancelButtonText: 'Cancelar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      form.submit();
+    }  
+  })
+}
+
+
+
+window.addEventListener('load', function(){
+  [].forEach.call(document.querySelectorAll('.container-form__delete'), function(e) {
+    e.addEventListener('click', function(e) {
+      confirmDelete
+ })
+})
+})
+ */
+window.addEventListener('load', function(){
+[].forEach.call(document.querySelectorAll('.container-form__delete'), function(e) {
+  e.addEventListener('click', function(e) {
+    alert("hiciste click");
+  });
+}); 
+
+
+/* 
+Swal.fire({
+  title: '¿Estás seguro de eliminar el producto?',
+  text: "Los cambios no son reversibles!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Aceptar',
+  cancelButtonText: 'Cancelar',
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  }
+})
+}
+ */
 
 /* window.addEventListener('load', function(){
     editar.addEventListener('click', function(){
@@ -21,15 +80,16 @@ const Swal = require('sweetalert2');
   });
 }); */ 
 
-window.addEventListener('load', function(){
+
+/* window.addEventListener('load', function(){
 [].forEach.call(document.querySelectorAll('.container-form__delete'), function(e) {
   e.addEventListener('click', function(e) {
-    document.querySelectorAll('.container-form__delete').Swal.fire("Our First Alert");
+    document.querySelectorAll('.container-form__delete').Swal.fire("Alerta prueba");
   });
 });
 
 
-})
+}) */
 
 /* window.addEventListener('load', function(){
   eliminarAlerta.addEventListener('click', () =>{
