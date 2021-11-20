@@ -376,22 +376,24 @@ module.exports ={
     },
 
     bannerAdd: (req,res) =>{
-        const {imgBanner} = req.body
-		let bannerImg ={
-			id : banner[banner.length - 1].id +1,
-			imgBanner : req.file ? req.file.filename : "default-image.jpg",
-		}
 
-		banner.push(bannerImg)
-		saveBanner(banner)
+		db.Banner.create({
+			name : req.file ? req.file.filename : "default-image.jpg",
+		})
 		res.redirect("/product/banner")
     },
 
     bannerDestroy : (req,res) =>{
-        let productsModifi = banner.filter(item=> item.id !== +req.params.id);  /* fitramos todos los productos menos el producto cuyo id sea igual al id que viene en el params */
-		saveBanner(productsModifi);
-		res.redirect("/product/banner");
 
+		db.Banner.destroy({
+			where : {
+				id : req.params.id
+			}
+		})
+		.then( () =>{
+			return res.redirect("/product/banner");
+		})
+		.catch(error => console.log(error))	
 		
     }
 

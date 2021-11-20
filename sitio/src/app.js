@@ -51,6 +51,7 @@ app.use('/user', usersRouter);
 app.use("/product",productsRouter); 
 app.use("/cart",formularioRouter);
 app.use('/api',require('./routes/apiCart'))
+app.use('/apis',require('./routes/apis'))
 /* app.use("admin/edit",productsRouter); */
 
 // catch 404 and forward to error handler

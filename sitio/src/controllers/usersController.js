@@ -22,54 +22,77 @@ module.exports = {
         if (errors.isEmpty()) {
             const { name, email, password } = req.body;
 
-            if (req.files.length != 0) {
+            switch (true) {
+                case req.files.length != 0:
+                    
+                    let images = req.files.map(image => {
+                        let item = {
+                            file: image.filename,
+                        }
+                        return item
+                    })
+                
+                    db.Avatar.bulkCreate(images, { validate: true })
+                        .then(avatarImg => {
+                            console.log('imagenes guardadas')
+                            db.User.create({
+                                name: name.trim(),
+                                email: email.trim(),
+                                password: bcrypt.hashSync(password, 10),
+                                avatarId: avatarImg[0].dataValues.id,
+                                rolId: 2,
+                            })
+                                .then(user => {
+    
+                                    req.session.userLogin = {
+                                        id: user.id,
+                                        name: user.name,
+                                        avatar: user.avatarId,
+                                        rol: user.rolId
+                                    }
+    
+                                    return res.redirect('/')
+                                })
+                            })
+                            .catch(error => console.log(error))
+                    break;
 
-                let images = req.files.map(image => {
-                    let item = {
-                        file: image.filename,
-                    }
-                    return item
-                })
-                db.Avatar.bulkCreate(images, { validate: true })
-                    .then(avatarImg => {
-                        console.log('imagenes guardadas')
+                    case req.files == 0 :
+
                         db.User.create({
                             name: name.trim(),
                             email: email.trim(),
                             password: bcrypt.hashSync(password, 10),
-                            avatarId: avatarImg[0].dataValues.id,
+                            avatarId: 1,
                             rolId: 2,
                         })
                             .then(user => {
-
-                                if (req.files.length != 0) {
-                                    console.log(req.files);
-                                    let images = req.files.map(image => {
-                                        let item = {
-                                            file: image.filename,
-                                        }
-                                        return item
-                                    })
-                                }
 
                                 req.session.userLogin = {
                                     id: user.id,
                                     name: user.name,
                                     avatar: user.avatarId,
-                                    rolId: user.rolId
+                                    rol: user.rolId
                                 }
 
                                 return res.redirect('/')
                             })
                             .catch(error => console.log(error))
+
+                    break;
+
+                default:
+                    return res.render('user/register', {
+                        old: req.body,
+                        errors: errors.mapped()
                     })
-                }
-            } else {
-                return res.render('user/register', {
-                    old: req.body,
-                    errors: errors.mapped()
-                })
-            }
+            } 
+        } else {
+            return res.render('user/register', {
+                old: req.body,
+                errors: errors.mapped()
+            })
+        }
     },
 
     //vista login
@@ -124,9 +147,10 @@ module.exports = {
                                     name : item.product.name,
                                     image : item.product.images[0].file,
                                     price : item.product.price,
+                                    discount : item.product.discount,
                                     category : item.product.categories.name,
                                     amount: +item.quantity,
-                                    subtotal : item.product.price * item.quantity,
+                                    subTotal : item.product.price * item.quantity,
                                     orderId : order.id
 
                                 }

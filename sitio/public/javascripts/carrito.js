@@ -11,6 +11,9 @@ let goShop = $("goShop") //boton
 let btnEmptyCart = $("emptyCart")
 let spanCantidad = $('span-cantidad')
 
+let thotousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+let descuento = (discount,price) => thotousand( price - (discount * price / 100).toFixed(0));
+
 const mostrarCantidad = cart => {
 
     var cantidad = 0;
@@ -19,12 +22,13 @@ const mostrarCantidad = cart => {
     if(cart){
         cart.forEach(item => {
             cantidad += item.amount;
-            total += item.subTotal 
+            total += parseInt(item.subTotal)
+            discount = item.discount
         })
     }
 
     spanCantidad.innerHTML = cantidad
-    cartTotal.innerHTML = `$ ${total}`
+    cartTotal.innerHTML = `$ ${total}` // `$ ${descuento(discount,total)}` para productos con descuentos
    
     if (cantidad === 0) {
         cardProduct.style.display = "none"
@@ -57,7 +61,7 @@ const cargarTabla = cart => {
                         <p class="container-name__name">${product.name}</p>
                     </div>
                     <div class="container-price">
-                        <span class="container-price__price">$${product.price}</span>
+                        <span class="container-price__price">$${descuento(product.discount,product.price)}</span>
                     </div>
                 </div>
 
