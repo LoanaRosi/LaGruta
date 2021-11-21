@@ -5,7 +5,7 @@
         <h2 class="titulo">Editar cuenta</h2> 
         <form class="formProfile" action="/user/profileUpdate?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <div class="box-forms">
-                <input type="text" name="name" id="name" placeholder="Nuevo nombre" value=" <%= locals.userLogin.name %> ">
+                <input type="text" name="name" id="name" placeholder="Nuevo nombre" value="">
                 <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                 <span id="nameErrors"></span>
             </div>
