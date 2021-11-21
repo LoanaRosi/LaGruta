@@ -1,16 +1,21 @@
 let formLogin = document.querySelector('#formLogin');
 let formError = document.getElementById("form-error");
 
+let password = document.getElementById("password")
+let eyeOpen = document.getElementById("eyeOpen")
+
 function qs(element) {
     return document.querySelector(element);
 }
 
-window.addEventListener("load", function () {
-    let $email = qs("#email"),
+let $email = qs("#email"),
       $emailErrors = qs("#emailErrors"),
       $password = qs("#password"),
       $passwordErrors = qs("#passwordErrors"),
       regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
+
+window.addEventListener("load", function () {
+    
 
       $email.addEventListener('blur', function() {
         switch (true) {
@@ -42,7 +47,7 @@ window.addEventListener("load", function () {
                 $passwordErrors.innerHTML = ''
                 break;
         }
-    },
+    }),
     
     formLogin.addEventListener('submit', event => {
         event.preventDefault();
@@ -78,25 +83,21 @@ window.addEventListener("load", function () {
             formLogin.submit()
         }
     })
-)
 
-let password = document.getElementById("password")
-let eyeOpen = document.getElementById("eyeOpen")
-
-eyeOpen.addEventListener("click",function(e){
-    switch (true) {
-        case password.type == "password":
-
-            return password.type = "text"
-            break;
-        case password.type == "text":
-
-            return password.type = "password"
-            break
+    eyeOpen.addEventListener("click",function(e){
+        switch (true) {
+            case password.type == "password":
     
-        default:
-            break;
-    }
-})
+                return password.type = "text"
+                break;
+            case password.type == "text":
+    
+                return password.type = "password"
+                break
+        
+            default:
+                break;
+        }
+    })
 })
 
