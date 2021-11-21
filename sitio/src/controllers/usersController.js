@@ -119,8 +119,9 @@ module.exports = {
                         avatar: user.avatar,
                         rol: user.rolId
                     }
+                    
                     if (recordame) {
-                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: -1 })
+                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: 1 * 365 * 24 * 60 * 60 })
                     }
 
                     /*  carrito */
