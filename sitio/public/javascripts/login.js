@@ -79,5 +79,24 @@ window.addEventListener("load", function () {
         }
     })
 )
+
+let password = document.getElementById("password")
+let eyeOpen = document.getElementById("eyeOpen")
+
+eyeOpen.addEventListener("click",function(e){
+    switch (true) {
+        case password.type == "password":
+
+            return password.type = "text"
+            break;
+        case password.type == "text":
+
+            return password.type = "password"
+            break
+    
+        default:
+            break;
+    }
+})
 })
 

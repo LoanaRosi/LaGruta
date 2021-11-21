@@ -79,8 +79,8 @@
     margin: 0 auto;
     padding: 5px;
     margin-top: 10px;
+    position: relative;
 }
-
 
 
 .vista-login .Login .box-form input{ /* todos los inputs del formulario */
@@ -91,6 +91,20 @@
     border-radius: 3px;
     color: #fff;
  
+}
+
+.vista-login .Login .eyeVisible{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 22px;
+    padding: 0px 5px;
+    cursor: pointer;
+    color: #000;
+}
+
+.vista-login .Login .eyeVisible:hover{
+    color: var(--color-Rojo3);
 }
 
 

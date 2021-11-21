@@ -23,7 +23,7 @@
             </div>
 
             <div class="box-form">
-                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <input type="password" name="password" id="password" placeholder="Contraseña"><p class="eyeVisible" id="eyeOpen"><i class="far fa-eye"></i></p>
                 <span class="text-danger small"><%= locals.errors && errors.password ? errors.password.msg : null %> </span>
                 <span id="passwordErrors"></span>
             </div>
