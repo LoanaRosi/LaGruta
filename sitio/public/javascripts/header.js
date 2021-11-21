@@ -45,6 +45,22 @@ window.addEventListener("load",()=>{
         
     })
 
+
+    let agregarCart = document.querySelectorAll(".agregarCart")
+
+    agregarCart.forEach( item => {
+
+        item.addEventListener("click", ()=>{
+
+            modalCart.classList.add("openCart")
+            modalCartProduct.classList.add("openCartProduct")
+    
+        })
+    })
+
+
+    // buscador
+
     let domSearchForm1 = document.getElementById('domSearchForm1')
     let domSearch1 = document.getElementById('domSearch1')
 
@@ -52,7 +68,9 @@ window.addEventListener("load",()=>{
         e.preventDefault()
 
         if (domSearch1.value != 0 ) {
-            domSearchForm1.submit()
+           domSearchForm1.submit()
+        }else{
+            null
         }
 
     })
@@ -65,20 +83,10 @@ window.addEventListener("load",()=>{
 
         if (domSearch2.value != 0 ) {
             domSearchForm2.submit()
+        }else{
+            null
         }
 
-    })
-
-    let agregarCart = document.querySelectorAll(".agregarCart")
-
-    agregarCart.forEach( item => {
-
-        item.addEventListener("click", ()=>{
-
-            modalCart.classList.add("openCart")
-            modalCartProduct.classList.add("openCartProduct")
-    
-        })
     })
     
 

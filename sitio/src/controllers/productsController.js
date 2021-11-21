@@ -28,7 +28,8 @@ module.exports ={
 			return res.render("listProducts",{
 				products,
 				descuento,
-				tothousand
+				tothousand,
+				title : "Todos Los Productos"
 			})
 		})
 		.catch(error => console.log(error)) 
@@ -47,7 +48,8 @@ module.exports ={
 			res.render("juegos-mesa",{
 				products,
 				descuento,
-				tothousand
+				tothousand,
+				title : "Juegos De Mesa"
 			})
 		})
 		.catch(error => console.log(error)) 
@@ -66,7 +68,8 @@ module.exports ={
 			res.render("juegos-previa",{
 				products,
 				descuento,
-				tothousand
+				tothousand,
+				title : "Juegos De Previa"
 			})
 		})
 		.catch(error => console.log(error)) 
@@ -85,7 +88,8 @@ module.exports ={
 			res.render("juegos-rol",{
 				products,
 				descuento,
-				tothousand
+				tothousand,
+				title : "Juegos De Rol"
 			})
 		})
 		.catch(error => console.log(error)) 
@@ -116,7 +120,8 @@ module.exports ={
 					productDetail,
 					productRelacion,
 					descuento,
-					tothousand
+					tothousand,
+					title : "Detalle De Producto"
 				})
 			})
 			
@@ -125,7 +130,9 @@ module.exports ={
 	},
 
 	mediosPago: (req, res) => {
-		return res.render('medios-pago')
+		return res.render('medios-pago',{
+			title : "Medios De Pago"
+		})
 	},
 
 	// formulario de creacion de producto
@@ -142,7 +149,8 @@ module.exports ={
 				categories,
 				status,
 				complexities,
-				languages
+				languages,
+				title : "Agregar Producto"
 			})
 		})
 		.catch(error => console.log(error))
@@ -237,7 +245,8 @@ module.exports ={
 				status,
 				complexities,
 				languages,
-				product
+				product,
+				title : "Editar Producto"
 			})
 		})
 		.catch(error => console.log(error))		
@@ -372,7 +381,10 @@ module.exports ={
 	banner: (req,res) =>{
 		db.Banner.findAll()
 		.then(banner => {
-			res.render("admin/banner",{banner})
+			res.render("admin/banner",{
+				banner,
+				title : "Control Banner"
+			})
 		})
     },
 

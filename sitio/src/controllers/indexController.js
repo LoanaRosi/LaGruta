@@ -46,7 +46,8 @@ module.exports ={
                 descuento,
                 products,
                 productsOfert,
-                banner
+                banner,
+                title : "LaGrutaDelDragón"
             })
         })
         .catch(error => console.log(error)) 
@@ -71,7 +72,8 @@ module.exports ={
                 tothousand,
                 descuento,
                 products,
-                resultado : req.query.busqueda
+                resultado : req.query.busqueda,
+                title : "Búsqueda"
             })
         })
         .catch(error => console.log(error)) 
@@ -84,7 +86,9 @@ module.exports ={
     },
 
     contact: (req,res) => {
-        res.render("contact")
+        res.render("contact",{
+            title : "Contacto"
+        })
     },
 
     mailsend: (req,res) => {
@@ -143,7 +147,9 @@ module.exports ={
     },
 
     about: (req,res) => {
-        res.render("about")
+        res.render("about",{
+            title : "Sobre Nosotros"
+        })
     }
 }
 

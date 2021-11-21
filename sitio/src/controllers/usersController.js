@@ -12,7 +12,9 @@ module.exports = {
     // vista register
     register: (req, res) => {
 
-        res.render('user/register')
+        res.render('user/register',{
+            title : "Registro"
+        })
 
     },
 
@@ -96,7 +98,9 @@ module.exports = {
     },
 
     //vista login
-    login: (req, res) => res.render('user/login'),
+    login: (req, res) => res.render('user/login',{
+        title : "Ingreso"
+    }),
 
     processLogin: (req, res) => {
         let errors = validationResult(req);
@@ -176,7 +180,8 @@ module.exports = {
         res.render('user/profile', {
             user,
             avatar,
-            session: req.session
+            session: req.session,
+            title : "Perfil"
         })
     },
 
@@ -186,6 +191,7 @@ module.exports = {
         });
         res.render('profileEdit', {
             user,
+            title : "Edición De Perfil"
         });
     },
 
@@ -228,6 +234,7 @@ module.exports = {
             .then(products => {
                 res.render("admin/admin", {
                     products,
+                    title : "Administración"
                 })
             })
             .catch(error => console.log(error))
