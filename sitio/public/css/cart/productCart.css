@@ -31,6 +31,7 @@
     transform: translateX(0px);
     opacity:unset;
     transition: transform .8s;
+    width: 100%;
 }
 
 .carrito .container-full{
@@ -44,7 +45,7 @@
     border-radius: 10px 0 10px 10px;
     z-index: 900;
     /* position: relative; */
-    /* height: 100vh; */
+    height: 100%;
 }
 
 
@@ -58,6 +59,7 @@
 .carrito .container-products{ /* contiene todos los productos */
     overflow-y: auto;
     max-height: 350px;
+    padding-bottom: 60px;
 }
 
 .carrito .cartNotProduct{ /* cuando el carrito no tiene productos */
@@ -233,6 +235,7 @@
     z-index: 1000;
     bottom: 0;
     width: 100%;
+    margin-top: -232px;
 }
 
 .carrito .detalle1, .detalle2 {
@@ -264,6 +267,10 @@
 }
 
 @media (min-width : 500px) {
+    
+    .carrito.openCartProduct{
+        width: unset;
+    }
     .carrito {
         float: right;
         position: fixed;

@@ -16,6 +16,36 @@ window.addEventListener("load",()=>{
         menuActive.classList.remove('menuActive')
     })
 
+     // buscador
+
+     let domSearchForm1 = document.getElementById('domSearchForm1')
+     let domSearch1 = document.getElementById('domSearch1')
+ 
+     domSearchForm1.addEventListener("submit", function(e){
+         e.preventDefault()
+ 
+         if (domSearch1.value != 0 ) {
+            domSearchForm1.submit()
+         }else{
+             null
+         }
+ 
+     })
+ 
+     let domSearchForm2 = document.getElementById('domSearchForm2')
+     let domSearch2 = document.getElementById('domSearch2')
+ 
+     domSearchForm2.addEventListener("submit", function(e){
+         e.preventDefault()
+ 
+         if (domSearch2.value != 0 ) {
+             domSearchForm2.submit()
+         }else{
+             null
+         }
+ 
+     })
+
     // carrito
 
     let openCart = document.getElementById('openModalCart')
@@ -45,36 +75,31 @@ window.addEventListener("load",()=>{
         
     })
 
-    let domSearchForm1 = document.getElementById('domSearchForm1')
-    let domSearch1 = document.getElementById('domSearch1')
 
-    domSearchForm1.addEventListener("submit", function(e){
-        e.preventDefault()
+    let agregarCart = document.querySelectorAll(".agregarCart")
 
-        if (domSearch1.value != 0 ) {
-            domSearchForm1.submit()
-        }
+    agregarCart.forEach( item => {
 
+        item.addEventListener("click", ()=>{
+
+            modalCart.classList.add("openCart")
+            modalCartProduct.classList.add("openCartProduct")
+    
+        })
     })
+    
 
-    let domSearchForm2 = document.getElementById('domSearchForm2')
-    let domSearch2 = document.getElementById('domSearch2')
-
-    domSearchForm2.addEventListener("submit", function(e){
-        e.preventDefault()
-
-        if (domSearch2.value != 0 ) {
-            domSearchForm2.submit()
-        }
-
-    })
 
     /* let loginAvertCart = document.getElementById("loginAvertCart")
     let avertCartOpen = document.getElementById("avertCartOpen")
 
-    avertCartOpen.addEventListener("click", function(e){
-        e.preventDefault()
-        loginAvertCart.classList.add("modalAvertCart")
+    window.addEventListener("click",(e)=>{
+        e.preventDefault();
+        if(e.target ==  avertCartOpen ){
+            
+            loginAvertCart.classList.add("modalAvertCart")
+        }
+        
     }) */
 })
 

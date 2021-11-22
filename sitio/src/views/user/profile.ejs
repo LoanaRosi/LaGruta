@@ -6,18 +6,23 @@
         <p>¡Hola <%= locals.userLogin.name %>!</p>
     </div>
 
-    <div class="user-email">
-       <a href="profileEdit">Editar detalles de mi perfil</a>
-    </div>
-    <br>
-    <div class="user-avatar">
-        <a href="/"> <img src="/images/users/<%= avatar.file %>"></a>
-    </div>
-    <div class="mensaje">
-        <p>¡Hacé tu primera compra!</p>
-        <a href="/">Ver productos</a>
-
-    </div>
+    <article class="contanerInfo">
+        <div class="user-avatar">
+            <p class="user-avatar__avatar" href="/"> <img src="/images/users/<%= avatar.file %>"></p>
+        </div>
+        <div class="contanerInfo__containGmail">
+            <p class="contanerInfo__gmail"><%= user.email %> </p>
+        </div>
+        <div class="userEdit">
+            <a class="userEdit__edit" href="profileEdit">Editar detalles de mi perfil</a>
+         </div>
+        <div class="mensaje">
+            <p>¡Hacé tu primera compra!</p>
+            <a href="/">Ver productos</a>
+    
+        </div>
+    </article>
+    
 </main>
     <%- include("../partials/footer") %> 
 </body>

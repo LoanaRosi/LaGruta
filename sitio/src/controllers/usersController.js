@@ -12,7 +12,9 @@ module.exports = {
     // vista register
     register: (req, res) => {
 
-        res.render('user/register')
+        res.render('user/register',{
+            title : "Registro"
+        })
 
     },
 
@@ -96,7 +98,9 @@ module.exports = {
     },
 
     //vista login
-    login: (req, res) => res.render('user/login'),
+    login: (req, res) => res.render('user/login',{
+        title : "Ingreso"
+    }),
 
     processLogin: (req, res) => {
         let errors = validationResult(req);
@@ -115,8 +119,9 @@ module.exports = {
                         avatar: user.avatar,
                         rol: user.rolId
                     }
+                    
                     if (recordame) {
-                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: -1 })
+                        res.cookie('LaGrutaDelDragon', req.session.userLogin, { maxAge: 1 * 365 * 24 * 60 * 60 })
                     }
 
                     /*  carrito */
@@ -164,8 +169,7 @@ module.exports = {
         } else {
             return res.render('user/login', {
                 errors: errors.mapped()
-            }
-            )
+            })
         }
     },
 
@@ -176,14 +180,18 @@ module.exports = {
         res.render('user/profile', {
             user,
             avatar,
-            session: req.session
+            session: req.session,
+            title : "Perfil"
         })
     },
 
     profileEdit: async(req, res) => {
-        let user = await db.User.findByPk(req.session.userLogin.id);
+        let user = await db.User.findByPk(req.session.userLogin.id,{
+            include : ["avatars"]
+        });
         res.render('profileEdit', {
             user,
+            title : "Edición De Perfil"
         });
     },
 
@@ -192,19 +200,28 @@ module.exports = {
         if (errors.isEmpty()) {
         const { name, email, password } = req.body;
         await db.User.update({
-            name,
-            email,
+            name : name,
+            email : email,
             password : bcrypt.hashSync(password, 10),
         },
         {
             where: { id : req.session.userLogin.id }
+        }).then(() => {
+            console.log("guardado")
+            res.redirect("/");
         });
-        res.cookie("recordame", null, { maxAge: -1 })
-        req.session.destroy();
-        res.redirect("/");
+        /* res.cookie("recordame", null, { maxAge: -1 })
+        req.session.destroy(); */
+        
         } else {
+            let user = await db.User.findByPk(req.session.userLogin.id,{
+                include : ["avatars"]
+            })
+
             return res.render('profileEdit', {
-                errors: errors.mapped()
+                errors: errors.mapped(), 
+                user,
+                title : "Edición De Perfil"
             })}
     },
 
@@ -226,6 +243,7 @@ module.exports = {
             .then(products => {
                 res.render("admin/admin", {
                     products,
+                    title : "Administración"
                 })
             })
             .catch(error => console.log(error))

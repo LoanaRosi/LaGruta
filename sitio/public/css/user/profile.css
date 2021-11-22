@@ -1,52 +1,103 @@
+.profile .contanerInfo{
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--color-negro2);
+    padding-bottom: 5px;
+    margin-bottom: 70px;
+    border-radius: 4px;
+    box-shadow: 10px 10px 15px #000;
+}
+
 .profile .user-info .saludo p{
     color: white;
     text-align: center;
     font-family: var(--fontFamily-Titulo);
     font-weight: 200;
+    margin: 0 auto;
     margin-top: 20px;
     font-size: 30px;
     /* text-transform: uppercase; */
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    width: 40%;
 }
 
 .profile .user-info .user-avatar{
     text-align: center;
+    padding-bottom: 40px;
+    background: #D80000;
+    background: -moz-linear-gradient(left, #D80000 0%, #A80000 50%, #630000 100%);
+    background: -webkit-linear-gradient(left, #D80000 0%, #A80000 50%, #630000 100%);
+    background: linear-gradient(to right, #D80000 0%, #A80000 50%, #630000 100%);
+    border-radius: 4px;
+}
+
+.profile .user-avatar__avatar{
+
 }
 
 .profile .user-info .user-avatar img{
     width: 140px;
     height: 135px;
-    border-radius: 50%;
-    border: 1px solid var(--color-negro3);
+    margin-top: 40px;
+    margin-bottom: -100px;
 }
 
-.profile .user-info .user-email{
+.profile .contanerInfo__containGmail{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.profile .contanerInfo__gmail{
+    color: #fff;
+    font-size: 18px;
+    font-family: var(--fontFamily-Textos);
+    border-bottom: 1px solid #fff;
+}
+
+.profile .user-info .userEdit{
     color: white;
     text-align: center;
     font-family: var(--fontFamily-Titulo);
     font-weight: 200;
-    margin-top: 10px;
+    margin-top: 35px;
     font-size: 15px;
     /* text-transform: uppercase; */
+
 }
 
-.profile .user-info .user-email a:hover {
-    color: #8E1212;
+.profile .user-info .userEdit a:hover {
+    color: #000;
     transition: .2s;
+}
+
+.profile .user-info .userEdit__edit{
+    background-color: var(--color-Rojo3);
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: 1px solid #000;
 }
 
 .profile .user-info .mensaje p, .profile .user-info a{
     color: white;
     font-family: var(--fontFamily-Titulo);
     font-weight: 200;
-    margin-top: 10px;
     font-size: 15px;
     
 }
 
 .profile .user-info .mensaje{
-    text-align: center; 
+    text-align: center;
+    margin: 0 auto;
     margin-bottom: 50px;
-    margin-top: 20px;
+    margin-top: 35px;
+    padding: 10px;
+    background-color: var(--color-Gris2);
+    width: 250px;
+    border-radius: 4px;
+    border: 1px solid var(--color-Rojo1);
 }
 
 .profile .user-info .mensaje a{
@@ -56,4 +107,12 @@ text-decoration: underline;
 .profile .user-info .mensaje a:hover{
     color: #8E1212;
     transition: .2s;
+}
+
+@media (min-width : 768px) {
+
+    .profile .contanerInfo{
+        width: 50%;
+    }
+
 }

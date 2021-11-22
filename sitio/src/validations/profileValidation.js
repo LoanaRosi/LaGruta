@@ -4,7 +4,7 @@ const db = require('../database/models')
 const users = require('../data/users.json');
 
 module.exports = [
-    check('name')
+   /*  body('name')
     .isEmpty().bail()
     .isLength({
         min : 2
@@ -39,5 +39,5 @@ module.exports = [
         }
         return true
     }).withMessage('La verificación de la contraseña no coincide'),
-
+ */
 ]
