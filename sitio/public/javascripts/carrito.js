@@ -30,7 +30,7 @@ const mostrarCantidad = cart => {
     spanCantidad.innerHTML = cantidad
     cartTotal.innerHTML = `$ ${total}` // `$ ${descuento(discount,total)}` para productos con descuentos
    
-    if (cantidad === 0) {
+    if (cantidad == 0) {
         cardProduct.style.display = "none"
         cartEmpty.style.display = "block"
         buyCart.classList.add('disabled')

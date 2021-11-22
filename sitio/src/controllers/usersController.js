@@ -86,13 +86,15 @@ module.exports = {
                 default:
                     return res.render('user/register', {
                         old: req.body,
-                        errors: errors.mapped()
+                        errors: errors.mapped(),
+                        title : "Registro"
                     })
             } 
         } else {
             return res.render('user/register', {
                 old: req.body,
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                title : "Registro"
             })
         }
     },
@@ -168,7 +170,8 @@ module.exports = {
                 .catch(error => console.log(error))
         } else {
             return res.render('user/login', {
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                title : "Ingreso"
             }
             )
         }
@@ -213,7 +216,8 @@ module.exports = {
         res.redirect("/");
         } else {
             return res.render('profileEdit', {
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                title : "Edición De Perfil"
             })}
     },
 
