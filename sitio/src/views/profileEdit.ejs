@@ -19,7 +19,7 @@
                 
     
                 <div class="box-forms">
-                    <input type="email" name="email" id="email" placeholder="Nuevo email" value="">
+                    <input type="email" name="email" id="email" placeholder="Nuevo email" value="<%= user.email %> ">
                     <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
                     <span id="emailErrors"></span>
                 </div>

@@ -204,19 +204,27 @@ module.exports = {
         if (errors.isEmpty()) {
         const { name, email, password } = req.body;
         await db.User.update({
-            name,
-            email,
+            name : name,
+            email : email,
             password : bcrypt.hashSync(password, 10),
         },
         {
             where: { id : req.session.userLogin.id }
+        }).then(() => {
+            console.log("guardado")
+            res.redirect("/");
         });
-        res.cookie("recordame", null, { maxAge: -1 })
-        req.session.destroy();
-        res.redirect("/");
+        /* res.cookie("recordame", null, { maxAge: -1 })
+        req.session.destroy(); */
+        
         } else {
+            let user = await db.User.findByPk(req.session.userLogin.id,{
+                include : ["avatars"]
+            })
+
             return res.render('profileEdit', {
-                errors: errors.mapped(),
+                errors: errors.mapped(), 
+                user,
                 title : "Edición De Perfil"
             })}
     },

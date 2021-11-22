@@ -1,5 +1,6 @@
 .vista-about .about .caja {
     display: flex;
+    font-family: var(--fontFamily-Textos);
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -7,3 +8,20 @@
     margin: 20px;
     padding: 20px;
 }
+
+.vista-about .about .loa {
+    border-radius: 50%;
+}
+
+.vista-about .about .fran {
+    border-radius: 50%;
+}
+
+.vista-about .about .mar {
+    border-radius: 50%;
+}
+
+.vista-about .about .datos {
+    padding: 20px;
+   
+} 
