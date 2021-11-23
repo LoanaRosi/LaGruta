@@ -65,7 +65,12 @@
 
 .control-banner .form-banner__imgBanner{ /* input para elegir el banner */
     width: 180px;
-    margin-right: 15px
+    margin-right: 15px;
+    background-color: var(--color-Rojo2);
+    color: #fff;
+    border: 1px solid #000;
+    padding: 3px;
+    border-radius: 4px;
 }
 
 .control-banner .form-banner__button{ /* boton para subir banner */
