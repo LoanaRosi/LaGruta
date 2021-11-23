@@ -47,6 +47,17 @@
     text-align: center;
   }
 
+  /* modal de eliminar un producto */
+  .index-admin .modalDelete{
+    display: none;
+  }
+
+  .index-admin .showFormDelete{
+    display: block;
+  }
+
+  /* --------- */
+
   .index-admin .container-delete{
     display: inline-block;
   }
