@@ -22,10 +22,10 @@
                         <td><%= product.name %> </td>
                         <td><%= product.price %> </td>
                         <td><%= product.categories.name %> </td>
-                        <td><%= product.sale %> </td> 
+                        <td><%= product.discount %> </td> 
                         <td class="container-form">
                             <form class="container-delete" action="/product/delete/<%= product.id %>?_method=DELETE" method="POST" id="form-delete<%= product.id %>">
-                                <button type="submit" class="container-form__delete"><i class="far fa-trash-alt" id="container-form__delete"></i></button>
+                                <a href="/product/delete/<%= product.id %>" onclick="return confirm('Estás seguro que deseas eliminar el registro?')"><i class="far fa-edit"></i></a>
                             </form>
                             <button class="container-form__edit" id="container-form__edit"><a href="/product/edit/<%= product.id %>"><i class="far fa-edit"></i></a></button>
                         </td>
@@ -38,3 +38,5 @@
 </body>
 </html>
 
+
+                            
